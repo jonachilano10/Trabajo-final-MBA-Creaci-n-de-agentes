@@ -19,6 +19,6 @@ Estado verificado el 11/09/2026.
 | Límite de contexto | Semana actual más un máximo de seis anteriores | Cumplido y probado |
 | Pruebas automatizadas | `tests/`: 13 pruebas aprobadas el 11/09/2026 | Cumplido |
 
-## Pendiente externo al funcionamiento
+## Publicación y despliegue
 
-La carpeta está preparada para la auditoría de privacidad y la publicación en un repositorio GitHub público. La publicación, configuración del proveedor y dominio forman parte del paso siguiente y no se presentan como ya realizadas.
+La entrega fue auditada y publicada en el repositorio público `jonachilano10/Trabajo-final-MBA-Creaci-n-de-agentes`. El despliegue de la aplicación en un proveedor externo y la configuración del dominio permanecen pendientes y no se presentan como ya realizados.

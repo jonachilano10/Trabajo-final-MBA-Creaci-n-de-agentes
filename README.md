@@ -144,4 +144,4 @@ En ejecución, SQLite guarda información estructurada y la página archiva cada
 - La contraseña compartida no ofrece auditoría nominal por empleado.
 - El filtro de privacidad puede producir falsos positivos o no detectar casos no contemplados.
 - Las relaciones del LLM no demuestran causalidad.
-- La publicación externa y el dominio todavía no forman parte de esta entrega local.
+- El código y la evidencia académica están publicados en GitHub; el despliegue público de la aplicación y el dominio todavía están pendientes.

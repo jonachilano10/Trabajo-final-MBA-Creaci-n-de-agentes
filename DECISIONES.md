@@ -1,5 +1,14 @@
 # Decisiones del proyecto
 
+## Decisión 021 - Publicación del repositorio académico
+
+**Fecha:** 11 de septiembre de 2026  
+**Estado:** implementada
+
+Después de la auditoría se inicializó Git en `Trabajo final`, se integró el commit inicial existente y se publicó la rama `main` en `https://github.com/jonachilano10/Trabajo-final-MBA-Creaci-n-de-agentes`.
+
+El commit publicado excluye los archivos declarados en `.gitignore`. El repositorio contiene código, documentos, pruebas y evidencia reconstruible, pero no contiene la clave de OpenAI, bases SQLite, Excel fuente, ZIP ni `runtime/`. La publicación del repositorio académico no equivale al despliegue productivo de la página web, que continúa sujeto a las condiciones documentadas en `PUBLICACION.md`.
+
 ## Decisión 020 - Auditoría previa al repositorio público
 
 **Fecha:** 11 de septiembre de 2026  
