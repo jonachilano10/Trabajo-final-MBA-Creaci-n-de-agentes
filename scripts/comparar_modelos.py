@@ -15,7 +15,7 @@ if str(PROJECT) not in __import__("sys").path:
     __import__("sys").path.insert(0, str(PROJECT))
 
 from agente_mantenimiento.database import HistoryDatabase  # noqa: E402
-from agente_mantenimiento.llm_openai import interpret_week_with_openai  # noqa: E402
+from agente_mantenimiento.llm_openai import LLMServiceError, interpret_week_with_openai  # noqa: E402
 from agente_mantenimiento.provenance import runtime_manifest, sha256_file  # noqa: E402
 
 
@@ -57,8 +57,14 @@ def main() -> int:
     args = parser.parse_args()
     if not args.confirmar_pruebas_pagas:
         parser.error("Falta --confirmar-pruebas-pagas. No se harán llamadas por accidente.")
-    if not os.environ.get("OPENAI_API_KEY", "").strip():
+    api_key = os.environ.get("OPENAI_API_KEY", "").strip()
+    if not api_key:
         parser.error("Falta OPENAI_API_KEY en el entorno.")
+    if api_key.lower() in {"tu_clave", "your_key", "your_api_key"} or len(api_key) < 20:
+        parser.error(
+            "OPENAI_API_KEY contiene un ejemplo o una clave incompleta. "
+            "Reemplazala por la clave real sin publicarla ni guardarla en el proyecto."
+        )
     database_path = args.db.resolve()
     if not database_path.is_file():
         parser.error(f"No existe la base: {database_path}")
@@ -80,10 +86,17 @@ def main() -> int:
                 shutil.copy2(database_path, temporary_db)
                 temporary_history = HistoryDatabase(temporary_db)
                 before_ids = {int(row["id"]) for row in temporary_history.list_llm_runs()}
-                count = interpret_week_with_openai(
-                    temporary_db, year=args.anio, week=week,
-                    model=model, reasoning_effort=effort,
-                )
+                try:
+                    count = interpret_week_with_openai(
+                        temporary_db, year=args.anio, week=week,
+                        model=model, reasoning_effort=effort,
+                    )
+                except LLMServiceError as error:
+                    print(
+                        f"ERROR API en semana {week}, modelo {model}, nivel {effort}: {error}",
+                        file=__import__("sys").stderr,
+                    )
+                    return 1
                 run = next(
                     row for row in reversed(temporary_history.list_llm_runs())
                     if int(row["id"]) not in before_ids
