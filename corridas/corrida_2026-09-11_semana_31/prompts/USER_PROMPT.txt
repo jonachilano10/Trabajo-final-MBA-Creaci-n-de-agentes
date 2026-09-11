@@ -1,0 +1,12 @@
+Objetivo: calcular la disponibilidad de la semana 31, comprendida del 2026-07-27 al 2026-08-02.
+
+Información: se adjuntan los archivos de avisos, solicitudes de tareas en sala y notificaciones.
+
+- No calcular ni estimar proyecciones del mes ni de otras semanas.
+- Recalcular usando exclusivamente los archivos cargados.
+- Conservar la interpretación del LLM como preliminar y sujeta a revisión humana.
+
+Archivos utilizados:
+- Avisos: 31-Avisos semana 31.XLSX
+- Notificaciones: 31-Notificaciones semana 31.XLSX
+- Tareas en sala: 31-TAREAS EN SALA SEMANA 31.xlsx

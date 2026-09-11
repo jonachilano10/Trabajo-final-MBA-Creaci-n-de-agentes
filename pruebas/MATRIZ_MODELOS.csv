@@ -1,0 +1,16 @@
+modelo,nivel_razonamiento,tokens_entrada_promedio,tokens_salida_promedio,costo_comparable_usd,ahorro_vs_gpt54_pct,corridas_anuales,costo_anual_comparable_usd,tipo_dato
+gpt-5.4,none,15288,6190,0.131073,0.0,52,6.815770,simulacion_sin_cache
+gpt-5.4,low,15288,6190,0.131073,0.0,52,6.815770,simulacion_sin_cache
+gpt-5.4,medium,15288,6190,0.131073,0.0,52,6.815770,simulacion_sin_cache
+gpt-5.4,high,15288,6190,0.131073,0.0,52,6.815770,simulacion_sin_cache
+gpt-5.4,xhigh,15288,6190,0.131073,0.0,52,6.815770,simulacion_sin_cache
+gpt-5.4-mini,none,15288,6190,0.039322,70.0,52,2.044731,simulacion_sin_cache
+gpt-5.4-mini,low,15288,6190,0.039322,70.0,52,2.044731,simulacion_sin_cache
+gpt-5.4-mini,medium,15288,6190,0.039322,70.0,52,2.044731,simulacion_sin_cache
+gpt-5.4-mini,high,15288,6190,0.039322,70.0,52,2.044731,simulacion_sin_cache
+gpt-5.4-mini,xhigh,15288,6190,0.039322,70.0,52,2.044731,simulacion_sin_cache
+gpt-5.4-nano,none,15288,6190,0.010795,91.8,52,0.561356,simulacion_sin_cache
+gpt-5.4-nano,low,15288,6190,0.010795,91.8,52,0.561356,simulacion_sin_cache
+gpt-5.4-nano,medium,15288,6190,0.010795,91.8,52,0.561356,simulacion_sin_cache
+gpt-5.4-nano,high,15288,6190,0.010795,91.8,52,0.561356,simulacion_sin_cache
+gpt-5.4-nano,xhigh,15288,6190,0.010795,91.8,52,0.561356,simulacion_sin_cache

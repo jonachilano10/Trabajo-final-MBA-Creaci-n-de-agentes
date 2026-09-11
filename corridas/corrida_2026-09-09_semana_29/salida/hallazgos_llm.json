@@ -1,0 +1,89 @@
+{
+  "findings": [
+    {
+      "relation_type": "same_bridge",
+      "title": "Reincidencia de traslación en P-MG11",
+      "notice_numbers": [
+        "800894037",
+        "800894057",
+        "800894097"
+      ],
+      "confidence": "alta",
+      "rationale": "En el mismo puente P-MG11 aparecen dos registros idénticos de \"sin traslacion norte sur\" y otro de \"sin traslacion este/oeste\". Los textos coinciden en la función afectada, pero las causas documentadas no son iguales: en los primeros se consigna corte de energía y en el de este/oeste falla de componente electrónico. La relación es preliminar por repetición funcional, no por causa común confirmada.",
+      "human_review": "Verificar en campo alimentación, ATV/contactor y cableado del sistema de traslación antes de concluir si se trata de una misma falla recurrente."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Repetición de falla de aparejo 15 tn en P-MG12",
+      "notice_numbers": [
+        "800893603",
+        "800893913",
+        "800894078"
+      ],
+      "confidence": "alta",
+      "rationale": "Los tres avisos de P-MG12 describen inmovilidad del aparejo de 15 tn: \"no baja ni sube aparejo de 15 tn\", \"NO BAJA AP 15 TN\" y \"aparejo de 15 tn no sube ni baja\". La similitud es clara por función y síntoma, aunque las causas registradas difieren entre falla de componente electrónico y corte de energía, con intervenciones también distintas. No hay evidencia documental para afirmar una sola causa.",
+      "human_review": "Revisar variador, alimentación y cadena de maniobra del aparejo de 15 tn para confirmar si hay un patrón único o eventos independientes."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reincidencia de traslación en P-MG23",
+      "notice_numbers": [
+        "800892746",
+        "800892753"
+      ],
+      "confidence": "alta",
+      "rationale": "Ambos registros de P-MG23 refieren ausencia de traslación, uno como \"sin traslacion\" y otro como \"sin traslacion norte-sur\". Aunque las causas documentadas son diferentes —falla de componente electrónico y falso contacto—, el síntoma operativo es consistente y afecta el mismo subsistema de movimiento. La coincidencia permite proponer relación, no confirmarla.",
+      "human_review": "Inspeccionar guirnalda, borneras y elementos de mando de traslación para validar si el defecto es recurrente o solo coincidente."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Fallas repetidas de giro/percha en P-MG41",
+      "notice_numbers": [
+        "800893199",
+        "800894035",
+        "800894073"
+      ],
+      "confidence": "alta",
+      "rationale": "En P-MG41 se repite el problema de giro/percha: \"ECL gira solo para un lado\" y dos avisos de \"no gira percha\". Los textos apuntan al mismo entorno funcional, pero las causas documentadas no coinciden exactamente: falso contacto en un caso, corte de energía en otro y falla de componente electrónico en el tercero. La relación es por similitud funcional, no por causalidad demostrada.",
+      "human_review": "Verificar cables, ATV de giros y componentes de mando asociados al giro/percha antes de atribuir una causa única."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reincidencia en picador de P-MG43",
+      "notice_numbers": [
+        "800893830",
+        "800893897"
+      ],
+      "confidence": "alta",
+      "rationale": "Los dos avisos de P-MG43 describen falta de operación del picador: \"No anda picador\" y \"no pica\". La función afectada es la misma, aunque las causas documentadas difieren entre desgaste y fatiga material, con intervenciones de recambio de válvula de picador. La coincidencia textual y funcional sugiere repetición del subsistema, sin confirmar una misma causa raíz.",
+      "human_review": "Revisar el estado mecánico y neumático del picador, incluyendo válvula y elementos de desgaste, para determinar si existe una falla repetitiva."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Traslación detenida con patrón repetido entre puentes",
+      "notice_numbers": [
+        "800892746",
+        "800892753",
+        "800894037",
+        "800894057",
+        "800894097"
+      ],
+      "confidence": "media",
+      "rationale": "Hay coincidencia funcional entre los eventos de traslación de P-MG11 y P-MG23: ambos reportan ausencia de movimiento en el eje norte-sur, y en P-MG11 además se registra la falta de traslación este/oeste. Las causas documentadas no son uniformes —corte de energía, falla de componente electrónico y falso contacto— y las intervenciones apuntan a componentes distintos. La relación es útil como contexto comparativo entre puentes, pero no prueba una causa común.",
+      "human_review": "Comparar en campo alimentación, borneras, pantógrafos y variadores de traslación entre ambos puentes antes de concluir una falla compartida."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Aparejo 15 tn con inmovilidad similar en varios puentes",
+      "notice_numbers": [
+        "800893603",
+        "800893913",
+        "800894016",
+        "800894078"
+      ],
+      "confidence": "media",
+      "rationale": "Se repite la referencia al aparejo de 15 tn sin movimiento en P-MG12, P-MG13 y P-MG21. Los textos son cercanos en función y síntoma, pero las causas documentadas no son iguales: falla de componente electrónico, corte de energía y falla de elemento de maniobra. También las intervenciones varían entre reset, reposición de variador y normalización de falla en variador. La comparación sugiere un patrón funcional, no una misma causa confirmada.",
+      "human_review": "Verificar si los equipos comparten arquitectura de mando, variadores o criterios de diagnóstico antes de asociar estas fallas como equivalentes."
+    }
+  ]
+}

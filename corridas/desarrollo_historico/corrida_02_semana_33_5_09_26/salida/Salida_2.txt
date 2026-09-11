@@ -1,0 +1,22 @@
+Completé el análisis de disponibilidad de la semana 33, exclusivamente para el período 10/08/2026–16/08/2026.
+Resultados consolidados
+Nivel	Disponibilidad
+Sala 1	98,44%
+Sala 2	94,72%
+Sala 3	86,55%
+Sala 4	97,81%
+Serie A	96,66%
+Serie B	92,11%
+Total	94,40%
+
+
+Principales resultados:
+124,00 h de mantenimiento solicitado.
+106,03 h de parada en 40 detenciones.
+P‑MG31 fue el equipo más afectado: 49,50 h de parada y 68,27% de disponibilidad.
+Repeticiones confirmadas:P‑MG32: “Pérdida de aire”, 2 eventos y 2,00 h.
+P‑MG33: “Sin traslación”, 2 eventos y 1,31 h.
+
+Los 40 avisos con parada se vincularon satisfactoriamente con notificaciones por orden y equipo.
+No se detectaron duraciones inválidas, avisos duplicados, superposiciones de parada ni coincidencias entre parada y mantenimiento programado.
+No se incluyeron proyecciones ni información de semanas anteriores.

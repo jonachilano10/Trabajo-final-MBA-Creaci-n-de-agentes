@@ -1,0 +1,9 @@
+Actualicé el informe de la semana 33 según el nuevo formato solicitado.
+Ahora incluye:
+Dos pestañas: informe semanal e histórico/recurrencias.
+Cinco filtros: semana, puente, serie, sala y categoría de falla.
+Gráfico interactivo de disponibilidad por puente.
+Tabla histórica con los valores calculados y almacenados.
+Análisis de recurrencias con descripciones originales, causas, intervenciones, confianza y necesidad de revisión humana.
+Declaración explícita de que solo se analizó una semana y no existe historial anterior para establecer comparaciones o tendencias.
+Los cálculos originales permanecen sin modificaciones: disponibilidad global de 94,40%.

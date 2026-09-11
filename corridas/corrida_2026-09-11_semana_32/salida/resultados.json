@@ -1,0 +1,1606 @@
+{
+  "period": {
+    "year": 2026,
+    "week": 32,
+    "start_date": "2026-08-03",
+    "end_date": "2026-08-09"
+  },
+  "sources": {
+    "notices": {
+      "name": "32-Avisos semana 32.XLSX",
+      "sha256": "0cbf4c4a5a55db52a9a76c4f76cd546759c3e0263f83cbf6348c959df6635498"
+    },
+    "notifications": {
+      "name": "32-Notificaciones semana 32.XLSX",
+      "sha256": "f4549efc0dba9273cf1c0ad731bfc3d381ba0f2755109fd0d5fc84c53aabb997"
+    },
+    "maintenance": {
+      "name": "32-TAREAS EN SALA SEMANA 32 (1).xlsx",
+      "sha256": "4d0ca9faccabe8eb5f847253be26e6edfe4bbcf1f6114c91c90520e2b66817dd"
+    }
+  },
+  "source_counts": {
+    "notices": 94,
+    "notifications": 195,
+    "maintenance": 28
+  },
+  "excluded": {
+    "notices": {
+      "P-BAA3": 2,
+      "P-C155": 1,
+      "P-C436": 1,
+      "P-C352": 1,
+      "P-C115": 1,
+      "P-C235": 2,
+      "P-C455": 1,
+      "P-PC06": 1,
+      "P-PC04": 3,
+      "P-C217": 1,
+      "P-C443": 1,
+      "P-BA05": 1,
+      "P-IL02": 3,
+      "P-C331": 2,
+      "P-C338": 1,
+      "P-C394": 1,
+      "P-C387": 1,
+      "P-C362": 1,
+      "P-C353": 1,
+      "P-C226": 1,
+      "P-C256": 1,
+      "P-C434": 1,
+      "P-C225": 1,
+      "P-C101": 1,
+      "P-C333": 1,
+      "P-C447": 1,
+      "P-C218": 1,
+      "P-C236": 1,
+      "P-C467": 1,
+      "P-C249": 1,
+      "P-C141": 1,
+      "P-BAA6": 3,
+      "P-C220": 1,
+      "P-BAA8": 1
+    },
+    "notifications": {
+      "P-BAA3": 6,
+      "P-C155": 2,
+      "P-C436": 2,
+      "P-C352": 2,
+      "P-C115": 2,
+      "P-C235": 4,
+      "P-C455": 2,
+      "P-C443": 2,
+      "P-C217": 2,
+      "P-PC06": 2,
+      "P-PC04": 6,
+      "P-IL02": 6,
+      "P-C338": 2,
+      "P-C331": 4,
+      "P-C362": 2,
+      "P-C387": 2,
+      "P-C394": 2,
+      "P-C434": 2,
+      "P-BA05": 2,
+      "P-C353": 2,
+      "P-C226": 2,
+      "P-C256": 2,
+      "P-C225": 3,
+      "P-C447": 2,
+      "P-C218": 2,
+      "P-C101": 2,
+      "P-C333": 2,
+      "P-C236": 2,
+      "P-C467": 2,
+      "P-BAA6": 6,
+      "P-C249": 2,
+      "P-C141": 2,
+      "P-C220": 2,
+      "P-BAA8": 2
+    },
+    "maintenance": {
+      "SALA 4 1°": 2,
+      "ZONA MANT.": 1,
+      "SALA 2 1°": 1,
+      "SALA 2 3°": 1
+    }
+  },
+  "equipment": [
+    {
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "calendar_hours": 168.0,
+      "maintenance_hours": 12.0,
+      "available_hours": 156.0,
+      "stop_hours": 3.46,
+      "stoppage_count": 3,
+      "notice_count": 5,
+      "availability": 97.78205128205127,
+      "failure_descriptions": [
+        "NO BAJA AP 15Tn",
+        "No cierra almeja",
+        "Palanca de control remoto suelta"
+      ]
+    },
+    {
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "calendar_hours": 168.0,
+      "maintenance_hours": 0,
+      "available_hours": 168.0,
+      "stop_hours": 6.56,
+      "stoppage_count": 5,
+      "notice_count": 7,
+      "availability": 96.09523809523809,
+      "failure_descriptions": [
+        "SE APAGA CONSTANTE",
+        "No giraran herramientas Almeja / Picador",
+        "Se apaga constantemente.-",
+        "No prende compresor.-",
+        "No baja aparejo 15 TN"
+      ]
+    },
+    {
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "calendar_hours": 168.0,
+      "maintenance_hours": 12.0,
+      "available_hours": 156.0,
+      "stop_hours": 6.3100000000000005,
+      "stoppage_count": 5,
+      "notice_count": 6,
+      "availability": 95.9551282051282,
+      "failure_descriptions": [
+        "MANIBELA TRASLACION SUELTA",
+        "No baja el aparejo de 15 TN",
+        "mg 13 sin traslación de carro",
+        "controlar giro ECL",
+        "No baja aparejo 15 TN"
+      ]
+    },
+    {
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "calendar_hours": 168.0,
+      "maintenance_hours": 32.0,
+      "available_hours": 136.0,
+      "stop_hours": 0,
+      "stoppage_count": 0,
+      "notice_count": 2,
+      "availability": 100.0,
+      "failure_descriptions": []
+    },
+    {
+      "equipment": "P-MG22",
+      "room": 2,
+      "series": "A",
+      "calendar_hours": 168.0,
+      "maintenance_hours": 8.0,
+      "available_hours": 160.0,
+      "stop_hours": 1.0,
+      "stoppage_count": 1,
+      "notice_count": 3,
+      "availability": 99.375,
+      "failure_descriptions": [
+        "No abre alicate"
+      ]
+    },
+    {
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "calendar_hours": 168.0,
+      "maintenance_hours": 4.0,
+      "available_hours": 164.0,
+      "stop_hours": 2.0,
+      "stoppage_count": 2,
+      "notice_count": 2,
+      "availability": 98.78048780487805,
+      "failure_descriptions": [
+        "Sin traslacion norte - sur",
+        "Sin traslacion n/s.-"
+      ]
+    },
+    {
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "calendar_hours": 168.0,
+      "maintenance_hours": 16.0,
+      "available_hours": 152.0,
+      "stop_hours": 5.12,
+      "stoppage_count": 4,
+      "notice_count": 5,
+      "availability": 96.63157894736841,
+      "failure_descriptions": [
+        "NO GIRA ALMEJA PICADOR",
+        "No tiene fuerza el picador",
+        "no gira almeja.-",
+        "Almeja sin fuerza"
+      ]
+    },
+    {
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "calendar_hours": 168.0,
+      "maintenance_hours": 20.0,
+      "available_hours": 148.0,
+      "stop_hours": 1.9500000000000002,
+      "stoppage_count": 2,
+      "notice_count": 3,
+      "availability": 98.68243243243245,
+      "failure_descriptions": [
+        "Controlar fuerza de ECL",
+        "No gira ECL"
+      ]
+    },
+    {
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "calendar_hours": 168.0,
+      "maintenance_hours": 0,
+      "available_hours": 168.0,
+      "stop_hours": 6.13,
+      "stoppage_count": 2,
+      "notice_count": 2,
+      "availability": 96.35119047619047,
+      "failure_descriptions": [
+        "No abre alicate.-",
+        "no sube destornillador"
+      ]
+    },
+    {
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "calendar_hours": 168.0,
+      "maintenance_hours": 32.0,
+      "available_hours": 136.0,
+      "stop_hours": 2.16,
+      "stoppage_count": 2,
+      "notice_count": 3,
+      "availability": 98.41176470588235,
+      "failure_descriptions": [
+        "DESTORNILLADOR NO BAJA",
+        "Error pesaje balanza.-"
+      ]
+    },
+    {
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "calendar_hours": 168.0,
+      "maintenance_hours": 8.0,
+      "available_hours": 160.0,
+      "stop_hours": 5.42,
+      "stoppage_count": 3,
+      "notice_count": 4,
+      "availability": 96.61250000000001,
+      "failure_descriptions": [
+        "Almeja subio torcida",
+        "Pinza torcida.-",
+        "controlar ECL (queda girando)"
+      ]
+    },
+    {
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "calendar_hours": 168.0,
+      "maintenance_hours": 12.0,
+      "available_hours": 156.0,
+      "stop_hours": 4.08,
+      "stoppage_count": 3,
+      "notice_count": 3,
+      "availability": 97.38461538461539,
+      "failure_descriptions": [
+        "Problemas almeja.-",
+        "Picador sin fuerza",
+        "Picador sin fuerza"
+      ]
+    }
+  ],
+  "rooms": [
+    {
+      "name": "Sala 1",
+      "calendar_hours": 504.0,
+      "maintenance_hours": 24.0,
+      "available_hours": 480.0,
+      "stop_hours": 16.33,
+      "stoppage_count": 13,
+      "availability": 96.59791666666668,
+      "uncalculable_equipment": []
+    },
+    {
+      "name": "Sala 2",
+      "calendar_hours": 504.0,
+      "maintenance_hours": 44.0,
+      "available_hours": 460.0,
+      "stop_hours": 3.0,
+      "stoppage_count": 3,
+      "availability": 99.34782608695653,
+      "uncalculable_equipment": []
+    },
+    {
+      "name": "Sala 3",
+      "calendar_hours": 504.0,
+      "maintenance_hours": 36.0,
+      "available_hours": 468.0,
+      "stop_hours": 13.2,
+      "stoppage_count": 8,
+      "availability": 97.17948717948718,
+      "uncalculable_equipment": []
+    },
+    {
+      "name": "Sala 4",
+      "calendar_hours": 504.0,
+      "maintenance_hours": 52.0,
+      "available_hours": 452.0,
+      "stop_hours": 11.66,
+      "stoppage_count": 8,
+      "availability": 97.42035398230088,
+      "uncalculable_equipment": []
+    }
+  ],
+  "series": [
+    {
+      "name": "Serie A",
+      "calendar_hours": 1008.0,
+      "maintenance_hours": 68.0,
+      "available_hours": 940.0,
+      "stop_hours": 19.33,
+      "stoppage_count": 16,
+      "availability": 97.9436170212766,
+      "uncalculable_equipment": []
+    },
+    {
+      "name": "Serie B",
+      "calendar_hours": 1008.0,
+      "maintenance_hours": 88.0,
+      "available_hours": 920.0,
+      "stop_hours": 24.86,
+      "stoppage_count": 16,
+      "availability": 97.29782608695652,
+      "uncalculable_equipment": []
+    }
+  ],
+  "global": {
+    "name": "Global",
+    "calendar_hours": 2016.0,
+    "maintenance_hours": 156.0,
+    "available_hours": 1860.0,
+    "stop_hours": 44.19,
+    "stoppage_count": 32,
+    "availability": 97.6241935483871,
+    "uncalculable_equipment": []
+  },
+  "failures": [
+    {
+      "source_row": 2,
+      "notice_number": "800897198",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "Almeja subio torcida",
+      "description_normalized": "almeja subio torcida",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.03,
+      "valid_stop": true,
+      "documented_cause": "Falla Operativa",
+      "order_number": "11300622",
+      "started_at": "2026-08-02T23:00:00",
+      "ended_at": "2026-08-03T00:02:00",
+      "interventions": [
+        "Falla operativa-se repone falla de time"
+      ],
+      "linked_notification": true,
+      "category": "Herramientas, almeja y cierre"
+    },
+    {
+      "source_row": 3,
+      "notice_number": "800897231",
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "description": "Consignar - Limpieza",
+      "description_normalized": "consignar - limpieza",
+      "extended_text": "",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "Alimentación de Energía",
+      "order_number": "11300626",
+      "started_at": "2026-08-03T04:54:01",
+      "ended_at": null,
+      "interventions": [
+        "consigna tarea de infa."
+      ],
+      "linked_notification": true,
+      "category": "Otra / revisión humana"
+    },
+    {
+      "source_row": 4,
+      "notice_number": "800897247",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "Pinza torcida.-",
+      "description_normalized": "pinza torcida.-",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 2.0,
+      "valid_stop": true,
+      "documented_cause": "Accidente",
+      "order_number": "11300751",
+      "started_at": "2026-08-03T07:00:04",
+      "ended_at": "2026-08-03T09:00:22",
+      "interventions": [
+        "Se realiza cambio de pinza atrapa morcet"
+      ],
+      "linked_notification": true,
+      "category": "Otra / revisión humana"
+    },
+    {
+      "source_row": 12,
+      "notice_number": "800897424",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "SE APAGA CONSTANTE",
+      "description_normalized": "se apaga constante",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.13,
+      "valid_stop": true,
+      "documented_cause": "Corte de Energía",
+      "order_number": "11300851",
+      "started_at": "2026-08-03T19:22:09",
+      "ended_at": "2026-08-03T20:30:00",
+      "interventions": [
+        "se repone atv de traslacion de carro"
+      ],
+      "linked_notification": true,
+      "category": "Otra / revisión humana"
+    },
+    {
+      "source_row": 13,
+      "notice_number": "800897425",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "MANIBELA TRASLACION SUELTA",
+      "description_normalized": "manibela traslacion suelta",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.12,
+      "valid_stop": true,
+      "documented_cause": "Falla Elemento de Maniobra",
+      "order_number": "11300849",
+      "started_at": "2026-08-03T19:22:37",
+      "ended_at": "2026-08-03T20:30:00",
+      "interventions": [
+        "SE REPARA CONTROL, SE DEJA OPERATIVO"
+      ],
+      "linked_notification": true,
+      "category": "Traslación"
+    },
+    {
+      "source_row": 14,
+      "notice_number": "800897426",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "DESTORNILLADOR NO GIRA",
+      "description_normalized": "destornillador no gira",
+      "extended_text": "",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "Alimentación de Energía",
+      "order_number": "11300853",
+      "started_at": "2026-08-03T19:23:08",
+      "ended_at": null,
+      "interventions": [
+        "se ajusta manipulador"
+      ],
+      "linked_notification": true,
+      "category": "Giro y percha"
+    },
+    {
+      "source_row": 15,
+      "notice_number": "800897427",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "DESTORNILLADOR NO BAJA",
+      "description_normalized": "destornillador no baja",
+      "extended_text": "Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada S",
+      "has_stop": true,
+      "stop_hours": 1.11,
+      "valid_stop": true,
+      "documented_cause": "Falla Elemento de Maniobra",
+      "order_number": "11300852",
+      "started_at": "2026-08-03T19:23:41",
+      "ended_at": "2026-08-03T20:30:00",
+      "interventions": [
+        "se ajusta manipulador"
+      ],
+      "linked_notification": true,
+      "category": "Izaje y aparejo"
+    },
+    {
+      "source_row": 16,
+      "notice_number": "800897453",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "No baja el aparejo de 15 TN",
+      "description_normalized": "no baja el aparejo de 15 tn",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.03,
+      "valid_stop": true,
+      "documented_cause": "Falso Contacto",
+      "order_number": "11300970",
+      "started_at": "2026-08-03T23:00:00",
+      "ended_at": "2026-08-04T00:02:00",
+      "interventions": [
+        "se repone falla no rearmable atvMalacate"
+      ],
+      "linked_notification": true,
+      "category": "Izaje y aparejo"
+    },
+    {
+      "source_row": 18,
+      "notice_number": "800897461",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "Sin traslacion norte - sur",
+      "description_normalized": "sin traslacion norte - sur",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.0,
+      "valid_stop": true,
+      "documented_cause": "Falso Contacto",
+      "order_number": "11300972",
+      "started_at": "2026-08-04T03:00:00",
+      "ended_at": "2026-08-04T04:00:00",
+      "interventions": [
+        "se repone falla no rearmable atv Carro"
+      ],
+      "linked_notification": true,
+      "category": "Traslación"
+    },
+    {
+      "source_row": 20,
+      "notice_number": "800897488",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "Problemas almeja.-",
+      "description_normalized": "problemas almeja.-",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.08,
+      "valid_stop": true,
+      "documented_cause": "Mal Uso o Uso Inadecuado",
+      "order_number": "11301064",
+      "started_at": "2026-08-04T06:26:02",
+      "ended_at": "2026-08-04T07:30:54",
+      "interventions": [
+        "Se encuentra almeja con mucho baño de al"
+      ],
+      "linked_notification": true,
+      "category": "Herramientas, almeja y cierre"
+    },
+    {
+      "source_row": 30,
+      "notice_number": "800897619",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "NO BAJA AP 15Tn",
+      "description_normalized": "no baja ap 15tn",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 0.93,
+      "valid_stop": true,
+      "documented_cause": "Alimentación de Energía",
+      "order_number": "11301133",
+      "started_at": "2026-08-04T20:34:33",
+      "ended_at": "2026-08-04T21:30:30",
+      "interventions": [
+        "se repone atv malacate"
+      ],
+      "linked_notification": true,
+      "category": "Izaje y aparejo"
+    },
+    {
+      "source_row": 31,
+      "notice_number": "800897638",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "No giraran herramientas Almeja / Picador",
+      "description_normalized": "no giraran herramientas almeja / picador",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.43,
+      "valid_stop": true,
+      "documented_cause": "Falla Componente Electrónico",
+      "order_number": "11301293",
+      "started_at": "2026-08-04T22:33:20",
+      "ended_at": "2026-08-04T23:59:00",
+      "interventions": [
+        "Reset de ATV.",
+        "OK."
+      ],
+      "linked_notification": true,
+      "category": "Giro y percha"
+    },
+    {
+      "source_row": 32,
+      "notice_number": "800897650",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "Falla giro de herramientas",
+      "description_normalized": "falla giro de herramientas",
+      "extended_text": "aviso duplicado se resuelve en aviso nº800897638 aviso duplicado se resuelve en aviso nº800897638 aviso duplicado se resuelve en av",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "",
+      "order_number": "11301293",
+      "started_at": "2026-08-04T22:56:21",
+      "ended_at": null,
+      "interventions": [
+        "Reset de ATV.",
+        "OK."
+      ],
+      "linked_notification": true,
+      "category": "Giro y percha"
+    },
+    {
+      "source_row": 35,
+      "notice_number": "800897738",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "Sin traslacion n/s.-",
+      "description_normalized": "sin traslacion n/s.-",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.0,
+      "valid_stop": true,
+      "documented_cause": "Circuito Abierto-Sin Continuidad",
+      "order_number": "11301421",
+      "started_at": "2026-08-05T10:00:00",
+      "ended_at": "2026-08-05T11:00:00",
+      "interventions": [
+        "SE REPONE FALLA"
+      ],
+      "linked_notification": true,
+      "category": "Traslación"
+    },
+    {
+      "source_row": 36,
+      "notice_number": "800897739",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "Se apaga constantemente.-",
+      "description_normalized": "se apaga constantemente.-",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 2.0,
+      "valid_stop": true,
+      "documented_cause": "Falso Contacto",
+      "order_number": "11301416",
+      "started_at": "2026-08-05T08:00:00",
+      "ended_at": "2026-08-05T10:00:00",
+      "interventions": [
+        "SE ACUDE AL PUENTE POR FALLAS VARIAS AL"
+      ],
+      "linked_notification": true,
+      "category": "Otra / revisión humana"
+    },
+    {
+      "source_row": 47,
+      "notice_number": "800897871",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "NO GIRA ALMEJA PICADOR",
+      "description_normalized": "no gira almeja picador",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.11,
+      "valid_stop": true,
+      "documented_cause": "Corte de Energía",
+      "order_number": "11301483",
+      "started_at": "2026-08-05T20:13:35",
+      "ended_at": "2026-08-05T21:20:00",
+      "interventions": [
+        "se repone atv de giro"
+      ],
+      "linked_notification": true,
+      "category": "Giro y percha"
+    },
+    {
+      "source_row": 48,
+      "notice_number": "800897896",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "No tiene fuerza el picador",
+      "description_normalized": "no tiene fuerza el picador",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 2.32,
+      "valid_stop": true,
+      "documented_cause": "Accidente",
+      "order_number": "11301580",
+      "started_at": "2026-08-06T00:40:41",
+      "ended_at": "2026-08-06T03:00:00",
+      "interventions": [
+        "Se encuentra manguera de alimentación de",
+        "Ok."
+      ],
+      "linked_notification": true,
+      "category": "Herramientas, almeja y cierre"
+    },
+    {
+      "source_row": 49,
+      "notice_number": "800897905",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "No funciona picador",
+      "description_normalized": "no funciona picador",
+      "extended_text": "",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "Sin Falla",
+      "order_number": "11301582",
+      "started_at": "2026-08-06T04:11:01",
+      "ended_at": "2026-08-06T05:00:00",
+      "interventions": [
+        "Se controla. No falla."
+      ],
+      "linked_notification": true,
+      "category": "Herramientas, almeja y cierre"
+    },
+    {
+      "source_row": 50,
+      "notice_number": "800897906",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "mg 13 sin traslación de carro",
+      "description_normalized": "mg 13 sin traslacion de carro",
+      "extended_text": "Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada S",
+      "has_stop": true,
+      "stop_hours": 0.8,
+      "valid_stop": true,
+      "documented_cause": "Falla Componente Electrónico",
+      "order_number": "11301583",
+      "started_at": "2026-08-06T04:11:54",
+      "ended_at": "2026-08-06T05:00:00",
+      "interventions": [
+        "Reset de ATV: condensador precarga"
+      ],
+      "linked_notification": true,
+      "category": "Traslación"
+    },
+    {
+      "source_row": 51,
+      "notice_number": "800897923",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "controlar ECL (queda girando)",
+      "description_normalized": "controlar ecl (queda girando)",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 2.39,
+      "valid_stop": true,
+      "documented_cause": "Ajuste Deficiente",
+      "order_number": "11301649",
+      "started_at": "2026-08-06T05:06:54",
+      "ended_at": "2026-08-06T07:30:08",
+      "interventions": [
+        "se realiza cambio de electrovalvula"
+      ],
+      "linked_notification": true,
+      "category": "Giro y percha"
+    },
+    {
+      "source_row": 54,
+      "notice_number": "800897951",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "No abre alicate.-",
+      "description_normalized": "no abre alicate.-",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.08,
+      "valid_stop": true,
+      "documented_cause": "Alimentación de Energía",
+      "order_number": "11301650",
+      "started_at": "2026-08-06T07:55:58",
+      "ended_at": "2026-08-06T09:00:48",
+      "interventions": [
+        "falla en ficha de electrovalvula"
+      ],
+      "linked_notification": true,
+      "category": "Herramientas, almeja y cierre"
+    },
+    {
+      "source_row": 55,
+      "notice_number": "800897952",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "Consignar.-",
+      "description_normalized": "consignar.-",
+      "extended_text": "",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "Corte de Energía",
+      "order_number": "11301651",
+      "started_at": "2026-08-06T07:57:38",
+      "ended_at": null,
+      "interventions": [
+        "se consigna y se desconsigna"
+      ],
+      "linked_notification": true,
+      "category": "Otra / revisión humana"
+    },
+    {
+      "source_row": 56,
+      "notice_number": "800898019",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "No prende compresor.-",
+      "description_normalized": "no prende compresor.-",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.0,
+      "valid_stop": true,
+      "documented_cause": "Desconectado",
+      "order_number": "11301658",
+      "started_at": "2026-08-06T10:00:00",
+      "ended_at": "2026-08-06T11:00:00",
+      "interventions": [
+        "SE REPONE RELE Y SE MIDEN FASES"
+      ],
+      "linked_notification": true,
+      "category": "Neumática, aire y compresor"
+    },
+    {
+      "source_row": 61,
+      "notice_number": "800898118",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "No cierra la almeja",
+      "description_normalized": "no cierra la almeja",
+      "extended_text": "",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "Sin Falla",
+      "order_number": "11301845",
+      "started_at": "2026-08-06T23:13:30",
+      "ended_at": null,
+      "interventions": [
+        "Se controla. No falla."
+      ],
+      "linked_notification": true,
+      "category": "Herramientas, almeja y cierre"
+    },
+    {
+      "source_row": 62,
+      "notice_number": "800898119",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "Controlar fuerza de ECL",
+      "description_normalized": "controlar fuerza de ecl",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 0.62,
+      "valid_stop": true,
+      "documented_cause": "Brida-Empaquetadura Floja",
+      "order_number": "11301846",
+      "started_at": "2026-08-06T23:22:32",
+      "ended_at": null,
+      "interventions": [
+        "Se controla máximo peso de AP4Tn con pes",
+        "Ok."
+      ],
+      "linked_notification": true,
+      "category": "Mando y control"
+    },
+    {
+      "source_row": 64,
+      "notice_number": "800898127",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "No cierra almeja",
+      "description_normalized": "no cierra almeja",
+      "extended_text": "Puente queda con la falla a fin de turno noche, al inicio del turno mañana se trabaja sobre puente en proyecto de testeras que ya e",
+      "has_stop": true,
+      "stop_hours": 1.53,
+      "valid_stop": true,
+      "documented_cause": "Falla Componente Electrónico",
+      "order_number": "11301849",
+      "started_at": "2026-08-07T04:28:02",
+      "ended_at": "2026-08-07T06:00:00",
+      "interventions": [
+        "Se reemplaza EV de apertura cierre de al",
+        "Ok.",
+        "se revisa cableado y arrollacable para d"
+      ],
+      "linked_notification": true,
+      "category": "Herramientas, almeja y cierre"
+    },
+    {
+      "source_row": 65,
+      "notice_number": "800898128",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "Consignar para limpieza",
+      "description_normalized": "consignar para limpieza",
+      "extended_text": "",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "Sin Falla",
+      "order_number": "11301848",
+      "started_at": "2026-08-07T04:28:47",
+      "ended_at": "2026-08-07T05:30:00",
+      "interventions": [
+        "Se consign y desconsign p/tarea program"
+      ],
+      "linked_notification": true,
+      "category": "Otra / revisión humana"
+    },
+    {
+      "source_row": 66,
+      "notice_number": "800898152",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "Consignar.-",
+      "description_normalized": "consignar.-",
+      "extended_text": "",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "Corte de Energía",
+      "order_number": "11301948",
+      "started_at": "2026-08-07T07:24:46",
+      "ended_at": null,
+      "interventions": [
+        "se consigna y se desconsigna"
+      ],
+      "linked_notification": true,
+      "category": "Otra / revisión humana"
+    },
+    {
+      "source_row": 68,
+      "notice_number": "800898188",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "no gira almeja.-",
+      "description_normalized": "no gira almeja.-",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.04,
+      "valid_stop": true,
+      "documented_cause": "Falla Componente Electrónico",
+      "order_number": "11301951",
+      "started_at": "2026-08-07T09:03:22",
+      "ended_at": "2026-08-07T10:06:00",
+      "interventions": [
+        "se repone variador"
+      ],
+      "linked_notification": true,
+      "category": "Giro y percha"
+    },
+    {
+      "source_row": 69,
+      "notice_number": "800898189",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "Error pesaje balanza.-",
+      "description_normalized": "error pesaje balanza.-",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.05,
+      "valid_stop": true,
+      "documented_cause": "Falla Componente Electrónico",
+      "order_number": "11301953",
+      "started_at": "2026-08-07T09:03:56",
+      "ended_at": "2026-08-07T10:06:44",
+      "interventions": [
+        "se realiza limpieza de celda de carga"
+      ],
+      "linked_notification": true,
+      "category": "Otra / revisión humana"
+    },
+    {
+      "source_row": 71,
+      "notice_number": "800898292",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "Palanca de control remoto suelta",
+      "description_normalized": "palanca de control remoto suelta",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.0,
+      "valid_stop": true,
+      "documented_cause": "Falla Operativa",
+      "order_number": "11301978",
+      "started_at": "2026-08-07T14:00:00",
+      "ended_at": "2026-08-07T15:00:00",
+      "interventions": [
+        "se repara control remoto"
+      ],
+      "linked_notification": true,
+      "category": "Mando y control"
+    },
+    {
+      "source_row": 72,
+      "notice_number": "800898293",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "Consignar por A/A",
+      "description_normalized": "consignar por a/a",
+      "extended_text": "",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "Alimentación de Energía",
+      "order_number": "11301992",
+      "started_at": "2026-08-07T15:40:52",
+      "ended_at": null,
+      "interventions": [
+        "consigna desconsigna tarea de infa"
+      ],
+      "linked_notification": true,
+      "category": "Otra / revisión humana"
+    },
+    {
+      "source_row": 73,
+      "notice_number": "800898314",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "no sube destornillador",
+      "description_normalized": "no sube destornillador",
+      "extended_text": "MG 33 no sube destornillador, continuar - control remoto en TD04 se da prioridad a consigna de cuba 249, cuba 141 y baa 6 para camb",
+      "has_stop": true,
+      "stop_hours": 5.05,
+      "valid_stop": true,
+      "documented_cause": "Brida-Empaquetadura Floja",
+      "order_number": "11302124",
+      "started_at": "2026-08-07T19:56:45",
+      "ended_at": "2026-08-08T01:00:00",
+      "interventions": [
+        "Se reemplaza destornillador ya que no su",
+        "Ok."
+      ],
+      "linked_notification": true,
+      "category": "Izaje y aparejo"
+    },
+    {
+      "source_row": 82,
+      "notice_number": "800898485",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "Picador sin fuerza",
+      "description_normalized": "picador sin fuerza",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 2.0,
+      "valid_stop": true,
+      "documented_cause": "Desgaste",
+      "order_number": "11302236",
+      "started_at": "2026-08-08T14:00:00",
+      "ended_at": "2026-08-08T16:00:00",
+      "interventions": [
+        "se busca repuesto en almacén se arma y s"
+      ],
+      "linked_notification": true,
+      "category": "Neumática, aire y compresor"
+    },
+    {
+      "source_row": 84,
+      "notice_number": "800898508",
+      "equipment": "P-MG22",
+      "room": 2,
+      "series": "A",
+      "description": "No abre alicate",
+      "description_normalized": "no abre alicate",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.0,
+      "valid_stop": true,
+      "documented_cause": "Fatiga Material",
+      "order_number": "11302250",
+      "started_at": "2026-08-08T20:21:10",
+      "ended_at": "2026-08-08T21:21:13",
+      "interventions": [
+        "se cambia alicate, queda ok.-"
+      ],
+      "linked_notification": true,
+      "category": "Herramientas, almeja y cierre"
+    },
+    {
+      "source_row": 85,
+      "notice_number": "800898525",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "controlar giro ECL",
+      "description_normalized": "controlar giro ecl",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 2.35,
+      "valid_stop": true,
+      "documented_cause": "Falta Aceite",
+      "order_number": "11302288",
+      "started_at": "2026-08-09T00:38:56",
+      "ended_at": "2026-08-09T03:00:00",
+      "interventions": [
+        "Se regula bajada de picador.",
+        "Ok."
+      ],
+      "linked_notification": true,
+      "category": "Giro y percha"
+    },
+    {
+      "source_row": 86,
+      "notice_number": "800898537",
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "description": "No abre el alicate",
+      "description_normalized": "no abre el alicate",
+      "extended_text": "",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "Sin Falla",
+      "order_number": "11302295",
+      "started_at": "2026-08-09T03:49:40",
+      "ended_at": "2026-08-09T04:20:00",
+      "interventions": [
+        "Se controla. No falla."
+      ],
+      "linked_notification": true,
+      "category": "Herramientas, almeja y cierre"
+    },
+    {
+      "source_row": 87,
+      "notice_number": "800898538",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "No gira ECL",
+      "description_normalized": "no gira ecl",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.33,
+      "valid_stop": true,
+      "documented_cause": "Brida-Empaquetadura Floja",
+      "order_number": "11302296",
+      "started_at": "2026-08-09T04:00:00",
+      "ended_at": "2026-08-09T05:20:00",
+      "interventions": [
+        "Se encuentra motor de giro de ECL suelto",
+        "Ok."
+      ],
+      "linked_notification": true,
+      "category": "Giro y percha"
+    },
+    {
+      "source_row": 88,
+      "notice_number": "800898599",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "Picador sin fuerza",
+      "description_normalized": "picador sin fuerza",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.0,
+      "valid_stop": true,
+      "documented_cause": "Desgaste",
+      "order_number": "11302418",
+      "started_at": "2026-08-09T14:00:00",
+      "ended_at": "2026-08-09T15:00:00",
+      "interventions": [
+        "Válvula de seguridad de cabezal de compr"
+      ],
+      "linked_notification": true,
+      "category": "Neumática, aire y compresor"
+    },
+    {
+      "source_row": 89,
+      "notice_number": "800898607",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "Destornillador sin fuerza.",
+      "description_normalized": "destornillador sin fuerza.",
+      "extended_text": "Sin fuerza al apretar morcetos (muchas varillas flojas) 09.08.2026 21:29:27 UTC-3 (A87865) se controla con pesa patron- no presenta",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "Sin Falla",
+      "order_number": "11302432",
+      "started_at": "2026-08-09T16:53:24",
+      "ended_at": null,
+      "interventions": [
+        "se controla con pesa patrón- no presenta"
+      ],
+      "linked_notification": true,
+      "category": "Neumática, aire y compresor"
+    },
+    {
+      "source_row": 90,
+      "notice_number": "800898608",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "No baja aparejo 15 TN",
+      "description_normalized": "no baja aparejo 15 tn",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.0,
+      "valid_stop": true,
+      "documented_cause": "Falso Contacto",
+      "order_number": "11302429",
+      "started_at": "2026-08-09T17:44:05",
+      "ended_at": "2026-08-09T18:44:04",
+      "interventions": [
+        "Se repone falso contacto en contactor Ap"
+      ],
+      "linked_notification": true,
+      "category": "Izaje y aparejo"
+    },
+    {
+      "source_row": 91,
+      "notice_number": "800898609",
+      "equipment": "P-MG22",
+      "room": 2,
+      "series": "A",
+      "description": "Cambiar resorte de pinza",
+      "description_normalized": "cambiar resorte de pinza",
+      "extended_text": "",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "Sin Falla",
+      "order_number": "11302434",
+      "started_at": "2026-08-09T17:55:09",
+      "ended_at": null,
+      "interventions": [
+        "Se controla sin falla operario continua"
+      ],
+      "linked_notification": true,
+      "category": "Otra / revisión humana"
+    },
+    {
+      "source_row": 92,
+      "notice_number": "800898620",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "No baja aparejo 15 TN",
+      "description_normalized": "no baja aparejo 15 tn",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 1.01,
+      "valid_stop": true,
+      "documented_cause": "Falla de Proceso",
+      "order_number": "11302431",
+      "started_at": "2026-08-09T18:24:27",
+      "ended_at": "2026-08-09T19:24:46",
+      "interventions": [
+        "se repone falla no rearmable ATV malacat"
+      ],
+      "linked_notification": true,
+      "category": "Izaje y aparejo"
+    },
+    {
+      "source_row": 94,
+      "notice_number": "800898626",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "Almeja sin fuerza",
+      "description_normalized": "almeja sin fuerza",
+      "extended_text": "",
+      "has_stop": true,
+      "stop_hours": 0.65,
+      "valid_stop": true,
+      "documented_cause": "Vibración Anormal",
+      "order_number": "11302461",
+      "started_at": "2026-08-09T22:51:12",
+      "ended_at": "2026-08-09T23:30:00",
+      "interventions": [],
+      "linked_notification": false,
+      "category": "Neumática, aire y compresor"
+    },
+    {
+      "source_row": 95,
+      "notice_number": "800898627",
+      "equipment": "P-MG22",
+      "room": 2,
+      "series": "A",
+      "description": "no prende el compresor",
+      "description_normalized": "no prende el compresor",
+      "extended_text": "",
+      "has_stop": false,
+      "stop_hours": 0.0,
+      "valid_stop": true,
+      "documented_cause": "Sin Falla",
+      "order_number": "11302462",
+      "started_at": "2026-08-09T22:52:02",
+      "ended_at": "2026-08-09T23:30:00",
+      "interventions": [],
+      "linked_notification": false,
+      "category": "Neumática, aire y compresor"
+    }
+  ],
+  "maintenance_events": [
+    {
+      "source_row": 3,
+      "equipment": "P-MG21",
+      "task": "LIMPIEZA DE PUENTE GRUA MG21",
+      "hours": 4.0,
+      "started_at": "2026-08-03T02:00:00",
+      "ended_at": "2026-08-03T06:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 4,
+      "equipment": "P-MG21",
+      "task": "PREV. ELEC. MG21",
+      "hours": 8.0,
+      "started_at": "2026-08-03T06:00:00",
+      "ended_at": "2026-08-03T14:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 5,
+      "equipment": "P-MG23",
+      "task": "INSP. MEC. MG23",
+      "hours": 4.0,
+      "started_at": "2026-08-03T14:00:00",
+      "ended_at": "2026-08-03T18:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 7,
+      "equipment": "P-MG32",
+      "task": "TAREAS MG32 Cambiar o mejorar aislacion",
+      "hours": 8.0,
+      "started_at": "2026-08-03T14:00:00",
+      "ended_at": "2026-08-03T22:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 8,
+      "equipment": "P-MG21",
+      "task": "LIMPIEZA DE PUENTE GRUA MG21",
+      "hours": 4.0,
+      "started_at": "2026-08-04T02:00:00",
+      "ended_at": "2026-08-04T06:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 9,
+      "equipment": "P-MG31",
+      "task": "TAREAS MG31  Cambiar motorreductor",
+      "hours": 8.0,
+      "started_at": "2026-08-04T06:00:00",
+      "ended_at": "2026-08-04T14:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 10,
+      "equipment": "P-MG21",
+      "task": "TAREAS Y LUB. MG21",
+      "hours": 8.0,
+      "started_at": "2026-08-04T14:00:00",
+      "ended_at": "2026-08-04T22:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 11,
+      "equipment": "P-MG43",
+      "task": "TAREAS MG43 Cambiar caja de paso de almeja",
+      "hours": 8.0,
+      "started_at": "2026-08-04T14:00:00",
+      "ended_at": "2026-08-04T22:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 13,
+      "equipment": "P-MG21",
+      "task": "PREV. MEC. MG21",
+      "hours": 8.0,
+      "started_at": "2026-08-05T06:00:00",
+      "ended_at": "2026-08-05T14:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 15,
+      "equipment": "P-MG42",
+      "task": "TAREAS MG42 cambio de freno",
+      "hours": 8.0,
+      "started_at": "2026-08-05T14:00:00",
+      "ended_at": "2026-08-05T22:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 16,
+      "equipment": "P-MG13",
+      "task": "TAREAS MG13 Cambiar cilindro de traba de picador",
+      "hours": 8.0,
+      "started_at": "2026-08-05T14:00:00",
+      "ended_at": "2026-08-05T22:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 17,
+      "equipment": "P-MG41",
+      "task": "LIMPIEZA DE PUENTE GRUA MG41",
+      "hours": 4.0,
+      "started_at": "2026-08-06T02:00:00",
+      "ended_at": "2026-08-06T06:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 18,
+      "equipment": "P-MG32",
+      "task": "TAREAS MG32-INFA TESTERAS",
+      "hours": 12.0,
+      "started_at": "2026-08-06T06:00:00",
+      "ended_at": "2026-08-06T18:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 20,
+      "equipment": "P-MG41",
+      "task": "PREV. ELEC. MG41",
+      "hours": 8.0,
+      "started_at": "2026-08-06T06:00:00",
+      "ended_at": "2026-08-06T14:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 22,
+      "equipment": "P-MG11",
+      "task": "CONTROL MG11",
+      "hours": 4.0,
+      "started_at": "2026-08-06T18:00:00",
+      "ended_at": "2026-08-06T22:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 23,
+      "equipment": "P-MG41",
+      "task": "LIMPIEZA DE PUENTE GRUA MG41",
+      "hours": 4.0,
+      "started_at": "2026-08-07T02:00:00",
+      "ended_at": "2026-08-07T06:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 24,
+      "equipment": "P-MG11",
+      "task": "TAREAS MG11-INFA TESTERAS-SOMBRA",
+      "hours": 8.0,
+      "started_at": "2026-08-07T06:00:00",
+      "ended_at": "2026-08-07T14:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 25,
+      "equipment": "P-MG22",
+      "task": "TAREAS MG22 Cambio de cable de acero AP15",
+      "hours": 8.0,
+      "started_at": "2026-08-07T06:00:00",
+      "ended_at": "2026-08-07T14:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 26,
+      "equipment": "P-MG43",
+      "task": "INSP. MEC. MG43",
+      "hours": 4.0,
+      "started_at": "2026-08-07T10:00:00",
+      "ended_at": "2026-08-07T14:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 27,
+      "equipment": "P-MG13",
+      "task": "CAMBIO A/A MG13",
+      "hours": 4.0,
+      "started_at": "2026-08-07T14:00:00",
+      "ended_at": "2026-08-07T22:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 28,
+      "equipment": "P-MG31",
+      "task": "TAREAS Y CONTROL MG31",
+      "hours": 8.0,
+      "started_at": "2026-08-07T14:00:00",
+      "ended_at": "2026-08-07T22:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 29,
+      "equipment": "P-MG41",
+      "task": "TAREAS Y LUB. MG41",
+      "hours": 8.0,
+      "started_at": "2026-08-07T14:00:00",
+      "ended_at": "2026-08-07T22:00:00",
+      "notes": ""
+    },
+    {
+      "source_row": 30,
+      "equipment": "P-MG41",
+      "task": "PREV. MEC. MG41",
+      "hours": 8.0,
+      "started_at": "2026-08-08T06:00:00",
+      "ended_at": "2026-08-08T14:00:00",
+      "notes": ""
+    }
+  ],
+  "validation_issues": [
+    {
+      "severity": "warning",
+      "type": "Orden sin notificación vinculable",
+      "source": "vinculación",
+      "source_row": 94,
+      "equipment": "P-MG31",
+      "detail": "Aviso 800898626; orden 11302461."
+    },
+    {
+      "severity": "warning",
+      "type": "Orden sin notificación vinculable",
+      "source": "vinculación",
+      "source_row": 95,
+      "equipment": "P-MG22",
+      "detail": "Aviso 800898627; orden 11302462."
+    }
+  ]
+}

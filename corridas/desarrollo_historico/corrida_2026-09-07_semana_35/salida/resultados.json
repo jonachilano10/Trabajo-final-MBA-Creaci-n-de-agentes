@@ -1,0 +1,27 @@
+{
+  "period": {
+    "year": 2026,
+    "week": 35,
+    "start_date": "2026-08-24",
+    "end_date": "2026-08-30"
+  },
+  "global": {
+    "calendar_hours": 2016.0,
+    "maintenance_hours": 152.0,
+    "available_hours": 1864.0,
+    "stop_hours": 39.35,
+    "stoppage_count": 30,
+    "availability": 97.88894849785407
+  },
+  "series": [
+    {"series": "A", "maintenance_hours": 64.0, "available_hours": 944.0, "stop_hours": 19.9, "stoppage_count": 19, "availability": 97.89194915254238},
+    {"series": "B", "maintenance_hours": 88.0, "available_hours": 920.0, "stop_hours": 19.45, "stoppage_count": 11, "availability": 97.88586956521739}
+  ],
+  "rooms": [
+    {"room": 1, "maintenance_hours": 40.0, "available_hours": 464.0, "stop_hours": 13.59, "stoppage_count": 12, "availability": 97.07112068965517},
+    {"room": 2, "maintenance_hours": 24.0, "available_hours": 480.0, "stop_hours": 6.31, "stoppage_count": 7, "availability": 98.68541666666667},
+    {"room": 3, "maintenance_hours": 56.0, "available_hours": 448.0, "stop_hours": 13.84, "stoppage_count": 6, "availability": 96.91071428571429},
+    {"room": 4, "maintenance_hours": 32.0, "available_hours": 472.0, "stop_hours": 5.61, "stoppage_count": 5, "availability": 98.8114406779661}
+  ],
+  "history_weeks": [33, 34, 35]
+}

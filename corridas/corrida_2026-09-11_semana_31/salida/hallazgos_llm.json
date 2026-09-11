@@ -1,0 +1,92 @@
+{
+  "findings": [
+    {
+      "relation_type": "same_bridge",
+      "title": "Repetición de no giro de percha en P-MG12",
+      "notice_numbers": [
+        "800894888",
+        "800895684",
+        "800895701"
+      ],
+      "confidence": "alta",
+      "rationale": "En P-MG12 se repite la indisponibilidad de giro de percha en avisos muy parecidos: \"no gira percha\" y \"no gira percha\" en la semana 31, más el antecedente \"no gira percha\" en la semana 30. Los registros documentan causas distintas, como Falso Contacto y Corte de Energía, y las intervenciones también cambian entre reset de ATV, reposición de falla y posicionamiento de pantógrafo. La similitud del síntoma es fuerte, pero no permite afirmar una única causa.",
+      "human_review": "Verificar en campo pantógrafo, borneras, alimentación y variador del sistema de giro antes de concluir recurrencia por una sola falla."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Recurrencia de aparejo 15 tn sin movimiento en P-MG21",
+      "notice_numbers": [
+        "800894078",
+        "800895682",
+        "800896003",
+        "800896049"
+      ],
+      "confidence": "alta",
+      "rationale": "En P-MG21 aparece varias veces la misma indisponibilidad del aparejo de 15 tn: \"aparejo de 15 tn no sube ni baja\", \"no baja ni sube aparejo de 15 tn\" y \"No sube ni baja aparejo\". Aunque el texto es muy consistente, las causas documentadas alternan entre Falla Componente Electrónico, Alimentación de Energía y las intervenciones incluyen reset o reposición de variador. Esto sugiere repetición del mismo síntoma en el mismo puente, sin demostrar causa común.",
+      "human_review": "Comprobar en el puente el estado del variador, la cadena de alimentación y el comando de izaje para distinguir si el fallo se repite en el mismo punto."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Bloqueo recurrente de almeja en P-MG42",
+      "notice_numbers": [
+        "800895288",
+        "800895874",
+        "800897215"
+      ],
+      "confidence": "media",
+      "rationale": "En P-MG42 se observan eventos vinculados con almeja trabada o con dificultad de apertura/cierre: \"ALMEJA TRABADA\", \"se traba la almeja al subir (reiniciar)\" y \"almeja sin aplauso\". Los textos son funcionalmente compatibles, pero las causas documentadas no son iguales: Falla Elemento de Maniobra, Falla Operativa y Lubricación Faltante. La relación es una recurrencia probable del mismo subsistema, no una causa confirmada.",
+      "human_review": "Revisar mecánica de almeja, lubricación, mando y secuencia de reinicio para separar trabamiento real de falla operativa o de maniobra."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Pérdida recurrente de aire/fuerza en P-MG43",
+      "notice_numbers": [
+        "800895061",
+        "800895285",
+        "800896655"
+      ],
+      "confidence": "media",
+      "rationale": "En P-MG43 aparecen descripciones que apuntan a la misma cadena neumática o de suministro: \"destornillador sin fuerza\", \"se queda sin aire y sin fuerza\" y \"se apaga compresor\". Sin embargo, los registros documentan Ajuste Deficiente y Falla Operativa, con acciones de agregado de aceite, prueba y control del compresor. La similitud funcional existe, pero no alcanza para asegurar una misma causa raíz.",
+      "human_review": "Verificar compresor, lubricación, presión disponible y condición del circuito neumático antes de cerrar el análisis."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Fallas de giro de percha/picador/almeja entre varios puentes",
+      "notice_numbers": [
+        "800894888",
+        "800895684",
+        "800896204",
+        "800897036"
+      ],
+      "confidence": "media",
+      "rationale": "Avisos de distintos puentes describen pérdida de giro en funciones equivalentes: P-MG12 \"no gira percha\", P-MG22 \"no gira la percha\", P-MG41 \"no gira picador-almeja\" y P-MG43 \"NO GIRA ECL\". Los documentos, sin embargo, no coinciden en la causa: Falso Contacto, Corte de Energía, Falla Componente Electrónico y Fatiga Material. La relación es funcional entre puentes, pero no confirma una causa común.",
+      "human_review": "Comparar en campo el circuito de giro, pantógrafos, variadores y sensores de los puentes involucrados para buscar un patrón técnico común."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Indisponibilidad de izaje/aparejo en puentes distintos",
+      "notice_numbers": [
+        "800894078",
+        "800895682",
+        "800896151",
+        "800896621",
+        "800897004"
+      ],
+      "confidence": "media",
+      "rationale": "Se repite la familia de fallas de no subir o no bajar aparejo/herramientas en varios puentes: P-MG21, P-MG12, P-MG13 y P-MG43. Los textos son muy parecidos, pero las causas documentadas varían entre Falla Componente Electrónico, Alimentación de Energía y Falso Contacto. Esto permite proponer una relación de familia de falla entre puentes, sin atribuir una causa compartida definitiva.",
+      "human_review": "Revisar variadores, contactos, alimentación y mando de izaje en cada puente para separar similitud funcional de origen técnico."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Bloqueo de almeja y aplauso en puentes diferentes",
+      "notice_numbers": [
+        "800895288",
+        "800895874",
+        "800896538"
+      ],
+      "confidence": "media",
+      "rationale": "Entre P-MG42 y P-MG33 aparecen avisos de almeja trabada, almeja sin aplauso y almeja que se bloquea al bajar. La función afectada es la misma, pero los documentos asignan causas distintas: Falla Elemento de Maniobra, Lubricación Faltante, Desconectado y Falla Operativa según el caso. La coincidencia es suficiente para vincularlos de forma preliminar entre puentes, no para afirmar una única causa.",
+      "human_review": "Verificar mecánica de bloqueo, lubricación y señal de mando en P-MG42 y P-MG33 antes de concluir relación causal."
+    }
+  ]
+}

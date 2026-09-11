@@ -1,0 +1,163 @@
+{
+  "findings": [
+    {
+      "relation_type": "same_bridge",
+      "title": "Reiteración de manipulación suelta en MG11",
+      "notice_numbers": [
+        "800894244",
+        "800895915",
+        "800896109",
+        "800898292",
+        "800900304",
+        "800901902"
+      ],
+      "confidence": "alta",
+      "rationale": "En el mismo puente MG11 aparecen varios avisos con control/manipulador/manibela suelta o no operativo en semanas distintas. Aunque los textos cambian entre traslación, control remoto y percha, la familia funcional es la misma y las causas documentadas no son idénticas: accidente, falla de elemento de maniobra y alimentación de energía.",
+      "human_review": "Inspeccionar en campo el manipulador, fijaciones, cableado y selectores para confirmar si se trata de un mismo problema mecánico recurrente o de fallas independientes."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Fallas repetidas de giro en MG12",
+      "notice_numbers": [
+        "800895684",
+        "800896006",
+        "800896632",
+        "800896729",
+        "800896941",
+        "800897118",
+        "800899192",
+        "800899848",
+        "800901907",
+        "800903016"
+      ],
+      "confidence": "alta",
+      "rationale": "MG12 muestra reiteradamente no gira percha, picador, almeja o herramientas a lo largo de varias semanas. Los documentos alternan entre falso contacto, falla de componente electrónico, corte de energía y desconectado, además de resets de ATV y variador, por lo que hay similitud funcional clara pero no una causa única demostrada.",
+      "human_review": "Revisar variadores de giro, pantógrafos, térmicos y continuidad del circuito antes de concluir un origen común."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Recurrencia de traslación en MG13",
+      "notice_numbers": [
+        "800897425",
+        "800897906",
+        "800899451",
+        "800901558",
+        "800902597"
+      ],
+      "confidence": "alta",
+      "rationale": "En MG13 se repiten avisos de sin traslación o traslación de carro/N-S en semanas sucesivas. Los textos mencionan control remoto, tiempo de espera, falso contacto y falla de componente electrónico, lo que sugiere una recurrencia funcional en la cadena de traslación, aunque con causas registradas distintas.",
+      "human_review": "Verificar control remoto, ATV del carro y cableado de traslación para separar si es un mismo punto intermitente o fallas diferentes."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reincidencia de aparejo 15 TN en MG21",
+      "notice_numbers": [
+        "800895682",
+        "800896003",
+        "800896049",
+        "800898856",
+        "800901300",
+        "800903828",
+        "800904184"
+      ],
+      "confidence": "alta",
+      "rationale": "MG21 presenta múltiples eventos de no baja / no sube aparejo 15 TN en distintas semanas. Las causas documentadas oscilan entre falla de componente electrónico y circuito abierto-sin continuidad, con intervenciones de reset o reemplazo de variador y condensador de precarga. La repetición del mismo síntoma es clara, pero la evidencia no confirma una sola causa común.",
+      "human_review": "Inspeccionar malacate, variador, precarga y contactores para confirmar si los eventos comparten el mismo circuito o son reparaciones separadas."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Patrón mixto de control y movimiento en MG31",
+      "notice_numbers": [
+        "800895836",
+        "800896109",
+        "800899897",
+        "800900089",
+        "800902784",
+        "800904550"
+      ],
+      "confidence": "media",
+      "rationale": "En MG31 aparecen fallas de mando/control y también paradas o pérdidas de traslación y diana. Los textos mezclan falla de elemento de maniobra, desalineación, circuito abierto y ajuste de contactos o profibus, por lo que hay una familia de problemas en el control del puente, aunque no un único modo de falla confirmado.",
+      "human_review": "Revisar control remoto, profibus, pantógrafos y alineación mecánica para verificar si el origen está en la cadena de mando o en fallas separadas."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Repetición de giro/izaje/almeja en MG23",
+      "notice_numbers": [
+        "800896939",
+        "800897461",
+        "800899191",
+        "800903196",
+        "800904614",
+        "800904718"
+      ],
+      "confidence": "media",
+      "rationale": "MG23 acumula avisos de no gira almeja, sin traslación, no baja aparejo y almeja baja sola. Las causas registradas cambian entre brida floja, falso contacto, circuito abierto, falla de componente electrónico y desalineación; por eso el patrón es de recurrencia funcional amplia y no de una causa única demostrada.",
+      "human_review": "Comprobar cableado, variador de giro, circuito del malacate y alineación de almeja para decidir si los síntomas comparten un mismo origen."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Fallas de giro de percha con patrón de variador/pantógrafos",
+      "notice_numbers": [
+        "800895684",
+        "800896632",
+        "800901499",
+        "800902249",
+        "800903646",
+        "800904089",
+        "800904560"
+      ],
+      "confidence": "media",
+      "rationale": "En distintos puentes se repite la función percha no gira o variantes equivalentes. Los textos suelen mencionar reset de variador, posicionamiento de pantógrafos o corrección de cableado, pero las causas documentadas no coinciden siempre: falso contacto, desconectado, falla de componente electrónico o alimentación de energía. La similitud es funcional, no causal.",
+      "human_review": "Comparar estado de pantógrafos, continuidad eléctrica y variadores de giro entre puentes antes de relacionar los eventos como una misma falla."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Traslación norte-sur recurrente entre puentes",
+      "notice_numbers": [
+        "800897461",
+        "800898647",
+        "800899125",
+        "800901930",
+        "800902597",
+        "800903895",
+        "800904015"
+      ],
+      "confidence": "alta",
+      "rationale": "Varios puentes muestran sin traslación norte-sur o sin traslación con textos muy parecidos. Las intervenciones hablan de reset o reemplazo de ATV/variador y las causas cambian entre falso contacto, falla de componente electrónico, alimentación de energía y circuito abierto, lo que permite proponer relación funcional entre puentes sin confirmar una causa compartida.",
+      "human_review": "Verificar en cada puente el tramo de traslación, el ATV asociado y la continuidad de mando para discriminar repetición real de modo de falla o coincidencia de síntoma."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Repetición de no baja / no sube aparejo 15 TN",
+      "notice_numbers": [
+        "800895682",
+        "800896151",
+        "800897453",
+        "800898856",
+        "800901300",
+        "800903828",
+        "800904184",
+        "800904416"
+      ],
+      "confidence": "alta",
+      "rationale": "La misma función de aparejo 15 TN aparece afectada en múltiples puentes, con descripciones de no baja, no sube o no baja ni sube. Los documentos alternan entre falso contacto, falla de componente electrónico, circuito abierto-sin continuidad y alimentación de energía, y varias intervenciones se concentran en variador, condensador precarga o malacate. Hay coincidencia fuerte de síntoma, pero no prueba de un único origen.",
+      "human_review": "Revisar el conjunto malacate-variador-precarga y comparar el cableado de mando entre puentes para confirmar si el patrón es común o solo parecido."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Familia de fallas en almeja/alicate y traba de cierre",
+      "notice_numbers": [
+        "800895874",
+        "800896538",
+        "800898958",
+        "800902124",
+        "800903924",
+        "800904663",
+        "800904718"
+      ],
+      "confidence": "media",
+      "rationale": "En varios puentes se repiten textos sobre almeja trabada, almeja cruzada, almeja a medio recorrido, se traba al subir o no abre alicate. Las causas son diversas: falla operativa, falso contacto, alimentación de energía, desgaste y ajuste deficiente; las intervenciones incluyen destrabe, cambio de válvulas o ajuste de mecanismos. El patrón es funcionalmente similar, pero no permite afirmar una misma causa.",
+      "human_review": "Inspeccionar por separado el mecanismo de cierre de almeja y el circuito de mando/aire en cada puente para determinar si la repetición es mecánica, eléctrica o operativa."
+    }
+  ]
+}

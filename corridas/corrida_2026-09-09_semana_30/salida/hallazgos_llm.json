@@ -1,0 +1,115 @@
+{
+  "findings": [
+    {
+      "relation_type": "same_bridge",
+      "title": "Repetición idéntica de traslación norte-sur en P-MG11",
+      "notice_numbers": [
+        "800894037",
+        "800894057"
+      ],
+      "confidence": "alta",
+      "rationale": "Ambos avisos pertenecen al mismo puente y describen exactamente la misma detención de traslación norte-sur. Además, el texto documenta la misma causa ('Corte de Energía') y la misma intervención ('se repone atv traslacion'), por lo que la repetición es muy consistente en el registro.",
+      "human_review": "Verificar en campo si fueron dos eventos distintos o un duplicado administrativo del mismo episodio, y confirmar si la parte reemplazada corresponde al mismo tramo de traslación."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reincidencia de no giro de percha en P-MG41",
+      "notice_numbers": [
+        "800894035",
+        "800894073"
+      ],
+      "confidence": "media",
+      "rationale": "En el mismo puente aparecen dos avisos con el mismo síntoma principal: la percha no gira. La coincidencia funcional es clara, pero las causas documentadas no son iguales ('Corte de Energía' vs 'Falla Componente Electrónico') y las intervenciones también difieren, así que la relación es de repetición sintomática, no de causa confirmada.",
+      "human_review": "Revisar si ambos avisos responden al mismo subconjunto eléctrico de giro o a fallas separadas en fechas cercanas."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reincidencia de falla en picador de P-MG43",
+      "notice_numbers": [
+        "800893830",
+        "800893897"
+      ],
+      "confidence": "media",
+      "rationale": "Los dos registros se concentran en el picador del mismo puente: uno indica 'No anda picador' y el otro 'no pica'. Son síntomas muy próximos, aunque los documentos atribuyen causas distintas ('Desgaste' y 'Fatiga Material') y las intervenciones fueron cambios de válvula. La similitud funcional sugiere recurrencia, pero no una causa única demostrada.",
+      "human_review": "Corroborar si la válvula y el circuito mecánico del picador presentan desgaste repetitivo o si se trata de fallas independientes del mismo equipo."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Fallas repetidas de almeja/aplauso en P-MG42",
+      "notice_numbers": [
+        "800894904",
+        "800895288"
+      ],
+      "confidence": "media",
+      "rationale": "Ambos avisos del mismo puente apuntan al conjunto de almeja: uno reporta que 'no pica ni aplaude almeja' y el otro 'almeja sin aplauso'. Los documentos muestran causas diferentes ('Circuito Abierto-Sin Continuidad' y 'Lubricación Faltante') y respuestas distintas (cambio de switch, agregado de aceite), por lo que la coincidencia es funcional pero no causalmente confirmada.",
+      "human_review": "Revisar en sitio el estado del switch de picar/aplauso, la lubricación del vaso y la continuidad del cableado del conjunto almeja."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reincidencia de anomalías de balanza en P-MG32",
+      "notice_numbers": [
+        "800892961",
+        "800895387"
+      ],
+      "confidence": "media",
+      "rationale": "En el mismo puente aparecen dos eventos asociados a la balanza: 'no funciona balanza' y 'Pantalla de balanza titila'. La relación es plausible por compartir el mismo sistema, pero la documentación registra causas distintas ('Falla Componente Electrónico' y 'Falso Contacto') y acciones diferentes, sin evidencia de una causa común única.",
+      "human_review": "Verificar conectores, celda/sensor y electrónica de indicación para decidir si ambas fallas pertenecen a la misma cadena de mando y medición."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Detenciones de traslación en varios puentes",
+      "notice_numbers": [
+        "800892746",
+        "800892753",
+        "800894037",
+        "800894097",
+        "800894795"
+      ],
+      "confidence": "media",
+      "rationale": "Los avisos provienen de puentes distintos pero comparten el mismo tipo de falla funcional: sin traslación o sin traslación norte-sur. Las causas documentadas no coinciden entre sí ('Corte de Energía', 'Falla Componente Electrónico', 'Falso Contacto', 'Falla Operativa'), así que la relación es de similitud de síntoma entre puentes, no de causa confirmada.",
+      "human_review": "Comparar en campo alimentación, borneras/guirnalda y lógica de timeout para decidir si existe un patrón común o solo fallas locales independientes."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Fallas de giro/percha en distintos puentes",
+      "notice_numbers": [
+        "800894035",
+        "800894073",
+        "800894350",
+        "800894888",
+        "800895140"
+      ],
+      "confidence": "media",
+      "rationale": "Varios puentes muestran síntomas afines en el subsistema de giro o herramientas: 'no giran herramientas', 'no gira la percha' y 'NO GIRA PICADOR'. Aunque el patrón funcional es parecido, los textos documentan causas distintas ('Corte de Energía', 'Alimentación de Energía', 'Falla Componente Electrónico') y soluciones diferentes, por lo que la relación es preliminar.",
+      "human_review": "Revisar si el problema está en la cadena común de giro, en variadores/ATV o en elementos específicos de cada puente antes de concluir una causa compartida."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Detenciones de izaje/aparejo en distintos puentes",
+      "notice_numbers": [
+        "800893192",
+        "800893272",
+        "800893603",
+        "800893913",
+        "800894016",
+        "800894078",
+        "800895174"
+      ],
+      "confidence": "media",
+      "rationale": "Los registros reúnen fallas de izaje/aparejo en varios puentes: 'no baja ni sube la percha', 'no baja ni sube aparejo', 'No sube aparejo', 'No baja AP', 'aparejo de 15 tn no sube ni baja' y 'no baja picador'. La similitud es funcional, pero las causas y acciones varían ampliamente ('Falso Contacto', 'Corte de Energía', 'Falla Elemento de Maniobra', 'Desgaste'), por lo que no puede afirmarse una causa común.",
+      "human_review": "Verificar por separado malacate, variadores, maniobra y circuito de potencia en cada puente para distinguir fallas repetidas de fallas aisladas."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Anomalías de balanza entre puentes distintos",
+      "notice_numbers": [
+        "800892961",
+        "800894187",
+        "800895387"
+      ],
+      "confidence": "media",
+      "rationale": "Los avisos vinculan problemas de balanza en puentes diferentes: una balanza que 'no funciona', una 'pantalla de balanza titila' y otra que reporta 'BALANZA ELECTRON NO FUNCIONA'. La coincidencia es de subsistema, no de causa: aparecen 'Falso Contacto' y 'Falla Componente Electrónico', con intervenciones de reset o reposición.",
+      "human_review": "Comprobar si las balanzas comparten electrónica, sensores o alimentación antes de concluir si existe un modo de falla repetido entre puentes."
+    }
+  ]
+}

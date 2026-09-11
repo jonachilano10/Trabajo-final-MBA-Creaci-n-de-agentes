@@ -1,0 +1,135 @@
+{
+  "findings": [
+    {
+      "relation_type": "same_bridge",
+      "title": "Recurrencia de giro en P-MG12",
+      "notice_numbers": [
+        "800895684",
+        "800895701",
+        "800896006",
+        "800896729",
+        "800896941",
+        "800897118",
+        "800899192",
+        "800899848",
+        "800901907",
+        "800903016"
+      ],
+      "confidence": "alta",
+      "rationale": "En P-MG12 se repite varias veces la misma familia de falla sobre giro de percha, picador y almeja/herramientas entre las semanas 31 a 35. Los textos son muy parecidos en el síntoma principal, pero las causas documentadas cambian entre falso contacto, falla de componente electrónico, corte de energía, falla operativa y reset de ATV. Esto sugiere recurrencia funcional en el mismo puente, sin poder afirmar una única causa común.",
+      "human_review": "Verificar en campo si el subsistema de giro, sus pantógrafos, cableado y variador presentan una falla intermitente persistente o problemas distintos en cada evento."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Repetición de falla de aparejo 15 tn en P-MG21",
+      "notice_numbers": [
+        "800895682",
+        "800896003",
+        "800896049",
+        "800898856",
+        "800901300"
+      ],
+      "confidence": "alta",
+      "rationale": "P-MG21 muestra repetición del mismo síntoma en el aparejo de 15 tn: no baja, no sube o no sube ni baja, registrado en varias semanas. Aunque la función afectada es la misma, las causas documentadas alternan entre falla de componente electrónico, falso contacto, circuito abierto y revisión de variador. La recurrencia es clara, pero la evidencia no permite unificar la causa.",
+      "human_review": "Revisar por separado variador, contactores, continuidad de cableado y elementos de mando del aparejo para confirmar si se trata de una misma falla intermitente o de eventos distintos."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reaparición de problemas de almeja en P-MG42",
+      "notice_numbers": [
+        "800895874",
+        "800897198",
+        "800901716",
+        "800901908",
+        "800902124"
+      ],
+      "confidence": "alta",
+      "rationale": "En P-MG42 se observan múltiples eventos sobre almeja: trabada, sin fuerza, no abre y se traba al subir. Los registros mezclan causas como desgaste, falso contacto, falla operativa y otros ajustes/intervenciones, pero mantienen el mismo bloque funcional afectado en el mismo puente. La similitud es fuerte, aunque no se puede asegurar una única raíz documental.",
+      "human_review": "Inspeccionar mecanismo de almeja, válvulas, freno/accionamiento y condiciones de uso para distinguir desgaste mecánico de fallas eléctricas u ოპერativas."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Repetición de no baja aparejo 15 tn en P-MG13",
+      "notice_numbers": [
+        "800897453",
+        "800898620",
+        "800903141"
+      ],
+      "confidence": "media",
+      "rationale": "P-MG13 presenta nuevamente falla sobre el aparejo de 15 tn en distintas semanas, con redacciones muy similares de 'no baja aparejo'. Las causas documentadas no son idénticas: falso contacto, falla de proceso y rearmado/reset del ATV de malacate. Hay continuidad del síntoma, pero la evidencia histórica disponible es más limitada que en otros puentes.",
+      "human_review": "Confirmar en terreno si el mismo circuito de malacate/ATV está interviniendo en todos los avisos o si se trata de fallas independientes del mismo síntoma."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Traslación norte-sur intermitente en varios puentes",
+      "notice_numbers": [
+        "800892746",
+        "800892753",
+        "800894037",
+        "800894057",
+        "800897461",
+        "800897738",
+        "800899125",
+        "800900061",
+        "800900979",
+        "800901930",
+        "800902597"
+      ],
+      "confidence": "alta",
+      "rationale": "La pérdida de traslación norte-sur se repite en varios puentes y semanas, con textos muy similares. Sin embargo, las causas documentadas varían ampliamente: corte de energía, falso contacto, componente electrónico, circuito abierto, desalineación, lubricación faltante y aflojamiento. La coincidencia es funcional y transversal, no suficiente para afirmar una causa común.",
+      "human_review": "Comparar por puente el estado de pantógrafos, ATV de carro, borneras, cableado y alineación mecánica antes de concluir una causa compartida."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Fallas de giro de percha/picador/almeja en distintos puentes",
+      "notice_numbers": [
+        "800894888",
+        "800895684",
+        "800896204",
+        "800896368",
+        "800901499",
+        "800901653",
+        "800902249",
+        "800902871",
+        "800903016"
+      ],
+      "confidence": "media",
+      "rationale": "Varios puentes reportan que no gira la percha, el picador o la almeja, con intervenciones similares sobre pantógrafos, variadores, cableado o posicionamiento. Aunque el bloque funcional es comparable, las causas documentadas difieren entre falso contacto, falla de componente electrónico, corte de energía y desconexión. La relación es plausible a nivel funcional, no causal.",
+      "human_review": "Revisar si los eventos comparten el mismo circuito de giro, el mismo variador o un patrón común de pantógrafos y conexiones."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Problemas de almeja y alicate con bloqueo o falta de apertura",
+      "notice_numbers": [
+        "800895485",
+        "800895874",
+        "800897198",
+        "800898958",
+        "800901716",
+        "800902124",
+        "800902275",
+        "800902337"
+      ],
+      "confidence": "media",
+      "rationale": "La familia de fallas sobre almeja/alicate aparece en distintos puentes como trabada, no abre, no cierra, queda cruzada o se bloquea al subir/bajar. Las causas documentadas son variadas: desgaste, falso contacto, falla operativa, alimentación de energía y otros ajustes mecánicos. La similitud de síntoma es consistente, pero no demuestra una sola causa compartida.",
+      "human_review": "Verificar si el problema dominante es mecánico, neumático o de mando en cada puente antes de asociar los casos entre sí."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Fallas neumáticas y de fuerza en compresor, picador y herramientas",
+      "notice_numbers": [
+        "800895285",
+        "800896655",
+        "800898485",
+        "800898599",
+        "800899610",
+        "800900062",
+        "800902335",
+        "800902409"
+      ],
+      "confidence": "media",
+      "rationale": "En varios puentes aparecen síntomas de compresor no prende, pérdida de aire o falta de fuerza en picador/herramientas. Los hechos muestran intervenciones sobre mangueras, válvulas, relés térmicos y alimentación, pero las causas documentadas no coinciden entre sí: desgaste, fatiga material, corte de energía, circuito abierto, accidente o ajuste deficiente. Esto sugiere una relación funcional común, no una causalidad única.",
+      "human_review": "Comprobar por puente el circuito de aire, el arranque del compresor, posibles fugas y el estado de válvulas y mangueras antes de agrupar los eventos."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+.env
+.env.local
+.vercel/
+runtime/
+__pycache__/
+*.pyc
+*.sqlite3-wal
+*.sqlite3-shm
+*.xlsx
+*.XLSX
+*.xls
+*.XLS
+*.xlsm
+*.XLSM
+*.sqlite3
+*.db
+*.zip
+*.ZIP
+
+# La base real y los Excel no deben publicarse en GitHub.
+data/*.sqlite3
+
+# Conservar .env.example como plantilla sin secretos.
+!.env.example

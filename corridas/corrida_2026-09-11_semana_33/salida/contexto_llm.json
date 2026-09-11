@@ -1,0 +1,2478 @@
+{
+  "report_period": {
+    "year": 2026,
+    "week": 33
+  },
+  "history_window": {
+    "maximum_previous_weeks": 6,
+    "included_periods": [
+      {
+        "year": 2026,
+        "week": 29
+      },
+      {
+        "year": 2026,
+        "week": 30
+      },
+      {
+        "year": 2026,
+        "week": 31
+      },
+      {
+        "year": 2026,
+        "week": 32
+      },
+      {
+        "year": 2026,
+        "week": 33
+      }
+    ]
+  },
+  "contract": {
+    "purpose": "Interpretar texto y proponer relaciones entre fallas.",
+    "forbidden": [
+      "recalcular o modificar métricas",
+      "inventar causas, intervenciones, avisos o valores",
+      "afirmar causalidad sin evidencia documental"
+    ],
+    "required_output_fields": [
+      "confidence",
+      "human_review",
+      "notice_numbers",
+      "rationale",
+      "relation_type",
+      "title"
+    ],
+    "relation_types": [
+      "cross_bridge",
+      "same_bridge"
+    ],
+    "confidence_values": [
+      "alta",
+      "baja",
+      "media"
+    ]
+  },
+  "failure_facts": [
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893192",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "No baja ni sube la percha-OKTB",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "se repone falla no rearmable atvMalacate"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800894037",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "sin traslacion norte sur",
+      "extended_text": "",
+      "documented_cause": "Corte de Energía",
+      "interventions": [
+        "se repone atv traslacion"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800894057",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "SIN TRASL NORTE SUR",
+      "extended_text": "",
+      "documented_cause": "Corte de Energía",
+      "interventions": [
+        "se repone atv traslacion"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800894097",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "sin traslacion este/oeste",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Se cambia contactor de linea puente."
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800892961",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "no funciona balanza",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Se resetea balanza.",
+        "OK."
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893603",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "no baja ni sube aparejo de 15 tn",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Reset de ATV: condensador precarga"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893840",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "Ajustar bulones ECL.-",
+      "extended_text": "Se ajustan bulones sueltos y se coloca faltante. Se ajustan bulones sueltos y se coloca faltante. Se ajustan bulones sueltos y se c",
+      "documented_cause": "Sobrecarga Mecánica",
+      "interventions": [
+        "Se ajustan bulones sueltos y se coloca f"
+      ],
+      "python_candidate_category": "Estructura o elemento mecánico"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893913",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "NO BAJA AP 15 Tn",
+      "extended_text": "",
+      "documented_cause": "Corte de Energía",
+      "interventions": [
+        "se resetea atv de malacate"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893962",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "No gira el picador",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "Se repone falla no rearmable atvgiros."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893319",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "SIN MOVIMIENTO",
+      "extended_text": "",
+      "documented_cause": "Aflojamiento",
+      "interventions": [
+        "se posicionan bien las herramientas, ok"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800894016",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "No sube aparejo de 15tn.-",
+      "extended_text": "",
+      "documented_cause": "Falla Elemento de Maniobra",
+      "interventions": [
+        "Se normaliza falla en variador (condens)"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800892851",
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "description": "Manguera suelta ECL.-",
+      "extended_text": "",
+      "documented_cause": "Desgaste",
+      "interventions": [
+        "Se normaliza manguera en ECL."
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800894078",
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "description": "aparejo de 15 tn no sube ni baja",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "se repone variador"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800892746",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "sin traslacion",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Se acomoda pantógrafos de percha de cola",
+        "OK."
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800892753",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "sin traslacion norte-sur",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "Se reajusta bornera x4.1 de guirnalda de",
+        "OK."
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893487",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "SIN FUERZA PICADOR(OKTD)",
+      "extended_text": "",
+      "documented_cause": "Lubricación Faltante",
+      "interventions": [
+        "se coloca aceite a compresor,se deja ok"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893837",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "No andan luminarias.-",
+      "extended_text": "Se revisan y reponen termicas. Se revisan y reponen termicas. Se revisan y reponen termicas. Se revisan y reponen termicas. Se revi",
+      "documented_cause": "Sobrecarga Eléctrica",
+      "interventions": [
+        "Se revisan y reponen termicas."
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800894036",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "falta resorte destornillador",
+      "extended_text": "",
+      "documented_cause": "Fatiga Material",
+      "interventions": [
+        "se cambia resortes de pinsa"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893459",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "PINZA DOBLADA",
+      "extended_text": "",
+      "documented_cause": "Aflojamiento",
+      "interventions": [
+        "se cambia pinza y resorte"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893199",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "ECL gira solo para un lado",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "Se normalizan cables desoldado en CR.",
+        "OK."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893500",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "DESTORNILLADOR TRABADO(OKTD)",
+      "extended_text": "FALLA OPERATIVA FALLA OPERATIVA FALLA OPERATIVA FALLA OPERATIVA FALLA OPERATIVA FALLA OPERATIVA FALLA OPERATIVA FALLA OPERATIVA FAL",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "se destraba destornillador, falla operat"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800894035",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "no gira percha",
+      "extended_text": "",
+      "documented_cause": "Corte de Energía",
+      "interventions": [
+        "se repone atv giros, se deja ok"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800894073",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "no gira percha",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "se repone"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893354",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "Almeja trabada",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "se repone falla de time out almeja"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800894011",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "Esparrago largo ECL cortado.-",
+      "extended_text": "",
+      "documented_cause": "Desgaste",
+      "interventions": [
+        "Se cambia esparrago doble."
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893272",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "NO BAJA ALMEJA",
+      "extended_text": "",
+      "documented_cause": "Corte de Energía",
+      "interventions": [
+        "se repone atv de malacate"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893830",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "No anda picador.",
+      "extended_text": "Se cambia valvula Jefferson de picador, se prueba y se entrega operativo. Se cambia valvula Jefferson de picador, se prueba y se en",
+      "documented_cause": "Desgaste",
+      "interventions": [
+        "Se cambia valvula Jefferson de picador,"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "notice_number": "800893897",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "no pica",
+      "extended_text": "",
+      "documented_cause": "Fatiga Material",
+      "interventions": [
+        "se cambia valvula de picador"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800894244",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "MANIPULADOR DE TRASL IKUSI SUELTO",
+      "extended_text": "Se cambia modo de falla. Se cambia modo de falla. Se cambia modo de falla. Se cambia modo de falla. Se cambia modo de falla. Se cam",
+      "documented_cause": "Accidente",
+      "interventions": [
+        "se cambia manipulador"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800894314",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "destornillador sin aire",
+      "extended_text": "Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada S",
+      "documented_cause": "Calidad Material",
+      "interventions": [
+        "se cambia destornillador"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800894350",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "no giran herramientas",
+      "extended_text": "",
+      "documented_cause": "Corte de Energía",
+      "interventions": [
+        "se repone variador"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800894914",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "Perdida de aceite por ECL.-",
+      "extended_text": "",
+      "documented_cause": "Ajuste Deficiente",
+      "interventions": [
+        "Se regula lubricador ecl, se limpia"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800895140",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "NO GIRA PICADOR",
+      "extended_text": "",
+      "documented_cause": "Alimentación de Energía",
+      "interventions": [
+        "se repone atv de giros"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800895174",
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "description": "no baja picador",
+      "extended_text": "",
+      "documented_cause": "Desgaste",
+      "interventions": [
+        "SE CAMBIA VALVULA"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800894888",
+      "equipment": "P-MG22",
+      "room": 2,
+      "series": "A",
+      "description": "no gira la percha",
+      "extended_text": "",
+      "documented_cause": "Corte de Energía",
+      "interventions": [
+        "se recetea variador de Giro."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800895485",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "Almeja no baja.-",
+      "extended_text": "Se regula freno de motor de giro ya que se encontraba frenado y giraba lento, se prueba consistentemente subida y bajada de almeja",
+      "documented_cause": "Ajuste Deficiente",
+      "interventions": [
+        "Se regula freno motor de giro(giro lento"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800894675",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "No enciende.-",
+      "extended_text": "",
+      "documented_cause": "Circuito Abierto-Sin Continuidad",
+      "interventions": [
+        "SE REPONE FALLA EN TABLERO PUENTE(R.SEG)"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800895603",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "No prende compresor.-",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "SE REVISA PUENTE DEBIDO A FALLA INTERMIT"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800894144",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "Control balanza con pesa patron.-",
+      "extended_text": "",
+      "documented_cause": "Sin Falla",
+      "interventions": [
+        "Se controla balanza con pesa patron ok"
+      ],
+      "python_candidate_category": "Mando y control"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800895387",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "Pantalla de balanza titila-OKTB",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "se repone falla por diferencia de celda"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800894910",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "Se apaga continuamente.-",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "Se replica falla y se ajustan contactos"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800894187",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "BALANZA ELECTRON NO FUNCIONA",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "se resetea balanza, ok"
+      ],
+      "python_candidate_category": "Alimentación eléctrica"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800894246",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "SE RESETEA CONSTANTE",
+      "extended_text": "",
+      "documented_cause": "Aflojamiento",
+      "interventions": [
+        "se regula sensores"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800894795",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "Sin traslacion",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "se repone falla de time out de almeja"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800894904",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "no pica ni aplaude almeja",
+      "extended_text": "",
+      "documented_cause": "Circuito Abierto-Sin Continuidad",
+      "interventions": [
+        "se cambia swich de picar- aplauso de alm"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800895288",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "almeja sin aplauso",
+      "extended_text": "",
+      "documented_cause": "Lubricación Faltante",
+      "interventions": [
+        "se le agrega aceite a vaso lubricador, s"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800895437",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "Ver perno almeja-OKTB",
+      "extended_text": "",
+      "documented_cause": "Desgaste",
+      "interventions": [
+        "Se repone tornillo faltante de defensa"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800895061",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "destornillador sin fuerza",
+      "extended_text": "",
+      "documented_cause": "Ajuste Deficiente",
+      "interventions": [
+        "se LE AGREGA ACEITE, SE PRUEBA QUEDANDO"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 30,
+      "notice_number": "800895285",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "se queda sin aire y sin fuerza",
+      "extended_text": "",
+      "documented_cause": "Ajuste Deficiente",
+      "interventions": [
+        "Se realiza prueba de torque de destornil"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896091",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "No gira almeja ni picador.-",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "se repone variador"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800895684",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "no gira percha",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "Reset de ATV: falta de fase.",
+        "OK."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800895701",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "no gira percha",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "Se posiciona pantógrafo de percha de col",
+        "OK."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896006",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "no gira picador-almeja",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "Reset de ATV: falta de fase."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896070",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "no enciende.-",
+      "extended_text": "",
+      "documented_cause": "Desconectado",
+      "interventions": [
+        "SE REPONE FALLA"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896151",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "NO SUBE AP 15 Tn",
+      "extended_text": "",
+      "documented_cause": "Alimentación de Energía",
+      "interventions": [
+        "se repone atv malacate"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896537",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "Picador no baja.-",
+      "extended_text": "",
+      "documented_cause": "Circuito Abierto-Sin Continuidad",
+      "interventions": [
+        "SE REPONE FALLA"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896632",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "no gira percha de colada",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "Se repone falso contacto en térmico 110v"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896729",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "no gira percha",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "Reset de ATV: falta de fase."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896941",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "no gira picador ni almeja",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Reset de ATV: condensador precarga"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800897118",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "No gira almeja.-",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Se resetea falla en variador (corto)"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896621",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "No baja aparejo de 15 TN",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "se controla se repone falla en contacto"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800895682",
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "description": "no baja ni sube aparejo de 15 tn",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Reset de ATV: condensador precarga"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800895863",
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "description": "CAMBIAR RESORTES",
+      "extended_text": "",
+      "documented_cause": "Fatiga Material",
+      "interventions": [
+        "se cambian resortes de pinza"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896003",
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "description": "no baja ni sube aparejo de 15tn",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Reset de ATV: Error Interno 27."
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896049",
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "description": "No sube ni baja aparejo.-",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "se repone variador"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800895640",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "NO BAJAN HERRAMIENTAS",
+      "extended_text": "",
+      "documented_cause": "Alimentación de Energía",
+      "interventions": [],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896939",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "no gira almeja",
+      "extended_text": "",
+      "documented_cause": "Brida-Empaquetadura Floja",
+      "interventions": [
+        "Se resetea ATV por sobre intensidad.",
+        "Ok."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800895836",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "no gira la almeja.-",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Se resetea falla"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800895845",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "no enciende.-",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Se cambia auxiliar de contactor de giro"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800895915",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "control desarmado",
+      "extended_text": "",
+      "documented_cause": "Accidente",
+      "interventions": [
+        "Se encuentra manipulador de traslaciones",
+        "OK."
+      ],
+      "python_candidate_category": "Mando y control"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896109",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "MANIBELA TRASL SUELTA MOV INVERTI",
+      "extended_text": "",
+      "documented_cause": "Falla Elemento de Maniobra",
+      "interventions": [
+        "SE REPARA CONTROL, SE DEJA OPERATIVO"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896492",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "se apaga compresor",
+      "extended_text": "",
+      "documented_cause": "Falla Elemento de Maniobra",
+      "interventions": [
+        "Se reemplazan contactos auxiliares de se",
+        "OK."
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896877",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "se queda sin traslacion",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "se repone falla de time out picador"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800897009",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "MANIBELA SUELTA TRASLACION(OKTD)",
+      "extended_text": "se repara manipulador de control se repara manipulador de control se repara manipulador de control se repara manipulador de control",
+      "documented_cause": "Alimentación de Energía",
+      "interventions": [
+        "se consigna y se desconsigna",
+        "SE REPARA CONTROL"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896574",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "Espigas elasticas rotas",
+      "extended_text": "",
+      "documented_cause": "Aflojamiento",
+      "interventions": [
+        "Se cambian espinas elasticas"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800897061",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "no bajan herramientas",
+      "extended_text": "",
+      "documented_cause": "Desgaste",
+      "interventions": [
+        "se cambia manguera de almeja BA0041650"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896538",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "Almeja se bloquea al bajar.-",
+      "extended_text": "",
+      "documented_cause": "Desconectado",
+      "interventions": [
+        "SE REPONE FALLA"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896874",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "Sin traslacion norte / sur",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "se repone falla por puerta abierta"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896204",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "no gira picador-almeja",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Reset de ATV: falta de fase. Control Ok."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896368",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "no gira picador.-",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "se repone variador"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800895874",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "ALMEJA TRABADA",
+      "extended_text": "",
+      "documented_cause": "Falla Elemento de Maniobra",
+      "interventions": [
+        "se destraba almeja, se deja ok"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896454",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "alicate se abre y no frena",
+      "extended_text": "",
+      "documented_cause": "Falta Aceite",
+      "interventions": [
+        "Se controla Alicate. No falla.",
+        "OK."
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800897165",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "DESTORNILLADOR NO SUBE",
+      "extended_text": "",
+      "documented_cause": "Fatiga Material",
+      "interventions": [
+        "se cambia valvula"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800897215",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "se traba la almeja al subir (reiniciar)",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800896655",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "se apaga compresor",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "Operador menciona que no tiene fuerza pa",
+        "OK."
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800897004",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "NO BAJAN HERRAMIENTAS(OKTD)",
+      "extended_text": "se cambia valvula de cilindros de trabas se cambia valvula de cilindros de trabas se cambia valvula de cilindros de trabas se cambi",
+      "documented_cause": "Alimentación de Energía",
+      "interventions": [
+        "SE CAMBIA VALVULA"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800897036",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "NO GIRA ECL(OKTD)",
+      "extended_text": "se cambia motor de giro de ecl, se deja ok se cambia motor de giro de ecl, se deja ok se cambia motor de giro de ecl, se deja ok se",
+      "documented_cause": "Fatiga Material",
+      "interventions": [
+        "se cambia motor de giro de ecl, se deja"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 31,
+      "notice_number": "800897025",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "NO ABRE ALICATE(OKTD)",
+      "extended_text": "se cambia alicate, se controla con operador, se deja ok se cambia alicate, se controla con operador, se deja ok se cambia alicate,",
+      "documented_cause": "Fatiga Material",
+      "interventions": [
+        "se cambia alicate, se controla con opera"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897619",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "NO BAJA AP 15Tn",
+      "extended_text": "",
+      "documented_cause": "Alimentación de Energía",
+      "interventions": [
+        "se repone atv malacate"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898127",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "No cierra almeja",
+      "extended_text": "Puente queda con la falla a fin de turno noche, al inicio del turno mañana se trabaja sobre puente en proyecto de testeras que ya e",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Se reemplaza EV de apertura cierre de al",
+        "Ok.",
+        "se revisa cableado y arrollacable para d"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898292",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "Palanca de control remoto suelta",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "se repara control remoto"
+      ],
+      "python_candidate_category": "Mando y control"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897424",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "SE APAGA CONSTANTE",
+      "extended_text": "",
+      "documented_cause": "Corte de Energía",
+      "interventions": [
+        "se repone atv de traslacion de carro"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897638",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "No giraran herramientas Almeja / Picador",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Reset de ATV.",
+        "OK."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897739",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "Se apaga constantemente.-",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "SE ACUDE AL PUENTE POR FALLAS VARIAS AL"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898019",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "No prende compresor.-",
+      "extended_text": "",
+      "documented_cause": "Desconectado",
+      "interventions": [
+        "SE REPONE RELE Y SE MIDEN FASES"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898608",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "No baja aparejo 15 TN",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "Se repone falso contacto en contactor Ap"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897425",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "MANIBELA TRASLACION SUELTA",
+      "extended_text": "",
+      "documented_cause": "Falla Elemento de Maniobra",
+      "interventions": [
+        "SE REPARA CONTROL, SE DEJA OPERATIVO"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897453",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "No baja el aparejo de 15 TN",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "se repone falla no rearmable atvMalacate"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897906",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "mg 13 sin traslación de carro",
+      "extended_text": "Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada S",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Reset de ATV: condensador precarga"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898525",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "controlar giro ECL",
+      "extended_text": "",
+      "documented_cause": "Falta Aceite",
+      "interventions": [
+        "Se regula bajada de picador.",
+        "Ok."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898620",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "No baja aparejo 15 TN",
+      "extended_text": "",
+      "documented_cause": "Falla de Proceso",
+      "interventions": [
+        "se repone falla no rearmable ATV malacat"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898508",
+      "equipment": "P-MG22",
+      "room": 2,
+      "series": "A",
+      "description": "No abre alicate",
+      "extended_text": "",
+      "documented_cause": "Fatiga Material",
+      "interventions": [
+        "se cambia alicate, queda ok.-"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897461",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "Sin traslacion norte - sur",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "se repone falla no rearmable atv Carro"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897738",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "Sin traslacion n/s.-",
+      "extended_text": "",
+      "documented_cause": "Circuito Abierto-Sin Continuidad",
+      "interventions": [
+        "SE REPONE FALLA"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897871",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "NO GIRA ALMEJA PICADOR",
+      "extended_text": "",
+      "documented_cause": "Corte de Energía",
+      "interventions": [
+        "se repone atv de giro"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897896",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "No tiene fuerza el picador",
+      "extended_text": "",
+      "documented_cause": "Accidente",
+      "interventions": [
+        "Se encuentra manguera de alimentación de",
+        "Ok."
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898188",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "no gira almeja.-",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "se repone variador"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898626",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "Almeja sin fuerza",
+      "extended_text": "",
+      "documented_cause": "Vibración Anormal",
+      "interventions": [],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898119",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "Controlar fuerza de ECL",
+      "extended_text": "",
+      "documented_cause": "Brida-Empaquetadura Floja",
+      "interventions": [
+        "Se controla máximo peso de AP4Tn con pes",
+        "Ok."
+      ],
+      "python_candidate_category": "Mando y control"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898538",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "No gira ECL",
+      "extended_text": "",
+      "documented_cause": "Brida-Empaquetadura Floja",
+      "interventions": [
+        "Se encuentra motor de giro de ECL suelto",
+        "Ok."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897951",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "No abre alicate.-",
+      "extended_text": "",
+      "documented_cause": "Alimentación de Energía",
+      "interventions": [
+        "falla en ficha de electrovalvula"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898314",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "no sube destornillador",
+      "extended_text": "MG 33 no sube destornillador, continuar - control remoto en TD04 se da prioridad a consigna de cuba 249, cuba 141 y baa 6 para camb",
+      "documented_cause": "Brida-Empaquetadura Floja",
+      "interventions": [
+        "Se reemplaza destornillador ya que no su",
+        "Ok."
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897427",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "DESTORNILLADOR NO BAJA",
+      "extended_text": "Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada Se agrega tilde de parada S",
+      "documented_cause": "Falla Elemento de Maniobra",
+      "interventions": [
+        "se ajusta manipulador"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898189",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "Error pesaje balanza.-",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "se realiza limpieza de celda de carga"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897198",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "Almeja subio torcida",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "Falla operativa-se repone falla de time"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897247",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "Pinza torcida.-",
+      "extended_text": "",
+      "documented_cause": "Accidente",
+      "interventions": [
+        "Se realiza cambio de pinza atrapa morcet"
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897923",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "controlar ECL (queda girando)",
+      "extended_text": "",
+      "documented_cause": "Ajuste Deficiente",
+      "interventions": [
+        "se realiza cambio de electrovalvula"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800897488",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "Problemas almeja.-",
+      "extended_text": "",
+      "documented_cause": "Mal Uso o Uso Inadecuado",
+      "interventions": [
+        "Se encuentra almeja con mucho baño de al"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898485",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "Picador sin fuerza",
+      "extended_text": "",
+      "documented_cause": "Desgaste",
+      "interventions": [
+        "se busca repuesto en almacén se arma y s"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 32,
+      "notice_number": "800898599",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "Picador sin fuerza",
+      "extended_text": "",
+      "documented_cause": "Desgaste",
+      "interventions": [
+        "Válvula de seguridad de cabezal de compr"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899057",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "NO BAJA PERCHA",
+      "extended_text": "",
+      "documented_cause": "Corte de Energía",
+      "interventions": [
+        "se resetea atv malacate"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899125",
+      "equipment": "P-MG11",
+      "room": 1,
+      "series": "A",
+      "description": "SIN TRASLACION",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "se repone falla de time out picador"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898647",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "sin traslación N/S",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Reset de ATV: Error 27"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899192",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "no giran herramientas",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "se repone y se controla, ok"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899848",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "No gira la almeja ni picador",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Reset de ATV: Error Interno 27."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800900000",
+      "equipment": "P-MG12",
+      "room": 1,
+      "series": "A",
+      "description": "No enciende",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Se regula detector de fase tablero de ca",
+        "OK."
+      ],
+      "python_candidate_category": "Otra / revisión humana"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898957",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "FALTA PERILLA ALMEJA PICADOR CONTROL",
+      "extended_text": "",
+      "documented_cause": "Alimentación de Energía",
+      "interventions": [
+        "se coloca perilla a control ikusi"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899451",
+      "equipment": "P-MG13",
+      "room": 1,
+      "series": "A",
+      "description": "sin traslacion",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "SE REPONE FALLA TIME OUT"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898664",
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "description": "No abre  / No gira aleja",
+      "extended_text": "",
+      "documented_cause": "Circuito Abierto-Sin Continuidad",
+      "interventions": [
+        "Se normaliza cable suelta en selectora d",
+        "Ok."
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898856",
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "description": "No baja aparejo 15 TN",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "Se repone falla no rearmable atvMalacate"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899126",
+      "equipment": "P-MG21",
+      "room": 2,
+      "series": "A",
+      "description": "Almeja sube torcida (sin traslacion)ROT",
+      "extended_text": "",
+      "documented_cause": "Aflojamiento",
+      "interventions": [
+        "Se repara freno de motor de giro almeja",
+        "Se realiza cambio de motor de giro de pi"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899436",
+      "equipment": "P-MG22",
+      "room": 2,
+      "series": "A",
+      "description": "No abre el alicate",
+      "extended_text": "",
+      "documented_cause": "Desgaste",
+      "interventions": [
+        "Se prueba alicate en posición de cuba y",
+        "Ok."
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899172",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "no gira la percha",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "se repone falla no rearmable atv GIROS"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899191",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "no gira almeja",
+      "extended_text": "",
+      "documented_cause": "Circuito Abierto-Sin Continuidad",
+      "interventions": [
+        "SE REPONE FALLA"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899812",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "Destornillador baja mal",
+      "extended_text": "",
+      "documented_cause": "Accidente",
+      "interventions": [
+        "Se retira restos de pinza de morceto (du"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899877",
+      "equipment": "P-MG23",
+      "room": 2,
+      "series": "A",
+      "description": "Perdida de aire por manguera de picador",
+      "extended_text": "",
+      "documented_cause": "Desgaste",
+      "interventions": [
+        "Se cambia manguera de picador"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899211",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "revisar rodamiento de traslacion nor/sur",
+      "extended_text": "",
+      "documented_cause": "Desalineación",
+      "interventions": [
+        "se cambian silenblock"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899897",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "mando roto",
+      "extended_text": "Se agrega tilde de parada",
+      "documented_cause": "Falla Elemento de Maniobra",
+      "interventions": [
+        "se repara control remoto"
+      ],
+      "python_candidate_category": "Mando y control"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800900089",
+      "equipment": "P-MG31",
+      "room": 3,
+      "series": "B",
+      "description": "Traslación carro N/S lenta y con ruido",
+      "extended_text": "se revisa en OT 11302467 se repara con OT 11304589 18.08.2026 15:26:33 UTC-3 (A90075) Se re-abre aviso para colocar tilde de parada",
+      "documented_cause": "Desalineación",
+      "interventions": [],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899171",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "Perdida de aire",
+      "extended_text": "equipo se encuentra en tarea de colada-se repara control remoto continua con tarea de colada",
+      "documented_cause": "Desconectado",
+      "interventions": [
+        "Operario indica que tiene falla el contr"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899959",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "Falla en el alicate al agarrar la varill",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "falla operativa, se cambia alicate"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800900061",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "sin traslacion norte/sur",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Se resetea falla de variador TC"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800900062",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "perdida de aire",
+      "extended_text": "",
+      "documented_cause": "Fatiga Material",
+      "interventions": [
+        "SE INSPECCIONA Y SE ENCUENTRA PERDIDA DE"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800900102",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "Almeja mal subida",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "se repone falla de time out almeja"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800900115",
+      "equipment": "P-MG32",
+      "room": 3,
+      "series": "B",
+      "description": "Sin fuerza las heramientas",
+      "extended_text": "Controlar falla al bajar la ameja.",
+      "documented_cause": "Desgaste",
+      "interventions": [
+        "Se desmonta cañería de alimentación de a",
+        "Ok."
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898766",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "NO TRASLADA",
+      "extended_text": "",
+      "documented_cause": "Lubricación Faltante",
+      "interventions": [
+        "se hecha aceite a vaso de válvulas de ap"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898886",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "SIN TRASLACION",
+      "extended_text": "Le cuesta cerrar la traba de almeja",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "Se repone falla de time out almeja desde"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898956",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "SIN TRASLACION",
+      "extended_text": "",
+      "documented_cause": "Alimentación de Energía",
+      "interventions": [
+        "se cambia valvila de traba de picador"
+      ],
+      "python_candidate_category": "Traslación"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899187",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "manguera suelta ECL",
+      "extended_text": "",
+      "documented_cause": "Desgaste",
+      "interventions": [
+        "se cambia racord,se ajusta manguera"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800900095",
+      "equipment": "P-MG33",
+      "room": 3,
+      "series": "B",
+      "description": "No baja aparejo de 15 TN",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "Se controla percha y aparejo de 15 tn"
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898939",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "no gira percha N06",
+      "extended_text": "",
+      "documented_cause": "Falso Contacto",
+      "interventions": [
+        "se reinicia variador de giro, se ajustan"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800900006",
+      "equipment": "P-MG41",
+      "room": 4,
+      "series": "B",
+      "description": "Picador no sube",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "Reset ATV: sobrevelocidad."
+      ],
+      "python_candidate_category": "Izaje y aparejo"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898685",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "SIN FUERZA ALMEJA PICADOR",
+      "extended_text": "",
+      "documented_cause": "Fatiga Material",
+      "interventions": [
+        "se reajusta cabezal de picador y se saca"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898958",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "ALMEJA TRABADA",
+      "extended_text": "",
+      "documented_cause": "Alimentación de Energía",
+      "interventions": [
+        "se destraba almeja"
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899878",
+      "equipment": "P-MG42",
+      "room": 4,
+      "series": "B",
+      "description": "Almeja queda cruzada",
+      "extended_text": "",
+      "documented_cause": "Falla Operativa",
+      "interventions": [
+        "Gancho de protección de almeja trabado e",
+        "OK."
+      ],
+      "python_candidate_category": "Herramientas, almeja y cierre"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898730",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "NO ENCIENDE COMPRESOR",
+      "extended_text": "",
+      "documented_cause": "Corte de Energía",
+      "interventions": [
+        "se repone termico, se controla ok"
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898931",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "no gira picador",
+      "extended_text": "",
+      "documented_cause": "Falla Componente Electrónico",
+      "interventions": [
+        "se repone variador"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800898948",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "no gira herramientas",
+      "extended_text": "",
+      "documented_cause": "Circuito Abierto-Sin Continuidad",
+      "interventions": [
+        "SE REPONE FALLA"
+      ],
+      "python_candidate_category": "Giro y percha"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899610",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "No prende el compresor",
+      "extended_text": "",
+      "documented_cause": "Circuito Abierto-Sin Continuidad",
+      "interventions": [
+        "Se repone relé térmico de compresor.",
+        "Ok."
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    },
+    {
+      "year": 2026,
+      "week": 33,
+      "notice_number": "800899638",
+      "equipment": "P-MG43",
+      "room": 4,
+      "series": "B",
+      "description": "se apaga el compresor",
+      "extended_text": "",
+      "documented_cause": "Accidente",
+      "interventions": [
+        "Se reemplaza manguera de alimentación de",
+        "Ok."
+      ],
+      "python_candidate_category": "Neumática, aire y compresor"
+    }
+  ]
+}

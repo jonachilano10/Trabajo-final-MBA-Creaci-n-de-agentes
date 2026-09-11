@@ -1,0 +1,10 @@
+semana,modelo,nivel,tokens_entrada,tokens_entrada_cacheados,tokens_salida,tokens_razonamiento,tokens_totales,costo_usd,tipo_dato
+29,gpt-5.4-mini,medium,3907,0,3488,2246,7395,0.01862625,real_api
+30,gpt-5.4-mini,medium,6126,0,5408,3875,11534,0.02893050,real_api
+31,gpt-5.4-mini,medium,10175,0,8053,6691,18228,0.04386975,real_api
+32,gpt-5.4-mini,medium,13567,0,7234,5244,20801,0.04272825,real_api
+33,gpt-5.4-mini,medium,17733,0,5840,3595,23573,0.03957975,real_api
+34,gpt-5.4-mini,medium,21104,0,7690,6038,28794,0.05043300,real_api
+35,gpt-5.4-mini,medium,24147,0,5072,3554,29219,0.04093425,real_api
+36,gpt-5.4-mini,medium,25547,25344,6736,4973,32283,0.03236505,real_api
+TOTAL,,,122306,25344,49521,36216,171827,0.29746680,real_api

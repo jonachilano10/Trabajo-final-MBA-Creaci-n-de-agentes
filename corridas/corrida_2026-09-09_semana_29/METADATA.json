@@ -1,0 +1,21 @@
+{
+  "archived_at": "2026-09-09T15:01:44-03:00",
+  "year": 2026,
+  "week": 29,
+  "period": {
+    "year": 2026,
+    "week": 29,
+    "start_date": "2026-07-13",
+    "end_date": "2026-07-19"
+  },
+  "requested_model": "gpt-5.4-mini",
+  "requested_reasoning_effort": "medium",
+  "llm_status": "completed",
+  "llm_error": null,
+  "source_sha256": {
+    "notices": "4534d95c353fdef75d7c443fdbf1c6fb30750a4beccfdfe8481daf485d41ecf0",
+    "notifications": "574b6b3f87df2efbfed724ff8b687527d81ad0dd2adaf0788b469c52e00c0f3c",
+    "maintenance": "7e8f9dd58c85b4922505be5aec93b34e9326b58669a0cb3feb032d13264cb6c2"
+  },
+  "llm_evidence_updated_at": "2026-09-09T16:03:45-03:00"
+}

@@ -1,0 +1,153 @@
+{
+  "findings": [
+    {
+      "relation_type": "same_bridge",
+      "title": "Repetición de giro de percha y herramientas en P-MG12",
+      "notice_numbers": [
+        "800895684",
+        "800895701",
+        "800896632",
+        "800896729",
+        "800897638",
+        "800899192",
+        "800899848"
+      ],
+      "confidence": "alta",
+      "rationale": "En el mismo puente se repiten fallas de giro con descripciones muy cercanas: \"no gira percha\", \"no gira percha de colada\", \"no gira picador-almeja\", \"no giran herramientas\" y \"no gira la almeja ni picador\". Los causales documentados no son idénticos, alternando entre falso contacto, falla de componente electrónico y falla operativa, y las intervenciones también varían entre reset de ATV, reposición de falla y posicionamiento de pantógrafo. Esto sugiere recurrencia funcional en el mismo subsistema, pero no confirma una causa única.",
+      "human_review": "Verificar en campo continuidad, borneras, pantógrafo y variador de giro de P-MG12, y confirmar si los distintos avisos corresponden al mismo circuito o a fallas distintas del conjunto de giro."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reiteración de falla de aparejo 15 tn en P-MG21",
+      "notice_numbers": [
+        "800895682",
+        "800896003",
+        "800896049",
+        "800898608",
+        "800898856"
+      ],
+      "confidence": "alta",
+      "rationale": "En P-MG21 se repite la imposibilidad de subir o bajar el aparejo de 15 tn en varias semanas. Aunque la descripción se mantiene muy estable, los causales registrados cambian entre falla de componente electrónico y falso contacto, y las intervenciones alternan entre reset de ATV, reposición de variador y reposición de falso contacto en contactor. La coincidencia textual y funcional es fuerte, pero la documentación no permite afirmar una única causa común.",
+      "human_review": "Revisar variador, contactor y cableado del aparejo de 15 tn en P-MG21, y comparar si los eventos recaen sobre el mismo punto de falla o sobre síntomas similares con origen distinto."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Persistencia de sin traslación en P-MG23",
+      "notice_numbers": [
+        "800892746",
+        "800892753",
+        "800897461",
+        "800897738",
+        "800898766",
+        "800898886"
+      ],
+      "confidence": "alta",
+      "rationale": "El puente P-MG23 muestra reiteración de pérdida de traslación con variantes de redacción como \"sin traslacion\", \"sin traslacion norte-sur\", \"sin traslacion n/s\" y \"no traslada\". Los causales documentados incluyen falso contacto, circuito abierto, lubricación faltante y una intervención asociada a time out, por lo que la evidencia apunta a un patrón recurrente del subsistema de traslación, aunque con mecanismos distintos en cada aviso.",
+      "human_review": "Inspeccionar pantógrafos, borneras, lubricación y el circuito de traslación del carro en P-MG23 antes de concluir si se trata de una repetición de la misma falla o de modos de falla diferentes."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Repetición de trabas y desalineación de almeja/alicate en P-MG42",
+      "notice_numbers": [
+        "800894904",
+        "800895288",
+        "800895874",
+        "800897198",
+        "800899878"
+      ],
+      "confidence": "alta",
+      "rationale": "En P-MG42 aparecen varias fallas sobre la almeja y el alicate: \"no pica ni aplaude almeja\", \"almeja sin aplauso\", \"ALMEJA TRABADA\", \"almeja subio torcida\" y \"almeja queda cruzada\". Los causales documentados son heterogéneos, incluyendo circuito abierto, lubricación faltante, falla operativa y ajuste deficiente, con intervenciones que van desde agregar aceite hasta destrabar o cambiar componentes. La similitud funcional es clara, pero no hay sustento para una sola causalidad.",
+      "human_review": "Revisar freno, cilindros, lubricación, switches de picar/aplauso y alineación mecánica de almeja y alicate en P-MG42."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Recurrencia de falta de aire y fuerza en P-MG43",
+      "notice_numbers": [
+        "800895061",
+        "800895285",
+        "800896655",
+        "800898730",
+        "800898931",
+        "800899610",
+        "800899638"
+      ],
+      "confidence": "media",
+      "rationale": "En P-MG43 se repiten síntomas de pérdida de fuerza y de funcionamiento del compresor: \"destornillador sin fuerza\", \"se queda sin aire y sin fuerza\", \"se apaga compresor\", \"NO ENCIENDE COMPRESOR\", \"No prende el compresor\" y \"se apaga el compresor\". Aunque el síntoma general se parece, los documentos mezclan ajuste deficiente, desgaste, corte de energía, accidente y circuito abierto, con intervenciones distintas sobre mangueras, relés térmicos y válvulas. Por eso se propone relación preliminar, sin concluir causa común.",
+      "human_review": "Verificar la línea neumática completa de P-MG43, alimentación eléctrica del compresor y estado de mangueras, relés térmicos y válvulas antes de unificar los eventos."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Fallas de giro de percha/almeja/picador en varios puentes",
+      "notice_numbers": [
+        "800895684",
+        "800896204",
+        "800898931",
+        "800899172",
+        "800899848"
+      ],
+      "confidence": "media",
+      "rationale": "Distintos puentes reportan el mismo tipo de síntoma en el giro: P-MG12 \"no gira percha\" y \"no gira la almeja ni picador\", P-MG23 \"no gira la percha\", P-MG41 \"no gira picador-almeja\" y P-MG43 \"no gira picador\". Los causales documentados no coinciden: se registran falla de componente electrónico, falso contacto y circuito abierto. La coincidencia funcional justifica una relación preliminar entre puentes, pero no demuestra una causa única compartida.",
+      "human_review": "Comparar en campo si los puentes comparten el mismo tipo de variador, cableado o puntos de conexión del giro, y revisar cada aviso por separado antes de concluir un patrón común."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Traslación norte-sur recurrente entre puentes",
+      "notice_numbers": [
+        "800892746",
+        "800892753",
+        "800894037",
+        "800897461",
+        "800899125",
+        "800900061",
+        "800900089"
+      ],
+      "confidence": "alta",
+      "rationale": "La pérdida de traslación aparece en varios puentes con redacciones muy próximas: \"sin traslacion norte sur\", \"sin traslacion n/s\", \"sin traslación N/S\", \"sin traslacion norte/sur\" y \"Traslación carro N/S lenta y con ruido\". Los causales registrados son distintos entre puentes y semanas: corte de energía, falso contacto, circuito abierto, desalineación, lubricación faltante y falla de componente electrónico. La relación es fuerte a nivel funcional, pero la evidencia no permite afirmar un único origen común.",
+      "human_review": "Revisar pantógrafos, borneras, variadores y alineación del carro de traslación en los puentes involucrados, contrastando cada aviso con la inspección física."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Compresor y suministro de aire con patrón repetido entre puentes",
+      "notice_numbers": [
+        "800895603",
+        "800896655",
+        "800898019",
+        "800899171",
+        "800899610",
+        "800899638"
+      ],
+      "confidence": "media",
+      "rationale": "Se repite la temática de compresor/aire en varios puentes: \"No prende compresor\", \"se apaga compresor\", \"NO ENCIENDE COMPRESOR\" y \"Pérdida de aire\". Los documentos asocian causas diferentes, como falla de componente electrónico, desconectado, accidente, corte de energía y desgaste, y las intervenciones también son distintas (relé térmico, manguera, revisión del puente, control de fases). Esto sugiere un patrón funcional compartido, sin que se pueda afirmar que la causa sea la misma.",
+      "human_review": "Verificar alimentación eléctrica, protecciones, relés térmicos y mangueras del sistema neumático en cada puente antes de vincular las fallas como una sola causa."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Problemas de apertura, trabado y cierre de alicate/almeja en varios puentes",
+      "notice_numbers": [
+        "800895874",
+        "800897198",
+        "800899436",
+        "800899878",
+        "800899959"
+      ],
+      "confidence": "media",
+      "rationale": "Hay eventos similares en distintos puentes sobre alicate/almeja: \"No abre el alicate\", \"Falla en el alicate al agarrar la varilla\", \"Almeja trabada\", \"Almeja queda cruzada\" y \"ALMEJA TRABADA\". Los causales documentados varían entre desgaste, falla operativa, alimentación de energía y ajustes mecánicos, por lo que la similitud es funcional pero no causal. La relación entre puentes es plausible por el tipo de síntoma, no por evidencia de una misma falla raíz.",
+      "human_review": "Revisar cilindros, protecciones, alineación mecánica y elementos de mando/apertura-cierre de alicate y almeja en los puentes citados."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Reiteración de no baja del aparejo 15 tn entre puentes",
+      "notice_numbers": [
+        "800895682",
+        "800896151",
+        "800897453",
+        "800898608",
+        "800898856",
+        "800900095"
+      ],
+      "confidence": "alta",
+      "rationale": "La imposibilidad de bajar el aparejo de 15 tn se repite en diferentes puentes con formulaciones muy parecidas: \"NO SUBE AP 15 Tn\", \"No baja aparejo 15 TN\", \"No baja el aparejo de 15 TN\" y \"No baja aparejo 15 TN\". Los documentos alternan entre alimentación de energía, falso contacto, falla de proceso, corte de energía y falla operativa, y las acciones registradas son resets o reposición de ATV/falla no rearmable. La coincidencia transversal es clara, pero no confirma una causa común.",
+      "human_review": "Comparar en campo el circuito de malacate, contactores y variadores de los puentes involucrados, y revisar cada aviso con su intervención asociada antes de cerrar un patrón común."
+    }
+  ]
+}

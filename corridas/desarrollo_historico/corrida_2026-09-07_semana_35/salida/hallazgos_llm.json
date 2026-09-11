@@ -1,0 +1,84 @@
+{
+  "findings": [
+    {
+      "relation_type": "same_bridge",
+      "title": "P-MG12: repetición del síntoma de giro del picador",
+      "notice_numbers": ["800901907", "800903016"],
+      "confidence": "alta",
+      "rationale": "Ambos avisos de la semana 35 describen que el picador no gira. Las causas documentadas no son idénticas: Falso Contacto y Corte de Energía. En los dos casos la notificación menciona reposición o reseteo del ATV de giros. La similitud corresponde al síntoma y al subsistema intervenido; no demuestra una causa única.",
+      "human_review": "Revisar el historial del ATV de giros, conexiones y alarmas del P-MG12 antes de concluir recurrencia causal."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "P-MG12: detenciones intermitentes con falso contacto documentado",
+      "notice_numbers": ["800903117", "800903187"],
+      "confidence": "alta",
+      "rationale": "Las descripciones originales indican 'se detiene con frecuencia' y 'se apaga a cada rato'. Ambos avisos registran Falso Contacto como causa. El primero informa revisión de térmicas y cableados; el segundo no posee notificación vinculable, por lo que no puede confirmarse que compartan el mismo punto de falla.",
+      "human_review": "Completar la intervención del aviso 800903187 y contrastar térmicas, cableado y registros de alarma."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "P-MG31: repetición de imposibilidad de bajar el picador",
+      "notice_numbers": ["800901053", "800901358"],
+      "confidence": "alta",
+      "rationale": "Los dos avisos de la semana 34 conservan la misma descripción: 'no baja picador'. Las causas documentadas difieren entre Ajuste Deficiente y Falla Componente Electrónico, por lo que se interpreta como repetición del modo observado y no como confirmación de una misma causa.",
+      "human_review": "Comparar componentes revisados e intervenciones de ambos avisos para determinar si existe un origen común."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "P-MG33: dos eventos de falta de traslación",
+      "notice_numbers": ["800898886", "800898956"],
+      "confidence": "alta",
+      "rationale": "Ambos avisos de la semana 33 describen 'SIN TRASLACION'. Uno registra Falso Contacto y el otro Alimentación de Energía. La coincidencia textual confirma repetición del síntoma, pero la documentación disponible no permite afirmar identidad causal.",
+      "human_review": "Revisar alimentación, contactos y registros del accionamiento de traslación del P-MG33."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "P-MG43: recurrencia funcional del compresor",
+      "notice_numbers": ["800898730", "800899610", "800899638"],
+      "confidence": "media",
+      "rationale": "Los avisos de la semana 33 describen que el compresor no enciende, no prende o se apaga. Las causas documentadas son Corte de Energía, Circuito Abierto-Sin Continuidad y Accidente. Los eventos afectan la función del compresor, aunque los textos no prueban un único mecanismo de falla.",
+      "human_review": "Separar problemas de alimentación, continuidad y disparos durante la revisión técnica del compresor."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Falta de traslación norte-sur en puentes diferentes",
+      "notice_numbers": ["800900061", "800900979", "800902597", "800901930", "800902096"],
+      "confidence": "alta",
+      "rationale": "P-MG32, P-MG12, P-MG13, P-MG21 y P-MG23 registran descripciones de falta de traslación norte-sur entre las semanas 33, 34 y 35. Las causas documentadas incluyen componente electrónico, falso contacto y alimentación de energía; varias intervenciones mencionan reposición del ATV. Existe similitud de función afectada, no evidencia suficiente de causa compartida entre puentes.",
+      "human_review": "Comparar alarmas de ATV, alimentación y condiciones de los circuitos de traslación por equipo."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Síntoma de percha sin giro en varios puentes",
+      "notice_numbers": ["800898939", "800901499", "800901609", "800901717", "800902249", "800902871", "800902407"],
+      "confidence": "alta",
+      "rationale": "Los textos originales de P-MG41, P-MG22, P-MG23, P-MG21 y P-MG31 describen que la percha no gira. Se documentan causas distintas, entre ellas Falso Contacto, Falla Componente Electrónico, Falla Operativa y Desconectado. Algunas intervenciones se relacionan con pantógrafos o variadores de giro. La asociación es sólida como modo funcional similar, pero no como causalidad común.",
+      "human_review": "Clasificar cada evento por variador, pantógrafo, alimentación, mando y condición operativa antes de comparar causas."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Pérdidas de aire documentadas en diferentes puentes",
+      "notice_numbers": ["800899877", "800899171", "800900062", "800902335", "800902409"],
+      "confidence": "alta",
+      "rationale": "P-MG23, P-MG32, P-MG12 y P-MG22 presentan descripciones originales de pérdida de aire. En varios eventos se mencionan mangueras y las causas registradas incluyen Desgaste, Desconectado y Fatiga Material. Los avisos de P-MG12 y P-MG22 de la semana 35 comparten Fatiga Material y notificaciones de reemplazo o reparación de elementos neumáticos, sin probar que exista una causa sistémica común.",
+      "human_review": "Comparar ubicación, componente reemplazado, condición de las mangueras y antigüedad por puente."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Picador que no baja en P-MG31 y P-MG43",
+      "notice_numbers": ["800901053", "800901358", "800900557"],
+      "confidence": "alta",
+      "rationale": "Dos avisos de P-MG31 y uno de P-MG43, todos de la semana 34, describen 'no baja picador'. Se registran Ajuste Deficiente y Falla Componente Electrónico. La descripción permite agrupar el modo observado entre puentes, pero no identificar un componente causal único.",
+      "human_review": "Contrastar sensores, ajustes, accionamiento y componentes electrónicos intervenidos en cada puente."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Trabado de almeja en P-MG12 y P-MG43",
+      "notice_numbers": ["800902275", "800902124"],
+      "confidence": "media",
+      "rationale": "En la semana 35, P-MG12 registra 'almeja trabada' y P-MG43 'Se trabo la almeja al subir'. Las causas documentadas son Falla Operativa y Falso Contacto, y las intervenciones también difieren. Se observa similitud en el síntoma general de bloqueo, con información insuficiente para afirmar el mismo modo técnico.",
+      "human_review": "Validar en qué etapa y mecanismo se produjo el bloqueo de cada almeja."
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reporte semanal de disponibilidad S29/2026</title>
+<style>
+:root{--navy:#17324d;--blue:#28658f;--ink:#1b2733;--muted:#60707d;--line:#d8e0e6;--soft:#f3f6f8;--paper:#fff;--warning:#8a4b08;--warning-bg:#fff4e5}
+*{box-sizing:border-box}body{margin:0;background:#eef2f5;color:var(--ink);font:14px/1.45 Arial,sans-serif}.page{max-width:1500px;margin:auto;background:var(--paper);min-height:100vh}
+header{padding:28px 34px 22px;background:var(--navy);color:#fff}header h1{margin:0 0 6px;font-size:25px}header p{margin:0;color:#dce7ef}
+.tabs{display:flex;border-bottom:1px solid var(--line);background:#fafbfd;padding:0 24px;position:sticky;top:0;z-index:5}.tab{border:0;border-bottom:3px solid transparent;background:transparent;padding:15px 18px 12px;font-weight:600;color:var(--muted);cursor:pointer}.tab[aria-selected=true]{color:var(--navy);border-bottom-color:var(--blue)}
+main{padding:28px 34px 48px}.panel[hidden]{display:none}h2{color:var(--navy);font-size:19px;margin:30px 0 12px}h3{color:var(--navy);font-size:15px;margin:20px 0 8px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.box{border:1px solid var(--line);border-radius:6px;padding:14px 16px}.label{color:var(--muted);font-size:12px;text-transform:uppercase}.value{color:var(--navy);font-size:23px;font-weight:600;margin-top:3px;font-variant-numeric:tabular-nums}.sub,.muted{color:var(--muted);font-size:12px}
+.notice{border-left:4px solid var(--blue);background:var(--soft);padding:12px 14px;margin:14px 0}.warning{border-left-color:var(--warning);background:var(--warning-bg)}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px}table{width:100%;border-collapse:collapse;min-width:720px}th{background:var(--soft);color:var(--navy);text-align:left;font-size:12px;padding:9px 10px;border-bottom:1px solid var(--line);position:sticky;top:0}td{padding:9px 10px;border-bottom:1px solid #e7ecef;vertical-align:top}.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.tag,.strong{font-weight:600;white-space:nowrap}
+.filters{display:grid;grid-template-columns:repeat(4,minmax(140px,1fr));gap:12px;padding:14px;background:var(--soft);border:1px solid var(--line);border-radius:6px}label{font-size:12px;font-weight:600;color:var(--navy)}select{display:block;width:100%;margin-top:5px;padding:8px;border:1px solid #b7c3cd;border-radius:4px;background:#fff}
+.charts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:18px 0}.chart{border:1px solid var(--line);border-radius:6px;padding:12px}.chart h3{margin:0 0 8px}.chart svg{width:100%;height:240px;display:block}.axis{stroke:#9eabb6;stroke-width:1}.gridline{stroke:#e4e9ed;stroke-width:1}.series-line{fill:none;stroke:var(--blue);stroke-width:2}.point{fill:var(--blue)}.chart-label{fill:var(--muted);font-size:11px}.chart-value{fill:var(--navy);font-size:12px;font-weight:600}
+footer{border-top:1px solid var(--line);padding:18px 34px;color:var(--muted);font-size:12px}@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.two,.charts{grid-template-columns:1fr}.filters{grid-template-columns:repeat(2,1fr)}main{padding:22px 18px 36px}header{padding:24px 18px}}
+</style></head><body><div class="page">
+<header><h1>Reporte semanal de disponibilidad</h1><p>Puentes grúa P‑MG · Semana 29/2026 · 2026-07-13 al 2026-07-19</p></header>
+<nav class="tabs" role="tablist"><button class="tab" id="tab-current" role="tab" aria-selected="true" aria-controls="current">1. Semana procesada</button><button class="tab" id="tab-history" role="tab" aria-selected="false" aria-controls="history">2. Histórico y recurrencias</button></nav>
+<main><section class="panel" id="current" role="tabpanel" aria-labelledby="tab-current">
+<div class="grid"><div class="box"><div class="label">Semana</div><div class="value">29/2026</div><div class="sub">2026-07-13 al 2026-07-19</div></div>
+<div class="box"><div class="label">Disponibilidad global</div><div class="value">98,28 %</div><div class="sub">Cálculo agregado</div></div>
+<div class="box"><div class="label">Horas de parada</div><div class="value">32,23 h</div><div class="sub">28 detenciones</div></div>
+<div class="box"><div class="label">Mantenimiento</div><div class="value">144,00 h</div><div class="sub">Tiempo disponible 1.872,00 h</div></div></div>
+<div class='notice warning'><strong>Sin historial suficiente.</strong> Esta es la primera semana almacenada. No se calculan comparaciones ni tendencias.</div>
+<div class="two"><div><h2>Disponibilidad por serie</h2><div class="table-wrap"><table><thead><tr><th>Serie</th><th class="num">Calendario h</th><th class="num">Mantenimiento h</th><th class="num">Disponible h</th><th class="num">Parada h</th><th class="num">Disponibilidad</th></tr></thead><tbody><tr><td>Serie A</td><td class='num'>1.008,00</td><td class='num'>60,00</td><td class='num'>948,00</td><td class='num'>17,75</td><td class='num strong'>98,13 %</td></tr><tr><td>Serie B</td><td class='num'>1.008,00</td><td class='num'>84,00</td><td class='num'>924,00</td><td class='num'>14,48</td><td class='num strong'>98,43 %</td></tr></tbody></table></div></div>
+<div><h2>Disponibilidad por sala</h2><div class="table-wrap"><table><thead><tr><th>Sala</th><th class="num">Calendario h</th><th class="num">Mantenimiento h</th><th class="num">Disponible h</th><th class="num">Parada h</th><th class="num">Disponibilidad</th></tr></thead><tbody><tr><td>Sala 1</td><td class='num'>504,00</td><td class='num'>36,00</td><td class='num'>468,00</td><td class='num'>11,29</td><td class='num strong'>97,59 %</td></tr><tr><td>Sala 2</td><td class='num'>504,00</td><td class='num'>24,00</td><td class='num'>480,00</td><td class='num'>6,46</td><td class='num strong'>98,65 %</td></tr><tr><td>Sala 3</td><td class='num'>504,00</td><td class='num'>56,00</td><td class='num'>448,00</td><td class='num'>2,45</td><td class='num strong'>99,45 %</td></tr><tr><td>Sala 4</td><td class='num'>504,00</td><td class='num'>28,00</td><td class='num'>476,00</td><td class='num'>12,03</td><td class='num strong'>97,47 %</td></tr></tbody></table></div></div></div>
+<h2>Disponibilidad por puente</h2><div class="table-wrap"><table><thead><tr><th>Equipo</th><th>Sala</th><th>Serie</th><th class="num">Mantenimiento h</th><th class="num">Disponible h</th><th class="num">Detenciones</th><th class="num">Parada h</th><th class="num">Disponibilidad</th><th>Fallas con detención</th></tr></thead><tbody>
+        <tr><td class="tag">P-MG11</td><td>1</td><td>A</td>
+        <td class="num">28,00</td><td class="num">140,00</td>
+        <td class="num">4</td><td class="num">5,07</td>
+        <td class="num strong">96,38 %</td>
+        <td>No baja ni sube la percha-OKTB; sin traslacion norte sur; SIN TRASL NORTE SUR; sin traslacion este/oeste</td></tr>
+        
+        <tr><td class="tag">P-MG12</td><td>1</td><td>A</td>
+        <td class="num">0,00</td><td class="num">168,00</td>
+        <td class="num">5</td><td class="num">4,47</td>
+        <td class="num strong">97,34 %</td>
+        <td>no funciona balanza; no baja ni sube aparejo de 15 tn; Ajustar bulones ECL.-; NO BAJA AP 15 Tn; No gira el picador</td></tr>
+        
+        <tr><td class="tag">P-MG13</td><td>1</td><td>A</td>
+        <td class="num">8,00</td><td class="num">160,00</td>
+        <td class="num">2</td><td class="num">1,75</td>
+        <td class="num strong">98,91 %</td>
+        <td>SIN MOVIMIENTO; No sube aparejo de 15tn.-</td></tr>
+        
+        <tr><td class="tag">P-MG21</td><td>2</td><td>A</td>
+        <td class="num">8,00</td><td class="num">160,00</td>
+        <td class="num">2</td><td class="num">2,90</td>
+        <td class="num strong">98,19 %</td>
+        <td>Manguera suelta ECL.-; aparejo de 15 tn no sube ni baja</td></tr>
+        
+        <tr><td class="tag">P-MG22</td><td>2</td><td>A</td>
+        <td class="num">8,00</td><td class="num">160,00</td>
+        <td class="num">0</td><td class="num">0,00</td>
+        <td class="num strong">100,00 %</td>
+        <td>Sin detenciones</td></tr>
+        
+        <tr><td class="tag">P-MG23</td><td>2</td><td>A</td>
+        <td class="num">8,00</td><td class="num">160,00</td>
+        <td class="num">4</td><td class="num">3,56</td>
+        <td class="num strong">97,78 %</td>
+        <td>sin traslacion; sin traslacion norte-sur; SIN FUERZA PICADOR(OKTD); No andan luminarias.-</td></tr>
+        
+        <tr><td class="tag">P-MG31</td><td>3</td><td>B</td>
+        <td class="num">32,00</td><td class="num">136,00</td>
+        <td class="num">0</td><td class="num">0,00</td>
+        <td class="num strong">100,00 %</td>
+        <td>Sin detenciones</td></tr>
+        
+        <tr><td class="tag">P-MG32</td><td>3</td><td>B</td>
+        <td class="num">8,00</td><td class="num">160,00</td>
+        <td class="num">1</td><td class="num">1,38</td>
+        <td class="num strong">99,14 %</td>
+        <td>falta resorte destornillador</td></tr>
+        
+        <tr><td class="tag">P-MG33</td><td>3</td><td>B</td>
+        <td class="num">16,00</td><td class="num">152,00</td>
+        <td class="num">1</td><td class="num">1,07</td>
+        <td class="num strong">99,30 %</td>
+        <td>PINZA DOBLADA</td></tr>
+        
+        <tr><td class="tag">P-MG41</td><td>4</td><td>B</td>
+        <td class="num">4,00</td><td class="num">164,00</td>
+        <td class="num">4</td><td class="num">5,06</td>
+        <td class="num strong">96,91 %</td>
+        <td>ECL gira solo para un lado; DESTORNILLADOR TRABADO(OKTD); no gira percha; no gira percha</td></tr>
+        
+        <tr><td class="tag">P-MG42</td><td>4</td><td>B</td>
+        <td class="num">16,00</td><td class="num">152,00</td>
+        <td class="num">2</td><td class="num">2,98</td>
+        <td class="num strong">98,04 %</td>
+        <td>Almeja trabada; Esparrago largo ECL cortado.-</td></tr>
+        
+        <tr><td class="tag">P-MG43</td><td>4</td><td>B</td>
+        <td class="num">8,00</td><td class="num">160,00</td>
+        <td class="num">3</td><td class="num">3,99</td>
+        <td class="num strong">97,51 %</td>
+        <td>NO BAJA ALMEJA; No anda picador.; no pica</td></tr>
+        </tbody></table></div>
+<h2>Detenciones y notificaciones vinculadas</h2><div class="table-wrap"><table><thead><tr><th>Equipo</th><th>Aviso</th><th>Orden</th><th class="num">Parada h</th><th>Categoría</th><th>Descripción original</th><th>Causa documentada</th><th>Intervención</th></tr></thead><tbody>
+        <tr data-week="29" data-equipment="P-MG11" data-room="1" data-series="A">
+        <td class="tag">P-MG11</td><td>800893192</td><td>11294232</td>
+        <td class="num">1,00</td><td>Izaje y aparejo</td>
+        <td>No baja ni sube la percha-OKTB</td><td>Falso Contacto</td>
+        <td>se repone falla no rearmable atvMalacate</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG11" data-room="1" data-series="A">
+        <td class="tag">P-MG11</td><td>800894037</td><td>11295052</td>
+        <td class="num">1,03</td><td>Traslación</td>
+        <td>sin traslacion norte sur</td><td>Corte de Energía</td>
+        <td>se repone atv traslacion</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG11" data-room="1" data-series="A">
+        <td class="tag">P-MG11</td><td>800894057</td><td>11295053</td>
+        <td class="num">0,71</td><td>Otra / revisión humana</td>
+        <td>SIN TRASL NORTE SUR</td><td>Corte de Energía</td>
+        <td>se repone atv traslacion</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG11" data-room="1" data-series="A">
+        <td class="tag">P-MG11</td><td>800894097</td><td>11295202</td>
+        <td class="num">2,33</td><td>Traslación</td>
+        <td>sin traslacion este/oeste</td><td>Falla Componente Electrónico</td>
+        <td>Se cambia contactor de linea puente.</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG12" data-room="1" data-series="A">
+        <td class="tag">P-MG12</td><td>800892961</td><td>11293716</td>
+        <td class="num">0,96</td><td>Otra / revisión humana</td>
+        <td>no funciona balanza</td><td>Falla Componente Electrónico</td>
+        <td>Se resetea balanza.<br>OK.</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG12" data-room="1" data-series="A">
+        <td class="tag">P-MG12</td><td>800893603</td><td>11294604</td>
+        <td class="num">0,46</td><td>Izaje y aparejo</td>
+        <td>no baja ni sube aparejo de 15 tn</td><td>Falla Componente Electrónico</td>
+        <td>Reset de ATV: condensador precarga</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG12" data-room="1" data-series="A">
+        <td class="tag">P-MG12</td><td>800893840</td><td>11294997</td>
+        <td class="num">1,00</td><td>Estructura o elemento mecánico</td>
+        <td>Ajustar bulones ECL.-</td><td>Sobrecarga Mecánica</td>
+        <td>Se ajustan bulones sueltos y se coloca f</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG12" data-room="1" data-series="A">
+        <td class="tag">P-MG12</td><td>800893913</td><td>11294873</td>
+        <td class="num">1,05</td><td>Izaje y aparejo</td>
+        <td>NO BAJA AP 15 Tn</td><td>Corte de Energía</td>
+        <td>se resetea atv de malacate</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG12" data-room="1" data-series="A">
+        <td class="tag">P-MG12</td><td>800893962</td><td>11294938</td>
+        <td class="num">1,00</td><td>Giro y percha</td>
+        <td>No gira el picador</td><td>Falso Contacto</td>
+        <td>Se repone falla no rearmable atvgiros.</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG13" data-room="1" data-series="A">
+        <td class="tag">P-MG13</td><td>800893319</td><td>11294223</td>
+        <td class="num">0,75</td><td>Otra / revisión humana</td>
+        <td>SIN MOVIMIENTO</td><td>Aflojamiento</td>
+        <td>se posicionan bien las herramientas, ok</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG13" data-room="1" data-series="A">
+        <td class="tag">P-MG13</td><td>800894016</td><td>11294967</td>
+        <td class="num">1,00</td><td>Izaje y aparejo</td>
+        <td>No sube aparejo de 15tn.-</td><td>Falla Elemento de Maniobra</td>
+        <td>Se normaliza falla en variador (condens)</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG21" data-room="2" data-series="A">
+        <td class="tag">P-MG21</td><td>800892851</td><td>11293627</td>
+        <td class="num">1,37</td><td>Neumática, aire y compresor</td>
+        <td>Manguera suelta ECL.-</td><td>Desgaste</td>
+        <td>Se normaliza manguera en ECL.</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG21" data-room="2" data-series="A">
+        <td class="tag">P-MG21</td><td>800894078</td><td>11295084</td>
+        <td class="num">1,53</td><td>Izaje y aparejo</td>
+        <td>aparejo de 15 tn no sube ni baja</td><td>Falla Componente Electrónico</td>
+        <td>se repone variador</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG23" data-room="2" data-series="A">
+        <td class="tag">P-MG23</td><td>800892746</td><td>11293694</td>
+        <td class="num">0,66</td><td>Traslación</td>
+        <td>sin traslacion</td><td>Falla Componente Electrónico</td>
+        <td>Se acomoda pantógrafos de percha de cola<br>OK.</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG23" data-room="2" data-series="A">
+        <td class="tag">P-MG23</td><td>800892753</td><td>11293695</td>
+        <td class="num">0,78</td><td>Traslación</td>
+        <td>sin traslacion norte-sur</td><td>Falso Contacto</td>
+        <td>Se reajusta bornera x4.1 de guirnalda de<br>OK.</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG23" data-room="2" data-series="A">
+        <td class="tag">P-MG23</td><td>800893487</td><td>11294661</td>
+        <td class="num">1,12</td><td>Neumática, aire y compresor</td>
+        <td>SIN FUERZA PICADOR(OKTD)</td><td>Lubricación Faltante</td>
+        <td>se coloca aceite a compresor,se deja ok</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG23" data-room="2" data-series="A">
+        <td class="tag">P-MG23</td><td>800893837</td><td>11294990</td>
+        <td class="num">1,00</td><td>Otra / revisión humana</td>
+        <td>No andan luminarias.-</td><td>Sobrecarga Eléctrica</td>
+        <td>Se revisan y reponen termicas.</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG32" data-room="3" data-series="B">
+        <td class="tag">P-MG32</td><td>800894036</td><td>11295051</td>
+        <td class="num">1,38</td><td>Herramientas, almeja y cierre</td>
+        <td>falta resorte destornillador</td><td>Fatiga Material</td>
+        <td>se cambia resortes de pinsa</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG33" data-room="3" data-series="B">
+        <td class="tag">P-MG33</td><td>800893459</td><td>11294419</td>
+        <td class="num">1,07</td><td>Otra / revisión humana</td>
+        <td>PINZA DOBLADA</td><td>Aflojamiento</td>
+        <td>se cambia pinza y resorte</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG41" data-room="4" data-series="B">
+        <td class="tag">P-MG41</td><td>800893199</td><td>11293958</td>
+        <td class="num">1,59</td><td>Giro y percha</td>
+        <td>ECL gira solo para un lado</td><td>Falso Contacto</td>
+        <td>Se normalizan cables desoldado en CR.<br>OK.</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG41" data-room="4" data-series="B">
+        <td class="tag">P-MG41</td><td>800893500</td><td>11294662</td>
+        <td class="num">1,43</td><td>Herramientas, almeja y cierre</td>
+        <td>DESTORNILLADOR TRABADO(OKTD)</td><td>Falla Operativa</td>
+        <td>se destraba destornillador, falla operat</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG41" data-room="4" data-series="B">
+        <td class="tag">P-MG41</td><td>800894035</td><td>11295049</td>
+        <td class="num">1,05</td><td>Giro y percha</td>
+        <td>no gira percha</td><td>Corte de Energía</td>
+        <td>se repone atv giros, se deja ok</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG41" data-room="4" data-series="B">
+        <td class="tag">P-MG41</td><td>800894073</td><td>11295083</td>
+        <td class="num">0,99</td><td>Giro y percha</td>
+        <td>no gira percha</td><td>Falla Componente Electrónico</td>
+        <td>se repone</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG42" data-room="4" data-series="B">
+        <td class="tag">P-MG42</td><td>800893354</td><td>11294239</td>
+        <td class="num">1,00</td><td>Herramientas, almeja y cierre</td>
+        <td>Almeja trabada</td><td>Falla Operativa</td>
+        <td>se repone falla de time out almeja</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG42" data-room="4" data-series="B">
+        <td class="tag">P-MG42</td><td>800894011</td><td>11294966</td>
+        <td class="num">1,98</td><td>Otra / revisión humana</td>
+        <td>Esparrago largo ECL cortado.-</td><td>Desgaste</td>
+        <td>Se cambia esparrago doble.</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG43" data-room="4" data-series="B">
+        <td class="tag">P-MG43</td><td>800893272</td><td>11294221</td>
+        <td class="num">1,00</td><td>Izaje y aparejo</td>
+        <td>NO BAJA ALMEJA</td><td>Corte de Energía</td>
+        <td>se repone atv de malacate</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG43" data-room="4" data-series="B">
+        <td class="tag">P-MG43</td><td>800893830</td><td>11294987</td>
+        <td class="num">1,50</td><td>Herramientas, almeja y cierre</td>
+        <td>No anda picador.</td><td>Desgaste</td>
+        <td>Se cambia valvula Jefferson de picador,</td></tr>
+        
+        <tr data-week="29" data-equipment="P-MG43" data-room="4" data-series="B">
+        <td class="tag">P-MG43</td><td>800893897</td><td>11294871</td>
+        <td class="num">1,49</td><td>Otra / revisión humana</td>
+        <td>no pica</td><td>Fatiga Material</td>
+        <td>se cambia valvula de picador</td></tr>
+        </tbody></table></div>
+<h2>Validación</h2><div class="table-wrap"><table><thead><tr><th>Severidad</th><th>Control</th><th>Fuente</th><th>Equipo</th><th>Detalle</th></tr></thead><tbody><tr><td>warning</td><td>Parada coincidente con mantenimiento</td><td>cruce avisos-mantenimiento</td><td>P-MG33</td><td>Aviso 800893459; tarea (CAPEX) Refuerzos testera MG 33.</td></tr></tbody></table></div>
+</section>
+<section class="panel" id="history" role="tabpanel" aria-labelledby="tab-history" hidden><h2>Histórico</h2><div class="notice warning"><strong>Semanas almacenadas: 1.</strong> Existe una sola semana almacenada. Los gráficos muestran el valor inicial y no una tendencia.</div>
+<div class="filters"><label>Semana<select id="filter-week"><option value="">Todas</option><option value="2026-29">S29/2026</option></select></label>
+<label>Puente<select id="filter-equipment"><option value="">Todos</option><option>P-MG11</option><option>P-MG12</option><option>P-MG13</option><option>P-MG21</option><option>P-MG22</option><option>P-MG23</option><option>P-MG31</option><option>P-MG32</option><option>P-MG33</option><option>P-MG41</option><option>P-MG42</option><option>P-MG43</option></select></label>
+<label>Sala<select id="filter-room"><option value="">Todas</option><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+<label>Serie<select id="filter-series"><option value="">Todas</option><option>A</option><option>B</option></select></label></div>
+<p id="selection-note" class="muted">Vista global de todas las semanas.</p>
+<div class="charts"><div class="chart"><h3>Horas de parada por semana</h3><svg id="chart-stop" role="img" aria-label="Horas de parada por semana"></svg></div><div class="chart"><h3>Disponibilidad por semana</h3><svg id="chart-availability" role="img" aria-label="Disponibilidad por semana"></svg></div><div class="chart"><h3>Detenciones por semana</h3><svg id="chart-count" role="img" aria-label="Cantidad de detenciones por semana"></svg></div></div>
+<h2>Valores históricos seleccionados</h2><div class="table-wrap"><table><thead><tr><th>Semana</th><th>Nivel</th><th>Elemento</th><th class="num">Mantenimiento h</th><th class="num">Parada h</th><th class="num">Detenciones</th><th class="num">Disponibilidad</th></tr></thead><tbody id="history-body"></tbody></table></div>
+<h2>Interpretación preliminar del LLM</h2><div class='notice'><strong>Interpretación preliminar del LLM: 7 hallazgos.</strong> No es determinante ni constituye un diagnóstico final. Todos los hallazgos requieren revisión y validación humana.</div><div class="notice">El LLM relaciona los textos originales, las causas documentadas y las intervenciones vinculadas. No modifica los cálculos, no confirma causalidad y no reemplaza el criterio técnico del responsable.</div><div class="table-wrap"><table><thead><tr><th>Alcance</th><th>Hallazgo</th><th>Avisos relacionados</th><th>Confianza</th><th>Interpretación</th><th>Revisión humana obligatoria</th></tr></thead><tbody><tr><td>Mismo puente</td><td>Reincidencia de traslación en P-MG11</td><td>800894037, 800894057, 800894097</td><td>alta</td><td>En el mismo puente P-MG11 aparecen dos registros idénticos de &quot;sin traslacion norte sur&quot; y otro de &quot;sin traslacion este/oeste&quot;. Los textos coinciden en la función afectada, pero las causas documentadas no son iguales: en los primeros se consigna corte de energía y en el de este/oeste falla de componente electrónico. La relación es preliminar por repetición funcional, no por causa común confirmada.</td><td>Verificar en campo alimentación, ATV/contactor y cableado del sistema de traslación antes de concluir si se trata de una misma falla recurrente.</td></tr><tr><td>Mismo puente</td><td>Repetición de falla de aparejo 15 tn en P-MG12</td><td>800893603, 800893913, 800894078</td><td>alta</td><td>Los tres avisos de P-MG12 describen inmovilidad del aparejo de 15 tn: &quot;no baja ni sube aparejo de 15 tn&quot;, &quot;NO BAJA AP 15 TN&quot; y &quot;aparejo de 15 tn no sube ni baja&quot;. La similitud es clara por función y síntoma, aunque las causas registradas difieren entre falla de componente electrónico y corte de energía, con intervenciones también distintas. No hay evidencia documental para afirmar una sola causa.</td><td>Revisar variador, alimentación y cadena de maniobra del aparejo de 15 tn para confirmar si hay un patrón único o eventos independientes.</td></tr><tr><td>Mismo puente</td><td>Reincidencia de traslación en P-MG23</td><td>800892746, 800892753</td><td>alta</td><td>Ambos registros de P-MG23 refieren ausencia de traslación, uno como &quot;sin traslacion&quot; y otro como &quot;sin traslacion norte-sur&quot;. Aunque las causas documentadas son diferentes —falla de componente electrónico y falso contacto—, el síntoma operativo es consistente y afecta el mismo subsistema de movimiento. La coincidencia permite proponer relación, no confirmarla.</td><td>Inspeccionar guirnalda, borneras y elementos de mando de traslación para validar si el defecto es recurrente o solo coincidente.</td></tr><tr><td>Mismo puente</td><td>Fallas repetidas de giro/percha en P-MG41</td><td>800893199, 800894035, 800894073</td><td>alta</td><td>En P-MG41 se repite el problema de giro/percha: &quot;ECL gira solo para un lado&quot; y dos avisos de &quot;no gira percha&quot;. Los textos apuntan al mismo entorno funcional, pero las causas documentadas no coinciden exactamente: falso contacto en un caso, corte de energía en otro y falla de componente electrónico en el tercero. La relación es por similitud funcional, no por causalidad demostrada.</td><td>Verificar cables, ATV de giros y componentes de mando asociados al giro/percha antes de atribuir una causa única.</td></tr><tr><td>Mismo puente</td><td>Reincidencia en picador de P-MG43</td><td>800893830, 800893897</td><td>alta</td><td>Los dos avisos de P-MG43 describen falta de operación del picador: &quot;No anda picador&quot; y &quot;no pica&quot;. La función afectada es la misma, aunque las causas documentadas difieren entre desgaste y fatiga material, con intervenciones de recambio de válvula de picador. La coincidencia textual y funcional sugiere repetición del subsistema, sin confirmar una misma causa raíz.</td><td>Revisar el estado mecánico y neumático del picador, incluyendo válvula y elementos de desgaste, para determinar si existe una falla repetitiva.</td></tr><tr><td>Entre puentes</td><td>Traslación detenida con patrón repetido entre puentes</td><td>800892746, 800892753, 800894037, 800894057, 800894097</td><td>media</td><td>Hay coincidencia funcional entre los eventos de traslación de P-MG11 y P-MG23: ambos reportan ausencia de movimiento en el eje norte-sur, y en P-MG11 además se registra la falta de traslación este/oeste. Las causas documentadas no son uniformes —corte de energía, falla de componente electrónico y falso contacto— y las intervenciones apuntan a componentes distintos. La relación es útil como contexto comparativo entre puentes, pero no prueba una causa común.</td><td>Comparar en campo alimentación, borneras, pantógrafos y variadores de traslación entre ambos puentes antes de concluir una falla compartida.</td></tr><tr><td>Entre puentes</td><td>Aparejo 15 tn con inmovilidad similar en varios puentes</td><td>800893603, 800893913, 800894016, 800894078</td><td>media</td><td>Se repite la referencia al aparejo de 15 tn sin movimiento en P-MG12, P-MG13 y P-MG21. Los textos son cercanos en función y síntoma, pero las causas documentadas no son iguales: falla de componente electrónico, corte de energía y falla de elemento de maniobra. También las intervenciones varían entre reset, reposición de variador y normalización de falla en variador. La comparación sugiere un patrón funcional, no una misma causa confirmada.</td><td>Verificar si los equipos comparten arquitectura de mando, variadores o criterios de diagnóstico antes de asociar estas fallas como equivalentes.</td></tr></tbody></table></div>
+<h2>Fallas repetidas en el mismo puente</h2><div class="table-wrap"><table><thead><tr><th>Puente</th><th>Descripciones originales</th><th>Semanas</th><th class="num">Cantidad</th><th>Causas documentadas</th><th>Intervenciones</th><th>Revisión humana</th></tr></thead><tbody><tr><td class='tag'>P-MG41</td><td>no gira percha<br>no gira percha</td><td>29/2026</td><td class='num'>2</td><td>Corte de Energía<br>Falla Componente Electrónico</td><td>se repone atv giros, se deja ok<br>se repone</td><td>Sí</td></tr></tbody></table></div>
+<h2>Candidatos de fallas similares entre puentes</h2><div class="notice">Python agrupa candidatos por categoría y conserva los textos originales. No afirma causalidad ni confirma similitud técnica. Esa decisión corresponde al LLM y a la revisión humana.</div><div class="table-wrap"><table><thead><tr><th>Categoría candidata</th><th>Puentes</th><th>Semanas</th><th class="num">Eventos</th><th>Descripciones originales</th><th>Estado</th></tr></thead><tbody><tr><td>Otra / revisión humana</td><td>P-MG11, P-MG12, P-MG13, P-MG23, P-MG33, P-MG42, P-MG43</td><td>29/2026</td><td class='num'>7</td><td>P-MG11: SIN TRASL NORTE SUR<br>P-MG12: no funciona balanza<br>P-MG13: SIN MOVIMIENTO<br>P-MG23: No andan luminarias.-<br>P-MG33: PINZA DOBLADA<br>P-MG42: Esparrago largo ECL cortado.-<br>P-MG43: no pica</td><td>Candidato preparado por Python. Requiere interpretación del LLM y revisión humana.</td></tr><tr><td>Izaje y aparejo</td><td>P-MG11, P-MG12, P-MG13, P-MG21, P-MG43</td><td>29/2026</td><td class='num'>6</td><td>P-MG11: No baja ni sube la percha-OKTB<br>P-MG12: no baja ni sube aparejo de 15 tn<br>P-MG12: NO BAJA AP 15 Tn<br>P-MG13: No sube aparejo de 15tn.-<br>P-MG21: aparejo de 15 tn no sube ni baja<br>P-MG43: NO BAJA ALMEJA</td><td>Candidato preparado por Python. Requiere interpretación del LLM y revisión humana.</td></tr><tr><td>Giro y percha</td><td>P-MG12, P-MG41</td><td>29/2026</td><td class='num'>4</td><td>P-MG12: No gira el picador<br>P-MG41: ECL gira solo para un lado<br>P-MG41: no gira percha<br>P-MG41: no gira percha</td><td>Candidato preparado por Python. Requiere interpretación del LLM y revisión humana.</td></tr><tr><td>Herramientas, almeja y cierre</td><td>P-MG32, P-MG41, P-MG42, P-MG43</td><td>29/2026</td><td class='num'>4</td><td>P-MG32: falta resorte destornillador<br>P-MG41: DESTORNILLADOR TRABADO(OKTD)<br>P-MG42: Almeja trabada<br>P-MG43: No anda picador.</td><td>Candidato preparado por Python. Requiere interpretación del LLM y revisión humana.</td></tr><tr><td>Traslación</td><td>P-MG11, P-MG23</td><td>29/2026</td><td class='num'>4</td><td>P-MG11: sin traslacion norte sur<br>P-MG11: sin traslacion este/oeste<br>P-MG23: sin traslacion<br>P-MG23: sin traslacion norte-sur</td><td>Candidato preparado por Python. Requiere interpretación del LLM y revisión humana.</td></tr><tr><td>Neumática, aire y compresor</td><td>P-MG21, P-MG23</td><td>29/2026</td><td class='num'>2</td><td>P-MG21: Manguera suelta ECL.-<br>P-MG23: SIN FUERZA PICADOR(OKTD)</td><td>Candidato preparado por Python. Requiere interpretación del LLM y revisión humana.</td></tr></tbody></table></div>
+</section></main><footer>Los cálculos y los datos de los gráficos fueron preparados por Python y almacenados en SQLite. La interpretación del LLM es preliminar, no determinante y requiere siempre revisión humana; no puede modificar horas, cantidades ni disponibilidades.</footer></div>
+<script>
+const DATA={"points": [{"year": 2026, "week": 29, "label": "S29/2026", "level": "global", "key": "Global", "room": "", "series": "", "maintenance_hours": 144.0, "stop_hours": 32.230000000000004, "stoppage_count": 28, "availability": 98.27831196581197}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "room", "key": "1", "room": "1", "series": "A", "maintenance_hours": 36.0, "stop_hours": 11.29, "stoppage_count": 11, "availability": 97.58760683760683}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "room", "key": "2", "room": "2", "series": "A", "maintenance_hours": 24.0, "stop_hours": 6.460000000000001, "stoppage_count": 6, "availability": 98.65416666666668}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "room", "key": "3", "room": "3", "series": "B", "maintenance_hours": 56.0, "stop_hours": 2.45, "stoppage_count": 2, "availability": 99.453125}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "room", "key": "4", "room": "4", "series": "B", "maintenance_hours": 28.0, "stop_hours": 12.030000000000001, "stoppage_count": 9, "availability": 97.47268907563026}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "series", "key": "A", "room": "", "series": "A", "maintenance_hours": 60.0, "stop_hours": 17.75, "stoppage_count": 17, "availability": 98.12763713080169}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "series", "key": "B", "room": "", "series": "B", "maintenance_hours": 84.0, "stop_hours": 14.48, "stoppage_count": 11, "availability": 98.43290043290042}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "equipment", "key": "P-MG11", "room": "1", "series": "A", "maintenance_hours": 28.0, "stop_hours": 5.07, "stoppage_count": 4, "availability": 96.37857142857143}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "equipment", "key": "P-MG12", "room": "1", "series": "A", "maintenance_hours": 0.0, "stop_hours": 4.47, "stoppage_count": 5, "availability": 97.33928571428572}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "equipment", "key": "P-MG13", "room": "1", "series": "A", "maintenance_hours": 8.0, "stop_hours": 1.75, "stoppage_count": 2, "availability": 98.90625}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "equipment", "key": "P-MG21", "room": "2", "series": "A", "maintenance_hours": 8.0, "stop_hours": 2.9000000000000004, "stoppage_count": 2, "availability": 98.1875}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "equipment", "key": "P-MG22", "room": "2", "series": "A", "maintenance_hours": 8.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "equipment", "key": "P-MG23", "room": "2", "series": "A", "maintenance_hours": 8.0, "stop_hours": 3.56, "stoppage_count": 4, "availability": 97.775}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "equipment", "key": "P-MG31", "room": "3", "series": "B", "maintenance_hours": 32.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "equipment", "key": "P-MG32", "room": "3", "series": "B", "maintenance_hours": 8.0, "stop_hours": 1.38, "stoppage_count": 1, "availability": 99.1375}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "equipment", "key": "P-MG33", "room": "3", "series": "B", "maintenance_hours": 16.0, "stop_hours": 1.07, "stoppage_count": 1, "availability": 99.29605263157896}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "equipment", "key": "P-MG41", "room": "4", "series": "B", "maintenance_hours": 4.0, "stop_hours": 5.0600000000000005, "stoppage_count": 4, "availability": 96.91463414634146}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "equipment", "key": "P-MG42", "room": "4", "series": "B", "maintenance_hours": 16.0, "stop_hours": 2.98, "stoppage_count": 2, "availability": 98.03947368421053}, {"year": 2026, "week": 29, "label": "S29/2026", "level": "equipment", "key": "P-MG43", "room": "4", "series": "B", "maintenance_hours": 8.0, "stop_hours": 3.99, "stoppage_count": 3, "availability": 97.50625}], "failures": [{"year": 2026, "week": 29, "equipment": "P-MG11", "room": "1", "series": "A", "category": "Izaje y aparejo", "description": "No baja ni sube la percha-OKTB", "stop_hours": 1.0}, {"year": 2026, "week": 29, "equipment": "P-MG11", "room": "1", "series": "A", "category": "Traslación", "description": "sin traslacion norte sur", "stop_hours": 1.03}, {"year": 2026, "week": 29, "equipment": "P-MG11", "room": "1", "series": "A", "category": "Otra / revisión humana", "description": "SIN TRASL NORTE SUR", "stop_hours": 0.71}, {"year": 2026, "week": 29, "equipment": "P-MG11", "room": "1", "series": "A", "category": "Traslación", "description": "sin traslacion este/oeste", "stop_hours": 2.33}, {"year": 2026, "week": 29, "equipment": "P-MG12", "room": "1", "series": "A", "category": "Otra / revisión humana", "description": "no funciona balanza", "stop_hours": 0.96}, {"year": 2026, "week": 29, "equipment": "P-MG12", "room": "1", "series": "A", "category": "Izaje y aparejo", "description": "no baja ni sube aparejo de 15 tn", "stop_hours": 0.46}, {"year": 2026, "week": 29, "equipment": "P-MG12", "room": "1", "series": "A", "category": "Estructura o elemento mecánico", "description": "Ajustar bulones ECL.-", "stop_hours": 1.0}, {"year": 2026, "week": 29, "equipment": "P-MG12", "room": "1", "series": "A", "category": "Izaje y aparejo", "description": "NO BAJA AP 15 Tn", "stop_hours": 1.05}, {"year": 2026, "week": 29, "equipment": "P-MG12", "room": "1", "series": "A", "category": "Giro y percha", "description": "No gira el picador", "stop_hours": 1.0}, {"year": 2026, "week": 29, "equipment": "P-MG13", "room": "1", "series": "A", "category": "Otra / revisión humana", "description": "SIN MOVIMIENTO", "stop_hours": 0.75}, {"year": 2026, "week": 29, "equipment": "P-MG13", "room": "1", "series": "A", "category": "Izaje y aparejo", "description": "No sube aparejo de 15tn.-", "stop_hours": 1.0}, {"year": 2026, "week": 29, "equipment": "P-MG21", "room": "2", "series": "A", "category": "Neumática, aire y compresor", "description": "Manguera suelta ECL.-", "stop_hours": 1.37}, {"year": 2026, "week": 29, "equipment": "P-MG21", "room": "2", "series": "A", "category": "Izaje y aparejo", "description": "aparejo de 15 tn no sube ni baja", "stop_hours": 1.53}, {"year": 2026, "week": 29, "equipment": "P-MG23", "room": "2", "series": "A", "category": "Traslación", "description": "sin traslacion", "stop_hours": 0.66}, {"year": 2026, "week": 29, "equipment": "P-MG23", "room": "2", "series": "A", "category": "Traslación", "description": "sin traslacion norte-sur", "stop_hours": 0.78}, {"year": 2026, "week": 29, "equipment": "P-MG23", "room": "2", "series": "A", "category": "Neumática, aire y compresor", "description": "SIN FUERZA PICADOR(OKTD)", "stop_hours": 1.12}, {"year": 2026, "week": 29, "equipment": "P-MG23", "room": "2", "series": "A", "category": "Otra / revisión humana", "description": "No andan luminarias.-", "stop_hours": 1.0}, {"year": 2026, "week": 29, "equipment": "P-MG32", "room": "3", "series": "B", "category": "Herramientas, almeja y cierre", "description": "falta resorte destornillador", "stop_hours": 1.38}, {"year": 2026, "week": 29, "equipment": "P-MG33", "room": "3", "series": "B", "category": "Otra / revisión humana", "description": "PINZA DOBLADA", "stop_hours": 1.07}, {"year": 2026, "week": 29, "equipment": "P-MG41", "room": "4", "series": "B", "category": "Giro y percha", "description": "ECL gira solo para un lado", "stop_hours": 1.59}, {"year": 2026, "week": 29, "equipment": "P-MG41", "room": "4", "series": "B", "category": "Herramientas, almeja y cierre", "description": "DESTORNILLADOR TRABADO(OKTD)", "stop_hours": 1.43}, {"year": 2026, "week": 29, "equipment": "P-MG41", "room": "4", "series": "B", "category": "Giro y percha", "description": "no gira percha", "stop_hours": 1.05}, {"year": 2026, "week": 29, "equipment": "P-MG41", "room": "4", "series": "B", "category": "Giro y percha", "description": "no gira percha", "stop_hours": 0.99}, {"year": 2026, "week": 29, "equipment": "P-MG42", "room": "4", "series": "B", "category": "Herramientas, almeja y cierre", "description": "Almeja trabada", "stop_hours": 1.0}, {"year": 2026, "week": 29, "equipment": "P-MG42", "room": "4", "series": "B", "category": "Otra / revisión humana", "description": "Esparrago largo ECL cortado.-", "stop_hours": 1.98}, {"year": 2026, "week": 29, "equipment": "P-MG43", "room": "4", "series": "B", "category": "Izaje y aparejo", "description": "NO BAJA ALMEJA", "stop_hours": 1.0}, {"year": 2026, "week": 29, "equipment": "P-MG43", "room": "4", "series": "B", "category": "Herramientas, almeja y cierre", "description": "No anda picador.", "stop_hours": 1.5}, {"year": 2026, "week": 29, "equipment": "P-MG43", "room": "4", "series": "B", "category": "Otra / revisión humana", "description": "no pica", "stop_hours": 1.49}]};
+const q=id=>document.getElementById(id);document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',String(t===tab)));document.querySelectorAll('.panel').forEach(p=>p.hidden=p.id!==tab.getAttribute('aria-controls'));if(tab.id==='tab-history')updateHistory();}));
+['filter-week','filter-equipment','filter-room','filter-series'].forEach(id=>q(id).addEventListener('change',updateHistory));
+function selection(){const equipment=q('filter-equipment').value,room=q('filter-room').value,series=q('filter-series').value,week=q('filter-week').value;let level='global',key='Global';if(equipment){level='equipment';key=equipment}else if(room){level='room';key=room}else if(series){level='series';key=series}let rows=DATA.points.filter(r=>r.level===level&&r.key===key);if(week){const [year,w]=week.split('-').map(Number);rows=rows.filter(r=>r.year===year&&r.week===w)}rows.sort((a,b)=>a.year-b.year||a.week-b.week);return{rows,level,key,week}}
+function fmt(value,digits=2){return value==null?'No calculable':value.toLocaleString('es-AR',{minimumFractionDigits:digits,maximumFractionDigits:digits})}
+function draw(id,rows,field,unit,zeroBase=true){const svg=q(id),w=420,h=240,m={l:58,r:20,t:25,b:48},iw=w-m.l-m.r,ih=h-m.t-m.b;svg.setAttribute('viewBox',`0 0 ${w} ${h}`);if(!rows.length){svg.innerHTML='<text class="chart-label" x="210" y="120" text-anchor="middle">Sin datos para el filtro</text>';return}const values=rows.map(r=>r[field]).filter(v=>v!=null);let min=zeroBase?0:Math.min(...values),max=Math.max(...values);if(field==='availability'){min=Math.min(90,min);max=100}if(max===min)max=min+1;const x=i=>rows.length===1?m.l+iw/2:m.l+iw*i/(rows.length-1),y=v=>m.t+ih-(v-min)/(max-min)*ih;let grid='';for(let i=0;i<=4;i++){const value=min+(max-min)*i/4,yy=y(value);grid+=`<line class="gridline" x1="${m.l}" y1="${yy}" x2="${w-m.r}" y2="${yy}"/><text class="chart-label" x="${m.l-7}" y="${yy+4}" text-anchor="end">${fmt(value,field==='stoppage_count'?0:1)}</text>`}const valid=rows.map((r,i)=>({r,i,v:r[field]})).filter(p=>p.v!=null);const path=valid.map((p,index)=>`${index?'L':'M'} ${x(p.i)} ${y(p.v)}`).join(' ');const marks=valid.map(p=>`<circle class="point" cx="${x(p.i)}" cy="${y(p.v)}" r="4"><title>${p.r.label}: ${fmt(p.v)} ${unit}</title></circle><text class="chart-value" x="${x(p.i)}" y="${Math.max(13,y(p.v)-9)}" text-anchor="middle">${fmt(p.v)}</text>`).join('');const labels=rows.map((r,i)=>`<text class="chart-label" x="${x(i)}" y="${h-18}" text-anchor="middle">${r.label}</text>`).join('');svg.innerHTML=`${grid}<line class="axis" x1="${m.l}" y1="${m.t+ih}" x2="${w-m.r}" y2="${m.t+ih}"/><path class="series-line" d="${path}"/>${marks}${labels}`}
+function updateHistory(){const s=selection();q('selection-note').textContent=`Nivel: ${s.level} · Elemento: ${s.key} · ${s.week?'una semana':'todas las semanas'}`;draw('chart-stop',s.rows,'stop_hours','h',true);draw('chart-availability',s.rows,'availability','%',false);draw('chart-count',s.rows,'stoppage_count','',true);q('history-body').innerHTML=s.rows.map(r=>`<tr><td>${r.label}</td><td>${r.level}</td><td>${r.key}</td><td class="num">${fmt(r.maintenance_hours)}</td><td class="num">${fmt(r.stop_hours)}</td><td class="num">${fmt(r.stoppage_count,0)}</td><td class="num strong">${fmt(r.availability)} %</td></tr>`).join('')||'<tr><td colspan="7">Sin datos para el filtro seleccionado.</td></tr>'}
+updateHistory();
+</script></body></html>

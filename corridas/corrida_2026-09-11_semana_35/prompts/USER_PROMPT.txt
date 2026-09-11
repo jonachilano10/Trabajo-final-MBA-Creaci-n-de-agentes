@@ -1,0 +1,12 @@
+Objetivo: calcular la disponibilidad de la semana 35, comprendida del 2026-08-24 al 2026-08-30.
+
+Información: se adjuntan los archivos de avisos, solicitudes de tareas en sala y notificaciones.
+
+- No calcular ni estimar proyecciones del mes ni de otras semanas.
+- Recalcular usando exclusivamente los archivos cargados.
+- Conservar la interpretación del LLM como preliminar y sujeta a revisión humana.
+
+Archivos utilizados:
+- Avisos: Avisos semana 35.XLSX
+- Notificaciones: Notificaciones semana 35.XLSX
+- Tareas en sala: TAREAS EN SALA SEMANA 35 (1).xlsx

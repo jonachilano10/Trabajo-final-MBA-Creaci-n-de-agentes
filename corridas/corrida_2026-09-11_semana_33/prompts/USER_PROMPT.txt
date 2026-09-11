@@ -1,0 +1,12 @@
+Objetivo: calcular la disponibilidad de la semana 33, comprendida del 2026-08-10 al 2026-08-16.
+
+Información: se adjuntan los archivos de avisos, solicitudes de tareas en sala y notificaciones.
+
+- No calcular ni estimar proyecciones del mes ni de otras semanas.
+- Recalcular usando exclusivamente los archivos cargados.
+- Conservar la interpretación del LLM como preliminar y sujeta a revisión humana.
+
+Archivos utilizados:
+- Avisos: 33-Avisos MG (1).XLSX
+- Notificaciones: 33-Notificaciones (1).XLSX
+- Tareas en sala: 33-TAREAS EN SALA SEMANA 33 (1).xlsx

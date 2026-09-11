@@ -1,0 +1,12 @@
+Objetivo: calcular la disponibilidad de la semana 36, comprendida del 2026-08-31 al 2026-09-06.
+
+Información: se adjuntan los archivos de avisos, solicitudes de tareas en sala y notificaciones.
+
+- No calcular ni estimar proyecciones del mes ni de otras semanas.
+- Recalcular usando exclusivamente los archivos cargados.
+- Conservar la interpretación del LLM como preliminar y sujeta a revisión humana.
+
+Archivos utilizados:
+- Avisos: Avisos semana 36.XLSX
+- Notificaciones: 36-Notificaciones semana 36.XLSX
+- Tareas en sala: TAREAS EN SALA SEMANA 36.xlsx

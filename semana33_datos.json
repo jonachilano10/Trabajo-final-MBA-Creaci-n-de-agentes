@@ -1,0 +1,1754 @@
+{
+  "periodo": {
+    "semana": 33,
+    "anio": 2026,
+    "inicio": "2026-08-10",
+    "fin": "2026-08-16",
+    "semanas_analizadas": 1
+  },
+  "fuentes": {
+    "avisos": "33-Avisos MG (1).XLSX",
+    "notificaciones": "33-Notificaciones (1).XLSX",
+    "mantenimiento": "33-TAREAS EN SALA SEMANA 33 (1).xlsx"
+  },
+  "conteos_fuente": {
+    "avisos_filas": 53,
+    "notificaciones_filas": 117,
+    "mantenimiento_filas": 24
+  },
+  "excluidos": {
+    "avisos": {},
+    "notificaciones": {},
+    "mantenimiento": {
+      "P-PC03": 1,
+      "P-BAA2": 1,
+      "ZONA MANT.": 1,
+      "P-C238/C241": 1,
+      "P-BAA6": 1
+    }
+  },
+  "puentes": [
+    {
+      "equipo": "P-MG11",
+      "sala": 1,
+      "serie": "A",
+      "calendario": 168.0,
+      "mantenimiento": 4.0,
+      "tiempo_disponible": 164.0,
+      "paradas": 2.12,
+      "detenciones": 2,
+      "avisos": 4,
+      "disponibilidad": 98.70731707317073,
+      "fallas": [
+        "NO BAJA PERCHA",
+        "SIN TRASLACION"
+      ]
+    },
+    {
+      "equipo": "P-MG12",
+      "sala": 1,
+      "serie": "A",
+      "calendario": 168.0,
+      "mantenimiento": 4.0,
+      "tiempo_disponible": 164.0,
+      "paradas": 3.8200000000000003,
+      "detenciones": 4,
+      "avisos": 6,
+      "disponibilidad": 97.67073170731709,
+      "fallas": [
+        "sin traslación N/S",
+        "no giran herramientas",
+        "No gira la almeja ni picador",
+        "No enciende"
+      ]
+    },
+    {
+      "equipo": "P-MG13",
+      "sala": 1,
+      "serie": "A",
+      "calendario": 168.0,
+      "mantenimiento": 0,
+      "tiempo_disponible": 168.0,
+      "paradas": 1.8,
+      "detenciones": 2,
+      "avisos": 2,
+      "disponibilidad": 98.92857142857142,
+      "fallas": [
+        "FALTA PERILLA ALMEJA PICADOR CONTROL",
+        "sin traslacion"
+      ]
+    },
+    {
+      "equipo": "P-MG21",
+      "sala": 2,
+      "serie": "A",
+      "calendario": 168.0,
+      "mantenimiento": 0,
+      "tiempo_disponible": 168.0,
+      "paradas": 15.11,
+      "detenciones": 3,
+      "avisos": 3,
+      "disponibilidad": 91.00595238095237,
+      "fallas": [
+        "No abre  / No gira aleja",
+        "No baja aparejo 15 TN",
+        "Almeja sube torcida (sin traslacion)ROT"
+      ]
+    },
+    {
+      "equipo": "P-MG22",
+      "sala": 2,
+      "serie": "A",
+      "calendario": 168.0,
+      "mantenimiento": 32.0,
+      "tiempo_disponible": 136.0,
+      "paradas": 1.35,
+      "detenciones": 1,
+      "avisos": 3,
+      "disponibilidad": 99.00735294117648,
+      "fallas": [
+        "No abre el alicate"
+      ]
+    },
+    {
+      "equipo": "P-MG23",
+      "sala": 2,
+      "serie": "A",
+      "calendario": 168.0,
+      "mantenimiento": 16.0,
+      "tiempo_disponible": 152.0,
+      "paradas": 7.63,
+      "detenciones": 4,
+      "avisos": 6,
+      "disponibilidad": 94.98026315789474,
+      "fallas": [
+        "no gira la percha",
+        "no gira almeja",
+        "Destornillador baja mal",
+        "Perdida de aire por manguera de picador"
+      ]
+    },
+    {
+      "equipo": "P-MG31",
+      "sala": 3,
+      "serie": "B",
+      "calendario": 168.0,
+      "mantenimiento": 12.0,
+      "tiempo_disponible": 156.0,
+      "paradas": 49.5,
+      "detenciones": 3,
+      "avisos": 6,
+      "disponibilidad": 68.26923076923077,
+      "fallas": [
+        "revisar rodamiento de traslacion nor/sur",
+        "mando roto",
+        "Traslación carro N/S lenta y con ruido"
+      ]
+    },
+    {
+      "equipo": "P-MG32",
+      "sala": 3,
+      "serie": "B",
+      "calendario": 168.0,
+      "mantenimiento": 8.0,
+      "tiempo_disponible": 160.0,
+      "paradas": 10.120000000000001,
+      "detenciones": 6,
+      "avisos": 6,
+      "disponibilidad": 93.675,
+      "fallas": [
+        "Perdida de aire",
+        "Falla en el alicate al agarrar la varill",
+        "sin traslacion norte/sur",
+        "perdida de aire",
+        "Almeja mal subida",
+        "Sin fuerza las heramientas"
+      ]
+    },
+    {
+      "equipo": "P-MG33",
+      "sala": 3,
+      "serie": "B",
+      "calendario": 168.0,
+      "mantenimiento": 8.0,
+      "tiempo_disponible": 160.0,
+      "paradas": 4.42,
+      "detenciones": 5,
+      "avisos": 5,
+      "disponibilidad": 97.23750000000001,
+      "fallas": [
+        "NO TRASLADA",
+        "SIN TRASLACION",
+        "SIN TRASLACION",
+        "manguera suelta ECL",
+        "No baja aparejo de 15 TN"
+      ]
+    },
+    {
+      "equipo": "P-MG41",
+      "sala": 4,
+      "serie": "B",
+      "calendario": 168.0,
+      "mantenimiento": 8.0,
+      "tiempo_disponible": 160.0,
+      "paradas": 2.02,
+      "detenciones": 2,
+      "avisos": 3,
+      "disponibilidad": 98.73749999999998,
+      "fallas": [
+        "no gira percha N06",
+        "Picador no sube"
+      ]
+    },
+    {
+      "equipo": "P-MG42",
+      "sala": 4,
+      "serie": "B",
+      "calendario": 168.0,
+      "mantenimiento": 32.0,
+      "tiempo_disponible": 136.0,
+      "paradas": 3.31,
+      "detenciones": 3,
+      "avisos": 3,
+      "disponibilidad": 97.56617647058823,
+      "fallas": [
+        "SIN FUERZA ALMEJA PICADOR",
+        "ALMEJA TRABADA",
+        "Almeja queda cruzada"
+      ]
+    },
+    {
+      "equipo": "P-MG43",
+      "sala": 4,
+      "serie": "B",
+      "calendario": 168.0,
+      "mantenimiento": 0,
+      "tiempo_disponible": 168.0,
+      "paradas": 4.83,
+      "detenciones": 5,
+      "avisos": 6,
+      "disponibilidad": 97.125,
+      "fallas": [
+        "NO ENCIENDE COMPRESOR",
+        "no gira picador",
+        "no gira herramientas",
+        "No prende el compresor",
+        "se apaga el compresor"
+      ]
+    }
+  ],
+  "salas": [
+    {
+      "nombre": "Sala 1",
+      "calendario": 504.0,
+      "mantenimiento": 8.0,
+      "tiempo_disponible": 496.0,
+      "paradas": 7.74,
+      "disponibilidad": 98.43951612903226,
+      "equipos_no_calculables": []
+    },
+    {
+      "nombre": "Sala 2",
+      "calendario": 504.0,
+      "mantenimiento": 48.0,
+      "tiempo_disponible": 456.0,
+      "paradas": 24.09,
+      "disponibilidad": 94.71710526315789,
+      "equipos_no_calculables": []
+    },
+    {
+      "nombre": "Sala 3",
+      "calendario": 504.0,
+      "mantenimiento": 28.0,
+      "tiempo_disponible": 476.0,
+      "paradas": 64.04,
+      "disponibilidad": 86.54621848739495,
+      "equipos_no_calculables": []
+    },
+    {
+      "nombre": "Sala 4",
+      "calendario": 504.0,
+      "mantenimiento": 40.0,
+      "tiempo_disponible": 464.0,
+      "paradas": 10.16,
+      "disponibilidad": 97.8103448275862,
+      "equipos_no_calculables": []
+    }
+  ],
+  "series": [
+    {
+      "nombre": "Serie A",
+      "calendario": 1008.0,
+      "mantenimiento": 56.0,
+      "tiempo_disponible": 952.0,
+      "paradas": 31.83,
+      "disponibilidad": 96.65651260504201,
+      "equipos_no_calculables": []
+    },
+    {
+      "nombre": "Serie B",
+      "calendario": 1008.0,
+      "mantenimiento": 68.0,
+      "tiempo_disponible": 940.0,
+      "paradas": 74.2,
+      "disponibilidad": 92.1063829787234,
+      "equipos_no_calculables": []
+    }
+  ],
+  "global": {
+    "nombre": "Global",
+    "calendario": 2016.0,
+    "mantenimiento": 124.0,
+    "tiempo_disponible": 1892.0,
+    "paradas": 106.03,
+    "disponibilidad": 94.39587737843553,
+    "equipos_no_calculables": []
+  },
+  "avisos": [
+    {
+      "fila": 2,
+      "aviso": "800898647",
+      "equipo": "P-MG12",
+      "descripcion": "sin traslación N/S",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 0.51,
+      "duracion_valida": true,
+      "causa": "Falla Componente Electrónico",
+      "orden": "11302463",
+      "inicio": "2026-08-10T01:09:19",
+      "fin": "2026-08-10T01:40:00",
+      "intervenciones": [
+        "Reset de ATV: Error 27"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Traslación"
+    },
+    {
+      "fila": 3,
+      "aviso": "800898663",
+      "equipo": "P-MG12",
+      "descripcion": "No gira la percha",
+      "texto_ampliado": "",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "Sin Falla",
+      "orden": "11302464",
+      "inicio": "2026-08-10T03:08:30",
+      "fin": "2026-08-10T03:40:00",
+      "intervenciones": [
+        "Se controla. No falla."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Giro y percha"
+    },
+    {
+      "fila": 4,
+      "aviso": "800898664",
+      "equipo": "P-MG21",
+      "descripcion": "No abre  / No gira aleja",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 0.84,
+      "duracion_valida": true,
+      "causa": "Circuito Abierto-Sin Continuidad",
+      "orden": "11302465",
+      "inicio": "2026-08-10T03:09:20",
+      "fin": "2026-08-10T04:00:00",
+      "intervenciones": [
+        "Se normaliza cable suelta en selectora d",
+        "Ok."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Giro y percha"
+    },
+    {
+      "fila": 5,
+      "aviso": "800898667",
+      "equipo": "P-MG22",
+      "descripcion": "Consignar para limpieza",
+      "texto_ampliado": "",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "Sin Falla",
+      "orden": "11302466",
+      "inicio": "2026-08-10T04:09:38",
+      "fin": "2026-08-10T05:00:00",
+      "intervenciones": [
+        "Se consign y desconsign p/tarea program"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Otra / revisión humana"
+    },
+    {
+      "fila": 6,
+      "aviso": "800898674",
+      "equipo": "P-MG31",
+      "descripcion": "Controlar ruido en carro",
+      "texto_ampliado": "Se escucha ruido al trasladar el carro en dirección Norte/ Sur",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "",
+      "orden": "11302467",
+      "inicio": "2026-08-10T04:29:31",
+      "fin": null,
+      "intervenciones": [
+        "Ruido al trasladar carro de N a S.",
+        "Ok."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Traslación"
+    },
+    {
+      "fila": 7,
+      "aviso": "800898685",
+      "equipo": "P-MG42",
+      "descripcion": "SIN FUERZA ALMEJA PICADOR",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.06,
+      "duracion_valida": true,
+      "causa": "Fatiga Material",
+      "orden": "11302698",
+      "inicio": "2026-08-10T06:26:08",
+      "fin": "2026-08-10T07:30:00",
+      "intervenciones": [
+        "se reajusta cabezal de picador y se saca"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Neumática, aire y compresor"
+    },
+    {
+      "fila": 8,
+      "aviso": "800898689",
+      "equipo": "P-MG41",
+      "descripcion": "CONSIGNAR",
+      "texto_ampliado": "",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "Corte de Energía",
+      "orden": "11302741",
+      "inicio": "2026-08-10T07:35:49",
+      "fin": "2026-08-10T09:00:00",
+      "intervenciones": [
+        "se consigna y desconsiga"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Otra / revisión humana"
+    },
+    {
+      "fila": 9,
+      "aviso": "800898730",
+      "equipo": "P-MG43",
+      "descripcion": "NO ENCIENDE COMPRESOR",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.06,
+      "duracion_valida": true,
+      "causa": "Corte de Energía",
+      "orden": "11302699",
+      "inicio": "2026-08-10T07:36:15",
+      "fin": "2026-08-10T08:40:00",
+      "intervenciones": [
+        "se repone termico, se controla ok"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Neumática, aire y compresor"
+    },
+    {
+      "fila": 10,
+      "aviso": "800898766",
+      "equipo": "P-MG33",
+      "descripcion": "NO TRASLADA",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.14,
+      "duracion_valida": true,
+      "causa": "Lubricación Faltante",
+      "orden": "11302750",
+      "inicio": "2026-08-10T10:51:37",
+      "fin": "2026-08-10T12:00:00",
+      "intervenciones": [
+        "se hecha aceite a vaso de válvulas de ap"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Traslación"
+    },
+    {
+      "fila": 11,
+      "aviso": "800898856",
+      "equipo": "P-MG21",
+      "descripcion": "No baja aparejo 15 TN",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.0,
+      "duracion_valida": true,
+      "causa": "Falso Contacto",
+      "orden": "11302835",
+      "inicio": "2026-08-10T14:00:00",
+      "fin": "2026-08-10T15:00:00",
+      "intervenciones": [
+        "Se repone falla no rearmable atvMalacate"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Izaje y aparejo"
+    },
+    {
+      "fila": 12,
+      "aviso": "800898860",
+      "equipo": "P-MG11",
+      "descripcion": "Se queda sin traslacion",
+      "texto_ampliado": "",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "Falla Operativa",
+      "orden": "11302836",
+      "inicio": "2026-08-10T15:03:59",
+      "fin": null,
+      "intervenciones": [
+        "Se repone falla de time out picador desd",
+        "se repone falla de time out picador"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Traslación"
+    },
+    {
+      "fila": 13,
+      "aviso": "800898886",
+      "equipo": "P-MG33",
+      "descripcion": "SIN TRASLACION",
+      "texto_ampliado": "Le cuesta cerrar la traba de almeja",
+      "parada": true,
+      "duracion": 0.5,
+      "duracion_valida": true,
+      "causa": "Falso Contacto",
+      "orden": "11302840",
+      "inicio": "2026-08-10T18:00:00",
+      "fin": "2026-08-10T18:30:00",
+      "intervenciones": [
+        "Se repone falla de time out almeja desde"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Traslación"
+    },
+    {
+      "fila": 14,
+      "aviso": "800898887",
+      "equipo": "P-MG23",
+      "descripcion": "No gira almeja",
+      "texto_ampliado": "",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "Sin Falla",
+      "orden": "11302839",
+      "inicio": "2026-08-10T20:26:44",
+      "fin": null,
+      "intervenciones": [
+        "se controla sin falla"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Giro y percha"
+    },
+    {
+      "fila": 15,
+      "aviso": "800898931",
+      "equipo": "P-MG43",
+      "descripcion": "no gira picador",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.12,
+      "duracion_valida": true,
+      "causa": "Falla Componente Electrónico",
+      "orden": "11303013",
+      "inicio": "2026-08-10T23:53:44",
+      "fin": "2026-08-11T01:00:41",
+      "intervenciones": [
+        "se repone variador"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Giro y percha"
+    },
+    {
+      "fila": 16,
+      "aviso": "800898939",
+      "equipo": "P-MG41",
+      "descripcion": "no gira percha N06",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.36,
+      "duracion_valida": true,
+      "causa": "Falso Contacto",
+      "orden": "11303010",
+      "inicio": "2026-08-11T03:39:02",
+      "fin": "2026-08-11T05:00:35",
+      "intervenciones": [
+        "se reinicia variador de giro, se ajustan"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Giro y percha"
+    },
+    {
+      "fila": 17,
+      "aviso": "800898948",
+      "equipo": "P-MG43",
+      "descripcion": "no gira herramientas",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 0.36,
+      "duracion_valida": true,
+      "causa": "Circuito Abierto-Sin Continuidad",
+      "orden": "11303618",
+      "inicio": "2026-08-10T22:38:23",
+      "fin": "2026-08-10T23:00:00",
+      "intervenciones": [
+        "SE REPONE FALLA"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Giro y percha"
+    },
+    {
+      "fila": 18,
+      "aviso": "800898956",
+      "equipo": "P-MG33",
+      "descripcion": "SIN TRASLACION",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 0.81,
+      "duracion_valida": true,
+      "causa": "Alimentación de Energía",
+      "orden": "11303142",
+      "inicio": "2026-08-11T06:48:32",
+      "fin": "2026-08-11T07:36:53",
+      "intervenciones": [
+        "se cambia valvila de traba de picador"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Traslación"
+    },
+    {
+      "fila": 19,
+      "aviso": "800898957",
+      "equipo": "P-MG13",
+      "descripcion": "FALTA PERILLA ALMEJA PICADOR CONTROL",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 0.8,
+      "duracion_valida": true,
+      "causa": "Alimentación de Energía",
+      "orden": "11303146",
+      "inicio": "2026-08-11T06:48:56",
+      "fin": "2026-08-11T07:36:53",
+      "intervenciones": [
+        "se coloca perilla a control ikusi"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Herramientas, almeja y cierre"
+    },
+    {
+      "fila": 20,
+      "aviso": "800898958",
+      "equipo": "P-MG42",
+      "descripcion": "ALMEJA TRABADA",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.57,
+      "duracion_valida": true,
+      "causa": "Alimentación de Energía",
+      "orden": "11303148",
+      "inicio": "2026-08-11T07:09:20",
+      "fin": "2026-08-11T08:43:17",
+      "intervenciones": [
+        "se destraba almeja"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Herramientas, almeja y cierre"
+    },
+    {
+      "fila": 21,
+      "aviso": "800899057",
+      "equipo": "P-MG11",
+      "descripcion": "NO BAJA PERCHA",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.12,
+      "duracion_valida": true,
+      "causa": "Corte de Energía",
+      "orden": "11303150",
+      "inicio": "2026-08-11T11:13:01",
+      "fin": "2026-08-11T12:20:00",
+      "intervenciones": [
+        "se resetea atv malacate"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Izaje y aparejo"
+    },
+    {
+      "fila": 22,
+      "aviso": "800899125",
+      "equipo": "P-MG11",
+      "descripcion": "SIN TRASLACION",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.0,
+      "duracion_valida": true,
+      "causa": "Falso Contacto",
+      "orden": "11303223",
+      "inicio": "2026-08-11T14:00:00",
+      "fin": "2026-08-11T15:00:00",
+      "intervenciones": [
+        "se repone falla de time out picador"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Traslación"
+    },
+    {
+      "fila": 23,
+      "aviso": "800899126",
+      "equipo": "P-MG21",
+      "descripcion": "Almeja sube torcida (sin traslacion)ROT",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 13.27,
+      "duracion_valida": true,
+      "causa": "Aflojamiento",
+      "orden": "11303156",
+      "inicio": "2026-08-11T14:43:57",
+      "fin": "2026-08-12T04:00:00",
+      "intervenciones": [
+        "Se repara freno de motor de giro almeja",
+        "Se realiza cambio de motor de giro de pi"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Traslación"
+    },
+    {
+      "fila": 24,
+      "aviso": "800899158",
+      "equipo": "P-MG11",
+      "descripcion": "No baja aparejo 15 TN",
+      "texto_ampliado": "se repone falla REARMABLE de aparejos",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "",
+      "orden": "",
+      "inicio": "2026-08-11T17:34:12",
+      "fin": null,
+      "intervenciones": [],
+      "notificacion_encontrada": false,
+      "categoria": "Izaje y aparejo"
+    },
+    {
+      "fila": 25,
+      "aviso": "800899170",
+      "equipo": "P-MG23",
+      "descripcion": "No gira almeja",
+      "texto_ampliado": "se trata en aviso 800899172",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "",
+      "orden": "",
+      "inicio": "2026-08-11T17:36:36",
+      "fin": null,
+      "intervenciones": [],
+      "notificacion_encontrada": false,
+      "categoria": "Giro y percha"
+    },
+    {
+      "fila": 26,
+      "aviso": "800899171",
+      "equipo": "P-MG32",
+      "descripcion": "Perdida de aire",
+      "texto_ampliado": "equipo se encuentra en tarea de colada-se repara control remoto continua con tarea de colada",
+      "parada": true,
+      "duracion": 1.0,
+      "duracion_valida": true,
+      "causa": "Desconectado",
+      "orden": "11303224",
+      "inicio": "2026-08-11T17:00:00",
+      "fin": "2026-08-11T18:00:00",
+      "intervenciones": [
+        "Operario indica que tiene falla el contr"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Neumática, aire y compresor"
+    },
+    {
+      "fila": 27,
+      "aviso": "800899172",
+      "equipo": "P-MG23",
+      "descripcion": "no gira la percha",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 0.84,
+      "duracion_valida": true,
+      "causa": "Falso Contacto",
+      "orden": "11303225",
+      "inicio": "2026-08-11T17:39:18",
+      "fin": "2026-08-11T18:30:00",
+      "intervenciones": [
+        "se repone falla no rearmable atv GIROS"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Giro y percha"
+    },
+    {
+      "fila": 28,
+      "aviso": "800899187",
+      "equipo": "P-MG33",
+      "descripcion": "manguera suelta ECL",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 0.97,
+      "duracion_valida": true,
+      "causa": "Desgaste",
+      "orden": "11303230",
+      "inicio": "2026-08-11T23:01:41",
+      "fin": null,
+      "intervenciones": [
+        "se cambia racord,se ajusta manguera"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Neumática, aire y compresor"
+    },
+    {
+      "fila": 29,
+      "aviso": "800899191",
+      "equipo": "P-MG23",
+      "descripcion": "no gira almeja",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 0.92,
+      "duracion_valida": true,
+      "causa": "Circuito Abierto-Sin Continuidad",
+      "orden": "11303231",
+      "inicio": "2026-08-12T00:05:00",
+      "fin": "2026-08-12T01:00:00",
+      "intervenciones": [
+        "SE REPONE FALLA"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Giro y percha"
+    },
+    {
+      "fila": 30,
+      "aviso": "800899192",
+      "equipo": "P-MG12",
+      "descripcion": "no giran herramientas",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.07,
+      "duracion_valida": true,
+      "causa": "Falla Componente Electrónico",
+      "orden": "11303233",
+      "inicio": "2026-08-12T01:12:15",
+      "fin": "2026-08-12T02:16:38",
+      "intervenciones": [
+        "se repone y se controla, ok"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Giro y percha"
+    },
+    {
+      "fila": 31,
+      "aviso": "800899211",
+      "equipo": "P-MG31",
+      "descripcion": "revisar rodamiento de traslacion nor/sur",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.19,
+      "duracion_valida": true,
+      "causa": "Desalineación",
+      "orden": "11303236",
+      "inicio": "2026-08-12T03:00:54",
+      "fin": "2026-08-12T04:12:17",
+      "intervenciones": [
+        "se cambian silenblock"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Traslación"
+    },
+    {
+      "fila": 32,
+      "aviso": "800899436",
+      "equipo": "P-MG22",
+      "descripcion": "No abre el alicate",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.35,
+      "duracion_valida": true,
+      "causa": "Desgaste",
+      "orden": "11303509",
+      "inicio": "2026-08-12T19:39:13",
+      "fin": "2026-08-12T21:00:00",
+      "intervenciones": [
+        "Se prueba alicate en posición de cuba y",
+        "Ok."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Herramientas, almeja y cierre"
+    },
+    {
+      "fila": 33,
+      "aviso": "800899451",
+      "equipo": "P-MG13",
+      "descripcion": "sin traslacion",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.0,
+      "duracion_valida": true,
+      "causa": "Falla Operativa",
+      "orden": "11303622",
+      "inicio": "2026-08-12T23:00:00",
+      "fin": "2026-08-13T00:00:01",
+      "intervenciones": [
+        "SE REPONE FALLA TIME OUT"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Traslación"
+    },
+    {
+      "fila": 34,
+      "aviso": "800899610",
+      "equipo": "P-MG43",
+      "descripcion": "No prende el compresor",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 0.61,
+      "duracion_valida": true,
+      "causa": "Circuito Abierto-Sin Continuidad",
+      "orden": "11303806",
+      "inicio": "2026-08-13T15:53:27",
+      "fin": "2026-08-13T16:30:00",
+      "intervenciones": [
+        "Se repone relé térmico de compresor.",
+        "Ok."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Neumática, aire y compresor"
+    },
+    {
+      "fila": 35,
+      "aviso": "800899638",
+      "equipo": "P-MG43",
+      "descripcion": "se apaga el compresor",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.68,
+      "duracion_valida": true,
+      "causa": "Accidente",
+      "orden": "11303807",
+      "inicio": "2026-08-13T19:38:56",
+      "fin": "2026-08-13T21:20:00",
+      "intervenciones": [
+        "Se reemplaza manguera de alimentación de",
+        "Ok."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Neumática, aire y compresor"
+    },
+    {
+      "fila": 36,
+      "aviso": "800899811",
+      "equipo": "P-MG43",
+      "descripcion": "Controlar compresor",
+      "texto_ampliado": "",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "Desgaste",
+      "orden": "11304158",
+      "inicio": "2026-08-14T12:43:04",
+      "fin": null,
+      "intervenciones": [
+        "Se coordina con producción la intervenci"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Neumática, aire y compresor"
+    },
+    {
+      "fila": 37,
+      "aviso": "800899812",
+      "equipo": "P-MG23",
+      "descripcion": "Destornillador baja mal",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 2.0,
+      "duracion_valida": true,
+      "causa": "Accidente",
+      "orden": "11303994",
+      "inicio": "2026-08-14T11:30:00",
+      "fin": "2026-08-14T13:30:00",
+      "intervenciones": [
+        "Se retira restos de pinza de morceto (du"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Herramientas, almeja y cierre"
+    },
+    {
+      "fila": 38,
+      "aviso": "800899848",
+      "equipo": "P-MG12",
+      "descripcion": "No gira la almeja ni picador",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 0.79,
+      "duracion_valida": true,
+      "causa": "Falla Componente Electrónico",
+      "orden": "11304040",
+      "inicio": "2026-08-14T16:12:22",
+      "fin": "2026-08-14T17:00:00",
+      "intervenciones": [
+        "Reset de ATV: Error Interno 27."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Giro y percha"
+    },
+    {
+      "fila": 39,
+      "aviso": "800899877",
+      "equipo": "P-MG23",
+      "descripcion": "Perdida de aire por manguera de picador",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 3.87,
+      "duracion_valida": true,
+      "causa": "Desgaste",
+      "orden": "11304034",
+      "inicio": "2026-08-14T19:37:58",
+      "fin": "2026-08-14T23:30:00",
+      "intervenciones": [
+        "Se cambia manguera de picador"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Neumática, aire y compresor"
+    },
+    {
+      "fila": 40,
+      "aviso": "800899878",
+      "equipo": "P-MG42",
+      "descripcion": "Almeja queda cruzada",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 0.68,
+      "duracion_valida": true,
+      "causa": "Falla Operativa",
+      "orden": "11304041",
+      "inicio": "2026-08-14T19:38:58",
+      "fin": "2026-08-14T20:20:00",
+      "intervenciones": [
+        "Gancho de protección de almeja trabado e",
+        "OK."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Herramientas, almeja y cierre"
+    },
+    {
+      "fila": 41,
+      "aviso": "800899897",
+      "equipo": "P-MG31",
+      "descripcion": "mando roto",
+      "texto_ampliado": "Se agrega tilde de parada",
+      "parada": true,
+      "duracion": 1.0,
+      "duracion_valida": true,
+      "causa": "Falla Elemento de Maniobra",
+      "orden": "11304155",
+      "inicio": "2026-08-15T01:25:14",
+      "fin": "2026-08-15T02:25:00",
+      "intervenciones": [
+        "se repara control remoto"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Mando y control"
+    },
+    {
+      "fila": 42,
+      "aviso": "800899906",
+      "equipo": "P-MG31",
+      "descripcion": "no baja picador",
+      "texto_ampliado": "",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "Sin Falla",
+      "orden": "11304207",
+      "inicio": "2026-08-15T06:42:52",
+      "fin": null,
+      "intervenciones": [
+        "se controla sin falla",
+        "se controla sin falla."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Izaje y aparejo"
+    },
+    {
+      "fila": 43,
+      "aviso": "800899907",
+      "equipo": "P-MG12",
+      "descripcion": "Arranca y se apaga seguido-OKTB",
+      "texto_ampliado": "",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "Falso Contacto",
+      "orden": "11304406",
+      "inicio": "2026-08-15T06:43:57",
+      "fin": null,
+      "intervenciones": [
+        "se cambia control remoto de recambio"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Otra / revisión humana"
+    },
+    {
+      "fila": 44,
+      "aviso": "800899959",
+      "equipo": "P-MG32",
+      "descripcion": "Falla en el alicate al agarrar la varill",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.59,
+      "duracion_valida": true,
+      "causa": "Falla Operativa",
+      "orden": "11304206",
+      "inicio": "2026-08-15T10:54:50",
+      "fin": "2026-08-15T12:30:00",
+      "intervenciones": [
+        "falla operativa, se cambia alicate"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Herramientas, almeja y cierre"
+    },
+    {
+      "fila": 45,
+      "aviso": "800899991",
+      "equipo": "P-MG31",
+      "descripcion": "Picador baja a la mitad de recorrido",
+      "texto_ampliado": "",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "Sin Falla",
+      "orden": "11304229",
+      "inicio": "2026-08-15T15:27:41",
+      "fin": "2026-08-15T16:00:00",
+      "intervenciones": [
+        "Se controla. No falla."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Herramientas, almeja y cierre"
+    },
+    {
+      "fila": 46,
+      "aviso": "800899996",
+      "equipo": "P-MG22",
+      "descripcion": "no funciona el diana",
+      "texto_ampliado": "",
+      "parada": false,
+      "duracion": 0.0,
+      "duracion_valida": true,
+      "causa": "Sin Falla",
+      "orden": "11304231",
+      "inicio": "2026-08-15T15:38:02",
+      "fin": "2026-08-15T17:00:00",
+      "intervenciones": [
+        "Se controla. No falla."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Otra / revisión humana"
+    },
+    {
+      "fila": 47,
+      "aviso": "800900000",
+      "equipo": "P-MG12",
+      "descripcion": "No enciende",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.45,
+      "duracion_valida": true,
+      "causa": "Falla Componente Electrónico",
+      "orden": "11304232",
+      "inicio": "2026-08-15T16:03:04",
+      "fin": "2026-08-15T17:30:00",
+      "intervenciones": [
+        "Se regula detector de fase tablero de ca",
+        "OK."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Otra / revisión humana"
+    },
+    {
+      "fila": 48,
+      "aviso": "800900006",
+      "equipo": "P-MG41",
+      "descripcion": "Picador no sube",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 0.66,
+      "duracion_valida": true,
+      "causa": "Falla Componente Electrónico",
+      "orden": "11304233",
+      "inicio": "2026-08-15T17:20:42",
+      "fin": "2026-08-15T18:00:00",
+      "intervenciones": [
+        "Reset ATV: sobrevelocidad."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Izaje y aparejo"
+    },
+    {
+      "fila": 49,
+      "aviso": "800900061",
+      "equipo": "P-MG32",
+      "descripcion": "sin traslacion norte/sur",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.0,
+      "duracion_valida": true,
+      "causa": "Falla Componente Electrónico",
+      "orden": "11304259",
+      "inicio": "2026-08-16T01:00:00",
+      "fin": "2026-08-16T02:00:00",
+      "intervenciones": [
+        "Se resetea falla de variador TC"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Traslación"
+    },
+    {
+      "fila": 50,
+      "aviso": "800900062",
+      "equipo": "P-MG32",
+      "descripcion": "perdida de aire",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.0,
+      "duracion_valida": true,
+      "causa": "Fatiga Material",
+      "orden": "11304382",
+      "inicio": "2026-08-16T02:00:00",
+      "fin": "2026-08-16T03:00:00",
+      "intervenciones": [
+        "SE INSPECCIONA Y SE ENCUENTRA PERDIDA DE"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Neumática, aire y compresor"
+    },
+    {
+      "fila": 51,
+      "aviso": "800900095",
+      "equipo": "P-MG33",
+      "descripcion": "No baja aparejo de 15 TN",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.0,
+      "duracion_valida": true,
+      "causa": "Falla Operativa",
+      "orden": "11304404",
+      "inicio": "2026-08-16T09:00:00",
+      "fin": "2026-08-16T10:00:00",
+      "intervenciones": [
+        "Se controla percha y aparejo de 15 tn"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Izaje y aparejo"
+    },
+    {
+      "fila": 52,
+      "aviso": "800900102",
+      "equipo": "P-MG32",
+      "descripcion": "Almeja mal subida",
+      "texto_ampliado": "",
+      "parada": true,
+      "duracion": 1.0,
+      "duracion_valida": true,
+      "causa": "Falla Operativa",
+      "orden": "11304405",
+      "inicio": "2026-08-16T11:30:00",
+      "fin": "2026-08-16T12:30:00",
+      "intervenciones": [
+        "se repone falla de time out almeja"
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Herramientas, almeja y cierre"
+    },
+    {
+      "fila": 53,
+      "aviso": "800900089",
+      "equipo": "P-MG31",
+      "descripcion": "Traslación carro N/S lenta y con ruido",
+      "texto_ampliado": "se revisa en OT 11302467 se repara con OT 11304589 18.08.2026 15:26:33 UTC-3 (A90075) Se re-abre aviso para colocar tilde de parada",
+      "parada": true,
+      "duracion": 47.31,
+      "duracion_valida": true,
+      "causa": "Desalineación",
+      "orden": "11304972",
+      "inicio": "2026-08-16T14:41:39",
+      "fin": "2026-08-18T14:00:00",
+      "intervenciones": [],
+      "notificacion_encontrada": false,
+      "categoria": "Traslación"
+    },
+    {
+      "fila": 54,
+      "aviso": "800900115",
+      "equipo": "P-MG32",
+      "descripcion": "Sin fuerza las heramientas",
+      "texto_ampliado": "Controlar falla al bajar la ameja.",
+      "parada": true,
+      "duracion": 4.53,
+      "duracion_valida": true,
+      "causa": "Desgaste",
+      "orden": "11304397",
+      "inicio": "2026-08-16T16:28:27",
+      "fin": "2026-08-16T21:00:00",
+      "intervenciones": [
+        "Se desmonta cañería de alimentación de a",
+        "Ok."
+      ],
+      "notificacion_encontrada": true,
+      "categoria": "Neumática, aire y compresor"
+    }
+  ],
+  "mantenimiento": [
+    {
+      "fila": 3,
+      "equipo": "P-MG22",
+      "tarea": "LIMPIEZA DE PUENTE GRUA MG22",
+      "horas": 4.0,
+      "inicio": "2026-08-10T02:00:00",
+      "fin": "2026-08-10T06:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 4,
+      "equipo": "P-MG41",
+      "tarea": "TAREAS MG41-INFA TESTERAS",
+      "horas": 8.0,
+      "inicio": "2026-08-10T06:00:00",
+      "fin": "2026-08-10T14:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 5,
+      "equipo": "P-MG23",
+      "tarea": "TAREAS MG23 Cambiar motor de izaje",
+      "horas": 8.0,
+      "inicio": "2026-08-10T06:00:00",
+      "fin": "2026-08-10T14:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 6,
+      "equipo": "P-MG22",
+      "tarea": "TAREAS Y LUB. MG22",
+      "horas": 8.0,
+      "inicio": "2026-08-10T14:00:00",
+      "fin": "2026-08-10T22:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 7,
+      "equipo": "P-MG42",
+      "tarea": "LIMPIEZA DE PUENTE GRUA MG42",
+      "horas": 4.0,
+      "inicio": "2026-08-11T02:00:00",
+      "fin": "2026-08-11T06:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 8,
+      "equipo": "P-MG22",
+      "tarea": "PREV. MEC. MG22",
+      "horas": 8.0,
+      "inicio": "2026-08-11T06:00:00",
+      "fin": "2026-08-11T14:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 10,
+      "equipo": "P-MG42",
+      "tarea": "TAREAS Y LUB. MG42",
+      "horas": 8.0,
+      "inicio": "2026-08-11T14:00:00",
+      "fin": "2026-08-11T22:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 11,
+      "equipo": "P-MG42",
+      "tarea": "LIMPIEZA DE PUENTE GRUA MG42",
+      "horas": 4.0,
+      "inicio": "2026-08-12T02:00:00",
+      "fin": "2026-08-12T06:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 12,
+      "equipo": "P-MG42",
+      "tarea": "PREV. ELEC. MG42",
+      "horas": 8.0,
+      "inicio": "2026-08-12T06:00:00",
+      "fin": "2026-08-12T14:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 13,
+      "equipo": "P-MG23",
+      "tarea": "INSP. MEC. MG23",
+      "horas": 8.0,
+      "inicio": "2026-08-12T06:00:00",
+      "fin": "2026-08-12T14:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 14,
+      "equipo": "P-MG12",
+      "tarea": "CONTROL MG12",
+      "horas": 4.0,
+      "inicio": "2026-08-12T14:00:00",
+      "fin": "2026-08-12T18:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 15,
+      "equipo": "P-MG22",
+      "tarea": "LIMPIEZA DE PUENTE GRUA MG22",
+      "horas": 4.0,
+      "inicio": "2026-08-13T02:00:00",
+      "fin": "2026-08-13T06:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 16,
+      "equipo": "P-MG33",
+      "tarea": "TAREAS MG33-INFA TESTERAS-SOMBRA",
+      "horas": 8.0,
+      "inicio": "2026-08-13T06:00:00",
+      "fin": "2026-08-13T14:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 17,
+      "equipo": "P-MG22",
+      "tarea": "PREV. ELEC. MG22",
+      "horas": 8.0,
+      "inicio": "2026-08-13T06:00:00",
+      "fin": "2026-08-13T14:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 18,
+      "equipo": "P-MG11",
+      "tarea": "INSP. MEC. MG11",
+      "horas": 4.0,
+      "inicio": "2026-08-13T06:00:00",
+      "fin": "2026-08-13T10:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 20,
+      "equipo": "P-MG42",
+      "tarea": "PREV. MEC. MG42",
+      "horas": 8.0,
+      "inicio": "2026-08-13T14:00:00",
+      "fin": "2026-08-13T22:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 23,
+      "equipo": "P-MG31",
+      "tarea": "TAREAS MG31  Cambiar motorreductor giro almeja",
+      "horas": 8.0,
+      "inicio": "2026-08-14T06:00:00",
+      "fin": "2026-08-14T14:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 24,
+      "equipo": "P-MG31",
+      "tarea": "INSP. MEC. MG31",
+      "horas": 4.0,
+      "inicio": "2026-08-14T14:00:00",
+      "fin": "2026-08-14T18:00:00",
+      "observaciones": ""
+    },
+    {
+      "fila": 26,
+      "equipo": "P-MG32",
+      "tarea": "TAREAS Y CONTROL MG32",
+      "horas": 8.0,
+      "inicio": "2026-08-15T14:00:00",
+      "fin": "2026-08-15T22:00:00",
+      "observaciones": ""
+    }
+  ],
+  "grupos_semana": [
+    {
+      "categoria": "Giro y percha",
+      "cantidad": 8,
+      "equipos": [
+        "P-MG12",
+        "P-MG21",
+        "P-MG23",
+        "P-MG41",
+        "P-MG43"
+      ],
+      "avisos": [
+        "800898664",
+        "800898931",
+        "800898939",
+        "800898948",
+        "800899172",
+        "800899191",
+        "800899192",
+        "800899848"
+      ],
+      "descripciones": [
+        "No abre  / No gira aleja",
+        "no gira picador",
+        "no gira percha N06",
+        "no gira herramientas",
+        "no gira la percha",
+        "no gira almeja",
+        "no giran herramientas",
+        "No gira la almeja ni picador"
+      ],
+      "causas": [
+        "Circuito Abierto-Sin Continuidad",
+        "Falla Componente Electrónico",
+        "Falso Contacto",
+        "Circuito Abierto-Sin Continuidad",
+        "Falso Contacto",
+        "Circuito Abierto-Sin Continuidad",
+        "Falla Componente Electrónico",
+        "Falla Componente Electrónico"
+      ],
+      "intervenciones": [
+        "Se normaliza cable suelta en selectora d | Ok.",
+        "se repone variador",
+        "se reinicia variador de giro, se ajustan",
+        "SE REPONE FALLA",
+        "se repone falla no rearmable atv GIROS",
+        "SE REPONE FALLA",
+        "se repone y se controla, ok",
+        "Reset de ATV: Error Interno 27."
+      ]
+    },
+    {
+      "categoria": "Herramientas, almeja y cierre",
+      "cantidad": 7,
+      "equipos": [
+        "P-MG13",
+        "P-MG22",
+        "P-MG23",
+        "P-MG32",
+        "P-MG42"
+      ],
+      "avisos": [
+        "800898957",
+        "800898958",
+        "800899436",
+        "800899812",
+        "800899878",
+        "800899959",
+        "800900102"
+      ],
+      "descripciones": [
+        "FALTA PERILLA ALMEJA PICADOR CONTROL",
+        "ALMEJA TRABADA",
+        "No abre el alicate",
+        "Destornillador baja mal",
+        "Almeja queda cruzada",
+        "Falla en el alicate al agarrar la varill",
+        "Almeja mal subida"
+      ],
+      "causas": [
+        "Alimentación de Energía",
+        "Alimentación de Energía",
+        "Desgaste",
+        "Accidente",
+        "Falla Operativa",
+        "Falla Operativa",
+        "Falla Operativa"
+      ],
+      "intervenciones": [
+        "se coloca perilla a control ikusi",
+        "se destraba almeja",
+        "Se prueba alicate en posición de cuba y | Ok.",
+        "Se retira restos de pinza de morceto (du",
+        "Gancho de protección de almeja trabado e | OK.",
+        "falla operativa, se cambia alicate",
+        "se repone falla de time out almeja"
+      ]
+    },
+    {
+      "categoria": "Izaje y aparejo",
+      "cantidad": 4,
+      "equipos": [
+        "P-MG11",
+        "P-MG21",
+        "P-MG33",
+        "P-MG41"
+      ],
+      "avisos": [
+        "800898856",
+        "800899057",
+        "800900006",
+        "800900095"
+      ],
+      "descripciones": [
+        "No baja aparejo 15 TN",
+        "NO BAJA PERCHA",
+        "Picador no sube",
+        "No baja aparejo de 15 TN"
+      ],
+      "causas": [
+        "Falso Contacto",
+        "Corte de Energía",
+        "Falla Componente Electrónico",
+        "Falla Operativa"
+      ],
+      "intervenciones": [
+        "Se repone falla no rearmable atvMalacate",
+        "se resetea atv malacate",
+        "Reset ATV: sobrevelocidad.",
+        "Se controla percha y aparejo de 15 tn"
+      ]
+    },
+    {
+      "categoria": "Neumática, aire y compresor",
+      "cantidad": 9,
+      "equipos": [
+        "P-MG23",
+        "P-MG32",
+        "P-MG33",
+        "P-MG42",
+        "P-MG43"
+      ],
+      "avisos": [
+        "800898685",
+        "800898730",
+        "800899171",
+        "800899187",
+        "800899610",
+        "800899638",
+        "800899877",
+        "800900062",
+        "800900115"
+      ],
+      "descripciones": [
+        "SIN FUERZA ALMEJA PICADOR",
+        "NO ENCIENDE COMPRESOR",
+        "Perdida de aire",
+        "manguera suelta ECL",
+        "No prende el compresor",
+        "se apaga el compresor",
+        "Perdida de aire por manguera de picador",
+        "perdida de aire",
+        "Sin fuerza las heramientas"
+      ],
+      "causas": [
+        "Fatiga Material",
+        "Corte de Energía",
+        "Desconectado",
+        "Desgaste",
+        "Circuito Abierto-Sin Continuidad",
+        "Accidente",
+        "Desgaste",
+        "Fatiga Material",
+        "Desgaste"
+      ],
+      "intervenciones": [
+        "se reajusta cabezal de picador y se saca",
+        "se repone termico, se controla ok",
+        "Operario indica que tiene falla el contr",
+        "se cambia racord,se ajusta manguera",
+        "Se repone relé térmico de compresor. | Ok.",
+        "Se reemplaza manguera de alimentación de | Ok.",
+        "Se cambia manguera de picador",
+        "SE INSPECCIONA Y SE ENCUENTRA PERDIDA DE",
+        "Se desmonta cañería de alimentación de a | Ok."
+      ]
+    },
+    {
+      "categoria": "Traslación",
+      "cantidad": 10,
+      "equipos": [
+        "P-MG11",
+        "P-MG12",
+        "P-MG13",
+        "P-MG21",
+        "P-MG31",
+        "P-MG32",
+        "P-MG33"
+      ],
+      "avisos": [
+        "800898647",
+        "800898766",
+        "800898886",
+        "800898956",
+        "800899125",
+        "800899126",
+        "800899211",
+        "800899451",
+        "800900061",
+        "800900089"
+      ],
+      "descripciones": [
+        "sin traslación N/S",
+        "NO TRASLADA",
+        "SIN TRASLACION",
+        "SIN TRASLACION",
+        "SIN TRASLACION",
+        "Almeja sube torcida (sin traslacion)ROT",
+        "revisar rodamiento de traslacion nor/sur",
+        "sin traslacion",
+        "sin traslacion norte/sur",
+        "Traslación carro N/S lenta y con ruido"
+      ],
+      "causas": [
+        "Falla Componente Electrónico",
+        "Lubricación Faltante",
+        "Falso Contacto",
+        "Alimentación de Energía",
+        "Falso Contacto",
+        "Aflojamiento",
+        "Desalineación",
+        "Falla Operativa",
+        "Falla Componente Electrónico",
+        "Desalineación"
+      ],
+      "intervenciones": [
+        "Reset de ATV: Error 27",
+        "se hecha aceite a vaso de válvulas de ap",
+        "Se repone falla de time out almeja desde",
+        "se cambia valvila de traba de picador",
+        "se repone falla de time out picador",
+        "Se repara freno de motor de giro almeja | Se realiza cambio de motor de giro de pi",
+        "se cambian silenblock",
+        "SE REPONE FALLA TIME OUT",
+        "Se resetea falla de variador TC",
+        ""
+      ]
+    }
+  ],
+  "validaciones": [
+    {
+      "tipo": "Orden sin notificación vinculable",
+      "fuente": "vinculación",
+      "fila": 53,
+      "equipo": "P-MG31",
+      "orden": "11304972",
+      "aviso": "800900089"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "findings": [
+    {
+      "relation_type": "same_bridge",
+      "title": "Reiteración de falla de giro en percha y almeja en P-MG12",
+      "notice_numbers": [
+        "800895684",
+        "800895701",
+        "800896006",
+        "800896729",
+        "800896941",
+        "800897118",
+        "800897638"
+      ],
+      "confidence": "alta",
+      "rationale": "En el mismo puente se repiten descripciones equivalentes como \"no gira percha\", \"no gira picador-almeja\" y \"No giraran herramientas Almeja / Picador\". Los textos documentados no coinciden en la causa: aparecen falso contacto, falla operativa y falla componente electrónico. Las intervenciones también cambian entre reset de ATV, reposición de falla, posicionamiento de pantógrafo y cambio de variador, por lo que la similitud es del síntoma y no de una causa confirmada.",
+      "human_review": "Verificar en campo el conjunto de giro, pantógrafo, variador/ATV y cableado antes de agrupar estos avisos como una misma falla de origen."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reiteración de no bajada de aparejo 15 TN en P-MG13",
+      "notice_numbers": [
+        "800894016",
+        "800896621",
+        "800897453",
+        "800898620"
+      ],
+      "confidence": "alta",
+      "rationale": "Los avisos del mismo puente describen una misma función afectada: \"No sube aparejo de 15tn\", \"No baja aparejo de 15 TN\" y \"No baja el aparejo de 15 TN\". Aunque el síntoma es muy parecido, las causas documentadas cambian entre falla elemento de maniobra, falso contacto y falla de proceso. Las intervenciones también varían entre normalización de contacto y reposición de falla no rearmable en el ATV malacate.",
+      "human_review": "Revisar malacate, contacto de mando y condición del ATV para determinar si se trata de una repetición funcional o de fallas distintas con síntomas similares."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reiteración de fallas de traslación norte-sur en P-MG23",
+      "notice_numbers": [
+        "800892746",
+        "800892753",
+        "800896874",
+        "800897461",
+        "800897738"
+      ],
+      "confidence": "alta",
+      "rationale": "En P-MG23 se repiten varias veces descripciones de traslación detenida: \"sin traslacion\", \"sin traslacion norte-sur\" y \"Sin traslacion n/s\". Los documentos no sostienen una sola causa; aparecen falla componente electrónico, falso contacto y circuito abierto-sin continuidad, con intervenciones distintas como ajuste de pantógrafos, bornera o reposición de falla. La coincidencia es fuerte por función y ubicación, pero no permite afirmar causalidad única.",
+      "human_review": "Inspeccionar la línea de traslación, borneras, pantógrafos y continuidad eléctrica para separar repetición real de fallas independientes."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reiteración de no giro de almeja y picador en P-MG31",
+      "notice_numbers": [
+        "800895836",
+        "800896091",
+        "800896204",
+        "800896368",
+        "800897871",
+        "800898188"
+      ],
+      "confidence": "alta",
+      "rationale": "El puente muestra una secuencia repetida de no giro en el mismo subconjunto: \"no gira la almeja\", \"No gira almeja ni picador\", \"no gira picador-almeja\" y \"NO GIRA ALMEJA PICADOR\". Las causas registradas alternan entre falla componente electrónico y corte de energía, con reposición de variador o reset de ATV como respuestas. La recurrencia es clara, pero los textos no prueban un mismo origen técnico único.",
+      "human_review": "Comprobar motor de giro, variador, fase de alimentación y estado del circuito de mando antes de consolidar el modo de falla."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reiteración de fallas en almeja, alicate y cierre en P-MG42",
+      "notice_numbers": [
+        "800894904",
+        "800895288",
+        "800895437",
+        "800895874",
+        "800896454",
+        "800897198",
+        "800897247",
+        "800897923"
+      ],
+      "confidence": "media",
+      "rationale": "En P-MG42 se repiten síntomas sobre el conjunto de almeja y cierre: \"no pica ni aplaude almeja\", \"almeja sin aplauso\", \"ALMEJA TRABADA\", \"alicate se abre y no frena\", \"Almeja subio torcida\" y \"Pinza torcida\". Los textos mezclan causas mecánicas, eléctricas y operativas, incluyendo circuito abierto, falta de aceite, desgaste, accidente y ajuste deficiente. La relación es plausible por proximidad funcional, aunque los avisos no aseguran el mismo componente fallado.",
+      "human_review": "Distinguir si los eventos corresponden a una misma cadena de almeja/cierre o a problemas separados de alicate, pinza, lubricación y mando."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Repetición de picador sin fuerza en P-MG43",
+      "notice_numbers": [
+        "800898485",
+        "800898599"
+      ],
+      "confidence": "alta",
+      "rationale": "Ambos avisos del mismo puente registran exactamente \"Picador sin fuerza\" y comparten el documental de desgaste. Aunque las intervenciones no están completas en ambos casos, la coincidencia textual es directa y concentrada en el mismo subsistema. Esto sugiere repetición del síntoma, pero no confirma que el mismo elemento interno sea el responsable en los dos eventos.",
+      "human_review": "Revisar el circuito neumático y el cabezal del compresor/picador para confirmar si la repetición corresponde al mismo punto de desgaste."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "No giro de percha/almeja en varios puentes con causas distintas",
+      "notice_numbers": [
+        "800894888",
+        "800895684",
+        "800895701",
+        "800896204",
+        "800896368",
+        "800897871",
+        "800898188"
+      ],
+      "confidence": "media",
+      "rationale": "Se observa el mismo tipo de síntoma en puentes diferentes: P-MG22, P-MG12, P-MG31 y P-MG41 reportan que la percha o la almeja no gira. Sin embargo, los textos documentados no convergen en una sola causa: aparecen falso contacto, corte de energía y falla componente electrónico. Las intervenciones también cambian entre reset, reposición de variador y ajuste de pantógrafo, por lo que la relación es funcional y no causal.",
+      "human_review": "Comparar el tren de giro, alimentación y mando entre puentes para determinar si comparten un punto débil común o solo un síntoma parecido."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Fallas de aparejo 15 TN repetidas entre varios puentes",
+      "notice_numbers": [
+        "800893603",
+        "800893913",
+        "800894078",
+        "800895682",
+        "800896003",
+        "800896049",
+        "800897453",
+        "800897619",
+        "800898608",
+        "800898620"
+      ],
+      "confidence": "media",
+      "rationale": "La no bajada o no movimiento del aparejo de 15 TN aparece en varios puentes distintos, incluyendo P-MG11, P-MG12, P-MG13 y P-MG21. Los registros no sostienen una causa común: se mencionan alimentación de energía, falla componente electrónico, falso contacto, falla de proceso y falla elemento de maniobra. La coincidencia es importante por función, pero la evidencia no permite afirmar un mismo origen técnico.",
+      "human_review": "Revisar por separado malacate, contactores, ATV y mando de aparejo en cada puente antes de concluir una causa compartida."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Traslación detenida en distintos puentes con distintos diagnósticos",
+      "notice_numbers": [
+        "800892746",
+        "800892753",
+        "800894037",
+        "800894057",
+        "800894097",
+        "800896874",
+        "800896877",
+        "800897009",
+        "800897461",
+        "800897738"
+      ],
+      "confidence": "media",
+      "rationale": "Se repite el síntoma de traslación sin movimiento en P-MG11, P-MG23, P-MG31 y P-MG33. Los textos asociados son heterogéneos: corte de energía, falso contacto, circuito abierto-sin continuidad, falla operativa y alimentación de energía. Las intervenciones van desde reposición de ATV hasta ajuste de borneras o reparación de control, lo que indica similitud funcional pero no causalidad confirmada.",
+      "human_review": "Contrastar continuidad eléctrica, fase, controles y pantógrafos de traslación para separar fallas recurrentes de eventos independientes."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Problemas de balanza y pesaje en puentes diferentes",
+      "notice_numbers": [
+        "800892961",
+        "800894187",
+        "800895387",
+        "800898189"
+      ],
+      "confidence": "media",
+      "rationale": "Los avisos muestran fallas de balanza o pesaje en más de un puente: \"no funciona balanza\", \"BALANZA ELECTRON NO FUNCIONA\", \"Pantalla de balanza titila\" y \"Error pesaje balanza\". Las causas documentadas no coinciden del todo, combinando falla componente electrónico y falso contacto, y en un caso se informa control normal. Esto sugiere una familia de síntomas parecidos, no una causa común demostrada.",
+      "human_review": "Revisar celda de carga, pantalla, cableado y procedimientos de reset en cada puente antes de agruparlos como una sola falla recurrente."
+    }
+  ]
+}

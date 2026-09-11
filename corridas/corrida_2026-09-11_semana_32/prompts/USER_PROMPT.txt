@@ -1,0 +1,12 @@
+Objetivo: calcular la disponibilidad de la semana 32, comprendida del 2026-08-03 al 2026-08-09.
+
+Información: se adjuntan los archivos de avisos, solicitudes de tareas en sala y notificaciones.
+
+- No calcular ni estimar proyecciones del mes ni de otras semanas.
+- Recalcular usando exclusivamente los archivos cargados.
+- Conservar la interpretación del LLM como preliminar y sujeta a revisión humana.
+
+Archivos utilizados:
+- Avisos: 32-Avisos semana 32.XLSX
+- Notificaciones: 32-Notificaciones semana 32.XLSX
+- Tareas en sala: 32-TAREAS EN SALA SEMANA 32 (1).xlsx

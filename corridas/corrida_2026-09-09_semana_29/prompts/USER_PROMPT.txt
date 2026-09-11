@@ -1,0 +1,12 @@
+Objetivo: calcular la disponibilidad de la semana 29, comprendida del 2026-07-13 al 2026-07-19.
+
+Información: se adjuntan los archivos de avisos, solicitudes de tareas en sala y notificaciones.
+
+- No calcular ni estimar proyecciones del mes ni de otras semanas.
+- Recalcular usando exclusivamente los archivos cargados.
+- Conservar la interpretación del LLM como preliminar y sujeta a revisión humana.
+
+Archivos utilizados:
+- Avisos: 29-Avisos semana 29.XLSX
+- Notificaciones: 29-Notificaciones semana 29.XLSX
+- Tareas en sala: 29-TAREAS EN SALA SEMANA 29.xlsx

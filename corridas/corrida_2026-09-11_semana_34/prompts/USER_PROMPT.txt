@@ -1,0 +1,12 @@
+Objetivo: calcular la disponibilidad de la semana 34, comprendida del 2026-08-17 al 2026-08-23.
+
+Información: se adjuntan los archivos de avisos, solicitudes de tareas en sala y notificaciones.
+
+- No calcular ni estimar proyecciones del mes ni de otras semanas.
+- Recalcular usando exclusivamente los archivos cargados.
+- Conservar la interpretación del LLM como preliminar y sujeta a revisión humana.
+
+Archivos utilizados:
+- Avisos: 34-Avisos semana.XLSX
+- Notificaciones: 34-Notificaciones.XLSX
+- Tareas en sala: 34-TAREAS EN SALA SEMANA.xlsx

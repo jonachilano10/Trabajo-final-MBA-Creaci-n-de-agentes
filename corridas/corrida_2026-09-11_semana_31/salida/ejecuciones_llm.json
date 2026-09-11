@@ -1,0 +1,26 @@
+{
+  "runs": [
+    {
+      "id": 3,
+      "created_at": "2026-09-11 22:09:50",
+      "report_year": 2026,
+      "report_week": 31,
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium",
+      "response_id": "resp_0a18e38d9c717ab6016aa47bfe704487d298089d402058c335",
+      "input_tokens": 10175,
+      "cached_input_tokens": 0,
+      "output_tokens": 8053,
+      "reasoning_tokens": 6691,
+      "total_tokens": 18228,
+      "input_cost_usd": 0.00763125,
+      "cached_input_cost_usd": 0.0,
+      "output_cost_usd": 0.0362385,
+      "total_cost_usd": 0.04386975,
+      "price_input_per_million": 0.75,
+      "price_cached_input_per_million": 0.075,
+      "price_output_per_million": 4.5,
+      "pricing_effective_date": "2026-09-08"
+    }
+  ]
+}

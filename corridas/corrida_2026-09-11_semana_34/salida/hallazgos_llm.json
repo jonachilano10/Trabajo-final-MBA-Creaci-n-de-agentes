@@ -1,0 +1,135 @@
+{
+  "findings": [
+    {
+      "relation_type": "same_bridge",
+      "title": "Repetición de fallas de giro en P-MG12",
+      "notice_numbers": [
+        "800895684",
+        "800895701",
+        "800896632",
+        "800896729",
+        "800899192",
+        "800899848"
+      ],
+      "confidence": "alta",
+      "rationale": "En P-MG12 se repite en varias semanas el síntoma de giro detenido o parcial sobre percha, almeja y herramientas. Los textos son muy parecidos, pero las causas documentadas no coinciden: falso contacto, falla operativa y falla de componente electrónico. Las intervenciones también varían entre reset, reposición de falla y posicionamiento de pantógrafos, por lo que solo puede proponerse una recurrencia funcional, no una causa común.",
+      "human_review": "Verificar en campo si todas las repeticiones corresponden al mismo subconjunto de giro o a elementos distintos del puente."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reincidencia de falla de aparejo 15 TN en P-MG21",
+      "notice_numbers": [
+        "800894078",
+        "800895682",
+        "800896003",
+        "800896049",
+        "800898856",
+        "800901300"
+      ],
+      "confidence": "alta",
+      "rationale": "En P-MG21 aparece reiteradamente la imposibilidad de subir o bajar el aparejo de 15 TN durante varias semanas. Aunque el síntoma es consistente, los registros alternan entre falla de componente electrónico, falso contacto y circuito abierto/sin continuidad; las acciones registradas también cambian entre reset y reposición de variador. La evidencia sostiene repetición del modo de falla, no una causa única confirmada.",
+      "human_review": "Confirmar si el malacate, el variador y el cableado asociado presentan el mismo patrón de reincidencia o si son fallas separadas del mismo servicio."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Inestabilidad recurrente de traslación y mando en P-MG31",
+      "notice_numbers": [
+        "800896877",
+        "800897009",
+        "800899211",
+        "800899897",
+        "800900089",
+        "800900834"
+      ],
+      "confidence": "media",
+      "rationale": "P-MG31 presenta varias descripciones de traslación detenida, suelta, lenta o con ruido, además de un mando roto. Los documentos asociados no apuntan a una sola causa: falso contacto, alimentación de energía, desalineación y falla de elemento de maniobra. Las intervenciones abarcan reparación de control, cambio de componentes y ajuste mecánico, lo que sugiere una familia de incidentes relacionados pero no un único evento repetido exactamente igual.",
+      "human_review": "Revisar si el problema está concentrado en el control remoto, en el carro de traslación o en ambos subsistemas."
+    },
+    {
+      "relation_type": "same_bridge",
+      "title": "Reincidencia de incidencias de almeja en P-MG42",
+      "notice_numbers": [
+        "800894904",
+        "800895874",
+        "800897198",
+        "800898958",
+        "800900442"
+      ],
+      "confidence": "media",
+      "rationale": "En P-MG42 se repiten fallas sobre la almeja con distintas expresiones: no pica ni aplaude, trabada, torcida y sin fuerza al aplaudir. Las causas documentadas son heterogéneas, incluyendo circuito abierto, falla operativa, alimentación de energía y falso contacto. Las intervenciones también cambian entre destrabar, regular y reemplazar componentes, por lo que la relación propuesta es por similitud funcional del conjunto, no por causalidad demostrada.",
+      "human_review": "Verificar estado mecánico y eléctrico del conjunto de almeja para distinguir entre bloqueo físico, comando y alimentación."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Falla recurrente de aparejo 15 TN entre puentes",
+      "notice_numbers": [
+        "800894078",
+        "800897453",
+        "800898608",
+        "800900006",
+        "800900787",
+        "800901625"
+      ],
+      "confidence": "alta",
+      "rationale": "El mismo síntoma de aparejo que no baja o no responde aparece en distintos puentes, no solo en uno: P-MG21, P-MG13, P-MG12, P-MG23, P-MG11 y P-MG41. Los textos son muy parecidos, pero las causas documentadas difieren entre falso contacto, circuito abierto/sin continuidad, falla de componente electrónico y falla operativa. Esto permite proponer una relación funcional entre puentes, sin afirmar un origen común.",
+      "human_review": "Comparar en campo si los avisos responden a un mismo tipo de accionamiento o a fallas independientes en cada puente."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Fallas similares de giro de percha en varios puentes",
+      "notice_numbers": [
+        "800894888",
+        "800895684",
+        "800899172",
+        "800901499",
+        "800901609",
+        "800901642"
+      ],
+      "confidence": "alta",
+      "rationale": "La falta de giro de percha se repite en distintos puentes, con textos muy próximos pero causas no uniformes. En los registros aparecen falso contacto, falla de componente electrónico y correcciones de posicionamiento de pantógrafos o variador. La coincidencia es suficiente para proponer relación preliminar por función afectada, pero no para concluir una misma causa raíz.",
+      "human_review": "Revisar si el problema se concentra en el sistema de giro, en los pantógrafos o en el control de mando de cada puente."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Patrón común de fallas de traslación en varios puentes",
+      "notice_numbers": [
+        "800894037",
+        "800897461",
+        "800897906",
+        "800898766",
+        "800899125",
+        "800900061"
+      ],
+      "confidence": "alta",
+      "rationale": "A lo largo de las semanas se observan múltiples avisos de sin traslación, traslación de carro detenida o comando de traslación defectuoso en puentes diferentes. Las causas documentadas varían entre falso contacto, alimentación de energía, alimentación de energía, lubricación faltante, falla operativa y falla de componente electrónico. La coincidencia de función y texto permite relacionarlos de manera preliminar, pero no sostener una causa común.",
+      "human_review": "Verificar en campo si existe un patrón común en contactores, variadores, botoneras o mantenimiento mecánico de la traslación."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Incidentes de balanza y pesaje en distintos puentes",
+      "notice_numbers": [
+        "800894187",
+        "800895387",
+        "800900892",
+        "800901148"
+      ],
+      "confidence": "media",
+      "rationale": "Los textos muestran fallas de balanza o pesaje en varios puentes: pantalla que titila, balanza que no funciona, error en balanza y falla en balanza. Las acciones registradas son distintas, como reset, limpieza de celda de carga o reposición desde tablero, y las causas documentadas también cambian entre falso contacto y falla de componente electrónico. Se trata de una similitud funcional entre puentes, no de una causa demostrada compartida.",
+      "human_review": "Confirmar si las celdas de carga, el tablero de pesaje o los cables asociados presentan el mismo tipo de deterioro en los equipos afectados."
+    },
+    {
+      "relation_type": "cross_bridge",
+      "title": "Problemas de compresor y suministro neumático entre puentes",
+      "notice_numbers": [
+        "800895603",
+        "800896492",
+        "800898730",
+        "800899610",
+        "800899638"
+      ],
+      "confidence": "media",
+      "rationale": "En puentes distintos aparecen avisos vinculados al compresor, pérdida de aire o falta de fuerza. Aunque los síntomas se parecen, las causas documentadas no son uniformes: falla de componente electrónico, falla operativa, circuito abierto/sin continuidad y accidente. Las intervenciones también son diferentes, desde revisar el puente hasta cambiar relé térmico o manguera, por lo que solo se puede hablar de una relación preliminar entre eventos parecidos.",
+      "human_review": "Comprobar si el origen está en el compresor, en la línea neumática o en una condición operativa específica de cada puente."
+    }
+  ]
+}

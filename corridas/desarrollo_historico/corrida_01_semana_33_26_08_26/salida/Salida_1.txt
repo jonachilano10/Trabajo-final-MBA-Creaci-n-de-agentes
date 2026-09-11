@@ -1,0 +1,14 @@
+Completé el análisis de la semana 33. La disponibilidad total fue 94,41%.
+Resultados principales:
+Serie A: 96,72%
+Serie B: 92,10%
+Sala 1: 98,44%
+Sala 2: 95,00%
+Sala 3: 86,39%
+Sala 4: 97,81%
+Menor disponibilidad: P-MG31, 68,27%, con 49,50 h de parada.
+Mayor disponibilidad: P-MG22, 99,01%.
+Mayor número de detenciones: P-MG32, 6 eventos.
+Repeticiones confirmadas: pérdida de aire en MG32 y falta de traslación en MG33.
+Los 40 avisos con parada quedaron vinculados satisfactoriamente con notificaciones por orden y equipo. El informe incluye cálculos auditables, detalle de mantenimiento, análisis de fallas, trazabilidad completa y observaciones técnicas respaldadas por SKF, Konecranes y Schneider Electric.
+Preparé Analisis_Disponibilidad_Semana33.xlsx con el análisis completo, limitado exclusivamente al 10–16/08/2026.
