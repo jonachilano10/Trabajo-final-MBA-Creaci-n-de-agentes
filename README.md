@@ -23,6 +23,9 @@ Sistema agéntico para calcular la disponibilidad semanal de 12 puentes grúa, c
 - [`MATRIZ_CUMPLIMIENTO.md`](MATRIZ_CUMPLIMIENTO.md): correspondencia con cada requisito.
 - [`pruebas/`](pruebas/): evidencia técnica y pruebas de privacidad.
 - [`PUBLICACION.md`](PUBLICACION.md): condiciones para una publicación segura.
+- [`HERRAMIENTAS_Y_CONECTORES.md`](HERRAMIENTAS_Y_CONECTORES.md): herramientas reales, permisos y trazas operativas.
+- [`REPRODUCIBILIDAD.md`](REPRODUCIBILIDAD.md): reconstrucción de versión, configuración, entrada y salida.
+- [`ARQUITECTURA_Y_EVOLUCION.md`](ARQUITECTURA_Y_EVOLUCION.md): arquitectura final y evolución de las iteraciones.
 
 ## Arquitectura y responsabilidades
 
@@ -61,6 +64,8 @@ cd "ruta\a\Trabajo final"
 python -m pip install -r requirements.txt
 ```
 
+Para reproducir exactamente el entorno evaluado se ofrece además `requirements-lock.txt`, con versiones fijadas.
+
 ## Ejecución web local
 
 La clave debe configurarse como variable de entorno y nunca guardarse en el repositorio:
@@ -95,6 +100,20 @@ python -m unittest discover -s tests -v
 
 La suite cubre base vacía, persistencia estructurada, duplicados, historial, límite de seis semanas, contrato del LLM, tokens y costos, privacidad, autenticación web y procesamiento de cargas.
 
+Reproducción integral con datos sintéticos seguros:
+
+```powershell
+python scripts/reproducir_demo.py
+```
+
+Esta prueba crea los tres Excel y una SQLite vacía en un directorio temporal, verifica resultados esperados y conserva el manifiesto en `pruebas/evidencia_reproducibilidad/`.
+
+Verificación completa de la entrega en un solo comando:
+
+```powershell
+python scripts/verificar_entrega.py
+```
+
 ## Corridas oficiales
 
 | Semana | Período | Disponibilidad | Parada | Detenciones | Estado LLM |
@@ -109,6 +128,8 @@ La suite cubre base vacía, persistencia estructurada, duplicados, historial, l�
 | 36 | 31/08–06/09 | 95,48 % | 83,36 h | 42 | Completo |
 
 Cada carpeta oficial incluye manifiesto de entrada, prompts exactos, validación, resultados, contexto, hallazgos, ejecución del LLM, metadatos y HTML. Los Excel originales no se publican: se identifican mediante nombre y SHA-256 para proteger información operativa y personal.
+
+Las corridas oficiales anteriores a la versión 1.1.0 no capturaron el commit de ejecución; esta limitación está declarada, sin reconstrucción retroactiva. Las nuevas corridas agregan automáticamente versión, hash del código, entorno, ruta de ejecución y hashes de artefactos. La prueba sintética proporciona una ejecución completamente repetible para terceros.
 
 ## Reporte e historial
 

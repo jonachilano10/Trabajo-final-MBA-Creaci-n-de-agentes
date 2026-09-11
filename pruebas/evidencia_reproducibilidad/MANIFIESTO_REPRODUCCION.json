@@ -1,0 +1,47 @@
+{
+  "purpose": "Reproducción segura y determinística desde una base SQLite vacía",
+  "command": "python scripts/reproducir_demo.py",
+  "network_used": false,
+  "input_data": "Excel sintéticos generados en un directorio temporal y eliminados al finalizar",
+  "runtime": {
+    "metadata_schema_version": "2.0",
+    "agent_version": "1.1.0",
+    "git_commit": null,
+    "source_snapshot_sha256": "619283d0780fc65e7a7caf66fc9f236f08b580b8aaa29cda0bafb0e177f2febd",
+    "python_version": "3.12.14",
+    "python_implementation": "CPython",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "dependencies": {
+      "openpyxl": "3.1.5",
+      "et_xmlfile": "2.0.0"
+    },
+    "executable_name": "python.exe"
+  },
+  "reproduction_script_sha256": "ecfde80de6724eb69697f37595bbdd4b6f4e1c12e37223a929ce4b7c4092384e",
+  "system_prompt_sha256": "314511f0c68252a506b989c6a4e5f5a6cf72bfaa0674cfe0a9ff722a4d958544",
+  "expected": {
+    "maintenance_hours": 4.0,
+    "stop_hours": 3.75,
+    "stoppage_count": 2,
+    "availability": 99.81361829025846
+  },
+  "checks": {
+    "maintenance_hours": true,
+    "stop_hours": true,
+    "stoppage_count": true,
+    "availability": true,
+    "base_started_empty": true,
+    "one_week_persisted": true,
+    "privacy_validation_passed": true,
+    "llm_contract_validated": true,
+    "report_generated": true
+  },
+  "observed_output_sha256": "f198efec5fd4e944cfca90a068b24cd240af2841f5722315865dabb38c157734",
+  "report_sha256": "df86bd0636e1eb5cb0bf89b751065089807c12264302c9c339e11d5d6949cbcb",
+  "synthetic_input_sha256": {
+    "notices": "13fc8a9b8deaf1ad0926c910f7c23183474c349f90eb4914511155e5df6c0ae2",
+    "notifications": "0204358c1e5bed3fa4698f0bcdc6831ed905b5602c9a4061b70501b58f4b9cb1",
+    "maintenance": "ea75e6b53fa43d05188b34af7d36482e217345b893b692474a9ad817f3948326"
+  },
+  "result": "PASS"
+}

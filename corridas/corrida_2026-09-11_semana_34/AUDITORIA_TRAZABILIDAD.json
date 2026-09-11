@@ -1,0 +1,36 @@
+{
+  "audited_at": "2026-09-11T20:48:31-03:00",
+  "execution_source_reference": null,
+  "execution_source_reference_status": "not_captured_contemporaneously",
+  "statement": "No se asignó retrospectivamente un commit. Los artefactos originales se autentican con hashes y la reproducción completa comienza en la versión 1.1.0.",
+  "audited_against_release": {
+    "metadata_schema_version": "2.0",
+    "agent_version": "1.1.0",
+    "git_commit": null,
+    "source_snapshot_sha256": "619283d0780fc65e7a7caf66fc9f236f08b580b8aaa29cda0bafb0e177f2febd",
+    "python_version": "3.12.14",
+    "python_implementation": "CPython",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "dependencies": {
+      "openpyxl": "3.1.5",
+      "et_xmlfile": "2.0.0"
+    },
+    "executable_name": "python.exe"
+  },
+  "original_artifact_sha256": {
+    "entrada/ARCHIVOS.md": "cdbdc2c17fd8051c7f4f5243c5586a1c39f7fa757228439893fc772d5eb04180",
+    "METADATA.json": "3ec3cf7f0dfb2cdc9dda2cea7e4ad60820ab4f82e9d0b5ebf205b5b2bed88153",
+    "prompts/CONTRATO_FUNCIONAL_AGENTE.md": "760d367fd2b2b6e5e9da3816506d22dfff471f35ed9215d5793903cb004b4ddd",
+    "prompts/SYSTEM_PROMPT.txt": "314511f0c68252a506b989c6a4e5f5a6cf72bfaa0674cfe0a9ff722a4d958544",
+    "prompts/USER_PROMPT.txt": "f2fc1c7639df826a40afa13687d020eab090b16befeb3d07ae5d5ff361b06b4f",
+    "prompts/USER_PROMPT_TEMPLATE.md": "d6ee6aced0a52c30b64de0fb663a21c11c2ebd175c22584ed3f4102facb46d58",
+    "README.md": "d1c5753a4467ab2feb0ddae909337febc605089d77da198f544c191daf5af183",
+    "salida/contexto_llm.json": "c0edf7d8364160e91f723086d6fc80ae4995137682d8e55919372df5091358a6",
+    "salida/ejecuciones_llm.json": "f948cb18394ce59b86b8e42c79f88ca7504f0f0047ba36d86aa0ab0040fae992",
+    "salida/hallazgos_llm.json": "5e4be71fe91db99cd2567c95a1dc31bb1b9f0b105db959486d42ed9b11d07ee9",
+    "salida/Reporte_Disponibilidad_Semana34.html": "442540570e085fb3a112fc57070c21892801170493217f8d988341672729026c",
+    "salida/resultados.json": "04b571b76b8ad0a8a57422d84e482721ed1b23eca652c4ec9c680d898fcb6d51",
+    "validacion/VALIDACION.md": "85a20818b88282930dbc9d11f0803560b79e8076b052f72de80b92e9f7b4c9c4"
+  },
+  "request_manifest_sha256": "e70982fe45a066eb7cdd94c242553ddafc9a06cb9f70a7db3c38efb7ffeca7ab"
+}

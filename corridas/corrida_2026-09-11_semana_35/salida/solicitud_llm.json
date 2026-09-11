@@ -1,0 +1,16 @@
+{
+  "interface": "OpenAI Responses API",
+  "method": "POST",
+  "endpoint": "https://api.openai.com/v1/responses",
+  "credential_source": "OPENAI_API_KEY environment variable (value not archived)",
+  "store": false,
+  "model": "gpt-5.4-mini",
+  "reasoning_effort": "medium",
+  "response_id": "resp_02ce842e4732fe8e016aa47f69ec5c87d2a2f156832771a24e",
+  "system_prompt_sha256": "314511f0c68252a506b989c6a4e5f5a6cf72bfaa0674cfe0a9ff722a4d958544",
+  "context_sha256": "3dfc009ed24f11bde0970174f54be77bd12cd939e574fea5295aeaa087c0a702",
+  "structured_output_schema_sha256": "127712890ef52e0c6e4792c70df2300397fbf0549c77c6c0b4ca5bdfa5ec476e",
+  "validated_output_sha256": "6df0342f53a982462d7bf31b42eac5034be810822552967be4a56014eae3ab43",
+  "post_validation": "agente_mantenimiento.llm_contract.validate_llm_payload",
+  "reconstructed_from_archived_artifacts": true
+}

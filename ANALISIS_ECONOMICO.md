@@ -52,20 +52,42 @@ costo = entrada no cacheada × tarifa de entrada
 
 Todos los términos se dividen por un millón. La aplicación conserva las tarifas junto con cada ejecución para que el cálculo sea auditable.
 
-## Elección de modelo y nivel
+## Elección provisional de modelo y nivel
 
 Se eligió **GPT-5.4 Mini con razonamiento medium** porque Python realiza los cálculos, validaciones y filtros; el LLM sólo relaciona textos y redacta hallazgos preliminares. En las ocho semanas produjo salidas estructuradas válidas, por lo que un modelo mayor no quedó justificado para el flujo normal.
 
 GPT-5.4 puede reservarse para revisar casos ambiguos. GPT-5.4 Nano promete menor costo, pero no debe adoptarse sin ejecutar una comparación de calidad sobre casos históricos revisados por una persona. Los niveles de razonamiento no tienen una tarifa unitaria distinta, aunque pueden modificar la cantidad de tokens de salida consumidos.
 
+La elección se declara **provisional** hasta completar el benchmark real definido en `pruebas/comparacion_modelos_real/README.md`. La comparación previa demuestra costo, pero no equivalencia de calidad. El programa `scripts/comparar_modelos.py` ejecuta Nano, Mini y GPT-5.4 sobre las mismas semanas sin alterar la base oficial, registra tokens y prepara una evaluación humana. No se presentan resultados simulados como si fueran ejecuciones reales.
+
 ## Control del crecimiento
 
 El LLM recibe la semana actual y como máximo las seis semanas anteriores. SQLite y los gráficos mantienen todo el historial, pero el contexto semántico no crece indefinidamente. La semana 36 ya ejercitó la ventana completa y consumió 25.547 tokens de entrada; además aprovechó 25.344 tokens cacheados, por lo que su costo fue menor que el de algunas semanas con menos contexto.
 
+## Almacenamiento y costo total de propiedad
+
+La medición de la entrega final, con ocho semanas, arrojó:
+
+| Componente | Tamaño medido | Promedio aproximado |
+|---|---:|---:|
+| SQLite | 315.392 bytes | 39.424 bytes/semana |
+| Archivos de las ocho corridas | 1.820.565 bytes | 227.571 bytes/semana |
+| Entorno completo de ejecución | 2.961.685 bytes | 370.211 bytes/semana |
+
+Una extrapolación lineal conservadora de SQLite más archivos de corrida es inferior a 15 MB por año. Reservar 25 MB anuales contempla metadatos adicionales, crecimiento irregular y holgura. Es una estimación de almacenamiento, no una proyección de disponibilidad.
+
+| Escenario anual | Hosting y respaldo | Dominio | API estimada | TCO de infraestructura |
+|---|---:|---:|---:|---:|
+| Académico/local en equipo existente | US$ 0 incremental | US$ 0 | US$ 1,93 | **US$ 1,93** |
+| Web pequeña, supuesto bajo | US$ 6/mes | US$ 15/año | US$ 1,93 | **US$ 88,93/año** |
+| Web pequeña, supuesto conservador | US$ 12/mes | US$ 20/año | US$ 1,93 | **US$ 165,93/año** |
+
+Los valores de hosting y dominio son supuestos de presupuesto, no cotizaciones de un proveedor. Deben reemplazarse por la oferta vigente al desplegar. No incluyen horas de revisión humana, soporte, impuestos ni integración corporativa. Para el volumen actual, el costo dominante no es SQLite ni el LLM, sino mantener un backend persistente, seguro y respaldado.
+
 ## Límites del análisis
 
-- Los costos corresponden exclusivamente al uso de tokens registrado por la API.
-- No se incluyen hosting, dominio, almacenamiento, soporte ni horas de revisión humana.
+- Los costos de API corresponden exclusivamente al uso registrado; hosting y dominio son escenarios presupuestarios declarados.
+- No se incluyen soporte, impuestos ni horas de revisión humana.
 - La proyección anual supone una corrida semanal y el promedio de las ocho observadas.
 - Los precios pueden cambiar; las futuras ejecuciones deben utilizar la tarifa vigente y conservar su fecha efectiva.
 - La calidad no se infiere del costo: los hallazgos continúan sujetos a revisión humana obligatoria.

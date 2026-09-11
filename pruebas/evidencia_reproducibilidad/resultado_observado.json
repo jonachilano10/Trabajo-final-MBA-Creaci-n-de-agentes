@@ -1,0 +1,124 @@
+{
+  "period": {
+    "year": 2026,
+    "week": 2,
+    "start_date": "2026-01-05",
+    "end_date": "2026-01-11"
+  },
+  "global": {
+    "maintenance_hours": 4.0,
+    "stop_hours": 3.75,
+    "stoppage_count": 2,
+    "availability": 99.81361829025846
+  },
+  "series": [
+    {
+      "name": "Serie A",
+      "calendar_hours": 1008.0,
+      "maintenance_hours": 4.0,
+      "available_hours": 1004.0,
+      "stop_hours": 2.5,
+      "stoppage_count": 1,
+      "availability": 99.75099601593625,
+      "uncalculable_equipment": []
+    },
+    {
+      "name": "Serie B",
+      "calendar_hours": 1008.0,
+      "maintenance_hours": 0,
+      "available_hours": 1008.0,
+      "stop_hours": 1.25,
+      "stoppage_count": 1,
+      "availability": 99.87599206349206,
+      "uncalculable_equipment": []
+    }
+  ],
+  "rooms": [
+    {
+      "name": "Sala 1",
+      "calendar_hours": 504.0,
+      "maintenance_hours": 4.0,
+      "available_hours": 500.0,
+      "stop_hours": 2.5,
+      "stoppage_count": 1,
+      "availability": 99.5,
+      "uncalculable_equipment": []
+    },
+    {
+      "name": "Sala 2",
+      "calendar_hours": 504.0,
+      "maintenance_hours": 0,
+      "available_hours": 504.0,
+      "stop_hours": 0,
+      "stoppage_count": 0,
+      "availability": 100.0,
+      "uncalculable_equipment": []
+    },
+    {
+      "name": "Sala 3",
+      "calendar_hours": 504.0,
+      "maintenance_hours": 0,
+      "available_hours": 504.0,
+      "stop_hours": 1.25,
+      "stoppage_count": 1,
+      "availability": 99.75198412698413,
+      "uncalculable_equipment": []
+    },
+    {
+      "name": "Sala 4",
+      "calendar_hours": 504.0,
+      "maintenance_hours": 0,
+      "available_hours": 504.0,
+      "stop_hours": 0,
+      "stoppage_count": 0,
+      "availability": 100.0,
+      "uncalculable_equipment": []
+    }
+  ],
+  "source_counts": {
+    "notices": 2,
+    "notifications": 2,
+    "maintenance": 1
+  },
+  "llm_findings": [
+    {
+      "id": 1,
+      "created_at": "2026-09-11 23:48:41",
+      "report_year": 2026,
+      "report_week": 2,
+      "relation_type": "cross_bridge",
+      "title": "Pérdidas de aire en equipos diferentes",
+      "confidence": "media",
+      "rationale": "Ambos avisos documentan una pérdida de aire; las causas específicas difieren.",
+      "human_review": "Confirmar en campo antes de concluir que existe un patrón común.",
+      "notice_numbers": [
+        "900001",
+        "900002"
+      ]
+    }
+  ],
+  "llm_runs": [
+    {
+      "id": 1,
+      "created_at": "2026-09-11 23:48:41",
+      "report_year": 2026,
+      "report_week": 2,
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium",
+      "response_id": "resp_demo_deterministico_sin_red",
+      "input_tokens": 100,
+      "cached_input_tokens": 0,
+      "output_tokens": 80,
+      "reasoning_tokens": 20,
+      "total_tokens": 180,
+      "input_cost_usd": 7.5e-05,
+      "cached_input_cost_usd": 0.0,
+      "output_cost_usd": 0.00036,
+      "total_cost_usd": 0.000435,
+      "price_input_per_million": 0.75,
+      "price_cached_input_per_million": 0.075,
+      "price_output_per_million": 4.5,
+      "pricing_effective_date": "2026-09-08"
+    }
+  ]
+}

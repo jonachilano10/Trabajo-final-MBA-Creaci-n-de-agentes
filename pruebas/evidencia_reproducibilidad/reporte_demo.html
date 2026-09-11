@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reporte semanal de disponibilidad S2/2026</title>
+<style>
+:root{--navy:#17324d;--blue:#28658f;--ink:#1b2733;--muted:#60707d;--line:#d8e0e6;--soft:#f3f6f8;--paper:#fff;--warning:#8a4b08;--warning-bg:#fff4e5}
+*{box-sizing:border-box}body{margin:0;background:#eef2f5;color:var(--ink);font:14px/1.45 Arial,sans-serif}.page{max-width:1500px;margin:auto;background:var(--paper);min-height:100vh}
+header{padding:28px 34px 22px;background:var(--navy);color:#fff}header h1{margin:0 0 6px;font-size:25px}header p{margin:0;color:#dce7ef}
+.tabs{display:flex;border-bottom:1px solid var(--line);background:#fafbfd;padding:0 24px;position:sticky;top:0;z-index:5}.tab{border:0;border-bottom:3px solid transparent;background:transparent;padding:15px 18px 12px;font-weight:600;color:var(--muted);cursor:pointer}.tab[aria-selected=true]{color:var(--navy);border-bottom-color:var(--blue)}
+main{padding:28px 34px 48px}.panel[hidden]{display:none}h2{color:var(--navy);font-size:19px;margin:30px 0 12px}h3{color:var(--navy);font-size:15px;margin:20px 0 8px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.box{border:1px solid var(--line);border-radius:6px;padding:14px 16px}.label{color:var(--muted);font-size:12px;text-transform:uppercase}.value{color:var(--navy);font-size:23px;font-weight:600;margin-top:3px;font-variant-numeric:tabular-nums}.sub,.muted{color:var(--muted);font-size:12px}
+.notice{border-left:4px solid var(--blue);background:var(--soft);padding:12px 14px;margin:14px 0}.warning{border-left-color:var(--warning);background:var(--warning-bg)}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:6px}table{width:100%;border-collapse:collapse;min-width:720px}th{background:var(--soft);color:var(--navy);text-align:left;font-size:12px;padding:9px 10px;border-bottom:1px solid var(--line);position:sticky;top:0}td{padding:9px 10px;border-bottom:1px solid #e7ecef;vertical-align:top}.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.tag,.strong{font-weight:600;white-space:nowrap}
+.filters{display:grid;grid-template-columns:repeat(4,minmax(140px,1fr));gap:12px;padding:14px;background:var(--soft);border:1px solid var(--line);border-radius:6px}label{font-size:12px;font-weight:600;color:var(--navy)}select{display:block;width:100%;margin-top:5px;padding:8px;border:1px solid #b7c3cd;border-radius:4px;background:#fff}
+.charts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:18px 0}.chart{border:1px solid var(--line);border-radius:6px;padding:12px}.chart h3{margin:0 0 8px}.chart svg{width:100%;height:240px;display:block}.axis{stroke:#9eabb6;stroke-width:1}.gridline{stroke:#e4e9ed;stroke-width:1}.series-line{fill:none;stroke:var(--blue);stroke-width:2}.point{fill:var(--blue)}.chart-label{fill:var(--muted);font-size:11px}.chart-value{fill:var(--navy);font-size:12px;font-weight:600}
+footer{border-top:1px solid var(--line);padding:18px 34px;color:var(--muted);font-size:12px}@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.two,.charts{grid-template-columns:1fr}.filters{grid-template-columns:repeat(2,1fr)}main{padding:22px 18px 36px}header{padding:24px 18px}}
+</style></head><body><div class="page">
+<header><h1>Reporte semanal de disponibilidad</h1><p>Puentes grúa P‑MG · Semana 2/2026 · 2026-01-05 al 2026-01-11</p></header>
+<nav class="tabs" role="tablist"><button class="tab" id="tab-current" role="tab" aria-selected="true" aria-controls="current">1. Semana procesada</button><button class="tab" id="tab-history" role="tab" aria-selected="false" aria-controls="history">2. Histórico y recurrencias</button></nav>
+<main><section class="panel" id="current" role="tabpanel" aria-labelledby="tab-current">
+<div class="grid"><div class="box"><div class="label">Semana</div><div class="value">2/2026</div><div class="sub">2026-01-05 al 2026-01-11</div></div>
+<div class="box"><div class="label">Disponibilidad global</div><div class="value">99,81 %</div><div class="sub">Cálculo agregado</div></div>
+<div class="box"><div class="label">Horas de parada</div><div class="value">3,75 h</div><div class="sub">2 detenciones</div></div>
+<div class="box"><div class="label">Mantenimiento</div><div class="value">4,00 h</div><div class="sub">Tiempo disponible 2.012,00 h</div></div></div>
+<div class='notice warning'><strong>Sin historial suficiente.</strong> Esta es la primera semana almacenada. No se calculan comparaciones ni tendencias.</div>
+<div class="two"><div><h2>Disponibilidad por serie</h2><div class="table-wrap"><table><thead><tr><th>Serie</th><th class="num">Calendario h</th><th class="num">Mantenimiento h</th><th class="num">Disponible h</th><th class="num">Parada h</th><th class="num">Disponibilidad</th></tr></thead><tbody><tr><td>Serie A</td><td class='num'>1.008,00</td><td class='num'>4,00</td><td class='num'>1.004,00</td><td class='num'>2,50</td><td class='num strong'>99,75 %</td></tr><tr><td>Serie B</td><td class='num'>1.008,00</td><td class='num'>0,00</td><td class='num'>1.008,00</td><td class='num'>1,25</td><td class='num strong'>99,88 %</td></tr></tbody></table></div></div>
+<div><h2>Disponibilidad por sala</h2><div class="table-wrap"><table><thead><tr><th>Sala</th><th class="num">Calendario h</th><th class="num">Mantenimiento h</th><th class="num">Disponible h</th><th class="num">Parada h</th><th class="num">Disponibilidad</th></tr></thead><tbody><tr><td>Sala 1</td><td class='num'>504,00</td><td class='num'>4,00</td><td class='num'>500,00</td><td class='num'>2,50</td><td class='num strong'>99,50 %</td></tr><tr><td>Sala 2</td><td class='num'>504,00</td><td class='num'>0,00</td><td class='num'>504,00</td><td class='num'>0,00</td><td class='num strong'>100,00 %</td></tr><tr><td>Sala 3</td><td class='num'>504,00</td><td class='num'>0,00</td><td class='num'>504,00</td><td class='num'>1,25</td><td class='num strong'>99,75 %</td></tr><tr><td>Sala 4</td><td class='num'>504,00</td><td class='num'>0,00</td><td class='num'>504,00</td><td class='num'>0,00</td><td class='num strong'>100,00 %</td></tr></tbody></table></div></div></div>
+<h2>Disponibilidad por puente</h2><div class="table-wrap"><table><thead><tr><th>Equipo</th><th>Sala</th><th>Serie</th><th class="num">Mantenimiento h</th><th class="num">Disponible h</th><th class="num">Detenciones</th><th class="num">Parada h</th><th class="num">Disponibilidad</th><th>Fallas con detención</th></tr></thead><tbody>
+        <tr><td class="tag">P-MG11</td><td>1</td><td>A</td>
+        <td class="num">0,00</td><td class="num">168,00</td>
+        <td class="num">1</td><td class="num">2,50</td>
+        <td class="num strong">98,51 %</td>
+        <td>Pérdida de aire en manguera</td></tr>
+
+        <tr><td class="tag">P-MG12</td><td>1</td><td>A</td>
+        <td class="num">4,00</td><td class="num">164,00</td>
+        <td class="num">0</td><td class="num">0,00</td>
+        <td class="num strong">100,00 %</td>
+        <td>Sin detenciones</td></tr>
+
+        <tr><td class="tag">P-MG13</td><td>1</td><td>A</td>
+        <td class="num">0,00</td><td class="num">168,00</td>
+        <td class="num">0</td><td class="num">0,00</td>
+        <td class="num strong">100,00 %</td>
+        <td>Sin detenciones</td></tr>
+
+        <tr><td class="tag">P-MG21</td><td>2</td><td>A</td>
+        <td class="num">0,00</td><td class="num">168,00</td>
+        <td class="num">0</td><td class="num">0,00</td>
+        <td class="num strong">100,00 %</td>
+        <td>Sin detenciones</td></tr>
+
+        <tr><td class="tag">P-MG22</td><td>2</td><td>A</td>
+        <td class="num">0,00</td><td class="num">168,00</td>
+        <td class="num">0</td><td class="num">0,00</td>
+        <td class="num strong">100,00 %</td>
+        <td>Sin detenciones</td></tr>
+
+        <tr><td class="tag">P-MG23</td><td>2</td><td>A</td>
+        <td class="num">0,00</td><td class="num">168,00</td>
+        <td class="num">0</td><td class="num">0,00</td>
+        <td class="num strong">100,00 %</td>
+        <td>Sin detenciones</td></tr>
+
+        <tr><td class="tag">P-MG31</td><td>3</td><td>B</td>
+        <td class="num">0,00</td><td class="num">168,00</td>
+        <td class="num">1</td><td class="num">1,25</td>
+        <td class="num strong">99,26 %</td>
+        <td>Pérdida de aire en conexión</td></tr>
+
+        <tr><td class="tag">P-MG32</td><td>3</td><td>B</td>
+        <td class="num">0,00</td><td class="num">168,00</td>
+        <td class="num">0</td><td class="num">0,00</td>
+        <td class="num strong">100,00 %</td>
+        <td>Sin detenciones</td></tr>
+
+        <tr><td class="tag">P-MG33</td><td>3</td><td>B</td>
+        <td class="num">0,00</td><td class="num">168,00</td>
+        <td class="num">0</td><td class="num">0,00</td>
+        <td class="num strong">100,00 %</td>
+        <td>Sin detenciones</td></tr>
+
+        <tr><td class="tag">P-MG41</td><td>4</td><td>B</td>
+        <td class="num">0,00</td><td class="num">168,00</td>
+        <td class="num">0</td><td class="num">0,00</td>
+        <td class="num strong">100,00 %</td>
+        <td>Sin detenciones</td></tr>
+
+        <tr><td class="tag">P-MG42</td><td>4</td><td>B</td>
+        <td class="num">0,00</td><td class="num">168,00</td>
+        <td class="num">0</td><td class="num">0,00</td>
+        <td class="num strong">100,00 %</td>
+        <td>Sin detenciones</td></tr>
+
+        <tr><td class="tag">P-MG43</td><td>4</td><td>B</td>
+        <td class="num">0,00</td><td class="num">168,00</td>
+        <td class="num">0</td><td class="num">0,00</td>
+        <td class="num strong">100,00 %</td>
+        <td>Sin detenciones</td></tr>
+        </tbody></table></div>
+<h2>Detenciones y notificaciones vinculadas</h2><div class="table-wrap"><table><thead><tr><th>Equipo</th><th>Aviso</th><th>Orden</th><th class="num">Parada h</th><th>Categoría</th><th>Descripción original</th><th>Causa documentada</th><th>Intervención</th></tr></thead><tbody>
+        <tr data-week="2" data-equipment="P-MG11" data-room="1" data-series="A">
+        <td class="tag">P-MG11</td><td>900001</td><td>700001</td>
+        <td class="num">2,50</td><td>Neumática, aire y compresor</td>
+        <td>Pérdida de aire en manguera</td><td>Manguera con pérdida documentada</td>
+        <td>Se reemplazó la manguera</td></tr>
+
+        <tr data-week="2" data-equipment="P-MG31" data-room="3" data-series="B">
+        <td class="tag">P-MG31</td><td>900002</td><td>700002</td>
+        <td class="num">1,25</td><td>Neumática, aire y compresor</td>
+        <td>Pérdida de aire en conexión</td><td>Conexión floja documentada</td>
+        <td>Se ajustó la conexión</td></tr>
+        </tbody></table></div>
+<h2>Validación</h2><div class="table-wrap"><table><thead><tr><th>Severidad</th><th>Control</th><th>Fuente</th><th>Equipo</th><th>Detalle</th></tr></thead><tbody><tr><td colspan='5'>No se detectaron observaciones de validación.</td></tr></tbody></table></div>
+</section>
+<section class="panel" id="history" role="tabpanel" aria-labelledby="tab-history" hidden><h2>Histórico</h2><div class="notice warning"><strong>Semanas almacenadas: 1.</strong> Existe una sola semana almacenada. Los gráficos muestran el valor inicial y no una tendencia.</div>
+<div class="filters"><label>Semana<select id="filter-week"><option value="">Todas</option><option value="2026-2">S2/2026</option></select></label>
+<label>Puente<select id="filter-equipment"><option value="">Todos</option><option>P-MG11</option><option>P-MG12</option><option>P-MG13</option><option>P-MG21</option><option>P-MG22</option><option>P-MG23</option><option>P-MG31</option><option>P-MG32</option><option>P-MG33</option><option>P-MG41</option><option>P-MG42</option><option>P-MG43</option></select></label>
+<label>Sala<select id="filter-room"><option value="">Todas</option><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+<label>Serie<select id="filter-series"><option value="">Todas</option><option>A</option><option>B</option></select></label></div>
+<p id="selection-note" class="muted">Vista global de todas las semanas.</p>
+<div class="charts"><div class="chart"><h3>Horas de parada por semana</h3><svg id="chart-stop" role="img" aria-label="Horas de parada por semana"></svg></div><div class="chart"><h3>Disponibilidad por semana</h3><svg id="chart-availability" role="img" aria-label="Disponibilidad por semana"></svg></div><div class="chart"><h3>Detenciones por semana</h3><svg id="chart-count" role="img" aria-label="Cantidad de detenciones por semana"></svg></div></div>
+<h2>Valores históricos seleccionados</h2><div class="table-wrap"><table><thead><tr><th>Semana</th><th>Nivel</th><th>Elemento</th><th class="num">Mantenimiento h</th><th class="num">Parada h</th><th class="num">Detenciones</th><th class="num">Disponibilidad</th></tr></thead><tbody id="history-body"></tbody></table></div>
+<h2>Interpretación preliminar del LLM</h2><div class='notice'><strong>Interpretación preliminar del LLM: 1 hallazgos.</strong> No es determinante ni constituye un diagnóstico final. Todos los hallazgos requieren revisión y validación humana.</div><div class="notice">El LLM relaciona los textos originales, las causas documentadas y las intervenciones vinculadas. No modifica los cálculos, no confirma causalidad y no reemplaza el criterio técnico del responsable.</div><div class="table-wrap"><table><thead><tr><th>Alcance</th><th>Hallazgo</th><th>Avisos relacionados</th><th>Confianza</th><th>Interpretación</th><th>Revisión humana obligatoria</th></tr></thead><tbody><tr><td>Entre puentes</td><td>Pérdidas de aire en equipos diferentes</td><td>900001, 900002</td><td>media</td><td>Ambos avisos documentan una pérdida de aire; las causas específicas difieren.</td><td>Confirmar en campo antes de concluir que existe un patrón común.</td></tr></tbody></table></div>
+<h2>Fallas repetidas en el mismo puente</h2><div class="table-wrap"><table><thead><tr><th>Puente</th><th>Descripciones originales</th><th>Semanas</th><th class="num">Cantidad</th><th>Causas documentadas</th><th>Intervenciones</th><th>Revisión humana</th></tr></thead><tbody><tr><td colspan='7'>Todavía no hay descripciones repetidas en un mismo puente.</td></tr></tbody></table></div>
+<h2>Candidatos de fallas similares entre puentes</h2><div class="notice">Python agrupa candidatos por categoría y conserva los textos originales. No afirma causalidad ni confirma similitud técnica. Esa decisión corresponde al LLM y a la revisión humana.</div><div class="table-wrap"><table><thead><tr><th>Categoría candidata</th><th>Puentes</th><th>Semanas</th><th class="num">Eventos</th><th>Descripciones originales</th><th>Estado</th></tr></thead><tbody><tr><td>Neumática, aire y compresor</td><td>P-MG11, P-MG31</td><td>2/2026</td><td class='num'>2</td><td>P-MG11: Pérdida de aire en manguera<br>P-MG31: Pérdida de aire en conexión</td><td>Candidato preparado por Python. Requiere interpretación del LLM y revisión humana.</td></tr></tbody></table></div>
+</section></main><footer>Los cálculos y los datos de los gráficos fueron preparados por Python y almacenados en SQLite. La interpretación del LLM es preliminar, no determinante y requiere siempre revisión humana; no puede modificar horas, cantidades ni disponibilidades.</footer></div>
+<script>
+const DATA={"points": [{"year": 2026, "week": 2, "label": "S2/2026", "level": "global", "key": "Global", "room": "", "series": "", "maintenance_hours": 4.0, "stop_hours": 3.75, "stoppage_count": 2, "availability": 99.81361829025846}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "room", "key": "1", "room": "1", "series": "A", "maintenance_hours": 4.0, "stop_hours": 2.5, "stoppage_count": 1, "availability": 99.5}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "room", "key": "2", "room": "2", "series": "A", "maintenance_hours": 0.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "room", "key": "3", "room": "3", "series": "B", "maintenance_hours": 0.0, "stop_hours": 1.25, "stoppage_count": 1, "availability": 99.75198412698413}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "room", "key": "4", "room": "4", "series": "B", "maintenance_hours": 0.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "series", "key": "A", "room": "", "series": "A", "maintenance_hours": 4.0, "stop_hours": 2.5, "stoppage_count": 1, "availability": 99.75099601593625}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "series", "key": "B", "room": "", "series": "B", "maintenance_hours": 0.0, "stop_hours": 1.25, "stoppage_count": 1, "availability": 99.87599206349206}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "equipment", "key": "P-MG11", "room": "1", "series": "A", "maintenance_hours": 0.0, "stop_hours": 2.5, "stoppage_count": 1, "availability": 98.51190476190477}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "equipment", "key": "P-MG12", "room": "1", "series": "A", "maintenance_hours": 4.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "equipment", "key": "P-MG13", "room": "1", "series": "A", "maintenance_hours": 0.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "equipment", "key": "P-MG21", "room": "2", "series": "A", "maintenance_hours": 0.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "equipment", "key": "P-MG22", "room": "2", "series": "A", "maintenance_hours": 0.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "equipment", "key": "P-MG23", "room": "2", "series": "A", "maintenance_hours": 0.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "equipment", "key": "P-MG31", "room": "3", "series": "B", "maintenance_hours": 0.0, "stop_hours": 1.25, "stoppage_count": 1, "availability": 99.25595238095238}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "equipment", "key": "P-MG32", "room": "3", "series": "B", "maintenance_hours": 0.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "equipment", "key": "P-MG33", "room": "3", "series": "B", "maintenance_hours": 0.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "equipment", "key": "P-MG41", "room": "4", "series": "B", "maintenance_hours": 0.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "equipment", "key": "P-MG42", "room": "4", "series": "B", "maintenance_hours": 0.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}, {"year": 2026, "week": 2, "label": "S2/2026", "level": "equipment", "key": "P-MG43", "room": "4", "series": "B", "maintenance_hours": 0.0, "stop_hours": 0.0, "stoppage_count": 0, "availability": 100.0}], "failures": [{"year": 2026, "week": 2, "equipment": "P-MG11", "room": "1", "series": "A", "category": "Neumática, aire y compresor", "description": "Pérdida de aire en manguera", "stop_hours": 2.5}, {"year": 2026, "week": 2, "equipment": "P-MG31", "room": "3", "series": "B", "category": "Neumática, aire y compresor", "description": "Pérdida de aire en conexión", "stop_hours": 1.25}]};
+const q=id=>document.getElementById(id);document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',String(t===tab)));document.querySelectorAll('.panel').forEach(p=>p.hidden=p.id!==tab.getAttribute('aria-controls'));if(tab.id==='tab-history')updateHistory();}));
+['filter-week','filter-equipment','filter-room','filter-series'].forEach(id=>q(id).addEventListener('change',updateHistory));
+function selection(){const equipment=q('filter-equipment').value,room=q('filter-room').value,series=q('filter-series').value,week=q('filter-week').value;let level='global',key='Global';if(equipment){level='equipment';key=equipment}else if(room){level='room';key=room}else if(series){level='series';key=series}let rows=DATA.points.filter(r=>r.level===level&&r.key===key);if(week){const [year,w]=week.split('-').map(Number);rows=rows.filter(r=>r.year===year&&r.week===w)}rows.sort((a,b)=>a.year-b.year||a.week-b.week);return{rows,level,key,week}}
+function fmt(value,digits=2){return value==null?'No calculable':value.toLocaleString('es-AR',{minimumFractionDigits:digits,maximumFractionDigits:digits})}
+function draw(id,rows,field,unit,zeroBase=true){const svg=q(id),w=420,h=240,m={l:58,r:20,t:25,b:48},iw=w-m.l-m.r,ih=h-m.t-m.b;svg.setAttribute('viewBox',`0 0 ${w} ${h}`);if(!rows.length){svg.innerHTML='<text class="chart-label" x="210" y="120" text-anchor="middle">Sin datos para el filtro</text>';return}const values=rows.map(r=>r[field]).filter(v=>v!=null);let min=zeroBase?0:Math.min(...values),max=Math.max(...values);if(field==='availability'){min=Math.min(90,min);max=100}if(max===min)max=min+1;const x=i=>rows.length===1?m.l+iw/2:m.l+iw*i/(rows.length-1),y=v=>m.t+ih-(v-min)/(max-min)*ih;let grid='';for(let i=0;i<=4;i++){const value=min+(max-min)*i/4,yy=y(value);grid+=`<line class="gridline" x1="${m.l}" y1="${yy}" x2="${w-m.r}" y2="${yy}"/><text class="chart-label" x="${m.l-7}" y="${yy+4}" text-anchor="end">${fmt(value,field==='stoppage_count'?0:1)}</text>`}const valid=rows.map((r,i)=>({r,i,v:r[field]})).filter(p=>p.v!=null);const path=valid.map((p,index)=>`${index?'L':'M'} ${x(p.i)} ${y(p.v)}`).join(' ');const marks=valid.map(p=>`<circle class="point" cx="${x(p.i)}" cy="${y(p.v)}" r="4"><title>${p.r.label}: ${fmt(p.v)} ${unit}</title></circle><text class="chart-value" x="${x(p.i)}" y="${Math.max(13,y(p.v)-9)}" text-anchor="middle">${fmt(p.v)}</text>`).join('');const labels=rows.map((r,i)=>`<text class="chart-label" x="${x(i)}" y="${h-18}" text-anchor="middle">${r.label}</text>`).join('');svg.innerHTML=`${grid}<line class="axis" x1="${m.l}" y1="${m.t+ih}" x2="${w-m.r}" y2="${m.t+ih}"/><path class="series-line" d="${path}"/>${marks}${labels}`}
+function updateHistory(){const s=selection();q('selection-note').textContent=`Nivel: ${s.level} · Elemento: ${s.key} · ${s.week?'una semana':'todas las semanas'}`;draw('chart-stop',s.rows,'stop_hours','h',true);draw('chart-availability',s.rows,'availability','%',false);draw('chart-count',s.rows,'stoppage_count','',true);q('history-body').innerHTML=s.rows.map(r=>`<tr><td>${r.label}</td><td>${r.level}</td><td>${r.key}</td><td class="num">${fmt(r.maintenance_hours)}</td><td class="num">${fmt(r.stop_hours)}</td><td class="num">${fmt(r.stoppage_count,0)}</td><td class="num strong">${fmt(r.availability)} %</td></tr>`).join('')||'<tr><td colspan="7">Sin datos para el filtro seleccionado.</td></tr>'}
+updateHistory();
+</script></body></html>

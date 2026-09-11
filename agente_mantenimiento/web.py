@@ -24,7 +24,11 @@ from .config import DEFAULT_ARCHIVE_DIR, DEFAULT_DB_PATH, DEFAULT_OUTPUT_DIR, PR
 from .database import DuplicateWeekError, HistoryDatabase
 from .economics import MODEL_PRICES, comparison_rows, estimate_text_tokens
 from .llm_contract import build_llm_context
-from .llm_openai import FINDINGS_SCHEMA, INSTRUCTIONS, LLMServiceError, interpret_week_with_openai
+from .llm_openai import (
+    FINDINGS_SCHEMA, INSTRUCTIONS, LLMServiceError, SYSTEM_PROMPT_PATH,
+    interpret_week_with_openai,
+)
+from .provenance import runtime_manifest, sha256_file, sha256_json
 from .report import generate_report
 from .privacy import ConfidentialDataError, validate_no_confidential_data
 
@@ -268,6 +272,25 @@ def _write_llm_evidence(root: Path, database_path: Path, year: int, week: int) -
     (root / "salida" / "ejecuciones_llm.json").write_text(
         json.dumps({"runs": runs}, ensure_ascii=False, indent=2), encoding="utf-8"
     )
+    latest_run = runs[-1] if runs else {}
+    request_manifest = {
+        "interface": "OpenAI Responses API",
+        "method": "POST",
+        "endpoint": "https://api.openai.com/v1/responses",
+        "credential_source": "OPENAI_API_KEY environment variable (value never archived)",
+        "store": False,
+        "model": latest_run.get("model"),
+        "reasoning_effort": latest_run.get("reasoning_effort"),
+        "response_id": latest_run.get("response_id"),
+        "system_prompt_sha256": sha256_file(SYSTEM_PROMPT_PATH),
+        "context_sha256": sha256_json(context),
+        "structured_output_schema_sha256": sha256_json(FINDINGS_SCHEMA),
+        "validated_output_sha256": sha256_json({"findings": findings}),
+        "post_validation": "agente_mantenimiento.llm_contract.validate_llm_payload",
+    }
+    (root / "salida" / "solicitud_llm.json").write_text(
+        json.dumps(request_manifest, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     metadata_path = root / "METADATA.json"
     if metadata_path.exists():
         metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
@@ -297,6 +320,7 @@ def _save_archive(
     requested_model: str,
     requested_effort: str,
     llm_error: str | None,
+    execution_entrypoint: str = "web:POST /procesar",
 ) -> None:
     root = archive_path(year, week)
     (root / "entrada").mkdir(parents=True, exist_ok=True)
@@ -354,6 +378,15 @@ def _save_archive(
         "llm_status": "completed" if llm_error is None else "pending",
         "llm_error": llm_error,
         "source_sha256": {key: sources[key]["sha256"] for key in sources},
+        "execution": {
+            "entrypoint": execution_entrypoint,
+            "database_mode": "SQLite local; archivos fuente procesados temporalmente",
+        },
+        "runtime": runtime_manifest(),
+        "artifact_sha256": {
+            str(path.relative_to(root)).replace("\\", "/"): sha256_file(path)
+            for path in sorted(root.rglob("*")) if path.is_file() and path.name != "METADATA.json"
+        },
     }
     (root / "METADATA.json").write_text(
         json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8"

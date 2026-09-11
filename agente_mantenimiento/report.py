@@ -277,5 +277,6 @@ function draw(id,rows,field,unit,zeroBase=true){{const svg=q(id),w=420,h=240,m={
 function updateHistory(){{const s=selection();q('selection-note').textContent=`Nivel: ${{s.level}} · Elemento: ${{s.key}} · ${{s.week?'una semana':'todas las semanas'}}`;draw('chart-stop',s.rows,'stop_hours','h',true);draw('chart-availability',s.rows,'availability','%',false);draw('chart-count',s.rows,'stoppage_count','',true);q('history-body').innerHTML=s.rows.map(r=>`<tr><td>${{r.label}}</td><td>${{r.level}}</td><td>${{r.key}}</td><td class="num">${{fmt(r.maintenance_hours)}}</td><td class="num">${{fmt(r.stop_hours)}}</td><td class="num">${{fmt(r.stoppage_count,0)}}</td><td class="num strong">${{fmt(r.availability)}} %</td></tr>`).join('')||'<tr><td colspan="7">Sin datos para el filtro seleccionado.</td></tr>'}}
 updateHistory();
 </script></body></html>"""
+    document = "\n".join(line.rstrip() for line in document.splitlines()) + "\n"
     output_path.write_text(document, encoding="utf-8")
     return output_path

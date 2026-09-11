@@ -17,5 +17,12 @@ OK test_public_web_requires_password_and_creates_session
 OK test_second_week_uses_stored_history_and_prepares_filters
 OK test_web_upload_processes_week_and_rejects_duplicate
 
-Tiempo de la última ejecución verificada: 5,195 segundos.
-No se realizaron llamadas externas: la respuesta API de la prueba de costo fue controlada localmente.
+Tiempo de la última ejecución verificada: 5,546 segundos.
+La prueba de archivado verifica versión 1.1.0, hash del código, ruta de ejecución,
+hashes de artefactos y manifiesto del conector. La prueba OpenAI verifica esquema
+estricto y store=false. No se realizaron llamadas externas: las respuestas API
+de las pruebas fueron controladas localmente.
+
+PRUEBA INTEGRAL ADICIONAL: python scripts/reproducir_demo.py
+RESULTADO: PASS
+ALCANCE: Excel sintéticos, privacidad, cálculo, SQLite vacía, contrato LLM y HTML.

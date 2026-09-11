@@ -1,5 +1,41 @@
 # Decisiones del proyecto
 
+## Decisión 025 - Respuesta a la evaluación externa de 85/100
+
+**Fecha:** 11 de septiembre de 2026
+**Estado:** implementada en SC-02 y FR-03; AE-03 pendiente de llamadas pagas y revisión humana
+
+La evaluación otorgó 85/100 y concentró el margen en SC-02 (8 puntos), FR-03 (5 puntos) y AE-03 (2 puntos). Se comprobó que el conector y la validación existían, pero su evidencia estaba dispersa; también se confirmó que los metadatos históricos no registraban versión/commit y que la comparación económica no equivalía a una comparación real de calidad.
+
+Se crearon `HERRAMIENTAS_Y_CONECTORES.md`, `REPRODUCIBILIDAD.md` y `ARQUITECTURA_Y_EVOLUCION.md`. La matriz de cumplimiento dejó de afirmar que los tres criterios estaban cerrados y ahora diferencia lo implementado de lo pendiente. El system prompt no se modificó porque SC-01 ya obtuvo puntaje completo y debe permanecer constante durante el benchmark.
+
+## Decisión 024 - Versión 1.1.0 y manifiesto automático
+
+**Fecha:** 11 de septiembre de 2026
+**Estado:** implementada y probada
+
+Las nuevas corridas archivan versión del agente, hash del código ejecutable, commit Git cuando está disponible, Python, dependencias, ruta de ejecución y hashes de todos los artefactos. También generan `solicitud_llm.json` con endpoint, configuración y huellas del prompt, contexto, esquema y salida validada, sin guardar la clave.
+
+Las corridas 29–36 no recibieron un commit inventado: se preservó la limitación contemporánea en `pruebas/RECONSTRUCCION_CORRIDAS_HISTORICAS.md`.
+
+## Decisión 023 - Reproducción pública sin datos operativos
+
+**Fecha:** 11 de septiembre de 2026
+**Estado:** implementada y aprobada
+
+Se agregó `scripts/reproducir_demo.py`. La prueba genera Excel sintéticos temporales, parte de una SQLite vacía, aplica privacidad, calcula, persiste, valida el contrato LLM con respuesta controlada y genera el HTML. Verifica valores esperados y guarda manifiesto y hashes en `pruebas/evidencia_reproducibilidad/`. No utiliza red ni consume tokens.
+
+Esta solución permite reproducción por terceros sin publicar los Excel reales. El inicio anterior del proyecto permanece identificado mediante hashes en `evidencia_inicio/README.md` y las iteraciones concretas siguen en `corridas/desarrollo_historico/`.
+
+## Decisión 022 - Benchmark real y TCO
+
+**Fecha:** 11 de septiembre de 2026
+**Estado:** infraestructura implementada; ejecución real pendiente de credencial
+
+Se definió antes de probar un umbral de suficiencia y se implementó `scripts/comparar_modelos.py`. El programa compara GPT-5.4 Nano, GPT-5.4 Mini y GPT-5.4 con el mismo nivel y semanas, copiando la base a un temporal para no alterar la evidencia oficial. Requiere confirmación explícita porque genera seis llamadas pagas y produce una planilla para revisión humana.
+
+La clave no estaba disponible en la sesión de mejora. No se fabricaron resultados. GPT-5.4 Mini permanece como elección provisional hasta completar y firmar la comparación. El análisis económico incorporó el tamaño real de SQLite y archivos, crecimiento anual y dos escenarios presupuestarios de hosting.
+
 ## Decisión 021 - Publicación del repositorio académico
 
 **Fecha:** 11 de septiembre de 2026  

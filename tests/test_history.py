@@ -175,6 +175,7 @@ class HistoryTests(unittest.TestCase):
             self.assertEqual(body["instructions"], SYSTEM_PROMPT_PATH.read_text(encoding="utf-8").strip())
             self.assertEqual(body["text"]["format"]["type"], "json_schema")
             self.assertTrue(body["text"]["format"]["strict"])
+            self.assertFalse(body["store"])
             self.assertNotIn("availability", body["input"])
             return {"output_text": json.dumps(output, ensure_ascii=False)}
 
@@ -243,6 +244,7 @@ class HistoryTests(unittest.TestCase):
             "prompts/USER_PROMPT_TEMPLATE.md", "prompts/CONTRATO_FUNCIONAL_AGENTE.md",
             "salida/resultados.json", "salida/contexto_llm.json",
             "salida/hallazgos_llm.json", "salida/ejecuciones_llm.json",
+            "salida/solicitud_llm.json",
             "salida/Reporte_Disponibilidad_Semana33.html", "validacion/VALIDACION.md",
         ):
             self.assertTrue((root / relative).is_file(), relative)
@@ -250,6 +252,17 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual(metadata["llm_status"], "pending")
         self.assertEqual(metadata["requested_model"], "gpt-5.4-mini")
         self.assertEqual(metadata["source_sha256"]["notices"], result["sources"]["notices"]["sha256"])
+        self.assertEqual(metadata["runtime"]["agent_version"], "1.1.0")
+        self.assertEqual(metadata["runtime"]["metadata_schema_version"], "2.0")
+        self.assertEqual(metadata["execution"]["entrypoint"], "web:POST /procesar")
+        self.assertIn("prompts/SYSTEM_PROMPT.txt", metadata["artifact_sha256"])
+        self.assertEqual(len(metadata["runtime"]["source_snapshot_sha256"]), 64)
+        request_manifest = json.loads(
+            (root / "salida" / "solicitud_llm.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(request_manifest["interface"], "OpenAI Responses API")
+        self.assertFalse(request_manifest["store"])
+        self.assertEqual(len(request_manifest["structured_output_schema_sha256"]), 64)
         notices = [row["notice_number"] for row in result["failures"][:2]]
         payload = self.root / "archive-findings.json"
         payload.write_text(json.dumps({"findings": [{
