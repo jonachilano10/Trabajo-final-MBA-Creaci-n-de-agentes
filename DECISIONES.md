@@ -1,5 +1,14 @@
 # Decisiones del proyecto
 
+## Decisión 030 - Verificación integral de examen y versión 1.4.0
+
+**Fecha:** 12 de septiembre de 2026
+**Estado:** implementada y probada
+
+Se centralizaron en código los valores predeterminados GPT-5.4 Mini y razonamiento `medium`, evitando divergencias entre la interfaz web y el conector. La verificación integral ahora comprueba que esos valores coincidan con la configuración aprobada en `CONCLUSION_EVALUACION.json`, que el benchmark esté cerrado y que el esquema LLM prohíba campos adicionales y limite la salida a ocho hallazgos.
+
+Se agregó `verificar_entrega.bat` para ejecutar la evidencia con doble clic en Windows, sin repetir llamadas pagas. También se actualizó el diagrama de arquitectura hasta la versión 1.4.0 y se corrigió la documentación del conector, que conservaba un límite antiguo de doce hallazgos aunque el código ya exigía ocho.
+
 ## Decisión 029 - Selección definitiva de GPT-5.4 Mini con razonamiento medium
 
 **Fecha:** 12 de septiembre de 2026

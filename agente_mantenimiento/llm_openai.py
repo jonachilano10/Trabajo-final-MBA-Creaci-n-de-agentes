@@ -17,6 +17,10 @@ class LLMServiceError(RuntimeError):
     """Raised when the external interpretation service cannot finish safely."""
 
 
+DEFAULT_MODEL = "gpt-5.4-mini"
+DEFAULT_REASONING_EFFORT = "medium"
+
+
 FINDINGS_SCHEMA = {
     "type": "object",
     "additionalProperties": False,
@@ -102,8 +106,10 @@ def interpret_week_with_openai(
     if not database.week_exists(year, week):
         raise LLMServiceError(f"La semana {week}/{year} no existe en la base.")
     context = build_llm_context(database_path, year=year, week=week)
-    selected_model = model or os.environ.get("OPENAI_MODEL", "gpt-5.4-mini")
-    selected_effort = reasoning_effort or os.environ.get("OPENAI_REASONING_EFFORT", "medium")
+    selected_model = model or os.environ.get("OPENAI_MODEL", DEFAULT_MODEL)
+    selected_effort = reasoning_effort or os.environ.get(
+        "OPENAI_REASONING_EFFORT", DEFAULT_REASONING_EFFORT
+    )
     body = {
         "model": selected_model,
         "reasoning": {"effort": selected_effort},

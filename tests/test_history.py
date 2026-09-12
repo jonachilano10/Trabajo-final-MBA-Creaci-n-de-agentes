@@ -16,7 +16,10 @@ from pathlib import Path
 from agente_mantenimiento.analysis import analyze_week
 from agente_mantenimiento.database import DuplicateWeekError, HistoryDatabase
 from agente_mantenimiento.llm_contract import LLMFindingValidationError, build_llm_context, import_llm_findings
-from agente_mantenimiento.llm_openai import INSTRUCTIONS, SYSTEM_PROMPT_PATH, interpret_week_with_openai
+from agente_mantenimiento.llm_openai import (
+    DEFAULT_MODEL, DEFAULT_REASONING_EFFORT, FINDINGS_SCHEMA, INSTRUCTIONS,
+    SYSTEM_PROMPT_PATH, interpret_week_with_openai,
+)
 from agente_mantenimiento.report import generate_report
 from agente_mantenimiento.privacy import detect_confidential_reason, scan_workbook
 from agente_mantenimiento.web import AppHandler
@@ -54,6 +57,20 @@ def cross_bridge_notices(result: dict) -> list[str]:
 
 
 class HistoryTests(unittest.TestCase):
+    def test_selected_runtime_defaults_and_strict_contract_match_evidence(self):
+        conclusion = json.loads(
+            (PROJECT / "pruebas" / "comparacion_modelos_real" / "ronda_02"
+             / "CONCLUSION_EVALUACION.json").read_text(encoding="utf-8")
+        )
+        selected = conclusion["selected_configuration"]
+        self.assertEqual(conclusion["status"], "complete")
+        self.assertTrue(selected["passed"])
+        self.assertEqual(DEFAULT_MODEL, selected["model"])
+        self.assertEqual(DEFAULT_REASONING_EFFORT, selected["reasoning_effort"])
+        self.assertFalse(FINDINGS_SCHEMA["additionalProperties"])
+        self.assertEqual(FINDINGS_SCHEMA["required"], ["findings"])
+        self.assertEqual(FINDINGS_SCHEMA["properties"]["findings"]["maxItems"], 8)
+
     def setUp(self) -> None:
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
@@ -301,7 +318,10 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual(metadata["llm_status"], "pending")
         self.assertEqual(metadata["requested_model"], "gpt-5.4-mini")
         self.assertEqual(metadata["source_sha256"]["notices"], result["sources"]["notices"]["sha256"])
-        self.assertEqual(metadata["runtime"]["agent_version"], "1.3.1")
+        self.assertEqual(
+            metadata["runtime"]["agent_version"],
+            (PROJECT / "VERSION").read_text(encoding="utf-8").strip(),
+        )
         self.assertEqual(metadata["runtime"]["metadata_schema_version"], "2.0")
         self.assertEqual(metadata["execution"]["entrypoint"], "web:POST /procesar")
         self.assertIn("prompts/SYSTEM_PROMPT.txt", metadata["artifact_sha256"])

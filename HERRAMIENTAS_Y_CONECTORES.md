@@ -13,7 +13,7 @@ Este documento concentra la evidencia operativa del criterio **SC-02**. El agent
 | Datos enviados | System prompt y hechos textuales ya filtrados de la semana actual y hasta seis semanas anteriores |
 | Datos excluidos | Excel originales, clave, base SQLite, nombres personales y métricas que el LLM no puede modificar |
 | Persistencia del proveedor | `store: false` |
-| Contrato de salida | JSON Schema estricto con máximo 12 hallazgos |
+| Contrato de salida | JSON Schema estricto con máximo 8 hallazgos |
 | Control posterior | `validate_llm_payload` rechaza campos extra, métricas, avisos inexistentes, textos vacíos y relaciones cuyo tipo no coincide con los puentes citados |
 | Acciones prohibidas | No modifica Excel, cálculos, SQLite fuera de sus hallazgos, SAP ni equipos de planta |
 

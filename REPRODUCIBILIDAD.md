@@ -10,7 +10,7 @@ La versión/commit exactos no se capturaron contemporáneamente en esas ocho cor
 
 ## Versión reproducible
 
-A partir de la versión `1.1.0`, cada nueva corrida archiva en `METADATA.json`. La versión `1.2.0` agrega la validación entre `relation_type` y el puente real; la 1.3.0 limita y prioriza hallazgos útiles; la 1.3.1 conserva también los intentos rechazados durante comparaciones:
+A partir de la versión `1.1.0`, cada nueva corrida archiva en `METADATA.json`. La versión `1.2.0` agrega la validación entre `relation_type` y el puente real; la 1.3.0 limita y prioriza hallazgos útiles; la 1.3.1 conserva también los intentos rechazados durante comparaciones; la 1.4.0 comprueba automáticamente que la configuración aprobada coincida con el valor predeterminado de producción:
 
 - versión del esquema de metadatos;
 - versión declarada del agente;
@@ -22,6 +22,8 @@ A partir de la versión `1.1.0`, cada nueva corrida archiva en `METADATA.json`. 
 - SHA-256 de fuentes y artefactos de salida.
 
 El hash del código permite identificar el contenido exacto incluso si Git no está instalado en el servidor. `requirements-lock.txt` fija las dependencias de la versión entregada.
+
+Para una comprobación integral se puede ejecutar `verificar_entrega.bat` o `python scripts/verificar_entrega.py`. El proceso no consume API: usa la reproducción controlada y valida la conclusión archivada del benchmark pago.
 
 ## Reproducción segura desde cero
 

@@ -115,6 +115,8 @@ Verificación completa de la entrega en un solo comando:
 python scripts/verificar_entrega.py
 ```
 
+En Windows también se puede hacer doble clic en `verificar_entrega.bat`. La verificación ejecuta las pruebas, reproduce una corrida sintética, controla las ocho corridas oficiales, valida el contrato JSON y confirma que el modelo predeterminado coincide con la configuración aprobada en el benchmark. No repite llamadas pagas.
+
 ## Corridas oficiales
 
 | Semana | Período | Disponibilidad | Parada | Detenciones | Estado LLM |

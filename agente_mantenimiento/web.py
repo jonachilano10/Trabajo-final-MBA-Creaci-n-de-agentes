@@ -25,7 +25,8 @@ from .database import DuplicateWeekError, HistoryDatabase
 from .economics import MODEL_PRICES, comparison_rows, estimate_text_tokens
 from .llm_contract import build_llm_context
 from .llm_openai import (
-    FINDINGS_SCHEMA, INSTRUCTIONS, LLMServiceError, SYSTEM_PROMPT_PATH,
+    DEFAULT_MODEL, DEFAULT_REASONING_EFFORT, FINDINGS_SCHEMA, INSTRUCTIONS,
+    LLMServiceError, SYSTEM_PROMPT_PATH,
     interpret_week_with_openai,
 )
 from .provenance import runtime_manifest, sha256_file, sha256_json
@@ -208,7 +209,7 @@ h2{{margin:0 0 16px;color:var(--navy);font-size:20px}}.grid{{display:grid;grid-t
 <label>Semana<input id='week' name='week' type='number' min='1' max='53' required></label>
 <label>Desde<input id='start_date' name='start_date' type='date' required></label>
 <label>Hasta<input id='end_date' name='end_date' type='date' required></label></div>
-<div class='grid' style='margin-top:14px'><label>Modelo LLM<select name='model'>{''.join(f"<option value='{m}'{' selected' if m == 'gpt-5.4-mini' else ''}>{esc(p.label)}</option>" for m, p in MODEL_PRICES.items())}</select></label>
+<div class='grid' style='margin-top:14px'><label>Modelo LLM<select name='model'>{''.join(f"<option value='{m}'{' selected' if m == DEFAULT_MODEL else ''}>{esc(p.label)}</option>" for m, p in MODEL_PRICES.items())}</select></label>
 <label>Nivel de razonamiento<select name='reasoning_effort'><option>none</option><option>low</option><option selected>medium</option><option>high</option><option>xhigh</option></select></label></div>
 <div class='files'><label>Excel de avisos<input name='notices' type='file' accept='.xlsx,.xlsm' required></label>
 <label>Excel de notificaciones<input name='notifications' type='file' accept='.xlsx,.xlsm' required></label>
@@ -537,8 +538,8 @@ class AppHandler(BaseHTTPRequestHandler):
                 if not self._check_csrf(data.get("csrf", [""])[0], csrf):
                     return
                 year, week = int(data["year"][0]), int(data["week"][0])
-                model = data.get("model", ["gpt-5.4-mini"])[0]
-                effort = data.get("reasoning_effort", ["medium"])[0]
+                model = data.get("model", [DEFAULT_MODEL])[0]
+                effort = data.get("reasoning_effort", [DEFAULT_REASONING_EFFORT])[0]
                 if model not in MODEL_PRICES or effort not in {"none", "low", "medium", "high", "xhigh"}:
                     raise ValueError("La combinación de modelo y razonamiento no es válida.")
                 count = interpret_week_with_openai(
@@ -559,8 +560,8 @@ class AppHandler(BaseHTTPRequestHandler):
             if not self._check_csrf(fields.get("csrf", ""), csrf):
                 return
             year, week = int(fields["year"]), int(fields["week"])
-            model = fields.get("model", "gpt-5.4-mini")
-            effort = fields.get("reasoning_effort", "medium")
+            model = fields.get("model", DEFAULT_MODEL)
+            effort = fields.get("reasoning_effort", DEFAULT_REASONING_EFFORT)
             if model not in MODEL_PRICES or effort not in {"none", "low", "medium", "high", "xhigh"}:
                 raise InputValidationError("La combinación de modelo y razonamiento no es válida.")
             start_date, end_date = date.fromisoformat(fields["start_date"]), date.fromisoformat(fields["end_date"])

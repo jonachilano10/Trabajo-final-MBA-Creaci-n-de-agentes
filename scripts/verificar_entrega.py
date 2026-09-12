@@ -13,6 +13,9 @@ if str(PROJECT) not in sys.path:
     sys.path.insert(0, str(PROJECT))
 
 from agente_mantenimiento.provenance import runtime_manifest  # noqa: E402
+from agente_mantenimiento.llm_openai import (  # noqa: E402
+    DEFAULT_MODEL, DEFAULT_REASONING_EFFORT, FINDINGS_SCHEMA,
+)
 
 
 OFFICIAL_PATTERN = re.compile(r"^corrida_\d{4}-\d{2}-\d{2}_semana_\d{2}$")
@@ -28,7 +31,12 @@ ROOT_FILES = (
     "README.md", "DECISIONES.md", "HERRAMIENTAS_Y_CONECTORES.md",
     "REPRODUCIBILIDAD.md", "ARQUITECTURA_Y_EVOLUCION.md",
     "ANALISIS_ECONOMICO.md", "MATRIZ_CUMPLIMIENTO.md",
-    "VERSION", "requirements-lock.txt",
+    "VERSION", "requirements-lock.txt", "verificar_entrega.bat",
+)
+
+BENCHMARK_CONCLUSION = (
+    PROJECT / "pruebas" / "comparacion_modelos_real" / "ronda_02"
+    / "CONCLUSION_EVALUACION.json"
 )
 
 
@@ -59,12 +67,31 @@ def main() -> int:
     missing_run_files = {key: value for key, value in missing_run_files.items() if value}
     unit_tests = run_checked([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"])
     reproduction = run_checked([sys.executable, "scripts/reproducir_demo.py"])
+    try:
+        benchmark = json.loads(BENCHMARK_CONCLUSION.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        benchmark = {}
+    selected = benchmark.get("selected_configuration") or {}
+    benchmark_complete = benchmark.get("status") == "complete"
+    selected_matches_runtime = (
+        selected.get("model") == DEFAULT_MODEL
+        and selected.get("reasoning_effort") == DEFAULT_REASONING_EFFORT
+        and selected.get("passed") is True
+    )
+    schema_contract_complete = (
+        FINDINGS_SCHEMA.get("additionalProperties") is False
+        and FINDINGS_SCHEMA.get("required") == ["findings"]
+        and FINDINGS_SCHEMA.get("properties", {}).get("findings", {}).get("maxItems") == 8
+    )
     checks = {
         "root_structure_complete": not missing_root,
         "eight_official_runs": len(roots) == 8,
         "official_run_evidence_complete": not missing_run_files,
         "unit_tests_passed": unit_tests["passed"],
         "safe_reproduction_passed": reproduction["passed"],
+        "llm_schema_contract_complete": schema_contract_complete,
+        "paid_benchmark_complete": benchmark_complete,
+        "selected_model_matches_runtime_default": selected_matches_runtime,
     }
     result = {
         "verified_at": datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -76,7 +103,11 @@ def main() -> int:
         "unit_tests": unit_tests,
         "reproduction": reproduction,
         "runtime": runtime_manifest(),
-        "paid_model_comparison": "not_executed_by_this_verifier",
+        "paid_model_comparison": {
+            "evidence": str(BENCHMARK_CONCLUSION.relative_to(PROJECT)),
+            "selected_configuration": selected,
+            "note": "La verificación no repite llamadas pagas; valida la evidencia archivada.",
+        },
     }
     output = PROJECT / "pruebas" / "VERIFICACION_ENTREGA.json"
     output.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
