@@ -58,7 +58,21 @@ Se eligió **GPT-5.4 Mini con razonamiento medium** porque Python realiza los c�
 
 GPT-5.4 puede reservarse para revisar casos ambiguos. GPT-5.4 Nano promete menor costo, pero no debe adoptarse sin ejecutar una comparación de calidad sobre casos históricos revisados por una persona. Los niveles de razonamiento no tienen una tarifa unitaria distinta, aunque pueden modificar la cantidad de tokens de salida consumidos.
 
-La elección se declara **provisional** hasta completar el benchmark real definido en `pruebas/comparacion_modelos_real/README.md`. La comparación previa demuestra costo, pero no equivalencia de calidad. El programa `scripts/comparar_modelos.py` ejecuta Nano, Mini y GPT-5.4 sobre las mismas semanas sin alterar la base oficial, registra tokens y prepara una evaluación humana. No se presentan resultados simulados como si fueran ejecuciones reales.
+## Benchmark real de configuraciones
+
+El 11/09/2026 se ejecutaron seis llamadas reales sobre las semanas 29 y 36, manteniendo prompt, contexto, nivel `medium` y esquema. La base oficial se copió a temporales y no fue modificada.
+
+| Modelo | Llamadas | Hallazgos | Tokens totales | Costo real | Proyección 52 corridas |
+|---|---:|---:|---:|---:|---:|
+| GPT-5.4 Nano | 2 | 19 | 40.481 | US$ 0,019168 | US$ 0,4984 |
+| GPT-5.4 Mini | 2 | 17 | 40.095 | US$ 0,067729 | US$ 1,7609 |
+| GPT-5.4 | 2 | 21 | 39.496 | US$ 0,217929 | US$ 5,6662 |
+
+Nano costó 71,7 % menos que Mini. Mini costó 68,9 % menos que GPT-5.4. Sin embargo, el control objetivo posterior encontró una relación `same_bridge` que mezclaba equipos en Nano y otra en Mini; GPT-5.4 no presentó errores de alcance. Por el umbral definido antes de probar, Nano y Mini no avanzan en esta primera comparación y GPT-5.4 es el único candidato a revisión humana.
+
+El hallazgo motivó una mejora real: la versión 1.2.0 explicita la regla en el system prompt y Python ahora valida que `same_bridge` contenga un único equipo y `cross_bridge` al menos dos. Los resultados originales se preservan como evidencia de la falla detectada.
+
+La elección final permanece **pendiente de revisión humana** sobre corrección, utilidad y afirmaciones no respaldadas. La evidencia está en `pruebas/comparacion_modelos_real/`. No se infiere calidad solamente por precio o cantidad de hallazgos.
 
 ## Control del crecimiento
 

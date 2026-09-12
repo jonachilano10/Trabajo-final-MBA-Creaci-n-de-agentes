@@ -132,12 +132,14 @@ def validate_llm_payload(
             conditions = " OR ".join("(w.year = ? AND w.week = ?)" for _ in periods)
             where = f" WHERE {conditions}" if conditions else " WHERE 0"
             parameters = [value for period in periods for value in period]
-        known_notices = {
-            str(row[0]) for row in connection.execute(
-                "SELECT f.notice_number FROM failure_events f JOIN weeks w ON w.id = f.week_id" + where,
-                parameters,
-            )
-        }
+        known_notice_equipment: dict[str, set[str]] = {}
+        for row in connection.execute(
+            "SELECT f.notice_number, f.equipment FROM failure_events f "
+            "JOIN weeks w ON w.id = f.week_id" + where,
+            parameters,
+        ):
+            known_notice_equipment.setdefault(str(row[0]), set()).add(str(row[1]))
+        known_notices = set(known_notice_equipment)
 
     validated: list[dict[str, Any]] = []
     for index, finding in enumerate(findings, start=1):
@@ -159,6 +161,17 @@ def validate_llm_payload(
         if unknown:
             raise LLMFindingValidationError(
                 f"Hallazgo {index}: avisos inexistentes en la base: {', '.join(unknown)}."
+            )
+        related_equipment = {
+            equipment for notice in notices for equipment in known_notice_equipment[notice]
+        }
+        if relation_type == "same_bridge" and len(related_equipment) != 1:
+            raise LLMFindingValidationError(
+                f"Hallazgo {index}: same_bridge referencia más de un puente."
+            )
+        if relation_type == "cross_bridge" and len(related_equipment) < 2:
+            raise LLMFindingValidationError(
+                f"Hallazgo {index}: cross_bridge debe referenciar puentes diferentes."
             )
         if any(not isinstance(finding[field], str) or not finding[field].strip()
                for field in ("title", "rationale", "human_review")):

@@ -2,6 +2,16 @@
 
 Esta carpeta recibirá la prueba paga necesaria para cerrar **AE-03**. No contiene resultados simulados presentados como reales.
 
+## Estado de la primera ejecución real
+
+La prueba finalizó el 11/09/2026 con seis llamadas y un costo total de **US$ 0,30482527**. Todos los avisos citados existen. El análisis objetivo posterior encontró dos errores de alcance:
+
+- GPT-5.4 Nano: 1 de 19 hallazgos `same_bridge` mezcló P-MG11 y P-MG21.
+- GPT-5.4 Mini: 1 de 17 hallazgos `same_bridge` mezcló P-MG21 y P-MG22.
+- GPT-5.4: 0 errores de alcance en 21 hallazgos.
+
+Por el umbral previo, sólo GPT-5.4 avanza a revisión humana. Esta falla produjo la versión 1.2.0 del agente, que agrega el control faltante al prompt y a Python. Los resultados no se corrigieron ni ocultaron.
+
 ## Diseño previo a la ejecución
 
 - Casos: semanas 29 y 36, para cubrir una semana inicial y otra con la ventana histórica completa.
@@ -31,4 +41,13 @@ python scripts/comparar_modelos.py `
   --confirmar-pruebas-pagas
 ```
 
-El programa generará `resultados_api.json`, `MANIFIESTO.json` y `evaluacion_humana.csv`. La prueba queda incompleta hasta que una persona competente revise el CSV, firme y redacte la conclusión. El programa no decide subjetivamente qué hallazgo es correcto.
+El programa generó `resultados_api.json`, `MANIFIESTO.json` y `evaluacion_humana.csv`. `scripts/preparar_revision_modelos.py` agregó `RESUMEN_OBJETIVO.json`, `revision_tecnica.csv` y `revision_candidatos_validos.csv`, con los hechos fuente junto a cada relación.
+
+La prueba queda incompleta hasta que una persona competente revise `revision_candidatos_validos.csv`. Debe completar `correcto_0_o_1`, `util_0_a_2`, `afirmacion_no_respaldada_0_o_1` y un comentario cuando corresponda. Luego se cierra con:
+
+```powershell
+python scripts/cerrar_evaluacion_modelos.py `
+  --rol-revisor "Responsable de mantenimiento"
+```
+
+El programa calcula el cumplimiento del umbral, pero no decide subjetivamente qué hallazgo es correcto.

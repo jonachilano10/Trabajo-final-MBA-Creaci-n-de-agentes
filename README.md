@@ -4,6 +4,7 @@ Sistema agéntico para calcular la disponibilidad semanal de 12 puentes grúa, c
 
 ## Estado final
 
+- Versión actual `1.2.0`, con validación cruzada entre tipo de relación y puente.
 - Ocho corridas oficiales completas: semanas 29 a 36 de 2026.
 - Base local estructurada en SQLite con control de duplicados.
 - Página web para cargar tres Excel y consultar reportes.
@@ -130,6 +131,8 @@ python scripts/verificar_entrega.py
 Cada carpeta oficial incluye manifiesto de entrada, prompts exactos, validación, resultados, contexto, hallazgos, ejecución del LLM, metadatos y HTML. Los Excel originales no se publican: se identifican mediante nombre y SHA-256 para proteger información operativa y personal.
 
 Las corridas oficiales anteriores a la versión 1.1.0 no capturaron el commit de ejecución; esta limitación está declarada, sin reconstrucción retroactiva. Las nuevas corridas agregan automáticamente versión, hash del código, entorno, ruta de ejecución y hashes de artefactos. La prueba sintética proporciona una ejecución completamente repetible para terceros.
+
+La comparación real de modelos completó seis llamadas sobre las semanas 29 y 36. Sus resultados, costos y control objetivo están en `pruebas/comparacion_modelos_real/`; la selección definitiva permanece sujeta a revisión humana.
 
 ## Reporte e historial
 

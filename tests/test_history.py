@@ -45,6 +45,14 @@ def analysis_for(week: int) -> dict:
     )
 
 
+def cross_bridge_notices(result: dict) -> list[str]:
+    first = result["failures"][0]
+    second = next(
+        row for row in result["failures"] if row["equipment"] != first["equipment"]
+    )
+    return [first["notice_number"], second["notice_number"]]
+
+
 class HistoryTests(unittest.TestCase):
     def setUp(self) -> None:
         self.temp = tempfile.TemporaryDirectory()
@@ -113,7 +121,7 @@ class HistoryTests(unittest.TestCase):
     def test_llm_contract_rejects_metrics_and_unknown_notices(self) -> None:
         result = analysis_for(33)
         self.db.save_analysis(result)
-        notices = [row["notice_number"] for row in result["failures"][:2]]
+        notices = cross_bridge_notices(result)
         valid = {
             "findings": [{
                 "relation_type": "cross_bridge", "title": "Patrón textual a revisar",
@@ -139,6 +147,31 @@ class HistoryTests(unittest.TestCase):
         with self.assertRaises(LLMFindingValidationError):
             import_llm_findings(self.db_path, invalid_path)
 
+        failures_by_equipment: dict[str, list[str]] = {}
+        for row in result["failures"]:
+            failures_by_equipment.setdefault(row["equipment"], []).append(row["notice_number"])
+        equipment_with_two = next(
+            notices_for_equipment for notices_for_equipment in failures_by_equipment.values()
+            if len(notices_for_equipment) >= 2
+        )
+        different_equipment = next(
+            notices_for_equipment[0] for notices_for_equipment in failures_by_equipment.values()
+            if notices_for_equipment[0] not in equipment_with_two
+        )
+        invalid = json.loads(json.dumps(valid))
+        invalid["findings"][0]["relation_type"] = "same_bridge"
+        invalid["findings"][0]["notice_numbers"] = [equipment_with_two[0], different_equipment]
+        invalid_path.write_text(json.dumps(invalid), encoding="utf-8")
+        with self.assertRaises(LLMFindingValidationError):
+            import_llm_findings(self.db_path, invalid_path)
+
+        invalid = json.loads(json.dumps(valid))
+        invalid["findings"][0]["relation_type"] = "cross_bridge"
+        invalid["findings"][0]["notice_numbers"] = equipment_with_two[:2]
+        invalid_path.write_text(json.dumps(invalid), encoding="utf-8")
+        with self.assertRaises(LLMFindingValidationError):
+            import_llm_findings(self.db_path, invalid_path)
+
         invalid = json.loads(json.dumps(valid))
         invalid["findings"][0]["notice_numbers"] = [notices[0], "NO-EXISTE"]
         invalid_path.write_text(json.dumps(invalid), encoding="utf-8")
@@ -160,7 +193,7 @@ class HistoryTests(unittest.TestCase):
     def test_openai_interpretation_uses_schema_and_is_scoped_to_week(self) -> None:
         result = analysis_for(33)
         self.db.save_analysis(result)
-        notices = [row["notice_number"] for row in result["failures"][:2]]
+        notices = cross_bridge_notices(result)
         output = {
             "findings": [{
                 "relation_type": "cross_bridge", "title": "Relación preliminar",
@@ -252,7 +285,7 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual(metadata["llm_status"], "pending")
         self.assertEqual(metadata["requested_model"], "gpt-5.4-mini")
         self.assertEqual(metadata["source_sha256"]["notices"], result["sources"]["notices"]["sha256"])
-        self.assertEqual(metadata["runtime"]["agent_version"], "1.1.0")
+        self.assertEqual(metadata["runtime"]["agent_version"], "1.2.0")
         self.assertEqual(metadata["runtime"]["metadata_schema_version"], "2.0")
         self.assertEqual(metadata["execution"]["entrypoint"], "web:POST /procesar")
         self.assertIn("prompts/SYSTEM_PROMPT.txt", metadata["artifact_sha256"])
@@ -263,7 +296,7 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual(request_manifest["interface"], "OpenAI Responses API")
         self.assertFalse(request_manifest["store"])
         self.assertEqual(len(request_manifest["structured_output_schema_sha256"]), 64)
-        notices = [row["notice_number"] for row in result["failures"][:2]]
+        notices = cross_bridge_notices(result)
         payload = self.root / "archive-findings.json"
         payload.write_text(json.dumps({"findings": [{
             "relation_type": "cross_bridge", "title": "Relación preliminar",

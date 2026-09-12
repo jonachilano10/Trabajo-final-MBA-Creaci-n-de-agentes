@@ -1,5 +1,16 @@
 # Decisiones del proyecto
 
+## Decisión 026 - Benchmark real y refuerzo del alcance de relaciones
+
+**Fecha:** 11 de septiembre de 2026
+**Estado:** llamadas y control objetivo completos; revisión humana pendiente
+
+Se ejecutaron GPT-5.4 Nano, GPT-5.4 Mini y GPT-5.4 con nivel `medium` sobre las semanas 29 y 36. Las seis llamadas costaron US$ 0,30482527 y se preservaron sin editar en `pruebas/comparacion_modelos_real/resultados_api.json`.
+
+Todos los avisos existían y las salidas respetaron el esquema original. Un cruce posterior entre `relation_type` y `equipment` detectó un hallazgo inconsistente en Nano y uno en Mini; GPT-5.4 no presentó ese error. Se agregó el control a `validate_llm_payload`, se incorporaron pruebas negativas y se actualizó el system prompt para exigir un equipo en `same_bridge` y al menos dos en `cross_bridge`. El agente pasó a versión 1.2.0.
+
+Los resultados defectuosos se conservaron como evidencia de que la prueba produjo una mejora. No se eligió automáticamente GPT-5.4: sus 21 hallazgos deben superar la revisión humana de corrección, utilidad y afirmaciones no respaldadas.
+
 ## Decisión 025 - Respuesta a la evaluación externa de 85/100
 
 **Fecha:** 11 de septiembre de 2026

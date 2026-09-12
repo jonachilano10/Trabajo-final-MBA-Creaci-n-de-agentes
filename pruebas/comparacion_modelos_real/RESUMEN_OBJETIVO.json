@@ -1,0 +1,47 @@
+{
+  "source": "resultados_api.json",
+  "checks": {
+    "calls_expected": 6,
+    "calls_observed": 6,
+    "all_outputs_passed_original_json_validation": true,
+    "all_notice_numbers_exist": true,
+    "relation_scope_errors_found": 2
+  },
+  "configurations": [
+    {
+      "model": "gpt-5.4-nano",
+      "reasoning_effort": "medium",
+      "calls": 2,
+      "findings": 19,
+      "scope_errors": 1,
+      "cost_usd": 0.01916767,
+      "tokens": 40481
+    },
+    {
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium",
+      "calls": 2,
+      "findings": 17,
+      "scope_errors": 1,
+      "cost_usd": 0.0677286,
+      "tokens": 40095
+    },
+    {
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium",
+      "calls": 2,
+      "findings": 21,
+      "scope_errors": 0,
+      "cost_usd": 0.21792899999999998,
+      "tokens": 39496
+    }
+  ],
+  "configurations_eligible_for_human_review": [
+    {
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium"
+    }
+  ],
+  "human_review_status": "pending",
+  "note": "La validez estructural no demuestra corrección técnica. Las columnas humanas de revision_tecnica.csv deben completarse por el responsable."
+}

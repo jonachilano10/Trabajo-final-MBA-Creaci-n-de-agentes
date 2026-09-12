@@ -1,0 +1,1151 @@
+{
+  "executed_at": "2026-09-11T21:00:57-03:00",
+  "results": [
+    {
+      "year": 2026,
+      "week": 29,
+      "model": "gpt-5.4-nano",
+      "reasoning_effort": "medium",
+      "finding_count": 10,
+      "usage_and_cost": {
+        "id": 9,
+        "created_at": "2026-09-11 23:57:57",
+        "report_year": 2026,
+        "report_week": 29,
+        "model": "gpt-5.4-nano",
+        "reasoning_effort": "medium",
+        "response_id": "resp_03c6aaed2e287800016aa4956dd01887d29ea35ef2ba7f66d9",
+        "input_tokens": 3907,
+        "cached_input_tokens": 2816,
+        "output_tokens": 4146,
+        "reasoning_tokens": 1566,
+        "total_tokens": 8053,
+        "input_cost_usd": 0.00021820000000000002,
+        "cached_input_cost_usd": 5.632e-05,
+        "output_cost_usd": 0.0051825,
+        "total_cost_usd": 0.00545702,
+        "price_input_per_million": 0.2,
+        "price_cached_input_per_million": 0.02,
+        "price_output_per_million": 1.25,
+        "pricing_effective_date": "2026-09-08"
+      },
+      "findings": [
+        {
+          "id": 71,
+          "created_at": "2026-09-11 23:57:57",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Traslación norte-sur sin movimiento repetida (mismo síntoma y causa documentada) en P-MG11",
+          "confidence": "alta",
+          "rationale": "En P-MG11 (serie A, room 1) se registran dos avisos con descripción prácticamente idéntica: “sin traslacion norte sur” / “SIN TRASL NORTE SUR”. En ambos casos la causa documentada figura como “Corte de Energía” y la intervención registrada es “se repone atv traslacion”. No se informan diferencias de componente ni de subsistema dentro de los textos provistos.",
+          "human_review": "Verificar en campo si el patrón corresponde a un evento eléctrico recurrente del sistema de alimentación/ATV para traslación (chequear condiciones de energía y protecciones) y revisar si hay eventos/alarma previos en el mismo período que coincidan con “Corte de Energía”.",
+          "notice_numbers": [
+            "800894037",
+            "800894057"
+          ]
+        },
+        {
+          "id": 72,
+          "created_at": "2026-09-11 23:57:57",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Fallas de izaje del aparejo 15 tn con recuperación por ATVs (P-MG12)",
+          "confidence": "media",
+          "rationale": "En P-MG12 (room 1, serie A) se reportan dos fallas relacionadas al izaje del aparejo: 800893603 (“no baja ni sube aparejo de 15 tn”) con causa documentada “Falla Componente Electrónico” e intervención “Reset de ATV: condensador precarga”; y 800893913 (“NO BAJA AP 15 Tn”) con causa documentada “Corte de Energía” e intervención “se resetea atv de malacate”. Comparten el síntoma funcional de falta de movimiento en el izaje del aparejo, pero las causas documentadas difieren (electrónica vs. corte de energía).",
+          "human_review": "Revisar en campo/planilla de mantenimiento los registros de alimentación y del variador/ATV del malacate para separar si hay dos mecanismos distintos (falla electrónica vs corte de energía) o si un mismo fenómeno subyacente dispara ambos tipos de causa.",
+          "notice_numbers": [
+            "800893603",
+            "800893913"
+          ]
+        },
+        {
+          "id": 73,
+          "created_at": "2026-09-11 23:57:57",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Falta de movimiento en P-MG13: un caso de “SIN MOVIMIENTO” y otro de izaje no operativo",
+          "confidence": "baja",
+          "rationale": "En P-MG13 (room 1, serie A) aparecen dos eventos con vínculo funcional general (“sin movimiento” vs. “No sube aparejo de 15tn.-”). 800893319 (“SIN MOVIMIENTO”) tiene causa documentada “Aflojamiento” e intervención “se posicionan bien las herramientas, ok”. 800894016 (“No sube aparejo de 15tn.-”) tiene causa documentada “Falla Elemento de Maniobra” e intervención “Se normaliza falla en variador (condens)”. Aunque ambos afectan operación/funcionamiento del puente, los textos documentan causas e intervenciones distintas.",
+          "human_review": "Confirmar qué modos operativos estaban solicitados (izaje vs traslación vs control general) y verificar si “Aflojamiento” corresponde a un bloqueo físico/operativo o a un evento de seguridad que también podría impedir el izaje.",
+          "notice_numbers": [
+            "800893319",
+            "800894016"
+          ]
+        },
+        {
+          "id": 74,
+          "created_at": "2026-09-11 23:57:57",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Traslación sin movimiento en P-MG23 con causas distintas (electrónica vs falso contacto)",
+          "confidence": "media",
+          "rationale": "En P-MG23 (room 2, serie A) se registran: 800892746 (“sin traslacion”) con causa documentada “Falla Componente Electrónico” e intervención “Se acomoda pantógrafos de percha de cola, OK.”, y 800892753 (“sin traslacion norte-sur”) con causa documentada “Falso Contacto” e intervención “Se reajusta bornera x4.1 de guirnalda... OK.”. En ambos casos el síntoma es traslación sin movimiento (con detalle direccional en uno), pero las causas documentadas y acciones correctivas difieren (pantógrafos vs bornera/guirnalda).",
+          "human_review": "Inspeccionar el sistema de alimentación/guirnaldas y pantógrafos para verificar si existen condiciones de contacto intermitente que expliquen ambos modos de falla, pero sin asumir causa única: comparar patrones direccionales y condiciones de montaje/ajuste.",
+          "notice_numbers": [
+            "800892746",
+            "800892753"
+          ]
+        },
+        {
+          "id": 75,
+          "created_at": "2026-09-11 23:57:57",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "No gira percha en P-MG41 por corte de energía vs falla de componente electrónico",
+          "confidence": "media",
+          "rationale": "En P-MG41 (room 4, serie B) se repite el mismo síntoma: “no gira percha” en 800894035 y 800894073. Sin embargo, las causas documentadas difieren: 800894035 indica “Corte de Energía” con intervención “se repone atv giros, se deja ok”; mientras que 800894073 indica “Falla Componente Electrónico” con intervención “se repone”. Al compartir el síntoma, podría haber relación funcional, pero los textos no confirman un mismo origen eléctrico/contactor/variador.",
+          "human_review": "Revisar el historial del circuito de giro (ATV/variador y conexiones de potencia/control) para identificar si “Corte de Energía” refleja una condición temporal del mismo componente o si son fallas separadas.",
+          "notice_numbers": [
+            "800894035",
+            "800894073"
+          ]
+        },
+        {
+          "id": 76,
+          "created_at": "2026-09-11 23:57:57",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Picador / “no pica” repetido en P-MG43 con cambio de válvula",
+          "confidence": "media",
+          "rationale": "En P-MG43 (room 4, serie B) aparecen dos eventos de falla del picador: 800893830 (“No anda picador.”) con causa documentada “Desgaste” e intervención “Se cambia valvula Jefferson de picador, se prueba...”; y 800893897 (“no pica”) con causa documentada “Fatiga Material” e intervención “se cambia valvula de picador”. Los textos muestran un patrón de corrección mediante cambio de válvula y un síntoma común del picador, aunque el motivo/causa documentada (desgaste vs fatiga) no es el mismo.",
+          "human_review": "Verificar especificación y condición de la válvula (y su entorno mecánico/neumático) y revisar si hay señales de causa raíz repetitiva (ciclos/condiciones de trabajo) que expliquen por qué se etiquetan como desgaste o fatiga.",
+          "notice_numbers": [
+            "800893830",
+            "800893897"
+          ]
+        },
+        {
+          "id": 77,
+          "created_at": "2026-09-11 23:57:57",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "cross_bridge",
+          "title": "“Corte de Energía” reportado como causa en distintos subsistemas del puente (múltiples equipos)",
+          "confidence": "media",
+          "rationale": "Se observa la misma causa documentada “Corte de Energía” en distintos equipos y subsistemas: 800894037 (P-MG11) para “sin traslacion norte sur”, 800893913 (P-MG12) para “NO BAJA AP 15 Tn”, 800894035 (P-MG41) para “no gira percha”, y 800893272 (P-MG43) para “NO BAJA ALMEJA”. En los textos, la intervención típica es “se repone/reset” del ATV asociado al modo afectado, pero los documentos no permiten confirmar que sea el mismo componente o circuito entre puentes.",
+          "human_review": "Indagar en documentación/bitácora eléctrica si existen eventos de alimentación coincidentes (por puente o por área) durante la semana para sustentar si el “Corte de Energía” es un fenómeno común o si cada puente lo interpreta/registra por fallas distintas en su control/maniobra.",
+          "notice_numbers": [
+            "800893272",
+            "800893913",
+            "800894035",
+            "800894037"
+          ]
+        },
+        {
+          "id": 78,
+          "created_at": "2026-09-11 23:57:57",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "cross_bridge",
+          "title": "Eventos con causa documentada “Falso Contacto” asociados a problemas de movimiento",
+          "confidence": "media",
+          "rationale": "Hay múltiples avisos con causa documentada “Falso Contacto” en distintos puentes: 800893192 (P-MG11) “No baja ni sube la percha-OKTB” (intervención: “se repone falla no rearmable atvMalacate”); 800892753 (P-MG23) “sin traslacion norte-sur” (intervención: “Se reajusta bornera x4.1 de guirnalda...”); y 800893199 (P-MG41) “ECL gira solo para un lado” (intervención: “Se normalizan cables desoldado en CR.”). Comparten la etiqueta de causa, pero el síntoma y las acciones correctivas difieren (contactos/borneras/cables vs circuito específico).",
+          "human_review": "Revisar el tipo de falla de contacto indicado en cada aviso (bornera/guirnalda, cables desoldados, circuito del malacate/ATV) para determinar si responde a un problema de calidad de conexión/mantenimiento recurrente o a fallas puntuales sin relación causal directa.",
+          "notice_numbers": [
+            "800892753",
+            "800893192",
+            "800893199"
+          ]
+        },
+        {
+          "id": 79,
+          "created_at": "2026-09-11 23:57:57",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "cross_bridge",
+          "title": "Izaje no operativo de aparejo 15 tn en varios equipos (síntoma común, causas documentadas variables)",
+          "confidence": "media",
+          "rationale": "En varios puentes se repite el síntoma de izaje no operativo del aparejo/almeja: 800893603 (P-MG12) “no baja ni sube aparejo de 15 tn” con causa “Falla Componente Electrónico”; 800893913 (P-MG12) “NO BAJA AP 15 Tn” con causa “Corte de Energía”; 800894078 (P-MG21) “aparejo de 15 tn no sube ni baja” con causa “Falla Componente Electrónico”; 800894016 (P-MG13) “No sube aparejo de 15tn.-” con causa “Falla Elemento de Maniobra”; y 800893272 (P-MG43) “NO BAJA ALMEJA” con causa “Corte de Energía”. El texto sugiere un patrón funcional del izaje, pero no confirma una causa común dado que las causas documentadas son diferentes.",
+          "human_review": "Separar por modo y subsistema (malacate, variador/maniobra, alimentación) y revisar en campo si existe una misma condición de operación que precipite la falta de izaje o si cada puente presenta fallas distintas.",
+          "notice_numbers": [
+            "800893272",
+            "800893603",
+            "800893913",
+            "800894016",
+            "800894078"
+          ]
+        },
+        {
+          "id": 80,
+          "created_at": "2026-09-11 23:57:57",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "cross_bridge",
+          "title": "Intervenciones tipo “reset/reponer ATV/variador” tras fallas de movimiento (acción correctiva recurrente, causa no confirmada)",
+          "confidence": "baja",
+          "rationale": "Existen intervenciones similares de recuperación mediante reset/reposición de electrónica de control/ATV/variador asociadas a fallas de movimiento: 800894037 (P-MG11) “se repone atv traslacion”; 800893603 (P-MG12) “Reset de ATV: condensador precarga”; 800894035 (P-MG41) “se repone atv giros, se deja ok”; y 800894016 (P-MG13) “Se normaliza falla en variador (condens)”. Aunque la maniobra correctiva se repite, los textos no demuestran que sea el mismo origen del problema entre puentes (las causas documentadas difieren entre avisos).",
+          "human_review": "Confirmar si el “reset/reponer” se realiza ante condiciones eléctricas/alarma similares (p. ej. cortes, protecciones, fallas de variador) o si solo es una acción estándar de recuperación que enmascara causas distintas en cada caso.",
+          "notice_numbers": [
+            "800893603",
+            "800894016",
+            "800894035",
+            "800894037"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium",
+      "finding_count": 7,
+      "usage_and_cost": {
+        "id": 9,
+        "created_at": "2026-09-11 23:58:35",
+        "report_year": 2026,
+        "report_week": 29,
+        "model": "gpt-5.4-mini",
+        "reasoning_effort": "medium",
+        "response_id": "resp_023f44da8bde29ab016aa49585dcf487d286d6f3ebd79456b5",
+        "input_tokens": 3907,
+        "cached_input_tokens": 3328,
+        "output_tokens": 6448,
+        "reasoning_tokens": 5103,
+        "total_tokens": 10355,
+        "input_cost_usd": 0.00043425,
+        "cached_input_cost_usd": 0.0002496,
+        "output_cost_usd": 0.029016,
+        "total_cost_usd": 0.02969985,
+        "price_input_per_million": 0.75,
+        "price_cached_input_per_million": 0.075,
+        "price_output_per_million": 4.5,
+        "pricing_effective_date": "2026-09-08"
+      },
+      "findings": [
+        {
+          "id": 71,
+          "created_at": "2026-09-11 23:58:35",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Traslación norte-sur repetida en P-MG11",
+          "confidence": "alta",
+          "rationale": "Ambos avisos describen exactamente \"sin traslacion norte sur\" en el mismo equipo P-MG11. Además, los dos registran la misma causa documentada, \"Corte de Energía\", y la misma intervención, \"se repone atv traslacion\". La coincidencia textual y documental es muy fuerte, aunque sigue siendo un hallazgo preliminar.",
+          "human_review": "Verificar si se trata de dos registros del mismo evento o de una reincidencia real; revisar alimentación y ATV de traslación norte-sur en campo antes de concluir repetición confirmada.",
+          "notice_numbers": [
+            "800894037",
+            "800894057"
+          ]
+        },
+        {
+          "id": 72,
+          "created_at": "2026-09-11 23:58:35",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Izaje/aparejo 15 tn recurrente en P-MG12",
+          "confidence": "media",
+          "rationale": "En P-MG12 ambos avisos apuntan a la imposibilidad de bajar o mover el aparejo de 15 tn: uno dice \"no baja ni sube aparejo de 15 tn\" y el otro \"NO BAJA AP 15 Tn\". La similitud funcional es clara, pero las causas documentadas no son iguales (\"Falla Componente Electrónico\" frente a \"Corte de Energía\") y las intervenciones también difieren (reset de ATV/condensador precarga versus reset de ATV de malacate).",
+          "human_review": "Revisar en campo el circuito de mando, variador y alimentación del aparejo 15 tn para confirmar si los dos avisos corresponden al mismo subsistema o a fallas independientes.",
+          "notice_numbers": [
+            "800893603",
+            "800893913"
+          ]
+        },
+        {
+          "id": 73,
+          "created_at": "2026-09-11 23:58:35",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Traslación repetida en P-MG23",
+          "confidence": "media",
+          "rationale": "Los dos registros de P-MG23 reportan ausencia de traslación: uno indica \"sin traslacion\" y el otro \"sin traslacion norte-sur\". La familia funcional coincide, pero las causas documentadas son distintas (\"Falla Componente Electrónico\" y \"Falso Contacto\") y las intervenciones también cambian (acomodo de pantógrafos versus reajuste de bornera de guirnalda).",
+          "human_review": "Inspeccionar borneras, guirnalda y pantógrafos del sistema de traslación para distinguir si la similitud es funcional o si son dos orígenes distintos.",
+          "notice_numbers": [
+            "800892746",
+            "800892753"
+          ]
+        },
+        {
+          "id": 74,
+          "created_at": "2026-09-11 23:58:35",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Giro/percha recurrente en P-MG41",
+          "confidence": "media",
+          "rationale": "En P-MG41 los tres avisos se concentran en la función de giro/percha: uno describe que \"ECL gira solo para un lado\" y los otros dos indican \"no gira percha\". Aunque pertenecen al mismo subsistema, las causas documentadas no son idénticas (\"Falso Contacto\", \"Corte de Energía\" y \"Falla Componente Electrónico\") y las intervenciones también varían (normalización de cables desoldados, reposición de ATV de giros y un reemplazo no especificado).",
+          "human_review": "Verificar cables, CR y ATV del conjunto de giro/percha para confirmar si la pérdida parcial y la pérdida total de giro comparten el mismo origen.",
+          "notice_numbers": [
+            "800893199",
+            "800894035",
+            "800894073"
+          ]
+        },
+        {
+          "id": 75,
+          "created_at": "2026-09-11 23:58:35",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Picador no operativo recurrente en P-MG43",
+          "confidence": "media",
+          "rationale": "Ambos avisos de P-MG43 refieren al picador: uno señala \"No anda picador\" y el otro \"no pica\". La coincidencia funcional es clara, pero las causas documentadas difieren (\"Desgaste\" y \"Fatiga Material\") y las intervenciones también cambian (cambio de válvula Jefferson versus cambio de válvula de picador).",
+          "human_review": "Revisar el conjunto de válvulas y el desgaste del mecanismo de picador para confirmar si se trata de recurrencia del mismo componente o de fallas separadas.",
+          "notice_numbers": [
+            "800893830",
+            "800893897"
+          ]
+        },
+        {
+          "id": 76,
+          "created_at": "2026-09-11 23:58:35",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "cross_bridge",
+          "title": "Fallas de izaje/aparejo en varios puentes",
+          "confidence": "media",
+          "rationale": "Los avisos citados pertenecen a puentes distintos pero comparten la imposibilidad de subir o bajar el elemento de izaje/aparejo: percha en P-MG11, aparejo de 15 tn en P-MG12, aparejo de 15 tn en P-MG13, aparejo de 15 tn en P-MG21 y almeja en P-MG43. Sin embargo, los textos documentan mecanismos diferentes, como falso contacto, falla de componente electrónico, corte de energía y falla de elemento de maniobra, con intervenciones que van desde reset de ATV hasta reposición de variador.",
+          "human_review": "Comparar en campo alimentación, variadores y mandos de izaje entre los puentes mencionados para confirmar si la similitud es sólo funcional o si existe un patrón técnico común.",
+          "notice_numbers": [
+            "800893192",
+            "800893272",
+            "800893603",
+            "800893913",
+            "800894016",
+            "800894078"
+          ]
+        },
+        {
+          "id": 77,
+          "created_at": "2026-09-11 23:58:35",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "cross_bridge",
+          "title": "Pérdida de traslación en varios puentes",
+          "confidence": "media",
+          "rationale": "Los avisos muestran pérdida de traslación en distintos puentes y ejes: P-MG11 reporta traslación este/oeste, P-MG23 traslación general y norte-sur, y P-MG41 ausencia de giro de percha asociada a la función de movimiento. Las causas documentadas no coinciden entre sí, ya que aparecen \"Falla Componente Electrónico\", \"Falso Contacto\" y \"Corte de Energía\", con intervenciones diferentes como cambio de contactor, reajuste de bornera, acomodar pantógrafos y reposición de ATV.",
+          "human_review": "Contrastar alimentación, contactores, borneras y pantógrafos de los puentes involucrados para verificar si la coincidencia es funcional y no una causa única compartida.",
+          "notice_numbers": [
+            "800892746",
+            "800892753",
+            "800894035",
+            "800894073",
+            "800894097"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "week": 29,
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium",
+      "finding_count": 9,
+      "usage_and_cost": {
+        "id": 9,
+        "created_at": "2026-09-11 23:59:06",
+        "report_year": 2026,
+        "report_week": 29,
+        "model": "gpt-5.4",
+        "reasoning_effort": "medium",
+        "response_id": "resp_008ae68f336852bc016aa495abc11887d2994f54edc5ba9845",
+        "input_tokens": 3907,
+        "cached_input_tokens": 2816,
+        "output_tokens": 3936,
+        "reasoning_tokens": 2097,
+        "total_tokens": 7843,
+        "input_cost_usd": 0.0027275,
+        "cached_input_cost_usd": 0.000704,
+        "output_cost_usd": 0.05904,
+        "total_cost_usd": 0.0624715,
+        "price_input_per_million": 2.5,
+        "price_cached_input_per_million": 0.25,
+        "price_output_per_million": 15.0,
+        "pricing_effective_date": "2026-09-08"
+      },
+      "findings": [
+        {
+          "id": 71,
+          "created_at": "2026-09-11 23:59:06",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Repetición de falta de traslación norte-sur en P-MG11",
+          "confidence": "alta",
+          "rationale": "Ambos avisos de P-MG11 describen el mismo síntoma de traslación norte-sur sin diferencias textuales relevantes, con la misma causa documentada (\"Corte de Energía\") y la misma intervención registrada (\"se repone atv traslacion\"). Esto sugiere repetición del mismo síntoma o posible duplicidad de registro, sin permitir concluir una causa única más allá de lo documentado.",
+          "human_review": "Confirmar en bitácora y en campo si ambos avisos corresponden a un mismo evento repetido o a dos eventos distintos, y verificar alimentación y mando de la traslación norte-sur.",
+          "notice_numbers": [
+            "800894037",
+            "800894057"
+          ]
+        },
+        {
+          "id": 72,
+          "created_at": "2026-09-11 23:59:06",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Incidencias múltiples de traslación en P-MG11",
+          "confidence": "media",
+          "rationale": "Los tres avisos de P-MG11 afectan la función de traslación, pero no son idénticos: dos refieren a falta de traslación norte-sur y uno a falta de traslación este/oeste. También difieren las causas documentadas, ya que en 800894037 y 800894057 figura \"Corte de Energía\", mientras que en 800894097 figura \"Falla Componente Electrónico\" con cambio de contactor de línea puente. Hay similitud funcional en el subsistema afectado, pero no evidencia suficiente para afirmar una causa común.",
+          "human_review": "Revisar si ambas direcciones de traslación comparten elementos de alimentación o mando y verificar si el contactor de línea puente se relaciona con los eventos de norte-sur.",
+          "notice_numbers": [
+            "800894037",
+            "800894057",
+            "800894097"
+          ]
+        },
+        {
+          "id": 73,
+          "created_at": "2026-09-11 23:59:06",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Repetición de falla de izaje en aparejo de 15 tn en P-MG12",
+          "confidence": "alta",
+          "rationale": "Ambos avisos de P-MG12 refieren al aparejo de 15 tn con pérdida de movimiento de izaje: uno indica que no baja ni sube y el otro que no baja. Las causas documentadas difieren (\"Falla Componente Electrónico\" frente a \"Corte de Energía\"), pero las intervenciones registradas son cercanas en su lógica, con acciones sobre ATV/variador del malacate. La coincidencia de equipo, capacidad y función sugiere recurrencia del mismo síntoma funcional, aunque no una misma causa confirmada.",
+          "human_review": "Verificar historial del variador/ATV del malacate de 15 tn y confirmar si los dos avisos afectaron el mismo modo de falla o etapas distintas del circuito de izaje.",
+          "notice_numbers": [
+            "800893603",
+            "800893913"
+          ]
+        },
+        {
+          "id": 74,
+          "created_at": "2026-09-11 23:59:06",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "cross_bridge",
+          "title": "Síntoma repetido de no subir o bajar en aparejo de 15 tn en varios puentes",
+          "confidence": "media",
+          "rationale": "Los avisos de P-MG12, P-MG13 y P-MG21 describen un síntoma muy parecido en el aparejo de 15 tn: imposibilidad de subir y/o bajar. Sin embargo, las causas documentadas no son uniformes, ya que aparecen \"Falla Componente Electrónico\", \"Corte de Energía\" y \"Falla Elemento de Maniobra\". Las intervenciones también varían entre reset o reposición de variador/ATV y normalización en variador. La relación es válida por similitud funcional del síntoma, pero no demuestra un origen común entre puentes.",
+          "human_review": "Comparar en campo si los tres puentes comparten la misma arquitectura de mando del aparejo de 15 tn y revisar si los avisos apuntan al mismo subconjunto o sólo a síntomas equivalentes.",
+          "notice_numbers": [
+            "800893603",
+            "800893913",
+            "800894016",
+            "800894078"
+          ]
+        },
+        {
+          "id": 75,
+          "created_at": "2026-09-11 23:59:06",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Fallas repetidas de traslación en P-MG23",
+          "confidence": "media",
+          "rationale": "Ambos avisos de P-MG23 refieren pérdida de traslación: uno de forma general (\"sin traslacion\") y otro específicamente en norte-sur. Las causas documentadas cambian entre \"Falla Componente Electrónico\" y \"Falso Contacto\", y también cambian las intervenciones, una sobre pantógrafos de percha de cola y otra sobre bornera x4.1 de guirnalda. La similitud está en la función afectada, pero los textos no permiten afirmar que se trate de la misma causa.",
+          "human_review": "Revisar continuidad entre guirnalda, borneras y pantógrafos involucrados en la traslación para determinar si existe un punto común o si fueron eventos independientes.",
+          "notice_numbers": [
+            "800892746",
+            "800892753"
+          ]
+        },
+        {
+          "id": 76,
+          "created_at": "2026-09-11 23:59:06",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Repetición de \"no gira percha\" en P-MG41",
+          "confidence": "alta",
+          "rationale": "Los avisos 800894035 y 800894073 de P-MG41 tienen exactamente la misma descripción (\"no gira percha\"). Aun así, difieren en la causa documentada, que pasa de \"Corte de Energía\" a \"Falla Componente Electrónico\", y la intervención registrada es distinta en detalle. Esto respalda una repetición clara del mismo síntoma en el mismo puente, sin que el texto permita unificar la causa.",
+          "human_review": "Confirmar si ambos avisos afectaron el mismo circuito o variador de giro y verificar si hubo recurrencia inmediata después de la intervención registrada.",
+          "notice_numbers": [
+            "800894035",
+            "800894073"
+          ]
+        },
+        {
+          "id": 77,
+          "created_at": "2026-09-11 23:59:06",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Eventos de giro relacionados en P-MG41",
+          "confidence": "media",
+          "rationale": "Los tres avisos de P-MG41 apuntan a funciones de giro, pero con manifestaciones distintas: 800893199 indica que el ECL gira sólo para un lado, mientras que 800894035 y 800894073 indican que la percha no gira. También cambian las causas documentadas, entre \"Falso Contacto\", \"Corte de Energía\" y \"Falla Componente Electrónico\", y las intervenciones van desde normalización de cables desoldados hasta reposición vinculada a ATV de giros. La relación es funcional, no concluyente en términos causales.",
+          "human_review": "Verificar si ECL y percha comparten mando, alimentación o cableado de giro en P-MG41 y confirmar si los cables desoldados del CR pueden relacionarse con las pérdidas totales de giro.",
+          "notice_numbers": [
+            "800893199",
+            "800894035",
+            "800894073"
+          ]
+        },
+        {
+          "id": 78,
+          "created_at": "2026-09-11 23:59:06",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "same_bridge",
+          "title": "Repetición de falla de picador en P-MG43",
+          "confidence": "alta",
+          "rationale": "Ambos avisos de P-MG43 describen indisponibilidad del picador con textos equivalentes en la práctica (\"No anda picador\" y \"no pica\"). Las causas documentadas difieren entre \"Desgaste\" y \"Fatiga Material\", pero en ambos casos la intervención menciona cambio de válvula de picador. La coincidencia de síntoma y del componente intervenido sugiere relación fuerte entre ambos registros, aunque no permite concluir un único mecanismo de falla.",
+          "human_review": "Inspeccionar la válvula del picador y su montaje para verificar si los dos avisos corresponden a recurrencia del mismo componente o a reemplazos sobre partes distintas del conjunto.",
+          "notice_numbers": [
+            "800893830",
+            "800893897"
+          ]
+        },
+        {
+          "id": 79,
+          "created_at": "2026-09-11 23:59:06",
+          "report_year": 2026,
+          "report_week": 29,
+          "relation_type": "cross_bridge",
+          "title": "Síntomas de picador repetidos en distintos puentes",
+          "confidence": "baja",
+          "rationale": "En P-MG12, P-MG23 y P-MG43 aparecen avisos que mencionan el picador, pero con síntomas diferentes: \"No gira el picador\", \"SIN FUERZA PICADOR\", \"No anda picador\" y \"no pica\". También son diferentes las causas documentadas (\"Falso Contacto\", \"Lubricación Faltante\", \"Desgaste\" y \"Fatiga Material\") y las intervenciones registradas, que incluyen acción sobre ATV de giros, agregado de aceite a compresor y cambio de válvula. La relación entre puentes es sólo preliminar por coincidencia de función nombrada.",
+          "human_review": "Comparar en cada puente qué función exacta del picador falló y si los avisos refieren al mismo subconjunto mecánico, neumático o eléctrico antes de agruparlos como patrón común.",
+          "notice_numbers": [
+            "800893487",
+            "800893830",
+            "800893897",
+            "800893962"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "week": 36,
+      "model": "gpt-5.4-nano",
+      "reasoning_effort": "medium",
+      "finding_count": 9,
+      "usage_and_cost": {
+        "id": 9,
+        "created_at": "2026-09-11 23:59:42",
+        "report_year": 2026,
+        "report_week": 36,
+        "model": "gpt-5.4-nano",
+        "reasoning_effort": "medium",
+        "response_id": "resp_085b103a90df9c88016aa495cac62087d2856bc39e967e2b5e",
+        "input_tokens": 25547,
+        "cached_input_tokens": 0,
+        "output_tokens": 6881,
+        "reasoning_tokens": 4174,
+        "total_tokens": 32428,
+        "input_cost_usd": 0.005109400000000001,
+        "cached_input_cost_usd": 0.0,
+        "output_cost_usd": 0.00860125,
+        "total_cost_usd": 0.013710650000000001,
+        "price_input_per_million": 0.2,
+        "price_cached_input_per_million": 0.02,
+        "price_output_per_million": 1.25,
+        "pricing_effective_date": "2026-09-08"
+      },
+      "findings": [
+        {
+          "id": 61,
+          "created_at": "2026-09-11 23:59:42",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "cross_bridge",
+          "title": "Fallas recurrentes de “falso contacto” asociadas a pérdida de movimiento (percha/almeja)",
+          "confidence": "media",
+          "rationale": "En la semana 36 aparecen múltiples descripciones con el mismo modo de falla documentado como “Falso Contacto” y síntomas de pérdida de movimiento/recorrido: P-MG11 “Percha no gira” (800903646) y “No sube la almeja” (800904108); P-MG12 “No baja ni sube la percha” (800903895); P-MG31 “No gira la percha” (800904089); P-MG41 “No gira la percha” (800903896). Aunque el síntoma funcional coincide (no gira/no sube), los textos no indican el mismo componente exacto entre puentes, por lo que la relación es preliminar y centrada en el tipo de falla. ",
+          "human_review": "Verificar en campo el/los puntos de “falso contacto” en cada puente: estado de conectores, selectoras y elementos de realimentación (según corresponda en el área eléctrica/maniobra) y registrar si se repite el mismo trayecto causal (misma zona/tablero/borne) en más de un equipo.",
+          "notice_numbers": [
+            "800903646",
+            "800903895",
+            "800903896",
+            "800904089",
+            "800904108"
+          ]
+        },
+        {
+          "id": 62,
+          "created_at": "2026-09-11 23:59:42",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "cross_bridge",
+          "title": "Modo “Circuito Abierto-Sin Continuidad” impactando izaje/giro y aparición de fallas secundarias",
+          "confidence": "media",
+          "rationale": "En semana 36 se repite la causa documentada “Circuito Abierto-Sin Continuidad” en eventos con pérdida de función: P-MG21 “no gira almeja” (800904616); P-MG22 “no sube aparejo 15tn” (800904416); P-MG41 “no sube almeja” (800904432). Además, P-MG31 registra una falla con el mismo modo de falla en “Se apaga continuamente / Falla diana” (800904550). Los síntomas no son idénticos (almeja vs aparejo vs diana), por lo que no se puede asegurar una causa común, pero sí una familia de fallas por continuidad eléctrica. ",
+          "human_review": "Inspeccionar continuidad/terminales y fichas asociadas a cada evento (diana/maniobra y circuitos de alimentación/señal). Confirmar si la “apertura sin continuidad” proviene del mismo tipo de circuito (por ejemplo, alimentación vs señal) en cada puente.",
+          "notice_numbers": [
+            "800904416",
+            "800904432",
+            "800904550",
+            "800904616"
+          ]
+        },
+        {
+          "id": 63,
+          "created_at": "2026-09-11 23:59:42",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "cross_bridge",
+          "title": "Problemas de ECL con evidencia de “Falta Aceite”/pérdida asociada",
+          "confidence": "media",
+          "rationale": "Hay evidencia textual en diferentes puentes/fechas dentro de la ventana histórica de fallas relacionadas con ECL y aceite: P-MG12 “Perdida de aceite por ECL.-” (800894914) con intervención de regulación/limpieza; P-MG13 “controlar giro ECL” (800898525) con “Falta Aceite”; y P-MG43 “ECL gira solo” (800904100) con “Falta Aceite” (se completa nivel de aceite). La relación sugiere un patrón de lubricación/aceite con impacto en el comportamiento de ECL, pero los textos no confirman que siempre sea el mismo mecanismo (pérdida vs condición de bajo nivel vs efectos distintos como “gira solo”).",
+          "human_review": "Verificar en campo condición de aceite y el estado de componentes relacionados con ECL (posible fuga, nivel, sellos y recorridos). Confirmar si el problema es sistémico de lubricación o si en cada puente deriva de una falla mecánica distinta.",
+          "notice_numbers": [
+            "800894914",
+            "800898525",
+            "800904100"
+          ]
+        },
+        {
+          "id": 64,
+          "created_at": "2026-09-11 23:59:42",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "Repetición de fallas de giro/izaje en P-MG12 con intervenciones de Reset/repone de ATV/variador",
+          "confidence": "media",
+          "rationale": "Para P-MG12, dentro de la ventana mostrada, se observan varias fallas donde el texto indica acciones sobre el ATV/variador y aparecen síntomas de no giro/no operación: 800895684 “no gira percha” (Reset de ATV: falta de fase.); 800897638 “No giraran herramientas Almeja / Picador” (Reset de ATV. OK.); 800896941 “no gira picador ni almeja” (Reset de ATV: condensador precarga); 800898647 (P-MG12) “sin traslación N/S” (Reset de ATV: Error 27); y en semana 36 800903511 “se bloquea constante” (Alimentación de Energía; intervención “se repone atv” y “se repone atv de giro”). Esto sugiere repetición de un patrón de intervención asociado a fallas del sistema de variación de velocidad, pero los documentos no establecen un componente único común en todos los eventos (puede variar entre energía, errores y modos de contacto).",
+          "human_review": "Revisar la causa raíz en P-MG12 para el patrón ATV/variador: historial de eventos de reset/errores del mismo equipo, y validar en sitio si existen eventos eléctricos previos (fase/contactor/termica) que disparen los reseteos o si el variador presenta fallas intermitentes en un subsistema.",
+          "notice_numbers": [
+            "800895684",
+            "800896941",
+            "800897638",
+            "800898647",
+            "800903511"
+          ]
+        },
+        {
+          "id": 65,
+          "created_at": "2026-09-11 23:59:42",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "P-MG11: fallas de luminarias de trabajo/seguridad con causas eléctricas distintas",
+          "confidence": "media",
+          "rationale": "En semana 36, P-MG11 registra dos fallas de luminación: 800903224 “no funciona luminaria de trabajo” con “Falla Componente Electrónico” (reflectores defectuosos según intervención); y 800903301 “falla luminaria de seguridad” con “Cortocircuito” (se encuentra corto en iluminación). La similitud es el sub-sistema (iluminación), pero el texto indica causas documentadas diferentes (componente electrónico vs cortocircuito), por lo que no se puede asumir la misma causa raíz aunque el área sea la misma.",
+          "human_review": "Inspeccionar y aislar el tramo/cableado y protecciones de iluminación de trabajo vs seguridad. Confirmar si el cortocircuito (seguridad) y el defecto de reflectores (trabajo) comparten alimentación/protección o son independientes.",
+          "notice_numbers": [
+            "800903224",
+            "800903301"
+          ]
+        },
+        {
+          "id": 66,
+          "created_at": "2026-09-11 23:59:42",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "P-MG33: repetición de “No abre alicate” asociado a maniobra de apertura",
+          "confidence": "media",
+          "rationale": "Para P-MG33 aparecen eventos con el mismo síntoma funcional: 800897951 “NO abre alicate” (causa documentada: “Alimentación de Energía”; intervención asociada a “ficha de electrovalvula”); y 800903711 “No abre alicate” en semana 36 (causa documentada: “Falla Componente Electrónico”; intervención indica “No funciona manipulador de apertura”). Dado que el síntoma es consistente pero las causas documentadas cambian, la relación sugiere un problema repetitivo del conjunto de apertura del alicate, sin confirmar que sea la misma causa raíz en ambos casos.",
+          "human_review": "Verificar en P-MG33 el circuito de maniobra del alicate: electrovalvula/ficha y alimentación/maniobrabilidad. Confirmar si las fallas están relacionadas con el mismo componente o con diferentes fallas del mismo sistema de apertura.",
+          "notice_numbers": [
+            "800897951",
+            "800903711"
+          ]
+        },
+        {
+          "id": 67,
+          "created_at": "2026-09-11 23:59:42",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "P-MG31: pérdida de giro de percha con causas de contacto/desconexión y rearmados",
+          "confidence": "media",
+          "rationale": "En P-MG31 se repite el síntoma “no gira la percha”: 800904089 (semana 36) “No gira la percha” con “Falso Contacto” (intervención: repone falla rearmable de ATV giros); y 800902407 (semana 35) “no gira percha N04” con “Desconectado” (intervención: arregla cable cortado de pantógrafo). Aunque ambas situaciones terminan en correcciones/rearmados, los textos muestran causas documentadas distintas (contacto vs desconectado por cable), por lo que la relación es funcional y no causal.",
+          "human_review": "Inspeccionar en P-MG31 el tramo de pantógrafos/cableado y los puntos de señal que causan “falso contacto”. Confirmar si hay un área común (mismo N°/mismo pantógrafo/zona) donde se origina la desconexión/contacto fallado.",
+          "notice_numbers": [
+            "800902407",
+            "800904089"
+          ]
+        },
+        {
+          "id": 68,
+          "created_at": "2026-09-11 23:59:42",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "P-MG21: repetición de fallas de aparejo 15tn (no baja/no sube) con variador/eletrónica como causa documentada",
+          "confidence": "media",
+          "rationale": "En P-MG21 se observan eventos de aparejo 15 tn con síntomas similares: 800903828 “NO BAJA AP 15 Tn” (semana 36; causa: “Falla Componente Electrónico”; intervención “se repone variador se controla ok”); 800904184 “no sube aparejo 15tn” (semana 36; causa: “Falla Componente Electrónico”; intervención “Se reinicia Var Mal.”); 800895682 (semana 31) “no baja ni sube aparejo de 15 tn” (causa: “Falla Componente Electrónico”; intervención “Reset de ATV: condensador precarga”); y 800897619 (semana 32) “NO BAJA AP 15Tn” (causa: “Alimentación de Energía”; intervención “se repone atv malacate”). La evidencia muestra recurrencia en el mismo tipo de función (aparejo 15tn), con causas documentadas que varían, por lo que la relación es de repetición funcional más que de causalidad única.",
+          "human_review": "Revisar en P-MG21 el sistema de malacate/aparejo 15tn: historial de variador/ATV y alimentación. Confirmar si existen fallas eléctricas previas (energía/condiciones de arranque) o si el variador/condensador precarga es el punto repetitivo.",
+          "notice_numbers": [
+            "800895682",
+            "800897619",
+            "800903828",
+            "800904184"
+          ]
+        },
+        {
+          "id": 69,
+          "created_at": "2026-09-11 23:59:42",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "cross_bridge",
+          "title": "Picador sin movimiento/avance: fallas “no gira/no pica/no terminó de subir” con causas y acciones variables",
+          "confidence": "baja",
+          "rationale": "En semana 36 aparecen varios eventos con el mismo tipo de síntoma asociado al picador: P-MG22 “Picador no termino de subir (alarma)” (800903649) con “Falla Componente Electrónico” y Reset de ATV; P-MG23 “Picador no gira” (800903196) con “Falla Componente Electrónico” y Reset de ATV; P-MG41 “No gira picador” (800904560) con “Falla Componente Electrónico” y Reset de ATV sobrevelocidad; P-MG42 “no gira picador” (800904153) con “Falla Componente Electrónico” y “Se reinicia Var de Giro”; y P-MG23 “No pica, sin fuerza” (800904528) con “Brida-Empaquetadura Floja” y regulación de escapes. La coincidencia es del sub-sistema (picador) y el comportamiento (no opera), pero los textos muestran causas documentadas diferentes, por lo que la relación cruzada es débil y requiere verificación adicional.",
+          "human_review": "En cada puente afectado, revisar en campo el subsistema del picador (electrónica/ATV vs conexiones mecánico-neumáticas) y comparar qué error de interfaz dispara la detención (según registro de falla/alarma del equipo). Confirmar si existe un disparador común no explicitado en los textos (p. ej., condiciones de energía o señal).",
+          "notice_numbers": [
+            "800903196",
+            "800903649",
+            "800904153",
+            "800904528",
+            "800904560"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "week": 36,
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium",
+      "finding_count": 10,
+      "usage_and_cost": {
+        "id": 9,
+        "created_at": "2026-09-12 00:00:06",
+        "report_year": 2026,
+        "report_week": 36,
+        "model": "gpt-5.4-mini",
+        "reasoning_effort": "medium",
+        "response_id": "resp_040a4f20a6ac99f1016aa495ef973487d29fc44308cb0ff721",
+        "input_tokens": 25547,
+        "cached_input_tokens": 0,
+        "output_tokens": 4193,
+        "reasoning_tokens": 2070,
+        "total_tokens": 29740,
+        "input_cost_usd": 0.01916025,
+        "cached_input_cost_usd": 0.0,
+        "output_cost_usd": 0.0188685,
+        "total_cost_usd": 0.03802875,
+        "price_input_per_million": 0.75,
+        "price_cached_input_per_million": 0.075,
+        "price_output_per_million": 4.5,
+        "pricing_effective_date": "2026-09-08"
+      },
+      "findings": [
+        {
+          "id": 61,
+          "created_at": "2026-09-12 00:00:06",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "Reiteración de fallas de giro en P-MG12",
+          "confidence": "alta",
+          "rationale": "En P-MG12 se repiten durante varias semanas descripciones equivalentes de giro: \"no gira percha\", \"no gira picador\", \"no giran herramientas\" y \"no gira la almeja ni picador\". Aunque las intervenciones cambian entre reset de ATV, alineación de pantógrafos, reposición de térmico o revisión de falta de fase, el síntoma funcional es el mismo en el mismo puente y en el mismo subsistema de giro. Las causas documentadas no son idénticas, por lo que solo permite proponer una recurrencia, no una causa única.",
+          "human_review": "Verificar en campo si el conjunto de giro de P-MG12 presenta una falla repetitiva del mismo origen o si son eventos independientes en distintos elementos (percha, picador, almeja, herramientas).",
+          "notice_numbers": [
+            "800895684",
+            "800895701",
+            "800896006",
+            "800896632",
+            "800896729",
+            "800896941",
+            "800897118",
+            "800897638",
+            "800899192",
+            "800899848",
+            "800901907",
+            "800903016"
+          ]
+        },
+        {
+          "id": 62,
+          "created_at": "2026-09-12 00:00:06",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "Reincidencia de fallas de aparejo en P-MG21",
+          "confidence": "alta",
+          "rationale": "En P-MG21 se repite el mismo tipo de indisponibilidad sobre el aparejo: \"no baja ni sube aparejo de 15tn\", \"no baja aparejo 15 TN\", \"no sube aparejo 15tn\" y \"ALMEJA NO BAJA\". Los textos alternan entre fallas de componente electrónico, falso contacto, circuito abierto, desgaste o falla operativa, y las acciones van desde reset de variador hasta cambio de freno. La similitud es fuerte por función y puente, pero las causas documentadas son variadas.",
+          "human_review": "Revisar si los avisos corresponden al mismo conjunto malacate/aparejo o si son fallas distintas que se manifiestan con el mismo síntoma de movimiento ausente o parcial.",
+          "notice_numbers": [
+            "800895682",
+            "800896003",
+            "800896049",
+            "800898856",
+            "800901300",
+            "800901555",
+            "800903828",
+            "800904011",
+            "800904184",
+            "800904416"
+          ]
+        },
+        {
+          "id": 63,
+          "created_at": "2026-09-12 00:00:06",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "Repetición de anomalías de mando y traslación en P-MG31",
+          "confidence": "media",
+          "rationale": "P-MG31 muestra repetidas descripciones sobre el control y la traslación: \"manibela suelta\", \"mando roto\", \"traslación carro N/S lenta y con ruido\" y \"se apaga continuamente/falla diana\". Los registros apuntan a distintos puntos del sistema, como control remoto, profibus, cableado o traslación, y las intervenciones también difieren. Aun así, el patrón sugiere recurrencia en el circuito de mando/traslación del mismo puente.",
+          "human_review": "Confirmar si existe un problema común de mando, comunicaciones o cableado que vincule los eventos, o si son fallas separadas en control, diana y traslación.",
+          "notice_numbers": [
+            "800896109",
+            "800897009",
+            "800899897",
+            "800900089",
+            "800902784",
+            "800904550"
+          ]
+        },
+        {
+          "id": 64,
+          "created_at": "2026-09-12 00:00:06",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "Recurrencia de sin traslación en P-MG33",
+          "confidence": "media",
+          "rationale": "En P-MG33 aparecen varias veces avisos de traslación detenida: \"NO TRASLADA\" y múltiples \"SIN TRASLACION\". Los documentos alternan causas de lubricación faltante, falso contacto, alimentación de energía y falla operativa, con acciones como agregar aceite, reponer ATV o cambiar válvula de traba. El patrón es consistente en función, aunque no en causa.",
+          "human_review": "Verificar si la traslación de P-MG33 presenta una degradación mecánica o eléctrica recurrente y revisar si las distintas intervenciones actuaron sobre el mismo origen.",
+          "notice_numbers": [
+            "800898766",
+            "800898886",
+            "800898956",
+            "800900276"
+          ]
+        },
+        {
+          "id": 65,
+          "created_at": "2026-09-12 00:00:06",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "Repetición de fallas de compresor y aire en P-MG43",
+          "confidence": "media",
+          "rationale": "P-MG43 registra varios eventos sobre el compresor y la disponibilidad de aire: \"NO ENCIENDE COMPRESOR\", \"No prende el compresor\", \"se apaga el compresor\" y \"sin aire - Cambio de compresor\". Las causas documentadas varían entre corte de energía, circuito abierto, accidente y falta de aceite, y las intervenciones incluyen reposición de térmico, relé térmico o cambio de compresor. La coincidencia es funcional y del mismo puente, pero no confirma un único mecanismo de falla.",
+          "human_review": "Revisar en campo la línea neumática, la alimentación eléctrica del compresor y el historial de lubricación para distinguir entre problema del equipo y problema de instalación.",
+          "notice_numbers": [
+            "800898730",
+            "800899610",
+            "800899638",
+            "800904152"
+          ]
+        },
+        {
+          "id": 66,
+          "created_at": "2026-09-12 00:00:06",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "cross_bridge",
+          "title": "Falla repetida de giro de percha en varios puentes",
+          "confidence": "media",
+          "rationale": "La misma función aparece afectada en distintos puentes y semanas: \"no gira percha\", \"percha no gira\", \"no gira la percha N06\" y variantes similares. Los textos muestran causas diversas, como falso contacto, desconectado y falla de componente electrónico, y las intervenciones van desde reposición de falla rearmable hasta alineación de pantógrafos o reparación de cable cortado. Esto sugiere un patrón funcional común entre puentes, sin evidencia para una causa única compartida.",
+          "human_review": "Comparar pantógrafos, cableado, selectores y variadores entre los puentes citados para descartar un problema de diseño o montaje común.",
+          "notice_numbers": [
+            "800895684",
+            "800896632",
+            "800901499",
+            "800901717",
+            "800902249",
+            "800902407",
+            "800903646",
+            "800904089"
+          ]
+        },
+        {
+          "id": 67,
+          "created_at": "2026-09-12 00:00:06",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "cross_bridge",
+          "title": "Indisponibilidad recurrente del aparejo 15 tn en distintos puentes",
+          "confidence": "media",
+          "rationale": "Hay avisos similares en varios puentes sobre el mismo servicio: \"NO SUBE AP 15 Tn\", \"No baja aparejo 15 TN\", \"no sube aparejo 15tn\" y \"no sube aparejo 15tn\". Las causas documentadas se distribuyen entre alimentación de energía, falso contacto, circuito abierto y falla de componente electrónico, con acciones que incluyen reset o reposición de variador y reparación de contacto. La recurrencia es clara por función, pero la evidencia no permite afirmar una causa común entre puentes.",
+          "human_review": "Revisar si el circuito de malacate, sensores, contactores y variadores presenta el mismo modo de falla en todos los puentes mencionados.",
+          "notice_numbers": [
+            "800896151",
+            "800897453",
+            "800898608",
+            "800901300",
+            "800901625",
+            "800903141",
+            "800903828",
+            "800904416"
+          ]
+        },
+        {
+          "id": 68,
+          "created_at": "2026-09-12 00:00:06",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "cross_bridge",
+          "title": "Patrón común de sin traslación en distintos puentes",
+          "confidence": "media",
+          "rationale": "La pérdida de traslación se repite en varios puentes con descripciones como \"SIN TRASLACION\", \"sin traslación N/S\" y \"NO TRASLADA\". Los registros alternan entre falso contacto, circuito abierto, falla de componente electrónico, alimentación de energía y lubricación faltante. La similitud funcional es consistente entre equipos, pero las causas y las intervenciones son distintas, por lo que solo puede proponerse una relación preliminar.",
+          "human_review": "Verificar si los puentes comparten un punto débil en el carro, el ATV, el cableado o el mantenimiento de lubricación antes de concluir una relación común.",
+          "notice_numbers": [
+            "800896874",
+            "800897461",
+            "800898766",
+            "800899125",
+            "800900061",
+            "800901930",
+            "800904015"
+          ]
+        },
+        {
+          "id": 69,
+          "created_at": "2026-09-12 00:00:06",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "cross_bridge",
+          "title": "Fallas similares de almeja y cierre en múltiples puentes",
+          "confidence": "media",
+          "rationale": "Las fallas de almeja/cierre aparecen repetidamente con términos como \"almeja trabada\", \"se trabó la almeja al subir\", \"almeja cruzada\", \"almeja a medio recorrido\" y \"almeja sin fuerza al aplaudir\". Las causas documentadas varían entre falla operativa, desgaste, falso contacto y ajuste deficiente, y las acciones incluyen destrabe, regulación o cambio de componentes. La coincidencia funcional es fuerte entre puentes, pero no prueba una única causa raíz.",
+          "human_review": "Inspeccionar mecanismos de traba, freno, mangueras y posicionamiento de pantógrafos en los puentes involucrados para distinguir si el patrón es mecánico, neumático u operativo.",
+          "notice_numbers": [
+            "800895874",
+            "800901716",
+            "800902124",
+            "800902275",
+            "800903885",
+            "800903924",
+            "800904663"
+          ]
+        },
+        {
+          "id": 70,
+          "created_at": "2026-09-12 00:00:06",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "cross_bridge",
+          "title": "Repetición de no giro de picador con causas distintas",
+          "confidence": "media",
+          "rationale": "El síntoma \"no gira picador\" o sus variantes se observa en distintos puentes y semanas. Los hechos documentados asocian el evento a falla de componente electrónico, corte de energía o intervención sobre variador, con acciones como reset de ATV o reposición de variador. La similitud textual y funcional es clara, pero las causas registradas no son uniformes.",
+          "human_review": "Revisar si los eventos comparten el mismo conjunto de giro, motor o variador, y confirmar si las intervenciones resuelven el mismo modo de falla o solo restablecen temporalmente el servicio.",
+          "notice_numbers": [
+            "800896941",
+            "800897871",
+            "800898931",
+            "800903016",
+            "800903196",
+            "800904153",
+            "800904560"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "week": 36,
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium",
+      "finding_count": 12,
+      "usage_and_cost": {
+        "id": 9,
+        "created_at": "2026-09-12 00:00:57",
+        "report_year": 2026,
+        "report_week": 36,
+        "model": "gpt-5.4",
+        "reasoning_effort": "medium",
+        "response_id": "resp_0198f5ce6f41c0ae016aa49606ef2887d28321878cbfc0f39e",
+        "input_tokens": 25547,
+        "cached_input_tokens": 0,
+        "output_tokens": 6106,
+        "reasoning_tokens": 3624,
+        "total_tokens": 31653,
+        "input_cost_usd": 0.0638675,
+        "cached_input_cost_usd": 0.0,
+        "output_cost_usd": 0.09159,
+        "total_cost_usd": 0.1554575,
+        "price_input_per_million": 2.5,
+        "price_cached_input_per_million": 0.25,
+        "price_output_per_million": 15.0,
+        "pricing_effective_date": "2026-09-08"
+      },
+      "findings": [
+        {
+          "id": 61,
+          "created_at": "2026-09-12 00:00:57",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "Reiteración en aparejo de 15 TN en P-MG21",
+          "confidence": "alta",
+          "rationale": "En P-MG21 se repiten avisos sobre imposibilidad de bajar o subir el aparejo de 15 TN. En la semana 36 aparecen tanto “NO BAJA AP 15 Tn” como “no sube aparejo 15tn”, y en semanas previas hay descripciones muy similares del mismo movimiento. Las causas documentadas no son uniformes: predominan “Falla Componente Electrónico”, pero también figuran “Falso Contacto” y “Circuito Abierto-Sin Continuidad”. Las intervenciones también varían entre reinicios y reposiciones de variador, por lo que la coincidencia es fuerte en el síntoma y la función afectada, no en una causa única demostrada.",
+          "human_review": "Verificar en campo si todos los avisos corresponden al mismo aparejo/malacate de 15 TN y revisar el historial de fallas del variador y del circuito de mando en ambos sentidos de movimiento.",
+          "notice_numbers": [
+            "800895682",
+            "800896003",
+            "800896049",
+            "800898856",
+            "800901300",
+            "800903828",
+            "800904184"
+          ]
+        },
+        {
+          "id": 62,
+          "created_at": "2026-09-12 00:00:57",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "Bloqueos y apagados recurrentes en P-MG12",
+          "confidence": "media",
+          "rationale": "En P-MG12 la semana 36 registra “se bloquea constante”, mientras que en semanas anteriores aparecen “SE APAGA CONSTANTE”, “Se apaga constantemente.-”, “se detiene con frecuencia” y “se apaga a cada rato”. Los textos apuntan a una reiteración de detenciones generales o bloqueos, pero no describen exactamente el mismo subsistema en todos los casos. Las causas documentadas alternan entre “Alimentación de Energía” y “Falso Contacto”, y las intervenciones mencionan reposición de ATV y revisión de térmicas/cableados.",
+          "human_review": "Corroborar si los eventos refieren al mismo circuito de protección o al mismo ATV y revisar registros de alarmas para separar paradas generales de fallas localizadas.",
+          "notice_numbers": [
+            "800897424",
+            "800897739",
+            "800903117",
+            "800903187",
+            "800903511"
+          ]
+        },
+        {
+          "id": 63,
+          "created_at": "2026-09-12 00:00:57",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "Falla repetida de giro de percha en P-MG11",
+          "confidence": "alta",
+          "rationale": "P-MG11 vuelve a presentar en la semana 36 “Percha no gira”, con antecedentes muy cercanos de “No gira la perchaOKTB” y “no giira percha N06”. La función afectada es consistente y en los tres casos aparecen acciones sobre pantógrafos o reseteo de variador. Sin embargo, las causas documentadas difieren entre “Falso Contacto”, “Desconectado” y “Circuito Abierto-Sin Continuidad”, por lo que la repetición confirma similitud del síntoma, no una causa común cerrada.",
+          "human_review": "Inspeccionar pantógrafos, cableado asociado y condiciones de rearmado del giro para confirmar si se trata del mismo punto de falla recurrente.",
+          "notice_numbers": [
+            "800901642",
+            "800901902",
+            "800903646"
+          ]
+        },
+        {
+          "id": 64,
+          "created_at": "2026-09-12 00:00:57",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "Repetición de falla de giro de percha en P-MG31",
+          "confidence": "media",
+          "rationale": "En P-MG31 la semana 36 aparece “No gira la percha” y en la semana 35 ya figuraba “no gira percha N04”. Ambos textos afectan la misma función de giro de percha, pero las causas documentadas cambian entre “Falso Contacto” y “Desconectado”. Las intervenciones también difieren: una sobre rearmado de ATV de giros y otra sobre cable cortado de pantógrafo.",
+          "human_review": "Revisar si ambos avisos corresponden a la misma percha/posición y verificar continuidad del cableado de pantógrafo junto con el comportamiento del giro bajo operación.",
+          "notice_numbers": [
+            "800902407",
+            "800904089"
+          ]
+        },
+        {
+          "id": 65,
+          "created_at": "2026-09-12 00:00:57",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "Antecedentes repetidos de compresor y falta de aire en P-MG43",
+          "confidence": "alta",
+          "rationale": "La semana 36 en P-MG43 se informa “sin aire - Cambio de compresor”. El historial inmediato del mismo puente muestra “se apaga compresor”, “NO ENCIENDE COMPRESOR”, “No prende el compresor” y “se apaga el compresor”. La coincidencia es clara en el sistema neumático/compresor, aunque las causas documentadas son distintas: “Falla Operativa”, “Corte de Energía”, “Circuito Abierto-Sin Continuidad”, “Accidente” y en la semana 36 “Falta Aceite”. También cambian las intervenciones, desde reposición térmica o manguera hasta cambio de compresor.",
+          "human_review": "Confirmar si todos los avisos refieren al mismo compresor o a fallas del circuito neumático asociado, y revisar niveles de aceite, alimentación eléctrica y posibles pérdidas en el circuito.",
+          "notice_numbers": [
+            "800896655",
+            "800898730",
+            "800899610",
+            "800899638",
+            "800904152"
+          ]
+        },
+        {
+          "id": 66,
+          "created_at": "2026-09-12 00:00:57",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "No baja aparejo 15 TN repetido en P-MG23",
+          "confidence": "media",
+          "rationale": "P-MG23 registra en la semana 36 “no baja aparejo 15tn”, con antecedente directo en la semana 34 de “No baja aparejo de 15 TN”. En ambos casos la intervención refiere reinicio del variador de malacate o condición equivalente. La causa documentada coincide en “Falla Componente Electrónico”, lo que refuerza la similitud, aunque el contexto operativo de cada evento no está desarrollado en los textos.",
+          "human_review": "Verificar si ambos avisos corresponden al mismo aparejo y revisar el historial del variador de malacate y sus condiciones de disparo.",
+          "notice_numbers": [
+            "800901625",
+            "800904614"
+          ]
+        },
+        {
+          "id": 67,
+          "created_at": "2026-09-12 00:00:57",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "No abre alicate repetido en P-MG33",
+          "confidence": "alta",
+          "rationale": "En P-MG33 se repite exactamente el síntoma “No abre alicate” entre la semana 36 y la 32. La coincidencia textual y funcional es alta, pero las causas documentadas difieren entre “Falla Componente Electrónico” y “Alimentación de Energía”. También las intervenciones no son iguales: en un caso se menciona manipulador de apertura y en el otro falla en ficha de electroválvula.",
+          "human_review": "Comprobar si la orden de apertura falla desde el mando, desde la ficha/electroválvula o en ambos puntos, para distinguir si es una recurrencia del mismo circuito o dos fallas distintas con igual síntoma.",
+          "notice_numbers": [
+            "800897951",
+            "800903711"
+          ]
+        },
+        {
+          "id": 68,
+          "created_at": "2026-09-12 00:00:57",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "Incidencias de iluminación repetidas en P-MG11",
+          "confidence": "media",
+          "rationale": "Durante la semana 36 P-MG11 presenta dos avisos de iluminación: “no funciona luminaria de trabajo” y “falla luminaria de seguridad”. Además, en la semana 35 ya había “Iluminacion de mg no enciende”. Hay relación por subsistema eléctrico de iluminación del mismo puente, pero no son idénticos: los textos distinguen luminaria de trabajo, de seguridad e iluminación general. Las causas documentadas también difieren entre “Falla Componente Electrónico”, “Cortocircuito” y “Circuito Abierto-Sin Continuidad”.",
+          "human_review": "Identificar si las luminarias comparten alimentación, protección o ramal de cableado, y separar en campo si son fallas del mismo circuito o de circuitos independientes.",
+          "notice_numbers": [
+            "800903057",
+            "800903224",
+            "800903301"
+          ]
+        },
+        {
+          "id": 69,
+          "created_at": "2026-09-12 00:00:57",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "same_bridge",
+          "title": "No bajan herramientas repetido en P-MG43",
+          "confidence": "alta",
+          "rationale": "En P-MG43 se repite el síntoma “NO BAJAN HERRAMIENTAS” entre la semana 36 y la 31. En ambos avisos la causa documentada es “Alimentación de Energía”, lo que refuerza la similitud. Aun así, las intervenciones no son iguales: en el antecedente se cambia una válvula y en la semana 36 se cambia un contactor de freno de almeja, por lo que no alcanza para afirmar un mismo origen puntual.",
+          "human_review": "Verificar qué herramienta y qué cadena de mando quedaron afectadas en cada caso, y revisar si la caída de movimiento provino del freno, la válvula o de una alimentación común.",
+          "notice_numbers": [
+            "800897004",
+            "800904460"
+          ]
+        },
+        {
+          "id": 70,
+          "created_at": "2026-09-12 00:00:57",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "cross_bridge",
+          "title": "Patrón semanal de fallas en aparejo de 15 TN entre puentes",
+          "confidence": "alta",
+          "rationale": "En la semana 36 varios puentes presentan síntomas muy parecidos sobre el aparejo de 15 TN: P-MG21 “NO BAJA AP 15 Tn”, P-MG22 “no sube aparejo 15tn”, P-MG23 “no baja aparejo 15tn” y P-MG41 “NO SUBE AP 15 tn”. La coincidencia funcional es fuerte y las intervenciones mencionan variador o reinicio del malacate en varios casos. No obstante, las causas documentadas no son idénticas: predomina “Falla Componente Electrónico”, pero también aparece “Circuito Abierto-Sin Continuidad”.",
+          "human_review": "Comparar en mantenimiento si estos eventos comparten el mismo tipo de alarma, variador o lógica de mando, o si fueron fallas locales independientes en cada puente.",
+          "notice_numbers": [
+            "800903828",
+            "800904264",
+            "800904416",
+            "800904614"
+          ]
+        },
+        {
+          "id": 71,
+          "created_at": "2026-09-12 00:00:57",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "cross_bridge",
+          "title": "Giro de percha afectado en varios puentes de la semana 36",
+          "confidence": "alta",
+          "rationale": "La semana 36 muestra tres avisos muy cercanos de “Percha no gira” o equivalente en P-MG11, P-MG31 y P-MG41. En los tres casos la causa documentada es “Falso Contacto”, aunque las intervenciones difieren entre posicionamiento de pantógrafos, reposición de falla rearmable de giro y control del circuito. La similitud sugiere un patrón funcional compartido de giro de percha, pero no prueba un único mecanismo físico común entre puentes distintos.",
+          "human_review": "Revisar si en los tres puentes hubo la misma condición de falsa maniobra, la misma alarma de giro o el mismo problema de pantógrafos/cableado antes de vincular los casos.",
+          "notice_numbers": [
+            "800903646",
+            "800903896",
+            "800904089"
+          ]
+        },
+        {
+          "id": 72,
+          "created_at": "2026-09-12 00:00:57",
+          "report_year": 2026,
+          "report_week": 36,
+          "relation_type": "cross_bridge",
+          "title": "Pinzas atrapa morsetos dobladas en dos puentes",
+          "confidence": "media",
+          "rationale": "En la semana 36 aparecen en P-MG33 y P-MG43 avisos muy similares: “PINZAS ATRAPA MORSETOS DOBLADAS” y “Pinza atrapa morsetos doblada”. Ambos tienen como causa documentada “Accidente” y en ambos se registra reemplazo de la pinza. La coincidencia del modo de daño es clara, pero al tratarse de puentes distintos no hay evidencia textual suficiente para asumir un origen común más allá de la similitud mecánica del evento.",
+          "human_review": "Comparar las condiciones de operación y el estado del morseto o elemento manipulado en ambos casos para definir si fueron impactos independientes o un patrón de uso repetido.",
+          "notice_numbers": [
+            "800903702",
+            "800904269"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -5,9 +5,9 @@
   "input_data": "Excel sintéticos generados en un directorio temporal y eliminados al finalizar",
   "runtime": {
     "metadata_schema_version": "2.0",
-    "agent_version": "1.1.0",
-    "git_commit": "7a6a4d928046808bb090678c51a634a34e2d2456",
-    "source_snapshot_sha256": "619283d0780fc65e7a7caf66fc9f236f08b580b8aaa29cda0bafb0e177f2febd",
+    "agent_version": "1.2.0",
+    "git_commit": null,
+    "source_snapshot_sha256": "adf9850f8aaf658b0fab3a02d63e91be1c035cc4a83efac1cce7977f851095f4",
     "python_version": "3.12.14",
     "python_implementation": "CPython",
     "platform": "Windows-11-10.0.26100-SP0",
@@ -18,7 +18,7 @@
     "executable_name": "python.exe"
   },
   "reproduction_script_sha256": "ecfde80de6724eb69697f37595bbdd4b6f4e1c12e37223a929ce4b7c4092384e",
-  "system_prompt_sha256": "314511f0c68252a506b989c6a4e5f5a6cf72bfaa0674cfe0a9ff722a4d958544",
+  "system_prompt_sha256": "9db9575ff6a574940b9bbf5ca8167437e3102359a8ca35b6dd8256f7912ff81d",
   "expected": {
     "maintenance_hours": 4.0,
     "stop_hours": 3.75,
@@ -36,12 +36,12 @@
     "llm_contract_validated": true,
     "report_generated": true
   },
-  "observed_output_sha256": "064b251e897749f90b0b3771a6f23807e009c9a2206d217fc50ecd8b170bfb50",
+  "observed_output_sha256": "05b50db1dc1b6c2f37d857b02f90a47ec78f60afd2e2b29d3e8edc2b8d3f6bea",
   "report_sha256": "df86bd0636e1eb5cb0bf89b751065089807c12264302c9c339e11d5d6949cbcb",
   "synthetic_input_sha256": {
-    "notices": "4bee32aa698cdcd4d7c04e1202591ae4c658d4d728f7f9da58e1434b32d2ce2a",
-    "notifications": "b654b9fa236e24915e183a0ca554e3d49354ae51ef5cfb516610889b9c6dc546",
-    "maintenance": "600f67ecc5fdc0a49bf030b80620d5d655e67e2ae75e507429ec8a9a00c716ef"
+    "notices": "7affb0e6b7c70986d71a624725ee4666d429bbc168d383b7a7c65e2baff2c3d1",
+    "notifications": "a90ef9425334bb4618fa034b60356b3e08c1ff598ac6706cae1dad15c4e57dc9",
+    "maintenance": "7edae9266f81ce36af18788d34ad6a004cec0284f3e5fdf030de25e2a272e8bd"
   },
   "result": "PASS"
 }

@@ -44,6 +44,12 @@ Cada hallazgo debe contener exactamente:
 
 No agregues campos numéricos, métricas ni claves distintas de las admitidas por el esquema.
 
+Reglas obligatorias para `relation_type`:
+
+- `same_bridge`: todos los avisos del hallazgo deben pertenecer exactamente al mismo código de equipo.
+- `cross_bridge`: los avisos del hallazgo deben incluir por lo menos dos códigos de equipo diferentes.
+- Antes de responder, verificá aviso por aviso el campo `equipment`. Si un grupo no cumple la regla, corregilo o no lo incluyas.
+
 ## 6. Ejemplos de criterio
 
 Aceptable: dos avisos describen que una misma función no responde. Se propone similitud del síntoma, se aclara que las causas documentadas son diferentes y se solicita revisar el subsistema en campo.
