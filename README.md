@@ -4,7 +4,7 @@ Sistema agéntico para calcular la disponibilidad semanal de 12 puentes grúa, c
 
 ## Estado final
 
-- Versión actual `1.3.0`, con validación cruzada, límite de ocho hallazgos y control de redundancia/utilidad.
+- Versión actual `1.3.1`, con validación cruzada, límite de ocho hallazgos, control de redundancia/utilidad y benchmark tolerante a rechazos.
 - Ocho corridas oficiales completas: semanas 29 a 36 de 2026.
 - Base local estructurada en SQLite con control de duplicados.
 - Página web para cargar tres Excel y consultar reportes.

@@ -1,5 +1,14 @@
 # Decisiones del proyecto
 
+## Decisión 028 - Los rechazos del benchmark son resultados, no fallas del ejecutor
+
+**Fecha:** 12 de septiembre de 2026
+**Estado:** implementada y probada
+
+La primera ejecución de la ronda 2 fue detenida por el nuevo control `same_bridge`. El rechazo era correcto, pero el ejecutor mostró un traceback y perdió la oportunidad de conservar la evidencia de uso.
+
+La versión 1.3.1 registra inmediatamente cada intento, conserva el payload inválido, `response_id`, tokens y costo sin incluir la clave, marca la configuración como no apta y continúa con las demás. También omite la segunda semana de un modelo que ya falló, evitando consumo innecesario. Se agregaron mensajes de progreso y una prueba que confirma que la evidencia del rechazo queda disponible.
+
 ## Decisión 027 - No reducir el umbral y ejecutar una segunda ronda
 
 **Fecha:** 11 de septiembre de 2026

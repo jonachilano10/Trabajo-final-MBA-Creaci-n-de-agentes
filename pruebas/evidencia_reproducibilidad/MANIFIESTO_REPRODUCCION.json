@@ -5,9 +5,9 @@
   "input_data": "Excel sintéticos generados en un directorio temporal y eliminados al finalizar",
   "runtime": {
     "metadata_schema_version": "2.0",
-    "agent_version": "1.3.0",
-    "git_commit": "ab3bccbebbf0778dd152605ccffb8de782ad4337",
-    "source_snapshot_sha256": "df733f5b3a8e5d4b618593c6f06936bbf81c7e76e619e686bbb601deb2d5395d",
+    "agent_version": "1.3.1",
+    "git_commit": null,
+    "source_snapshot_sha256": "db523c7f52e27dd8d4f1218d3e98c3a4f902b6120ed232d1bd10109ef3abfa83",
     "python_version": "3.12.14",
     "python_implementation": "CPython",
     "platform": "Windows-11-10.0.26100-SP0",
@@ -36,12 +36,12 @@
     "llm_contract_validated": true,
     "report_generated": true
   },
-  "observed_output_sha256": "f64845249bbfbabdc97c129dea3191cd1b15872f829cdd7fef101f17a21332d1",
+  "observed_output_sha256": "7908629dc1c7ae6ebc30e8e89fc53616cd34fd94f9e2b2049c704465f025ae78",
   "report_sha256": "df86bd0636e1eb5cb0bf89b751065089807c12264302c9c339e11d5d6949cbcb",
   "synthetic_input_sha256": {
-    "notices": "b4f8594c1da533d2bf7aa2d91de85bf1ba3d58e1d9716c2c8b7f827c77f15162",
-    "notifications": "b9041e59c6a8bdd6fa8eda08bf8fad3247a05b9d9e21962752dd81187cc15699",
-    "maintenance": "fadefdf42a4500aae7b2aa682fdb8f4db5ec50e065484e5d4e1a4db4dab1d571"
+    "notices": "85b94c9e5a2f10cff21a73f6309ec9424c7ed1e34e5a66abc303e88ee44924ef",
+    "notifications": "8a9a36087d3017177d9b30ac04f177b9527e0a171e3d83b7a605f830e1656b5e",
+    "maintenance": "23047569de3af7072bb20a9c4a16c495185e14d4a0ea2d5815d86e8f455f2c63"
   },
   "result": "PASS"
 }

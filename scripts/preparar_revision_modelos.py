@@ -35,7 +35,10 @@ def main() -> int:
     contexts = {int(row["week"]): context_for_week(int(row["week"])) for row in payload["results"]}
     review_rows: list[dict[str, object]] = []
     summary: dict[tuple[str, str], dict[str, object]] = defaultdict(
-        lambda: {"calls": 0, "findings": 0, "scope_errors": 0, "cost_usd": 0.0, "tokens": 0}
+        lambda: {
+            "calls": 0, "completed_calls": 0, "technical_failures": 0,
+            "findings": 0, "scope_errors": 0, "cost_usd": 0.0, "tokens": 0,
+        }
     )
     for result in payload["results"]:
         week = int(result["week"])
@@ -43,6 +46,9 @@ def main() -> int:
         effort = str(result["reasoning_effort"])
         key = (model, effort)
         summary[key]["calls"] += 1
+        status = str(result.get("status", "completed"))
+        summary[key]["completed_calls"] += int(status == "completed")
+        summary[key]["technical_failures"] += int(status != "completed")
         summary[key]["findings"] += int(result["finding_count"])
         summary[key]["cost_usd"] += float(result["usage_and_cost"]["total_cost_usd"])
         summary[key]["tokens"] += int(result["usage_and_cost"]["total_tokens"])
@@ -87,16 +93,20 @@ def main() -> int:
         summary_rows.append({"model": model, "reasoning_effort": effort, **values})
     eligible = {
         (str(row["model"]), str(row["reasoning_effort"]))
-        for row in summary_rows if int(row["scope_errors"]) == 0 and int(row["calls"]) == 2
+        for row in summary_rows
+        if int(row["scope_errors"]) == 0
+        and int(row["completed_calls"]) == 2
+        and int(row["technical_failures"]) == 0
     }
     eligible_rows = [
         row for row in review_rows if (str(row["modelo"]), str(row["nivel"])) in eligible
     ]
     eligible_path = results_dir / "revision_candidatos_validos.csv"
-    with eligible_path.open("w", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(eligible_rows[0]))
-        writer.writeheader()
-        writer.writerows(eligible_rows)
+    if eligible_rows:
+        with eligible_path.open("w", encoding="utf-8-sig", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(eligible_rows[0]))
+            writer.writeheader()
+            writer.writerows(eligible_rows)
     objective = {
         "source": "resultados_api.json",
         "checks": {

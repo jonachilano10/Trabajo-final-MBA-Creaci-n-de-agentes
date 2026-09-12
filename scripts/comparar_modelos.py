@@ -15,6 +15,8 @@ if str(PROJECT) not in __import__("sys").path:
     __import__("sys").path.insert(0, str(PROJECT))
 
 from agente_mantenimiento.database import HistoryDatabase  # noqa: E402
+from agente_mantenimiento.economics import calculate_cost  # noqa: E402
+from agente_mantenimiento.llm_contract import LLMFindingValidationError  # noqa: E402
 from agente_mantenimiento.llm_openai import LLMServiceError, interpret_week_with_openai  # noqa: E402
 from agente_mantenimiento.provenance import runtime_manifest, sha256_file  # noqa: E402
 
@@ -34,6 +36,35 @@ def parse_configuration(value: str) -> tuple[str, str]:
     if effort not in {"none", "low", "medium", "high", "xhigh"}:
         raise argparse.ArgumentTypeError(f"Nivel no permitido: {effort}")
     return model, effort
+
+
+def usage_evidence(error: LLMFindingValidationError, model: str) -> dict[str, object]:
+    usage = getattr(error, "api_usage", {}) or {}
+    input_details = usage.get("input_tokens_details") or {}
+    output_details = usage.get("output_tokens_details") or {}
+    input_tokens = int(usage.get("input_tokens") or 0)
+    cached_tokens = int(input_details.get("cached_tokens") or 0)
+    output_tokens = int(usage.get("output_tokens") or 0)
+    return {
+        "model": model,
+        "response_id": getattr(error, "api_response_id", ""),
+        "input_tokens": input_tokens,
+        "cached_input_tokens": cached_tokens,
+        "output_tokens": output_tokens,
+        "reasoning_tokens": int(output_details.get("reasoning_tokens") or 0),
+        "total_tokens": int(usage.get("total_tokens") or input_tokens + output_tokens),
+        **calculate_cost(
+            model, input_tokens=input_tokens, cached_input_tokens=cached_tokens,
+            output_tokens=output_tokens,
+        ),
+    }
+
+
+def save_checkpoint(path: Path, executed_at: str, results: list[dict[str, object]]) -> None:
+    path.write_text(
+        json.dumps({"executed_at": executed_at, "results": results}, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
 
 
 def main() -> int:
@@ -77,10 +108,16 @@ def main() -> int:
 
     output_dir = args.salida.resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
+    result_path = output_dir / "resultados_api.json"
+    executed_at = datetime.now().astimezone().isoformat(timespec="seconds")
     results: list[dict[str, object]] = []
     review_rows: list[dict[str, object]] = []
+    failed_configurations: set[tuple[str, str]] = set()
     for week in args.semanas:
         for model, effort in configurations:
+            if (model, effort) in failed_configurations:
+                continue
+            print(f"Iniciando S{week} — {model} — {effort}...", flush=True)
             with tempfile.TemporaryDirectory(prefix="comparacion_llm_") as temporary:
                 temporary_db = Path(temporary) / "comparacion.sqlite3"
                 shutil.copy2(database_path, temporary_db)
@@ -91,11 +128,27 @@ def main() -> int:
                         temporary_db, year=args.anio, week=week,
                         model=model, reasoning_effort=effort,
                     )
+                except LLMFindingValidationError as error:
+                    invalid_findings = getattr(error, "invalid_payload", {}).get("findings", [])
+                    result = {
+                        "status": "validation_failed",
+                        "year": args.anio, "week": week, "model": model,
+                        "reasoning_effort": effort, "finding_count": len(invalid_findings),
+                        "validation_error": str(error),
+                        "usage_and_cost": usage_evidence(error, model),
+                        "findings": invalid_findings,
+                    }
+                    results.append(result)
+                    failed_configurations.add((model, effort))
+                    save_checkpoint(result_path, executed_at, results)
+                    print(f"RECHAZADO S{week} — {model}: {error}", flush=True)
+                    continue
                 except LLMServiceError as error:
                     print(
                         f"ERROR API en semana {week}, modelo {model}, nivel {effort}: {error}",
                         file=__import__("sys").stderr,
                     )
+                    save_checkpoint(result_path, executed_at, results)
                     return 1
                 run = next(
                     row for row in reversed(temporary_history.list_llm_runs())
@@ -103,11 +156,14 @@ def main() -> int:
                 )
                 findings = temporary_history.load_report_data(args.anio, week)["llm_findings"]
                 result = {
+                    "status": "completed",
                     "year": args.anio, "week": week, "model": model,
                     "reasoning_effort": effort, "finding_count": count,
                     "usage_and_cost": run, "findings": findings,
                 }
                 results.append(result)
+                save_checkpoint(result_path, executed_at, results)
+                print(f"COMPLETO S{week} — {model}: {count} hallazgos", flush=True)
                 for index, finding in enumerate(findings, start=1):
                     review_rows.append({
                         "anio": args.anio, "semana": week, "modelo": model,
@@ -121,16 +177,12 @@ def main() -> int:
                     })
 
     timestamp = datetime.now().astimezone().isoformat(timespec="seconds")
-    result_path = output_dir / "resultados_api.json"
-    result_path.write_text(
-        json.dumps({"executed_at": timestamp, "results": results}, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
     review_path = output_dir / "evaluacion_humana.csv"
-    with review_path.open("w", encoding="utf-8-sig", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(review_rows[0]))
-        writer.writeheader()
-        writer.writerows(review_rows)
+    if review_rows:
+        with review_path.open("w", encoding="utf-8-sig", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(review_rows[0]))
+            writer.writeheader()
+            writer.writerows(review_rows)
     total_cost = sum(float(row["usage_and_cost"]["total_cost_usd"]) for row in results)
     manifest = {
         "executed_at": timestamp,
@@ -138,7 +190,10 @@ def main() -> int:
         "database_path_not_archived": str(database_path),
         "weeks": args.semanas,
         "configurations": [{"model": model, "reasoning_effort": effort} for model, effort in configurations],
-        "calls_completed": len(results),
+        "calls_attempted": len(results),
+        "calls_completed": sum(row["status"] == "completed" for row in results),
+        "validation_failures": sum(row["status"] == "validation_failed" for row in results),
+        "skipped_after_failure": len(args.semanas) * len(configurations) - len(results),
         "total_cost_usd": total_cost,
         "runtime": runtime_manifest(),
         "results_sha256": sha256_file(result_path),

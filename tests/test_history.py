@@ -220,6 +220,21 @@ class HistoryTests(unittest.TestCase):
         report_data = self.db.load_report_data(2026, 33)
         self.assertEqual(len(report_data["llm_findings"]), 1)
 
+        invalid_output = json.loads(json.dumps(output))
+        invalid_output["findings"][0]["relation_type"] = "same_bridge"
+        invalid_response = {
+            "id": "resp_invalid_scope",
+            "output_text": json.dumps(invalid_output, ensure_ascii=False),
+            "usage": {"input_tokens": 100, "output_tokens": 50, "total_tokens": 150},
+        }
+        with self.assertRaises(LLMFindingValidationError) as rejected:
+            interpret_week_with_openai(
+                self.db_path, year=2026, week=33, api_key="test-key",
+                transport=lambda body, key: invalid_response,
+            )
+        self.assertEqual(rejected.exception.api_response_id, "resp_invalid_scope")
+        self.assertEqual(rejected.exception.api_usage["total_tokens"], 150)
+
     def test_openai_usage_and_cost_are_recorded(self) -> None:
         result = analysis_for(33)
         self.db.save_analysis(result)
@@ -286,7 +301,7 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual(metadata["llm_status"], "pending")
         self.assertEqual(metadata["requested_model"], "gpt-5.4-mini")
         self.assertEqual(metadata["source_sha256"]["notices"], result["sources"]["notices"]["sha256"])
-        self.assertEqual(metadata["runtime"]["agent_version"], "1.3.0")
+        self.assertEqual(metadata["runtime"]["agent_version"], "1.3.1")
         self.assertEqual(metadata["runtime"]["metadata_schema_version"], "2.0")
         self.assertEqual(metadata["execution"]["entrypoint"], "web:POST /procesar")
         self.assertIn("prompts/SYSTEM_PROMPT.txt", metadata["artifact_sha256"])

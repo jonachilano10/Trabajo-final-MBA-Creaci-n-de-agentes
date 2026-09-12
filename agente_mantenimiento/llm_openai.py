@@ -10,7 +10,7 @@ from typing import Any, Callable
 from .config import PROJECT_DIR
 from .database import HistoryDatabase
 from .economics import MODEL_PRICES, PRICING_EFFECTIVE_DATE, calculate_cost
-from .llm_contract import build_llm_context, validate_llm_payload
+from .llm_contract import LLMFindingValidationError, build_llm_context, validate_llm_payload
 
 
 class LLMServiceError(RuntimeError):
@@ -122,7 +122,17 @@ def interpret_week_with_openai(
         payload = json.loads(_output_text(response))
     except json.JSONDecodeError as error:
         raise LLMServiceError("El LLM no devolvió JSON válido.") from error
-    validated = validate_llm_payload(database_path, payload, year=year, week=week)
+    try:
+        validated = validate_llm_payload(database_path, payload, year=year, week=week)
+    except LLMFindingValidationError as error:
+        # Preserve sanitized evidence for benchmarks. The API key is never part
+        # of the response and is not attached to the exception.
+        error.api_response_id = str(response.get("id") or "")
+        error.api_usage = response.get("usage") or {}
+        error.invalid_payload = payload
+        error.requested_model = selected_model
+        error.requested_reasoning_effort = selected_effort
+        raise
     if not validated:
         raise LLMServiceError(
             "El LLM no produjo hallazgos. La corrida permanece incompleta para revisión."
