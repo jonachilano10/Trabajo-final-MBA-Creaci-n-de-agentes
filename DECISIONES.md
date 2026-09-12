@@ -1,5 +1,20 @@
 # Decisiones del proyecto
 
+## Decisión 029 - Selección definitiva de GPT-5.4 Mini con razonamiento medium
+
+**Fecha:** 12 de septiembre de 2026
+**Estado:** implementada, revisada y cerrada
+
+La ronda 2 repitió el benchmark sobre las semanas 29 y 36 con el mismo contexto, nivel `medium`, contrato de salida y tres modelos. Las seis llamadas fueron válidas y costaron US$ 0,3290209. La revisión humana abarcó los 33 hallazgos y mantuvo los umbrales definidos antes de observar resultados: corrección mínima de 90 %, utilidad media mínima de 1,5/2 y cero afirmaciones no respaldadas.
+
+| Configuración | Corrección | Utilidad | No respaldadas | Costo 2 semanas | Resultado |
+|---|---:|---:|---:|---:|---|
+| GPT-5.4 Nano / medium | 84,62 % | 1,08/2 | 2 | US$ 0,0171784 | No aprueba |
+| GPT-5.4 Mini / medium | 100,00 % | 2,00/2 | 0 | US$ 0,0724725 | Aprueba |
+| GPT-5.4 / medium | 85,71 % | 1,43/2 | 2 | US$ 0,2393700 | No aprueba |
+
+Se seleccionó GPT-5.4 Mini porque fue la única configuración suficiente y cuesta 69,7 % menos que GPT-5.4 en esta prueba. Nano fue 76,3 % más barato que Mini, pero no alcanzó calidad ni respaldo; por lo tanto, elegirlo sólo por precio habría sido incorrecto. El programa ya utilizaba Mini/`medium` como valor predeterminado, de modo que no fue necesario alterar el flujo de producción. La evidencia original, la revisión normalizada, los controles objetivos y la conclusión están en `pruebas/comparacion_modelos_real/ronda_02/`.
+
 ## Decisión 028 - Los rechazos del benchmark son resultados, no fallas del ejecutor
 
 **Fecha:** 12 de septiembre de 2026
@@ -12,7 +27,7 @@ La versión 1.3.1 registra inmediatamente cada intento, conserva el payload inv�
 ## Decisión 027 - No reducir el umbral y ejecutar una segunda ronda
 
 **Fecha:** 11 de septiembre de 2026
-**Estado:** mejora implementada; ronda 2 pendiente
+**Estado:** mejora implementada; ronda 2 completada (ver Decisión 029)
 
 La revisión humana de GPT-5.4 alcanzó 90,48 % de corrección, cero afirmaciones no respaldadas y 1,29/2 de utilidad. Como la utilidad mínima se había fijado en 1,5, ninguna configuración aprobó la primera ronda.
 
@@ -21,7 +36,7 @@ No se modificó el umbral después de observar los resultados. Se pasó a versi�
 ## Decisión 026 - Benchmark real y refuerzo del alcance de relaciones
 
 **Fecha:** 11 de septiembre de 2026
-**Estado:** llamadas y control objetivo completos; revisión humana pendiente
+**Estado:** ronda 1 cerrada sin configuración aprobada; continuada en Decisiones 027–029
 
 Se ejecutaron GPT-5.4 Nano, GPT-5.4 Mini y GPT-5.4 con nivel `medium` sobre las semanas 29 y 36. Las seis llamadas costaron US$ 0,30482527 y se preservaron sin editar en `pruebas/comparacion_modelos_real/resultados_api.json`.
 
@@ -32,7 +47,7 @@ Los resultados defectuosos se conservaron como evidencia de que la prueba produj
 ## Decisión 025 - Respuesta a la evaluación externa de 85/100
 
 **Fecha:** 11 de septiembre de 2026
-**Estado:** implementada en SC-02 y FR-03; AE-03 pendiente de llamadas pagas y revisión humana
+**Estado:** implementada; AE-03 cerrado posteriormente en la Decisión 029
 
 La evaluación otorgó 85/100 y concentró el margen en SC-02 (8 puntos), FR-03 (5 puntos) y AE-03 (2 puntos). Se comprobó que el conector y la validación existían, pero su evidencia estaba dispersa; también se confirmó que los metadatos históricos no registraban versión/commit y que la comparación económica no equivalía a una comparación real de calidad.
 

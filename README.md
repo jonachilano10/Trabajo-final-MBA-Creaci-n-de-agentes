@@ -132,7 +132,7 @@ Cada carpeta oficial incluye manifiesto de entrada, prompts exactos, validación
 
 Las corridas oficiales anteriores a la versión 1.1.0 no capturaron el commit de ejecución; esta limitación está declarada, sin reconstrucción retroactiva. Las nuevas corridas agregan automáticamente versión, hash del código, entorno, ruta de ejecución y hashes de artefactos. La prueba sintética proporciona una ejecución completamente repetible para terceros.
 
-La primera comparación real completó seis llamadas y revisión humana sobre las semanas 29 y 36. Ningún modelo superó todos los umbrales, por lo que se preservó la falla y se mejoró el prompt. La ronda 2 y la selección definitiva permanecen pendientes.
+La comparación real se ejecutó en dos rondas sobre las semanas 29 y 36. La primera ronda detectó errores de alcance y utilidad insuficiente, que se conservaron como evidencia y motivaron controles adicionales y el prompt 1.3.0. En la segunda ronda se completaron otras seis llamadas y 33 revisiones humanas. **GPT-5.4 Mini con razonamiento `medium`** fue la única configuración que superó los umbrales predefinidos: 100 % de corrección, utilidad 2,00/2 y ninguna afirmación no respaldada. Su costo fue US$ 0,0724725 para dos semanas, 69,7 % menor que GPT-5.4. La conclusión reproducible está en `pruebas/comparacion_modelos_real/ronda_02/CONCLUSION_EVALUACION.json`.
 
 ## Reporte e historial
 

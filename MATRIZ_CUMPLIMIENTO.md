@@ -1,6 +1,6 @@
 # Matriz de cumplimiento y respuesta a la evaluación
 
-Estado revisado el 11/09/2026 después de la devolución externa de 85/100. Esta matriz distingue evidencia existente, corrección aplicada y pendientes humanos; no declara completa una prueba que todavía no se ejecutó.
+Estado revisado el 12/09/2026 después de completar la segunda ronda del benchmark y su revisión humana. Esta matriz distingue la evidencia original, las correcciones y el cierre verificable.
 
 | Criterio | Evidencia verificable | Estado |
 |---|---|---|
@@ -16,7 +16,7 @@ Estado revisado el 11/09/2026 después de la devolución externa de 85/100. Esta
 | FR-03 — Reconstrucción exacta | `REPRODUCIBILIDAD.md`, `VERSION`, `requirements-lock.txt`, `scripts/reproducir_demo.py`, evidencia generada y nuevo manifiesto automático | Corrección implementada; listo para reevaluar |
 | AE-01 — Consumo real | `CONSUMO_REAL_CORRIDAS.csv`, trazas con tokens y costo | Cumplido |
 | AE-02 — Proyección económica | `ANALISIS_ECONOMICO.md` | Cumplido |
-| AE-03 — Configuración costo-eficiente | Ronda 1 real, control objetivo y revisión humana preservados; prompt 1.3.0 corregido | Pendiente de ronda 2 comparable |
+| AE-03 — Configuración costo-eficiente | Dos rondas reales; `ronda_02/resultados_api.json`, `revision_humana_normalizada.csv` y `CONCLUSION_EVALUACION.json` | Cumplido: GPT-5.4 Mini / `medium` seleccionado |
 | Gobierno y riesgo | `GOBIERNO_Y_RIESGO.md`, privacidad y autenticación | Cumplido |
 
 ## Evidencia nueva para SC-02
@@ -27,9 +27,9 @@ La herramienta se identifica por nombre, endpoint, código, permisos, credencial
 
 La versión 1.1.0 registra versión, commit cuando está disponible, hash exacto del código, entorno, dependencias, entrada web y hashes de artefactos. Una corrida sintética completa permite reconstruir el flujo desde una base vacía sin publicar datos operativos. Las ocho corridas anteriores mantienen declarada la ausencia de un commit contemporáneo.
 
-## Pendiente controlado para AE-03
+## Cierre verificable de AE-03
 
-Las seis llamadas reales y la revisión humana se completaron. Nano y Mini tuvieron un error objetivo de alcance; GPT-5.4 superó corrección y respaldo, pero obtuvo 1,29/2 de utilidad frente al umbral 1,5. Ningún modelo aprobó. La versión 1.3.0 corrige redundancia y utilidad; falta repetir la misma prueba. La clave no se guardó en el repositorio.
+La ronda 1 no aprobó y se preservó sin reducir el umbral. Después del prompt 1.3.0, la ronda 2 completó seis llamadas y 33 revisiones humanas. GPT-5.4 Mini / `medium` fue el único modelo que alcanzó 100 % de corrección, 2,00/2 de utilidad y cero afirmaciones no respaldadas. Costó US$ 0,0724725 para dos semanas, frente a US$ 0,2393700 de GPT-5.4. La selección no depende de una estimación: puede reconstruirse desde los JSON y CSV archivados. La clave nunca se guardó en el repositorio.
 
 ## Publicación
 

@@ -1,0 +1,47 @@
+{
+  "reviewed_by_role": "Ingeniero de mantenimiento responsable",
+  "review_date": "2026-09-12",
+  "evaluations": [
+    {
+      "model": "gpt-5.4-nano",
+      "reasoning_effort": "medium",
+      "findings_reviewed": 13,
+      "correctness_rate": 0.8461538461538461,
+      "average_utility_0_to_2": 1.0769230769230769,
+      "unsupported_claims": 2,
+      "cost_two_calls_usd": 0.017178400000000003,
+      "passed": false
+    },
+    {
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium",
+      "findings_reviewed": 6,
+      "correctness_rate": 1.0,
+      "average_utility_0_to_2": 2.0,
+      "unsupported_claims": 0,
+      "cost_two_calls_usd": 0.0724725,
+      "passed": true
+    },
+    {
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium",
+      "findings_reviewed": 14,
+      "correctness_rate": 0.8571428571428571,
+      "average_utility_0_to_2": 1.4285714285714286,
+      "unsupported_claims": 2,
+      "cost_two_calls_usd": 0.23937000000000003,
+      "passed": false
+    }
+  ],
+  "selected_configuration": {
+    "model": "gpt-5.4-mini",
+    "reasoning_effort": "medium",
+    "findings_reviewed": 6,
+    "correctness_rate": 1.0,
+    "average_utility_0_to_2": 2.0,
+    "unsupported_claims": 0,
+    "cost_two_calls_usd": 0.0724725,
+    "passed": true
+  },
+  "status": "complete"
+}

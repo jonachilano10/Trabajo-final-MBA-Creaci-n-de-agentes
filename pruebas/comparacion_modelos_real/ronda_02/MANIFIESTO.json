@@ -1,0 +1,44 @@
+{
+  "executed_at": "2026-09-12T12:42:34-03:00",
+  "database_sha256": "5131cdde1c7a5102fc27cfc941095af2149df2c5e94bd50a01b536d8e39e4c3e",
+  "database_path_not_archived": "C:\\Users\\jona_\\Desktop\\Jona\\MBA\\2026\\Creación de agentes con IA\\Trabajo final\\runtime\\entrega_final\\data\\historico.sqlite3",
+  "weeks": [
+    29,
+    36
+  ],
+  "configurations": [
+    {
+      "model": "gpt-5.4-nano",
+      "reasoning_effort": "medium"
+    },
+    {
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium"
+    }
+  ],
+  "calls_attempted": 6,
+  "calls_completed": 6,
+  "validation_failures": 0,
+  "skipped_after_failure": 0,
+  "total_cost_usd": 0.3290209,
+  "runtime": {
+    "metadata_schema_version": "2.0",
+    "agent_version": "1.3.1",
+    "git_commit": null,
+    "source_snapshot_sha256": "db523c7f52e27dd8d4f1218d3e98c3a4f902b6120ed232d1bd10109ef3abfa83",
+    "python_version": "3.14.7",
+    "python_implementation": "CPython",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "dependencies": {
+      "openpyxl": "3.1.5",
+      "et_xmlfile": "2.0.0"
+    },
+    "executable_name": "python.exe"
+  },
+  "results_sha256": "359c24f83c9a239582fdd924103ca75d0e38d4f3cc65da51133e55ead5d474f8",
+  "review_status": "pending_human_review"
+}

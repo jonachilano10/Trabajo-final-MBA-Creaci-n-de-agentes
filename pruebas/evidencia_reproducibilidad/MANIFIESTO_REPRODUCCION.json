@@ -6,7 +6,7 @@
   "runtime": {
     "metadata_schema_version": "2.0",
     "agent_version": "1.3.1",
-    "git_commit": "879c2599ce8254236e3678570eae2f863e325e3a",
+    "git_commit": null,
     "source_snapshot_sha256": "db523c7f52e27dd8d4f1218d3e98c3a4f902b6120ed232d1bd10109ef3abfa83",
     "python_version": "3.12.14",
     "python_implementation": "CPython",
@@ -36,12 +36,12 @@
     "llm_contract_validated": true,
     "report_generated": true
   },
-  "observed_output_sha256": "8ec8c43928cbffa94a0f91fadfad923232cb16a79aa5abc553ab5ab2d9620efa",
+  "observed_output_sha256": "40412a35cdd404acc4b2f03f02a07f9c1cf50040b3d84b7551baeb5eb82a3e8a",
   "report_sha256": "df86bd0636e1eb5cb0bf89b751065089807c12264302c9c339e11d5d6949cbcb",
   "synthetic_input_sha256": {
-    "notices": "d32223cef540de5baae0eaeeacaa078d4297106e72a6d3ff5abd85db8557e78b",
-    "notifications": "39f38c26f36c7609d8aeb8ec86c699f85bf6d33a161863dbd32685f696579c0d",
-    "maintenance": "8d4fee60e1ea7c9eb19255e384b2974c1afbd298cacaf77e242595b3a6b28703"
+    "notices": "613a1c7f5304cdbebbe42367c1b340a218a9b180500b5f6d6ee6b58c8e4dbda5",
+    "notifications": "7652b7c7a3f6f1d7f06c945a208074658ff2c82a4c3c7bec02a5e1992d8713df",
+    "maintenance": "a79c50110d55d94fb4232bf7e32055556992fa438cccb40965493a45ce27a68a"
   },
   "result": "PASS"
 }

@@ -1,6 +1,6 @@
 # Análisis económico del agente
 
-Fecha de cierre: 11/09/2026. Moneda: USD. Los importes no incluyen impuestos, conversión a pesos ni servicios de infraestructura. Las tarifas aplicadas son las registradas por el programa con fecha efectiva 08/09/2026.
+Fecha de cierre: 12/09/2026. Moneda: USD. Los importes no incluyen impuestos, conversión a pesos ni servicios de infraestructura. Las tarifas aplicadas son las registradas por el programa con fecha efectiva 08/09/2026.
 
 ## Consumo real de las corridas oficiales
 
@@ -52,11 +52,11 @@ costo = entrada no cacheada × tarifa de entrada
 
 Todos los términos se dividen por un millón. La aplicación conserva las tarifas junto con cada ejecución para que el cálculo sea auditable.
 
-## Elección provisional de modelo y nivel
+## Elección definitiva de modelo y nivel
 
-Se eligió **GPT-5.4 Mini con razonamiento medium** porque Python realiza los cálculos, validaciones y filtros; el LLM sólo relaciona textos y redacta hallazgos preliminares. En las ocho semanas produjo salidas estructuradas válidas, por lo que un modelo mayor no quedó justificado para el flujo normal.
+Se seleccionó **GPT-5.4 Mini con razonamiento medium** porque Python realiza los cálculos, validaciones y filtros, y la segunda ronda real demostró suficiencia para la tarea semántica: 100 % de corrección, 2,00/2 de utilidad y cero afirmaciones no respaldadas en la revisión humana. Fue la única configuración aprobada.
 
-GPT-5.4 puede reservarse para revisar casos ambiguos. GPT-5.4 Nano promete menor costo, pero no debe adoptarse sin ejecutar una comparación de calidad sobre casos históricos revisados por una persona. Los niveles de razonamiento no tienen una tarifa unitaria distinta, aunque pueden modificar la cantidad de tokens de salida consumidos.
+GPT-5.4 no aportó calidad suficiente en esta muestra y costó más; Nano fue más barato, pero incumplió los umbrales. Los niveles de razonamiento no tienen una tarifa unitaria distinta, aunque pueden modificar la cantidad de tokens de salida consumidos. La selección es válida para este conjunto y contrato, y debe reevaluarse si cambian el prompt, los modelos o el tipo de datos.
 
 ## Benchmark real de configuraciones
 
@@ -74,7 +74,15 @@ El hallazgo motivó una mejora real: la versión 1.2.0 explicita la regla en el 
 
 La revisión humana de GPT-5.4 obtuvo 90,48 % de corrección, cero afirmaciones no respaldadas y 1,29/2 de utilidad. Como el umbral previo exigía 1,5/2, ninguna configuración superó la ronda 1. No se redujo el criterio después de conocer el resultado.
 
-La versión 1.3.0 limita la salida a ocho hallazgos, elimina redundancias y exige utilidad técnica concreta. La elección final permanece pendiente de una segunda ronda comparable. La evidencia y la conclusión firmada por rol están en `pruebas/comparacion_modelos_real/`.
+La versión 1.3.0 limita la salida a ocho hallazgos, elimina redundancias y exige utilidad técnica concreta. La ronda 2 comparable, ejecutada el 12/09/2026, produjo estos resultados:
+
+| Modelo | Hallazgos revisados | Corrección | Utilidad | No respaldadas | Costo real (2 semanas) | Ahorro frente a GPT-5.4 |
+|---|---:|---:|---:|---:|---:|---:|
+| GPT-5.4 Nano | 13 | 84,62 % | 1,08/2 | 2 | US$ 0,0171784 | 92,8 % |
+| GPT-5.4 Mini | 6 | 100,00 % | 2,00/2 | 0 | US$ 0,0724725 | 69,7 % |
+| GPT-5.4 | 14 | 85,71 % | 1,43/2 | 2 | US$ 0,2393700 | 0,0 % |
+
+El umbral predefinido fue corrección ≥ 90 %, utilidad ≥ 1,5/2 y cero afirmaciones no respaldadas. Mini fue el único aprobado y, entre las configuraciones suficientes, es necesariamente la de menor costo. Proyectando el promedio de sus dos llamadas a 52 semanas, el costo del LLM es aproximadamente US$ 1,8843 al año. La evidencia y la conclusión firmada por rol están en `pruebas/comparacion_modelos_real/ronda_02/`.
 
 ## Control del crecimiento
 
