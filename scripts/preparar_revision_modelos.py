@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import re
@@ -23,7 +24,11 @@ def context_for_week(week: int) -> dict[str, dict[str, object]]:
 
 
 def main() -> int:
-    source = RESULTS_DIR / "resultados_api.json"
+    parser = argparse.ArgumentParser(description="Prepara el control objetivo y la revisión humana.")
+    parser.add_argument("--directorio", type=Path, default=RESULTS_DIR)
+    args = parser.parse_args()
+    results_dir = args.directorio.resolve()
+    source = results_dir / "resultados_api.json"
     if not source.is_file():
         raise FileNotFoundError("Primero ejecutá scripts/comparar_modelos.py")
     payload = json.loads(source.read_text(encoding="utf-8"))
@@ -72,7 +77,7 @@ def main() -> int:
                 "afirmacion_no_respaldada_0_o_1": "",
                 "comentario_revisor": "", "rol_revisor": "", "fecha_revision": "",
             })
-    review_path = RESULTS_DIR / "revision_tecnica.csv"
+    review_path = results_dir / "revision_tecnica.csv"
     with review_path.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(review_rows[0]))
         writer.writeheader()
@@ -87,7 +92,7 @@ def main() -> int:
     eligible_rows = [
         row for row in review_rows if (str(row["modelo"]), str(row["nivel"])) in eligible
     ]
-    eligible_path = RESULTS_DIR / "revision_candidatos_validos.csv"
+    eligible_path = results_dir / "revision_candidatos_validos.csv"
     with eligible_path.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(eligible_rows[0]))
         writer.writeheader()
@@ -111,7 +116,7 @@ def main() -> int:
             "de revision_tecnica.csv deben completarse por el responsable."
         ),
     }
-    (RESULTS_DIR / "RESUMEN_OBJETIVO.json").write_text(
+    (results_dir / "RESUMEN_OBJETIVO.json").write_text(
         json.dumps(objective, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     print(json.dumps(objective, ensure_ascii=False, indent=2))

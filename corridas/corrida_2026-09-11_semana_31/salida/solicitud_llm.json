@@ -9,7 +9,7 @@
   "response_id": "resp_0a18e38d9c717ab6016aa47bfe704487d298089d402058c335",
   "system_prompt_sha256": "314511f0c68252a506b989c6a4e5f5a6cf72bfaa0674cfe0a9ff722a4d958544",
   "context_sha256": "65144d6c4f32fd66750abfe7a791cddc3fed0e1759d99106548093799893a896",
-  "structured_output_schema_sha256": "127712890ef52e0c6e4792c70df2300397fbf0549c77c6c0b4ca5bdfa5ec476e",
+  "structured_output_schema_sha256": "1435e001a0f9acc593c91f5157ce7237cbd4286f99c665d802744bf2bfc61b7a",
   "validated_output_sha256": "7875bfb90703f65ab5cec57729b1839de8986818a8ea8432599d51611cf3ffe6",
   "post_validation": "agente_mantenimiento.llm_contract.validate_llm_payload",
   "reconstructed_from_archived_artifacts": true

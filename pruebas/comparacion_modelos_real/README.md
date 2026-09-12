@@ -12,6 +12,8 @@ La prueba finalizó el 11/09/2026 con seis llamadas y un costo total de **US$ 0,
 
 Por el umbral previo, sólo GPT-5.4 avanza a revisión humana. Esta falla produjo la versión 1.2.0 del agente, que agrega el control faltante al prompt y a Python. Los resultados no se corrigieron ni ocultaron.
 
+La revisión humana posterior obtuvo 90,48 % de corrección, 1,29/2 de utilidad y cero afirmaciones no respaldadas. GPT-5.4 tampoco aprobó porque la utilidad quedó debajo de 1,5. `CONCLUSION_RONDA_1.md` documenta la decisión de no reducir el umbral. La versión 1.3.0 mejora priorización y redundancia; requiere una ronda 2 en un subdirectorio separado.
+
 ## Diseño previo a la ejecución
 
 - Casos: semanas 29 y 36, para cubrir una semana inicial y otra con la ventana histórica completa.

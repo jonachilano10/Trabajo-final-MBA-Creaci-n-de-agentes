@@ -1,13 +1,13 @@
 {
-  "audited_at": "2026-09-11T21:10:35-03:00",
+  "audited_at": "2026-09-11T21:27:44-03:00",
   "execution_source_reference": null,
   "execution_source_reference_status": "not_captured_contemporaneously",
   "statement": "No se asignó retrospectivamente un commit. Los artefactos originales se autentican con hashes y la reproducción completa comienza en la versión 1.1.0.",
   "audited_against_release": {
     "metadata_schema_version": "2.0",
-    "agent_version": "1.2.0",
-    "git_commit": "ada9ec73cb28fdf7bb5c08fa6d89104891977131",
-    "source_snapshot_sha256": "adf9850f8aaf658b0fab3a02d63e91be1c035cc4a83efac1cce7977f851095f4",
+    "agent_version": "1.3.0",
+    "git_commit": null,
+    "source_snapshot_sha256": "df733f5b3a8e5d4b618593c6f06936bbf81c7e76e619e686bbb601deb2d5395d",
     "python_version": "3.12.14",
     "python_implementation": "CPython",
     "platform": "Windows-11-10.0.26100-SP0",
@@ -32,5 +32,5 @@
     "salida/resultados.json": "d14e34c93fba872f29a2f27eb0b59f6d8a93f13fae7e4b5df5e7bfdb1aefdada",
     "validacion/VALIDACION.md": "402dff3033581e7f5270c82016d212c55ca04d6c01fe583ec46b2f62a0c722fc"
   },
-  "request_manifest_sha256": "423cbd16fafee0cd2eb250a71a12367d62f58d5369d40a0a1ffae84262e0235f"
+  "request_manifest_sha256": "4acbee4627318da16b3221c3f000133ef95988cc281b946a611f916c1d3ca88c"
 }

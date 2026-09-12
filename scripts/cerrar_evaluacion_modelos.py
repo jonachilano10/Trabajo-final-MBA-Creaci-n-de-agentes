@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
@@ -10,6 +11,9 @@ from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parents[1]
 RESULTS_DIR = PROJECT / "pruebas" / "comparacion_modelos_real"
+COMPACT_REVIEW = re.compile(
+    r"^([01])-([012])-([01])(?:\s+comentario_revisor:\s*(.*))?$", re.IGNORECASE
+)
 
 
 def integer(row: dict[str, str], field: str, allowed: set[int]) -> int:
@@ -24,20 +28,39 @@ def integer(row: dict[str, str], field: str, allowed: set[int]) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Cierra el benchmark después de la revisión humana.")
+    parser.add_argument("--directorio", type=Path, default=RESULTS_DIR)
     parser.add_argument(
         "--revision", type=Path,
-        default=RESULTS_DIR / "revision_candidatos_validos.csv",
     )
     parser.add_argument("--rol-revisor", required=True)
     parser.add_argument("--fecha", default=date.today().isoformat())
     args = parser.parse_args()
-    rows = list(csv.DictReader(args.revision.open(encoding="utf-8-sig", newline="")))
+    results_dir = args.directorio.resolve()
+    revision_path = args.revision or (results_dir / "revision_candidatos_validos.csv")
+    rows = list(csv.DictReader(revision_path.open(encoding="utf-8-sig", newline="")))
     if not rows:
         raise ValueError("La planilla de revisión no contiene hallazgos.")
     grouped: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
     for row in rows:
+        if not row.get("correcto_0_o_1", "").strip():
+            compact = COMPACT_REVIEW.fullmatch(row.get("fecha_revision", "").strip())
+            if compact:
+                row["correcto_0_o_1"] = compact.group(1)
+                row["util_0_a_2"] = compact.group(2)
+                row["afirmacion_no_respaldada_0_o_1"] = compact.group(3)
+                if compact.group(4) and not row.get("comentario_revisor", "").strip():
+                    row["comentario_revisor"] = compact.group(4).strip()
+                row["fecha_revision"] = args.fecha
+        row["rol_revisor"] = args.rol_revisor
+        if not row.get("fecha_revision", "").strip():
+            row["fecha_revision"] = args.fecha
         grouped[(row["modelo"], row["nivel"])].append(row)
-    objective = json.loads((RESULTS_DIR / "RESUMEN_OBJETIVO.json").read_text(encoding="utf-8"))
+    normalized_path = results_dir / "revision_humana_normalizada.csv"
+    with normalized_path.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+    objective = json.loads((results_dir / "RESUMEN_OBJETIVO.json").read_text(encoding="utf-8"))
     costs = {
         (row["model"], row["reasoning_effort"]): float(row["cost_usd"])
         for row in objective["configurations"]
@@ -67,7 +90,7 @@ def main() -> int:
         "selected_configuration": selected,
         "status": "complete" if selected else "no_configuration_passed",
     }
-    (RESULTS_DIR / "CONCLUSION_EVALUACION.json").write_text(
+    (results_dir / "CONCLUSION_EVALUACION.json").write_text(
         json.dumps(conclusion, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     print(json.dumps(conclusion, ensure_ascii=False, indent=2))

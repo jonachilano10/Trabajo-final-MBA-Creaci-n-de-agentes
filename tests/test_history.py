@@ -208,6 +208,7 @@ class HistoryTests(unittest.TestCase):
             self.assertEqual(body["instructions"], SYSTEM_PROMPT_PATH.read_text(encoding="utf-8").strip())
             self.assertEqual(body["text"]["format"]["type"], "json_schema")
             self.assertTrue(body["text"]["format"]["strict"])
+            self.assertEqual(body["text"]["format"]["schema"]["properties"]["findings"]["maxItems"], 8)
             self.assertFalse(body["store"])
             self.assertNotIn("availability", body["input"])
             return {"output_text": json.dumps(output, ensure_ascii=False)}
@@ -285,7 +286,7 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual(metadata["llm_status"], "pending")
         self.assertEqual(metadata["requested_model"], "gpt-5.4-mini")
         self.assertEqual(metadata["source_sha256"]["notices"], result["sources"]["notices"]["sha256"])
-        self.assertEqual(metadata["runtime"]["agent_version"], "1.2.0")
+        self.assertEqual(metadata["runtime"]["agent_version"], "1.3.0")
         self.assertEqual(metadata["runtime"]["metadata_schema_version"], "2.0")
         self.assertEqual(metadata["execution"]["entrypoint"], "web:POST /procesar")
         self.assertIn("prompts/SYSTEM_PROMPT.txt", metadata["artifact_sha256"])

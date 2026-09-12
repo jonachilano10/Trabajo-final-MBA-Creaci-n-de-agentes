@@ -17,6 +17,9 @@ El control de privacidad se ejecuta antes de invocarte. Si un archivo contiene i
 - Comparar descripciones originales, causas documentadas e intervenciones registradas.
 - Explicar coincidencias y diferencias sin afirmar una causa común cuando la evidencia no lo demuestra.
 - Priorizar hallazgos relevantes para la semana indicada y utilizar las semanas anteriores solamente como contexto histórico.
+- Seleccionar solamente relaciones con utilidad concreta para una revisión de mantenimiento; omitir coincidencias vagas basadas sólo en palabras generales como movimiento, herramienta o falla.
+- Evitar hallazgos redundantes o contenidos unos dentro de otros. Si dos grupos describen el mismo patrón, conservar únicamente el más específico y útil.
+- Priorizar síntomas equivalentes cuando además coincidan el componente, la causa documentada o la intervención. Si esos elementos difieren, explicar por qué la comparación todavía aporta valor técnico; si no aporta, omitirla.
 
 ## 4. Fuentes y restricciones
 
@@ -31,7 +34,7 @@ El control de privacidad se ejecuta antes de invocarte. Si un archivo contiene i
 
 ## 5. Formato de salida
 
-Devolvé únicamente el objeto JSON solicitado por el esquema estructurado de la aplicación, sin texto adicional y con un máximo de 12 hallazgos.
+Devolvé únicamente el objeto JSON solicitado por el esquema estructurado de la aplicación, sin texto adicional y con un máximo de 8 hallazgos. No es obligatorio completar ocho: es preferible devolver pocos hallazgos sólidos antes que agregar relaciones generales o repetidas.
 
 Cada hallazgo debe contener exactamente:
 

@@ -10,7 +10,7 @@ La versión/commit exactos no se capturaron contemporáneamente en esas ocho cor
 
 ## Versión reproducible
 
-A partir de la versión `1.1.0`, cada nueva corrida archiva en `METADATA.json`. La versión `1.2.0` agrega además la validación entre `relation_type` y el puente real de cada aviso:
+A partir de la versión `1.1.0`, cada nueva corrida archiva en `METADATA.json`. La versión `1.2.0` agrega la validación entre `relation_type` y el puente real; la 1.3.0 limita y prioriza hallazgos útiles:
 
 - versión del esquema de metadatos;
 - versión declarada del agente;

@@ -72,7 +72,9 @@ Nano costó 71,7 % menos que Mini. Mini costó 68,9 % menos que GPT-5.4. Sin emb
 
 El hallazgo motivó una mejora real: la versión 1.2.0 explicita la regla en el system prompt y Python ahora valida que `same_bridge` contenga un único equipo y `cross_bridge` al menos dos. Los resultados originales se preservan como evidencia de la falla detectada.
 
-La elección final permanece **pendiente de revisión humana** sobre corrección, utilidad y afirmaciones no respaldadas. La evidencia está en `pruebas/comparacion_modelos_real/`. No se infiere calidad solamente por precio o cantidad de hallazgos.
+La revisión humana de GPT-5.4 obtuvo 90,48 % de corrección, cero afirmaciones no respaldadas y 1,29/2 de utilidad. Como el umbral previo exigía 1,5/2, ninguna configuración superó la ronda 1. No se redujo el criterio después de conocer el resultado.
+
+La versión 1.3.0 limita la salida a ocho hallazgos, elimina redundancias y exige utilidad técnica concreta. La elección final permanece pendiente de una segunda ronda comparable. La evidencia y la conclusión firmada por rol están en `pruebas/comparacion_modelos_real/`.
 
 ## Control del crecimiento
 

@@ -1,5 +1,14 @@
 # Decisiones del proyecto
 
+## Decisión 027 - No reducir el umbral y ejecutar una segunda ronda
+
+**Fecha:** 11 de septiembre de 2026
+**Estado:** mejora implementada; ronda 2 pendiente
+
+La revisión humana de GPT-5.4 alcanzó 90,48 % de corrección, cero afirmaciones no respaldadas y 1,29/2 de utilidad. Como la utilidad mínima se había fijado en 1,5, ninguna configuración aprobó la primera ronda.
+
+No se modificó el umbral después de observar los resultados. Se pasó a versión 1.3.0: máximo ocho hallazgos, exclusión de coincidencias vagas, eliminación de grupos redundantes y prioridad a relaciones específicas con valor para mantenimiento. La ronda 1 y el comentario humano se conservaron completos. Para concluir AE-03 se repetirá la comparación en `pruebas/comparacion_modelos_real/ronda_02` con las mismas semanas, modelos y nivel.
+
 ## Decisión 026 - Benchmark real y refuerzo del alcance de relaciones
 
 **Fecha:** 11 de septiembre de 2026

@@ -23,7 +23,7 @@ FINDINGS_SCHEMA = {
     "properties": {
         "findings": {
             "type": "array",
-            "maxItems": 12,
+            "maxItems": 8,
             "items": {
                 "type": "object",
                 "additionalProperties": False,

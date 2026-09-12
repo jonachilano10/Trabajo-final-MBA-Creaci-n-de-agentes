@@ -16,7 +16,7 @@ Estado revisado el 11/09/2026 después de la devolución externa de 85/100. Esta
 | FR-03 — Reconstrucción exacta | `REPRODUCIBILIDAD.md`, `VERSION`, `requirements-lock.txt`, `scripts/reproducir_demo.py`, evidencia generada y nuevo manifiesto automático | Corrección implementada; listo para reevaluar |
 | AE-01 — Consumo real | `CONSUMO_REAL_CORRIDAS.csv`, trazas con tokens y costo | Cumplido |
 | AE-02 — Proyección económica | `ANALISIS_ECONOMICO.md` | Cumplido |
-| AE-03 — Configuración costo-eficiente | Seis llamadas reales, costos, control objetivo y planilla reducida de revisión | Pendiente únicamente de revisión humana |
+| AE-03 — Configuración costo-eficiente | Ronda 1 real, control objetivo y revisión humana preservados; prompt 1.3.0 corregido | Pendiente de ronda 2 comparable |
 | Gobierno y riesgo | `GOBIERNO_Y_RIESGO.md`, privacidad y autenticación | Cumplido |
 
 ## Evidencia nueva para SC-02
@@ -29,7 +29,7 @@ La versión 1.1.0 registra versión, commit cuando está disponible, hash exacto
 
 ## Pendiente controlado para AE-03
 
-Las seis llamadas reales se completaron. Nano y Mini tuvieron un error objetivo de alcance cada uno; GPT-5.4 no. Falta revisar y aprobar técnicamente los 21 hallazgos del único candidato que superó esa barrera. La clave no se guardó en el repositorio.
+Las seis llamadas reales y la revisión humana se completaron. Nano y Mini tuvieron un error objetivo de alcance; GPT-5.4 superó corrección y respaldo, pero obtuvo 1,29/2 de utilidad frente al umbral 1,5. Ningún modelo aprobó. La versión 1.3.0 corrige redundancia y utilidad; falta repetir la misma prueba. La clave no se guardó en el repositorio.
 
 ## Publicación
 

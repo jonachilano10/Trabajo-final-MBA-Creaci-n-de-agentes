@@ -1,0 +1,18 @@
+{
+  "reviewed_by_role": "Responsable de mantenimiento",
+  "review_date": "2026-09-11",
+  "evaluations": [
+    {
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium",
+      "findings_reviewed": 21,
+      "correctness_rate": 0.9047619047619048,
+      "average_utility_0_to_2": 1.2857142857142858,
+      "unsupported_claims": 0,
+      "cost_two_calls_usd": 0.21792899999999998,
+      "passed": false
+    }
+  ],
+  "selected_configuration": null,
+  "status": "no_configuration_passed"
+}
