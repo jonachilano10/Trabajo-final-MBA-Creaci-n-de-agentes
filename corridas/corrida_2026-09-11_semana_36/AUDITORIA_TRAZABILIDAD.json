@@ -1,12 +1,12 @@
 {
-  "audited_at": "2026-09-11T21:27:44-03:00",
+  "audited_at": "2026-09-11T21:28:16-03:00",
   "execution_source_reference": null,
   "execution_source_reference_status": "not_captured_contemporaneously",
   "statement": "No se asignó retrospectivamente un commit. Los artefactos originales se autentican con hashes y la reproducción completa comienza en la versión 1.1.0.",
   "audited_against_release": {
     "metadata_schema_version": "2.0",
     "agent_version": "1.3.0",
-    "git_commit": null,
+    "git_commit": "ab3bccbebbf0778dd152605ccffb8de782ad4337",
     "source_snapshot_sha256": "df733f5b3a8e5d4b618593c6f06936bbf81c7e76e619e686bbb601deb2d5395d",
     "python_version": "3.12.14",
     "python_implementation": "CPython",
